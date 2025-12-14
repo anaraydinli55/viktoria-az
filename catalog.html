@@ -3,37 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Viktoria Boya Kataloqu</title>
+<title>Viktoria Paltar Boyaları Kataloqu</title>
 <style>
-  body { font-family: Arial, sans-serif; background: #fff; color: #333; margin:0; padding:0; }
-  header { background:#7c3aed; color:#fff; padding:15px; text-align:center; }
-  a { color:#fff; text-decoration:none; margin:0 10px; }
-  h1 { text-align: center; margin: 20px 0; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); gap: 15px; padding: 20px; }
-  .color-card { border: 1px solid #ccc; padding: 10px; text-align: center; }
-  .color-card img { width: 100%; height: auto; cursor:pointer; transition: transform .2s; }
-  .color-card img:hover { transform: scale(1.05); }
+  body { font-family: Arial, sans-serif; background: #f5f6fb; margin:0; padding:0; color:#222; }
+  header { background:#4b0082; padding:14px 16px; text-align:center; }
+  nav a { color:#fff; text-decoration:none; margin:0 10px; font-weight:600; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:16px; padding:20px; }
+  .card { background:#fff; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:12px; text-align:center; }
+  .card img { width:100%; border-radius:14px; cursor:pointer; transition: transform .2s; }
+  .card img:hover { transform:scale(1.05); }
+  h1 { text-align:center; color:#4b0082; margin:20px 0; }
 </style>
 </head>
 <body>
 
 <header>
-  <a href="/">Ana Səhifə</a>
-  <a href="/catalog.html">Kataloq</a>
+  <nav>
+    <a href="/">Ana səhifə</a>
+    <a href="/catalog.html">Kataloq</a>
+  </nav>
 </header>
 
-<h1>Viktoria Boya Kataloqu</h1>
+<h1>Viktoria Paltar Boyaları Kataloqu</h1>
 
 <div class="grid" id="colorGrid"></div>
 
 <script>
-  const grid = document.getElementById('colorGrid');
-  for(let i=1; i<=60; i++){
-    const card = document.createElement('div');
-    card.className = 'color-card';
-    card.innerHTML = `<img src="images/${i}.jpg" alt="Rəng ${i}"><p>Rəng ${i}</p>`;
+  // Hal-hazırda yalnız 8 rəng əlavə edilib
+  const colors = [
+    {num:60, file:"60-boncuk-mavi.jpg", name:"Rəng 60"},
+    {num:46, file:"46-petrol.jpg", name:"Rəng 46"},
+    {num:35, file:"35-cam-gobegi.jpg", name:"Rəng 35"},
+    {num:23, file:"23-acik-mavi.jpg", name:"Rəng 23"},
+    {num:40, file:"40-nefti.jpg", name:"Rəng 40"},
+    {num:47, file:"47-zeytini.jpg", name:"Rəng 47"},
+    {num:41, file:"41-haki.jpg", name:"Rəng 41"},
+    {num:30, file:"30-siyah.jpg", name:"Rəng 30"}
+  ];
+
+  const grid = document.getElementById("colorGrid");
+  colors.forEach(c=>{
+    const card = document.createElement("div");
+    card.className = "card";
+    card.innerHTML = `<img src="images/${c.file}" alt="${c.name}"><p>${c.name}</p>`;
     grid.appendChild(card);
-  }
+  });
 </script>
 
 </body>
