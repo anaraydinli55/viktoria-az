@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viktoria Boya Kataloqu</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #fff; color: #333; }
+  h1 { text-align: center; margin: 20px 0; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); gap: 15px; padding: 20px; }
+  .color-card { border: 1px solid #ccc; padding: 10px; text-align: center; }
+  .color-card img { width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <h1>Viktoria Boya Kataloqu</h1>
+  <div class="grid" id="colorGrid"></div>
+
+  <script>
+    const grid = document.getElementById('colorGrid');
+    for(let i=1; i<=60; i++){
+      const card = document.createElement('div');
+      card.className = 'color-card';
+      card.innerHTML = `<img src="images/${i}.jpg" alt="Rəng ${i}"><p>Rəng ${i}</p>`;
+      grid.appendChild(card);
+    }
+  </script>
+</body>
+</html>
