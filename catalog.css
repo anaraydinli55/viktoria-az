@@ -1,0 +1,128 @@
+/* ===== Ümumi bədən ===== */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* açıq boz fon */
+    color: #333; /* tünd mətn */
+    margin: 0;
+    padding: 0;
+}
+
+/* ===== Başlıq ===== */
+header {
+    background-color: #6a0dad; /* tünd mor fon */
+    color: #f0a0ff; /* neon mor yazı */
+    padding: 25px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 8px #f0a0ff;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #d9b3ff;
+}
+
+/* ===== Kataloq konteyneri ===== */
+.catalog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+/* ===== Məhsul kartı ===== */
+.product-card {
+    background-color: white; /* açıq kart fonu */
+    border: 2px solid #6a0dad; /* mor çərçivə */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #6a0dad;
+    border-color: #f0a0ff;
+}
+
+/* ===== Məhsul şəkli ===== */
+.product-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #6a0dad;
+}
+
+/* ===== Məhsul məlumatı ===== */
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.product-info h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #6a0dad; /* başlıq mor */
+    text-shadow: 0 0 4px #d9b3ff;
+}
+
+.product-info p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 15px 0;
+}
+
+/* ===== Buton ===== */
+.product-info button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 5px #6a0dad;
+}
+
+.product-info button:hover {
+    background-color: #f0a0ff;
+    color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #f0a0ff;
+}
+
+/* ===== Footer ===== */
+footer {
+    background-color: #6a0dad;
+    color: #f0a0ff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    text-shadow: 0 0 5px #d9b3ff;
+}
+
+/* ===== Mobil uyğun dizayn ===== */
+@media (max-width: 600px) {
+    header {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    .catalog-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .product-info h3 {
+        font-size: 16px;
+    }
+
+    .product-info p {
+        font-size: 13px;
+    }
+
+    .product-info button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
