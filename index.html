@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş</title>
-  <meta name="description" content="Viktoria paltar boyaları – 60 fərqli rəng. Tişört, çanta, ayaqqabı və parça üçün ideal. WhatsApp ilə sürətli sifariş." />
-
-  <!-- SEO -->
+  <meta name="description" content="Viktoria paltar boyaları – 60 fərqli rəng. Tişört, çanta, ayaqqabı və paltar üçün ideal. WhatsApp ilə sürətli sifariş." />
   <link rel="canonical" href="https://viktoria-az-ashy.vercel.app/" />
   <meta property="og:title" content="Viktoria Paltar Boyaları – 60 Rəng" />
   <meta property="og:description" content="Azərbaycanda Viktoria paltar boyaları. Hər rəng üçün ayrıca səhifə və WhatsApp sifariş." />
@@ -15,30 +13,21 @@
   <meta property="og:url" content="https://viktoria-az-ashy.vercel.app/" />
 
   <style>
-    body { margin:0; font-family:system-ui,Arial; background:#f5f6fb; color:#222; }
+    body { margin:0; font-family:Arial, sans-serif; background:#f5f6fb; color:#222; }
     header { background:#4b0082; padding:14px 16px; }
     nav { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; }
     nav a { color:#fff; text-decoration:none; font-weight:600; }
-
     .container { max-width:1200px; margin:auto; padding:20px; }
-
     .hero { display:grid; grid-template-columns:1fr; gap:24px; align-items:center; text-align:center; }
     .hero img { max-width:420px; width:100%; margin:auto; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.15); }
-
     h1 { font-size:clamp(26px,5vw,40px); color:#4b0082; margin-bottom:10px; }
     h2 { color:#4b0082; margin-top:50px; }
-
     .btn { display:inline-block; padding:12px 20px; background:#25D366; color:#fff; border-radius:14px; text-decoration:none; font-weight:700; }
-
     .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:16px; }
     .card { background:#fff; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:12px; text-align:center; }
     .card img { width:100%; border-radius:14px; }
-
     footer { background:#ececec; padding:26px; margin-top:70px; text-align:center; font-size:14px; }
-
-    @media (min-width:768px) {
-      .hero { grid-template-columns:1fr 1fr; text-align:left; }
-    }
+    @media (min-width:768px) { .hero { grid-template-columns:1fr 1fr; text-align:left; } }
   </style>
 </head>
 <body>
@@ -48,143 +37,18 @@
     <a href="/">Ana səhifə</a>
     <a href="#catalog">Kataloq</a>
     <a href="#rules">Boyama qaydaları</a>
-    <a href="https://wa.me/994554828424" target="_blank">WhatsApp</a>
+    <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifarişi" target="_blank">WhatsApp</a>
   </nav>
 </header>
 
 <section class="container hero">
   <div>
-    <h1>Viktoria Kumaş Boyaları</h1>
+    <h1>Viktoria Paltar Boyaları</h1>
     <p><strong>Azərbaycanda ən geniş rəng çeşidinə sahib Viktoria paltar boyalarının onlayn vitrini.</strong></p>
     <p>60 fərqli rəng • Hobbi və professional istifadə • Təhlükəsiz boyama</p>
     <a class="btn" href="#catalog">Rənglərə bax</a>
   </div>
-
-  <!-- BU ŞƏKİLİ YÜKLƏ -->
-  <img src="images/30-siyah.jpg" alt="Viktoria kumaş boyaları" />
+  <img src="images/30-siyah.jpg" alt="Viktoria paltar boyaları" />
 </section>
 
-<section id="catalog" class="container">
-  <h2>Kataloq – 60 Rəng</h2>
-  <div id="colorGrid" class="grid"></div>
-</section>
-
-<section id="rules" class="container">
-  <h2>Boyama Qaydaları</h2>
-  <ul>
-    <li>Kumaşı boyamadan əvvəl yuyun və qurudun</li>
-    <li>Boya istifadədən əvvəl yaxşı qarışdırılmalıdır</li>
-    <li>Boyadıqdan sonra 24 saat quruma vaxtı verin</li>
-    <li>İlk yuma maksimum 30°C olmalıdır</li>
-  </ul>
-</section>
-
-<footer>
-  <p>© 2026 Viktoria Paltar Boyaları · WhatsApp ilə sifariş</p>
-</footer>
-
-<script>
-const colors = [
-  { slug:'qirmizi', name:'Qırmızı' },
-  { slug:'goy', name:'Göy' },
-  { slug:'sari', name:'Sarı' },
-  { slug:'yasil', name:'Yaşıl' },
-  { slug:'qara', name:'Qara' },
-  { slug:'ag', name:'Ağ' }
-  // 60 rəngə qədər davam et
-];
-
-const grid = document.getElementById('colorGrid');
-colors.forEach(c => {
-  grid.innerHTML += `
-    <div class="card">
-      <img src="images/${c.slug}.jpg" alt="${c.name} boya" />
-      <strong>${c.name}</strong>
-      <a class="btn" href="/boya/${c.slug}.html">Bax</a>
-    </div>`;
-});
-</script>
-
-</body>
-</html>
-
-<!-- ================== qara.html ================== -->
-<!-- Bu faylı repo kökünə: qara.html kimi əlavə et -->
-<!-- images/30-siyah.jpg mövcud olmalıdır -->
-<!DOCTYPE html>
-<html lang="az">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Qara Viktoria Paltar Boyası | WhatsApp Sifariş</title>
-  <meta name="description" content="Qara Viktoria paltar boyası – tişört, çanta və digər parçalar üçün ideal. WhatsApp ilə sürətli sifariş." />
-
-  <!-- SEO -->
-  <link rel="canonical" href="https://viktoria-az-ashy.vercel.app/qara.html" />
-  <meta property="og:title" content="Qara Viktoria Paltar Boyası" />
-  <meta property="og:description" content="Qara rəng Viktoria paltar boyası – WhatsApp ilə sifariş." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://viktoria-az-ashy.vercel.app/qara.html" />
-
-  <style>
-    body { margin:0; font-family:system-ui,Arial; background:#f5f6fb; color:#222; }
-    header { background:#4b0082; padding:14px 16px; }
-    nav { display:flex; justify-content:center; gap:18px; flex-wrap:wrap; }
-    nav a { color:#fff; text-decoration:none; font-weight:600; }
-
-    .container { max-width:1000px; margin:auto; padding:20px; }
-
-    h1 { color:#4b0082; font-size:clamp(24px,5vw,36px); }
-
-    .product { display:grid; grid-template-columns:1fr; gap:24px; }
-    .product img { width:100%; border-radius:20px; box-shadow:0 12px 32px rgba(0,0,0,.2); }
-
-    .btn { display:inline-block; padding:14px 22px; background:#25D366; color:#fff; border-radius:16px; text-decoration:none; font-weight:700; font-size:16px; }
-
-    ul { padding-left:18px; }
-
-    footer { margin-top:60px; background:#ececec; padding:26px; text-align:center; font-size:14px; }
-
-    @media (min-width:768px) {
-      .product { grid-template-columns:1fr 1fr; align-items:center; }
-    }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <a href="/">Ana səhifə</a>
-    <a href="/index.html#catalog">Kataloq</a>
-    <a href="https://wa.me/994554828424" target="_blank">WhatsApp</a>
-  </nav>
-</header>
-
-<section class="container">
-  <div class="product">
-    <img src="images/30-siyah.jpg" alt="Qara Viktoria Kumaş Boyası" />
-
-    <div>
-      <h1>Qara Viktoria Paltar Boyası</h1>
-      <p>Qara rəng Viktoria paltar boyası həm gündəlik, həm də professional tekstil boyama işləri üçün uyğundur.</p>
-
-      <ul>
-        <li>Tşirt, çanta, parça və ayaqqabı üçün ideal</li>
-        <li>Dərin və qalıcı qara rəng</li>
-        <li>Ev şəraitində təhlükəsiz istifadə</li>
-      </ul>
-
-      <a class="btn" href="https://wa.me/994554828424?text=Qara%20Viktoria%20kuma%C5%9F%20boyas%C4%B1%20sifari%C5%9Fi" target="_blank">
-        WhatsApp ilə sifariş et
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2026 Viktoria Paltar Boyaları</p>
-</footer>
-
-</body>
-</html>
+<section id="catalog" class="con
