@@ -1,1 +1,121 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boya.online | Viktoria Kumaş Boyaları</title>
+  <meta name="description" content="Azərbaycanda Viktoria kumaş boyaları – 60 fərqli rəng, boyama qaydaları və WhatsApp ilə sifariş." />
+  <link rel="canonical" href="https://boya.online/" />
+  <meta property="og:title" content="Boya.online – Viktoria Kumaş Boyaları" />
+  <meta property="og:description" content="60 fərqli rəng, ətraflı izahlar və WhatsApp ilə sifariş." />
+  <meta property="og:type" content="website" />
+  <style>
+    body { margin:0; font-family:system-ui,Arial; background:#f6f7fb; color:#1f1f1f; }
+    header { background:#4b0082; padding:14px; }
+    nav { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+    nav a { color:#fff; text-decoration:none; font-weight:600; }
+    .container { max-width:1200px; margin:auto; padding:20px; }
+    .hero { text-align:center; }
+    .hero img { max-width:420px; width:100%; border-radius:16px; margin-top:20px; }
+    h1 { font-size:clamp(24px,5vw,36px); color:#4b0082; }
+    h2 { color:#4b0082; margin-top:40px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:14px; }
+    .card { background:#fff; border-radius:16px; box-shadow:0 6px 18px rgba(0,0,0,.08); padding:12px; text-align:center; }
+    .card img { width:100%; border-radius:12px; }
+    .btn { display:block; margin-top:10px; padding:10px; background:#25D366; color:#fff; border-radius:10px; text-decoration:none; font-weight:700; }
+    footer { margin-top:60px; background:#ececec; padding:24px; text-align:center; }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="/">Ana səhifə</a>
+    <a href="#catalog">Kataloq</a>
+    <a href="#rules">Boyama qaydaları</a>
+    <a href="#blog">Blog</a>
+    <a href="https://wa.me/994XXXXXXXXX" target="_blank">WhatsApp</a>
+  </nav>
+</header>
+
+<section class="container hero">
+  <h1>Boya.online</h1>
+  <p><strong>Boya.online — Azərbaycanda ən geniş rəng çeşidinə sahib Viktoria kumaş boyalarının rəsmi satış platformasıdır.</strong></p>
+  <p>60 fərqli rəng, hobbi və professional istifadə üçün ideal tekstil boyaları.</p>
+  <img src="images/boya-paketleri.jpg" alt="Viktoria boya paketləri" />
+</section>
+
+<section id="catalog" class="container">
+  <h2>Kataloq – 60 Rəng</h2>
+  <div id="colorGrid" class="grid"></div>
+</section>
+
+<section id="rules" class="container">
+  <h2>Boyama Qaydaları</h2>
+  <ul>
+    <li>Kumaşı əvvəlcədən yuyun</li>
+    <li>Boya tam qarışdırılmalıdır</li>
+    <li>24 saat quruma vaxtı verin</li>
+    <li>İlk yuma 30°C</li>
+  </ul>
+</section>
+
+<section id="blog" class="container">
+  <h2>Blog</h2>
+  <div class="grid">
+    <div class="card">Kumaş boyama üçün 5 ipucu</div>
+    <div class="card">Viktoria boyaları niyə keyfiyyətlidir?</div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 Boya.online</p>
+</footer>
+
+<script>
+const colors = [
+  {slug:'qirmizi', name:'Qırmızı'}, {slug:'goy', name:'Göy'}, {slug:'sari', name:'Sarı'},
+  {slug:'yasil', name:'Yaşıl'}, {slug:'qara', name:'Qara'}, {slug:'ag', name:'Ağ'},
+]; // buraya 60 rəng əlavə edəcəksən
+
+const grid = document.getElementById('colorGrid');
+colors.forEach(c => {
+  grid.innerHTML += `
+  <div class="card">
+    <img src="images/${c.slug}.jpg" alt="${c.name} boya" />
+    <strong>${c.name}</strong>
+    <a class="btn" href="/boya/${c.slug}.html">Bax</a>
+  </div>`;
+});
+</script>
+
+</body>
+</html>
+
+<!-- DETAIL PAGE TEMPLATE: /boya/qirmizi.html -->
+<!--
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Qırmızı Viktoria Kumaş Boyası</title>
+<meta name="description" content="Qırmızı Viktoria kumaş boyası – istifadə qaydaları və WhatsApp sifariş." />
+</head>
+<body>
+<h1>Qırmızı Viktoria Kumaş Boyası</h1>
+<img src="../images/qirmizi.jpg" alt="Qırmızı boya" />
+<p>Bu rəng tişört, çanta və digər tekstil məhsulları üçün uyğundur.</p>
+<a href="https://wa.me/994XXXXXXXXX?text=Qırmızı%20Viktoria%20boya%20sifarişi">WhatsApp sifariş</a>
+</body>
+</html>
+-->
+
+<!-- sitemap.xml -->
+<!--
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://boya.online/</loc></url>
+  <url><loc>https://boya.online/boya/qirmizi.html</loc></url>
+</urlset>
+-->
 
