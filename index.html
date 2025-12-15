@@ -105,6 +105,28 @@
       margin-bottom: 24px;
     }
 
+    /* Instagram */
+    .instagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .instagram img {
+      width: 48px;
+      height: 48px;
+    }
+
+    .instagram a {
+      text-decoration: none;
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
     footer {
       background: #ececec;
       padding: 26px;
@@ -117,6 +139,9 @@
       .hero {
         grid-template-columns: 1fr 1fr;
         text-align: left;
+      }
+      .instagram {
+        gap: 16px;
       }
     }
   </style>
@@ -168,6 +193,14 @@
       Azərbaycanda rəngi solmuş paltarların evdə boyanaraq yenidən istifadə
       olunmasını təmin etmək.
     </p>
+
+    <!-- Instagram -->
+    <div class="instagram">
+      <a href="https://instagram.com/paltar_boyalari" target="_blank">
+        <img src="images/instagram.webp" alt="Instagram">
+        Instagram
+      </a>
+    </div>
   </div>
 </section>
 
