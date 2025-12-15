@@ -29,7 +29,7 @@ body {
 
 .header nav a {
   color: #ffff00; /* sarı */
-  text-decoration: none;
+  text-decoration: underline; /* hamısı altı çizgili */
   font-weight: 600;
   font-size: 16px;
   padding: 8px 12px;
@@ -38,11 +38,6 @@ body {
 
 .header nav a:hover {
   color: #ffea00; /* hover üçün açıq sarı */
-}
-
-/* Altı çizgili linklər üçün */
-.header nav a.underline {
-  text-decoration: underline;
 }
 
 /* MAIN CONTAINER */
@@ -111,4 +106,3 @@ li {
     padding: 10px 16px;
   }
 }
-
