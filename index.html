@@ -22,10 +22,12 @@
     .hero img { max-width:420px; width:100%; margin:auto; border-radius:18px; box-shadow:0 10px 30px rgba(0,0,0,.15); }
     h1 { font-size:clamp(26px,5vw,40px); color:#4b0082; margin-bottom:10px; }
     h2 { color:#4b0082; margin-top:50px; }
+    h3 { color:#4b0082; margin-bottom:10px; }
     .btn { display:inline-block; padding:12px 20px; background:#25D366; color:#fff; border-radius:14px; text-decoration:none; font-weight:700; }
     .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:16px; }
-    .card { background:#fff; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:12px; text-align:center; }
-    .card img { width:100%; border-radius:14px; }
+    .card { background:#fff; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:16px; margin-bottom:24px; }
+    .card ul { padding-left:20px; }
+    .card li { margin-bottom:6px; }
     footer { background:#ececec; padding:26px; margin-top:70px; text-align:center; font-size:14px; }
     @media (min-width:768px) { .hero { grid-template-columns:1fr 1fr; text-align:left; } }
   </style>
@@ -51,38 +53,42 @@
   <img src="images/30-siyah.jpg" alt="Viktoria paltar boyaları" />
 </section>
 
-<!-- Qaydalar bölməsi -->
-<section id="rules" class="container">
-  <h2>Yaxşı nəticə əldə etmək üçün boyama qaydalarına düzgün əməl etməyiniz tövsiyyə olunur</h2>
-  <p>🔹 Haqqımızda
+<!-- Haqqımızda bölməsi -->
+<section id="about" class="container">
+  <h2>Haqqımızda & Missiyamız</h2>
 
-Viktoria Boya, yüksək keyfiyyətli toz boyalar və tekstil məhsulları ilə ev və sənaye istifadəsinə xidmət edən aparıcı şirkətlərdən biridir. Məqsədimiz təbii və davamlı rəng həlləri təqdim etməklə müştərilərimizin yaradıcılıq potensialını artırmaqdır.
+  <div class="card">
+    <h3>🔹 Haqqımızda</h3>
+    <p>Viktoria Boya, yüksək keyfiyyətli toz boyalar və tekstil məhsulları ilə ev və sənaye istifadəsinə xidmət edən aparıcı şirkətlərdən biridir. Məqsədimiz təbii və davamlı rəng həlləri təqdim etməklə müştərilərimizin yaradıcılıq potensialını artırmaqdır.</p>
+  </div>
 
-🔹 Məhsullarımız
+  <div class="card">
+    <h3>🔹 Məhsullarımız</h3>
+    <ul>
+      <li>Pambıq, kətan və viskon üçün toz boyalar</li>
+      <li>İpək və yarı sintetik parçalar üçün boyalar</li>
+      <li>Rəng qarışıqları və DIY paketlər</li>
+    </ul>
+  </div>
 
-Pambıq, kətan və viskon üçün toz boyalar
+  <div class="card">
+    <h3>🔹 Missiyamız</h3>
+    <p>Müştərilərə asan, təhlükəsiz və keyfiyyətli boyama təcrübəsi təmin etmək. Rənglərin canlılığını qoruyaraq, yaradıcılığı təşviq etmək.</p>
+  </div>
 
-İpək və yarı sintetik parçalar üçün boyalar
+  <div class="card">
+    <h3>🔹 Vizyonumuz</h3>
+    <p>Azərbaycan və region bazarında ev boyama və sənaye boyalarında lider brend olmaq və hər istifadəçiyə əlçatan rəng həlləri təqdim etmək.</p>
+  </div>
 
-Rəng qarışıqları və DIY paketlər
-
-
-🔹 Missiyamız
-
-Müştərilərə asan, təhlükəsiz və keyfiyyətli boyama təcrübəsi təmin etmək.
-Rənglərin canlılığını qoruyaraq, yaradıcılığı təşviq etmək.
-
-🔹 Vizyonumuz
-
-Azərbaycan və region bazarında ev boyama və sənaye boyalarında lider brend olmaq və hər istifadəçiyə əlçatan rəng həlləri təqdim etmək.
-
-🔹 Dəyərlərimiz
-
-Keyfiyyət və davamlılıq
-
-Müştəri məmnuniyyəti
-
-Yaradıcılıq və innovasiya</p>
+  <div class="card">
+    <h3>🔹 Dəyərlərimiz</h3>
+    <ul>
+      <li>Keyfiyyət və davamlılıq</li>
+      <li>Müştəri məmnuniyyəti</li>
+      <li>Yaradıcılıq və innovasiya</li>
+    </ul>
+  </div>
 </section>
 
 <footer>
