@@ -1,19 +1,34 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
+body {
+  font-family: Arial, sans-serif;
+  background: #3a3a3a; /* orta koyu gri */
+  color: #f1f1f1;
+  line-height: 1.6;
+}
+
 /* HEADER */
 .header {
-  background: #4b4b4b; /* orta boz, ağ deyil */
+  background: #4b4b4b; /* orta boz */
   padding: 14px;
   text-align: center; /* ortada */
 }
 
 .header nav {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* yatayda ortala */
   gap: 20px;
   flex-wrap: wrap; /* kiçik ekranlarda sətirə keçsin */
 }
 
 .header nav a {
-  color: #ffff00; /* sarı link */
+  color: #ffff00; /* sarı */
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -22,5 +37,76 @@
 }
 
 .header nav a:hover {
-  color: #ffea00; /* hover açıq sarı */
+  color: #ffea00; /* hover üçün açıq sarı */
+}
+
+.header nav a.active {
+  text-decoration: underline;
+}
+
+/* MAIN CONTAINER */
+.rules-container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+/* TITLES */
+.rules-container h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #ffff00; /* sarı */
+}
+
+.rules-container h2 {
+  margin-bottom: 10px;
+  color: #ffff00; /* sarı */
+}
+
+/* CARD */
+.card {
+  background: #2b2b2b; /* tünd kart fonu */
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 20px;
+}
+
+/* LISTS */
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 6px;
+  font-size: 15px;
+}
+
+/* WARNING */
+.warning {
+  border-left: 5px solid #ff4d4d;
+  background: #402222;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* DESKTOP ENHANCEMENT */
+@media (min-width: 768px) {
+  .rules-container {
+    padding: 30px;
+  }
+
+  .card {
+    padding: 24px;
+  }
+
+  .header nav a {
+    font-size: 18px;
+    padding: 10px 16px;
+  }
 }
