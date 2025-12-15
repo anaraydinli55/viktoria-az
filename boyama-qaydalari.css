@@ -40,7 +40,8 @@ body {
   color: #ffea00; /* hover üçün açıq sarı */
 }
 
-.header nav a.active {
+/* Altı çizgili linklər üçün */
+.header nav a.underline {
   text-decoration: underline;
 }
 
