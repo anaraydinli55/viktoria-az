@@ -1,28 +1,62 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-<link rel="stylesheet" href="catalog.css">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Viktoria Paltar Boyaları Kataloqu</title>
 
 <style>
-  body { font-family: Arial, sans-serif; background: #f5f6fb; margin:0; padding:0; color:#222; }
-  header { background:#4b0082; padding:14px 16px; text-align:center; }
-  nav a { color:#fff; text-decoration:none; margin:0 10px; font-weight:600; }
-  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:16px; padding:20px; }
-  .card { background:#fff; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:12px; text-align:center; }
-  .card img { width:100%; border-radius:14px; cursor:pointer; transition: transform .2s; }
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f6fb;
+    margin:0;
+    padding:0;
+    color:#222;
+  }
+  header {
+    background:#4b0082;
+    padding:14px 16px;
+    text-align:center;
+  }
+  nav a {
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:600;
+    font-size:16px;
+  }
+  nav a:hover { color:#ffea00; }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+    gap:16px;
+    padding:20px;
+  }
+  .card {
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    padding:12px;
+    text-align:center;
+  }
+  .card img {
+    width:100%;
+    border-radius:14px;
+    cursor:pointer;
+    transition: transform .2s;
+  }
   .card img:hover { transform:scale(1.05); }
-  h1 { text-align:center; color:#4b0082; margin:20px 0; }
-
-  /* 🔮 Mor neon qiymət yazıları */
+  h1 {
+    text-align:center;
+    color:#4b0082;
+    margin:20px 0;
+  }
+  /* Qiymət yazısı */
   .price {
-    color: #b100ff;
+    color: #ffd400;       /* sarı */
     font-weight: 800;
-    text-shadow:
-      0 0 6px rgba(177,0,255,.7),
-      0 0 12px rgba(177,0,255,.6);
+    font-size: 16px;
+    margin-top: 8px;
   }
 </style>
 </head>
@@ -42,66 +76,66 @@
 
 <script>
   const colors = [
-    {file:"1-pembe.jpg", name:"Qiyməti 4AZN"},
-    {file:"2-kavunici.jpg", name:"Qiyməti 4AZN"},
-    {file:"3-yavruagzi.jpg", name:"Qiyməti 4AZN"},
-    {file:"4-koyu-pembe.jpg", name:"Qiyməti 4AZN"},
-    {file:"5-al.jpg", name:"Qiyməti 4AZN"},
-    {file:"6-atresi-pembe.jpg", name:"Qiyməti 4AZN"},
-    {file:"7-nar-cicegi.jpg", name:"Qiyməti 4AZN"},
-    {file:"8-kirmizi.jpg", name:"Qiyməti 4AZN"},
-    {file:"9-koyu-kirmizi.jpg", name:"Qiyməti 4AZN"},
-    {file:"10-visne-curugu.jpg", name:"Qiyməti 4AZN"},
-    {file:"11-sari.jpg", name:"Qiyməti 4AZN"},
-    {file:"12-turuncu.jpg", name:"Qiyməti 4AZN"},
-    {file:"13-gul-kurusu.jpg", name:"Qiyməti 4AZN"},
-    {file:"14-bej-acik.jpg", name:"Qiyməti 4AZN"},
-    {file:"15-bej-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"16-tutun-rengi.jpg", name:"Qiyməti 4AZN"},
-    {file:"17-acik-kahve.jpg", name:"Qiyməti 4AZN"},
-    {file:"18-kahve-orta.jpg", name:"Qiyməti 4AZN"},
-    {file:"19-kahve.jpg", name:"Qiyməti 4AZN"},
-    {file:"20-kahve-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"21-fes-rengi.jpg", name:"Qiyməti 4AZN"},
-    {file:"22-guvez.jpg", name:"Qiyməti 4AZN"},
-    {file:"23-acik-mavi.jpg", name:"Qiyməti 4AZN"},
-    {file:"24-mavi-orta.jpg", name:"Qiyməti 4AZN"},
-    {file:"25-mavi-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"26-mor-acik.jpg", name:"Qiyməti 4AZN"},
-    {file:"27-mor-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"28-lacivert-acik.jpg", name:"Qiyməti 4AZN"},
-    {file:"29-lacivert-orta.jpg", name:"Qiyməti 4AZN"},
-    {file:"30-siyah.jpg", name:"Qiyməti 4AZN"},
-    {file:"31-eflatun.jpg", name:"Qiyməti 4AZN"},
-    {file:"32-bej.jpg", name:"Qiyməti 4AZN"},
-    {file:"33-kursuni-acik.jpg", name:"Qiyməti 4AZN"},
-    {file:"34-kursuni-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"35-cam-gobegi.jpg", name:"Qiyməti 4AZN"},
-    {file:"36-filizi-acik.jpg", name:"Qiyməti 4AZN"},
-    {file:"37-filizi-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"38-yesil.jpg", name:"Qiyməti 4AZN"},
-    {file:"39-koyu-yesil.jpg", name:"Qiyməti 4AZN"},
-    {file:"40-nefti.jpg", name:"Qiyməti 4AZN"},
-    {file:"41-haki.jpg", name:"Qiyməti 4AZN"},
-    {file:"42-kanarya.jpg", name:"Qiyməti 4AZN"},
-    {file:"43-sarabi.jpg", name:"Qiyməti 4AZN"},
-    {file:"44-portakal.jpg", name:"Qiyməti 4AZN"},
-    {file:"45-zumrut.jpg", name:"Qiyməti 4AZN"},
-    {file:"46-petrol.jpg", name:"Qiyməti 4AZN"},
-    {file:"47-zeytini.jpg", name:"Qiyməti 4AZN"},
-    {file:"48-saksonya.jpg", name:"Qiyməti 4AZN"},
-    {file:"49-civit-mavi.jpg", name:"Qiyməti 4AZN"},
-    {file:"50-m-lacivert.jpg", name:"Qiyməti 4AZN"},
-    {file:"51-lacivert-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"52-yanik-kahve.jpg", name:"Qiyməti 4AZN"},
-    {file:"53-sarabi-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"54-eflatun-koyu.jpg", name:"Qiyməti 4AZN"},
-    {file:"55-menekse.jpg", name:"Qiyməti 4AZN"},
-    {file:"56-altin-sari.jpg", name:"Qiyməti 4AZN"},
-    {file:"57-k-sari.jpg", name:"Qiyməti 4AZN"},
-    {file:"60-boncuk-mavi.jpg", name:"Qiyməti 4AZN"},
-    {file:"61-blujin-mavisi.jpg", name:"Qiyməti 4AZN"},
-    {file:"62-fiske.jpg", name:"Sabitləşdirici • Qiyməti 4AZN", link:"/fiske.html"}
+    {file:"1-pembe.jpg", name:"Qiyməti 4 AZN"},
+    {file:"2-kavunici.jpg", name:"Qiyməti 4 AZN"},
+    {file:"3-yavruagzi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"4-koyu-pembe.jpg", name:"Qiyməti 4 AZN"},
+    {file:"5-al.jpg", name:"Qiyməti 4 AZN"},
+    {file:"6-atresi-pembe.jpg", name:"Qiyməti 4 AZN"},
+    {file:"7-nar-cicegi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"8-kirmizi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"9-koyu-kirmizi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"10-visne-curugu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"11-sari.jpg", name:"Qiyməti 4 AZN"},
+    {file:"12-turuncu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"13-gul-kurusu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"14-bej-acik.jpg", name:"Qiyməti 4 AZN"},
+    {file:"15-bej-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"16-tutun-rengi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"17-acik-kahve.jpg", name:"Qiyməti 4 AZN"},
+    {file:"18-kahve-orta.jpg", name:"Qiyməti 4 AZN"},
+    {file:"19-kahve.jpg", name:"Qiyməti 4 AZN"},
+    {file:"20-kahve-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"21-fes-rengi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"22-guvez.jpg", name:"Qiyməti 4 AZN"},
+    {file:"23-acik-mavi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"24-mavi-orta.jpg", name:"Qiyməti 4 AZN"},
+    {file:"25-mavi-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"26-mor-acik.jpg", name:"Qiyməti 4 AZN"},
+    {file:"27-mor-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"28-lacivert-acik.jpg", name:"Qiyməti 4 AZN"},
+    {file:"29-lacivert-orta.jpg", name:"Qiyməti 4 AZN"},
+    {file:"30-siyah.jpg", name:"Qiyməti 4 AZN"},
+    {file:"31-eflatun.jpg", name:"Qiyməti 4 AZN"},
+    {file:"32-bej.jpg", name:"Qiyməti 4 AZN"},
+    {file:"33-kursuni-acik.jpg", name:"Qiyməti 4 AZN"},
+    {file:"34-kursuni-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"35-cam-gobegi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"36-filizi-acik.jpg", name:"Qiyməti 4 AZN"},
+    {file:"37-filizi-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"38-yesil.jpg", name:"Qiyməti 4 AZN"},
+    {file:"39-koyu-yesil.jpg", name:"Qiyməti 4 AZN"},
+    {file:"40-nefti.jpg", name:"Qiyməti 4 AZN"},
+    {file:"41-haki.jpg", name:"Qiyməti 4 AZN"},
+    {file:"42-kanarya.jpg", name:"Qiyməti 4 AZN"},
+    {file:"43-sarabi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"44-portakal.jpg", name:"Qiyməti 4 AZN"},
+    {file:"45-zumrut.jpg", name:"Qiyməti 4 AZN"},
+    {file:"46-petrol.jpg", name:"Qiyməti 4 AZN"},
+    {file:"47-zeytini.jpg", name:"Qiyməti 4 AZN"},
+    {file:"48-saksonya.jpg", name:"Qiyməti 4 AZN"},
+    {file:"49-civit-mavi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"50-m-lacivert.jpg", name:"Qiyməti 4 AZN"},
+    {file:"51-lacivert-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"52-yanik-kahve.jpg", name:"Qiyməti 4 AZN"},
+    {file:"53-sarabi-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"54-eflatun-koyu.jpg", name:"Qiyməti 4 AZN"},
+    {file:"55-menekse.jpg", name:"Qiyməti 4 AZN"},
+    {file:"56-altin-sari.jpg", name:"Qiyməti 4 AZN"},
+    {file:"57-k-sari.jpg", name:"Qiyməti 4 AZN"},
+    {file:"60-boncuk-mavi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"61-blujin-mavisi.jpg", name:"Qiyməti 4 AZN"},
+    {file:"62-fiske.jpg", name:"Sabitləşdirici • Qiyməti 4 AZN", link:"/fiske.html"}
   ];
 
   const grid = document.getElementById("colorGrid");
