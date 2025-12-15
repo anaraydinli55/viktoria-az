@@ -1,19 +1,19 @@
 /* HEADER */
 .header {
-  background: #4b0082;
+  background: #4b4b4b; /* orta boz, ağ deyil */
   padding: 14px;
-  text-align: center; /* mobil + web ortalaması */
+  text-align: center; /* ortada */
 }
 
 .header nav {
   display: flex;
-  justify-content: center; /* yatayda ortala */
+  justify-content: center;
   gap: 20px;
   flex-wrap: wrap; /* kiçik ekranlarda sətirə keçsin */
 }
 
 .header nav a {
-  color: #ffff00; /* sarı */
+  color: #ffff00; /* sarı link */
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -22,5 +22,5 @@
 }
 
 .header nav a:hover {
-  color: #ffea00; /* hover üçün açıq sarı */
+  color: #ffea00; /* hover açıq sarı */
 }
