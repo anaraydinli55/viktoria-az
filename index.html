@@ -40,7 +40,19 @@
       font-weight: 600;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+    }
+
+    /* WhatsApp */
+    .wa-link {
+      font-weight: 800;
+      font-size: 18px;
+    }
+
+    .wa-icon {
+      width: 30px;
+      height: 30px;
+      fill: #25D366;
     }
 
     .container {
@@ -71,14 +83,8 @@
       margin-bottom: 10px;
     }
 
-    h2 {
+    h2, h3 {
       color: #4b0082;
-      margin-top: 50px;
-    }
-
-    h3 {
-      color: #4b0082;
-      margin-bottom: 10px;
     }
 
     .btn {
@@ -99,14 +105,6 @@
       margin-bottom: 24px;
     }
 
-    .card ul {
-      padding-left: 20px;
-    }
-
-    .card li {
-      margin-bottom: 6px;
-    }
-
     footer {
       background: #ececec;
       padding: 26px;
@@ -123,6 +121,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -131,17 +130,12 @@
     <a href="/catalog.html">Kataloq</a>
     <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
 
-    <!-- WHATSAPP – BÖYÜK, QALIN, BELİRGİN -->
-    <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
-       target="_blank"
-       style="font-weight:800; font-size:18px;">
+    <a class="wa-link"
+       href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
+       target="_blank">
       WhatsApp
-      <svg xmlns="http://www.w3.org/2000/svg"
-           width="28"
-           height="28"
-           viewBox="0 0 24 24"
-           fill="#25D366">
-        <path d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.48 1.34 4.99L2 22l5.18-1.36a9.9 9.9 0 0 0 4.86 1.26h.01c5.5 0 9.96-4.46 9.96-9.96S17.54 2 12.04 2z"/>
+      <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
+        <path d="M16 2.667C8.82 2.667 3 8.487 3 15.667c0 2.43.636 4.806 1.842 6.907L3 29.333l6.98-1.82a13.01 13.01 0 006.02 1.487h.006c7.18 0 13-5.82 13-13S23.18 2.667 16 2.667zm0 23.19a10.84 10.84 0 01-5.53-1.53l-.395-.233-4.14 1.08 1.11-4.03-.257-.414a10.8 10.8 0 1119.07-5.063A10.85 10.85 0 0116 25.857zm6.23-8.17c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.22.34-.88 1.1-1.08 1.32-.2.23-.4.26-.74.09-.34-.17-1.43-.53-2.72-1.7-1.01-.9-1.69-2.02-1.89-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.53-.28-.68-.57-.59-.77-.6h-.66c-.23 0-.6.09-.92.43-.31.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.18.82.35 1.45.56 1.95.72.83.26 1.59.22 2.19.13.67-.1 2.02-.82 2.31-1.6.29-.78.29-1.45.2-1.6-.08-.14-.3-.23-.64-.4z"/>
       </svg>
     </a>
   </nav>
@@ -160,14 +154,19 @@
   </a>
 </section>
 
-<section id="about" class="container">
+<section class="container">
   <h2>Haqqımızda & Missiyamız</h2>
 
   <div class="card">
     <h3>🔹 Haqqımızda</h3>
+    <p>Viktoria Boya yüksək keyfiyyətli toz boyalar təqdim edir.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔹 Missiyamız</h3>
     <p>
-      Viktoria Boya, yüksək keyfiyyətli toz boyalar və tekstil məhsulları ilə
-      ev və sənaye istifadəsinə xidmət edən aparıcı şirkətlərdən biridir.
+      Azərbaycanda rəngi solmuş paltarların evdə boyanaraq yenidən istifadə
+      olunmasını təmin etmək.
     </p>
   </div>
 </section>
