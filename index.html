@@ -43,7 +43,6 @@
       gap: 6px;
     }
 
-    /* WhatsApp */
     .wa-link {
       font-weight: 800;
       font-size: 18px;
@@ -105,32 +104,37 @@
       margin-bottom: 24px;
     }
 
-    /* Instagram */
-    .instagram {
+    /* Instagram Footer */
+    .instagram-footer {
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 12px;
-      margin-top: 20px;
-      flex-wrap: wrap;
+      gap: 8px;
+      margin: 20px 0 10px 0;
+      text-align: center;
     }
 
-    .instagram img {
-      width: 48px;
-      height: 48px;
+    .instagram-footer img {
+      width: 60px;
+      height: 60px;
     }
 
-    .instagram a {
+    .instagram-footer a {
+      color: #E1306C;
+      font-weight: 800;
+      font-size: 20px;
       text-decoration: none;
-      color: #000;
-      font-weight: 700;
-      font-size: 18px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
     }
 
     footer {
       background: #ececec;
       padding: 26px;
-      margin-top: 70px;
+      margin-top: 10px;
       text-align: center;
       font-size: 14px;
     }
@@ -140,8 +144,12 @@
         grid-template-columns: 1fr 1fr;
         text-align: left;
       }
-      .instagram {
-        gap: 16px;
+      .instagram-footer img {
+        width: 70px;
+        height: 70px;
+      }
+      .instagram-footer a {
+        font-size: 22px;
       }
     }
   </style>
@@ -193,16 +201,16 @@
       Azərbaycanda rəngi solmuş paltarların evdə boyanaraq yenidən istifadə
       olunmasını təmin etmək.
     </p>
-
-    <!-- Instagram -->
-    <div class="instagram">
-      <a href="https://instagram.com/paltar_boyalari" target="_blank">
-        <img src="images/instagram.webp" alt="Instagram">
-        Instagram
-      </a>
-    </div>
   </div>
 </section>
+
+<!-- Instagram Footer -->
+<div class="instagram-footer">
+  <a href="https://instagram.com/paltar_boyalari" target="_blank">
+    <img src="images/instagram.webp" alt="Instagram Logo">
+    Instagram
+  </a>
+</div>
 
 <footer>
   &copy; 2025 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.
