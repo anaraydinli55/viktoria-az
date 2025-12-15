@@ -1,0 +1,52 @@
+.rules {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.rules h2 {
+  text-align: center;
+  color: #4b0082;
+  margin-bottom: 16px;
+}
+
+.rules .intro {
+  text-align: center;
+  color: #444;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.rule-box {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #f5f6fb;
+  border-radius: 14px;
+}
+
+.rule-box h3 {
+  margin-bottom: 10px;
+  color: #4b0082;
+}
+
+.rule-box ul,
+.rule-box ol {
+  padding-left: 20px;
+  color: #333;
+}
+
+.rule-box li {
+  margin-bottom: 6px;
+}
+
+.warning {
+  background: #fff0f0;
+  border-left: 6px solid #e63946;
+  padding: 16px;
+  border-radius: 10px;
+  color: #a10000;
+  font-weight: 600;
+}
