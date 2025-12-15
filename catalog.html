@@ -134,6 +134,8 @@
     {file:"55-menekse.jpg", name:"Qiyməti 4 AZN"},
     {file:"56-altin-sari.jpg", name:"Qiyməti 4 AZN"},
     {file:"57-k-sari.jpg", name:"Qiyməti 4 AZN"},
+    {file:"58-yanik-lacivert.jpg", name:"Qiyməti 4 AZN"},
+    {file:"59-lacivert-orta.jpg", name:"Qiyməti 4 AZN"},
     {file:"60-boncuk-mavi.jpg", name:"Qiyməti 4 AZN"},
     {file:"61-blujin-mavisi.jpg", name:"Qiyməti 4 AZN"},
     {file:"62-fiske.jpg", name:"Sabitləşdirici • Qiyməti 4 AZN", link:"/fiske.html"}
@@ -141,7 +143,7 @@
 
   const grid = document.getElementById("colorGrid");
 
-  colors.forEach(c => {
+  colors.forEach((c, index) => {
     const card = document.createElement("div");
     card.className = "card";
 
@@ -149,7 +151,10 @@
     img.src = `images/${c.file}`;
     img.alt = c.name;
 
-    if (c.link) {
+    // 1-dən 59-a qədər boyama-qaydalari.html, 62-fiske isə fiske.html
+    if (index < 59) {
+      img.onclick = () => window.location.href = "/boyama-qaydalari.html";
+    } else if (c.link) {
       img.onclick = () => window.location.href = c.link;
     }
 
