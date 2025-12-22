@@ -115,9 +115,9 @@ h2, h3 {
 /* ========== INSTAGRAM ========== */
 .instagram-footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: column;  /* dikey hizalama */
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   margin: 20px 0 10px;
   text-align: center;
 }
@@ -130,9 +130,14 @@ h2, h3 {
 .instagram-footer a {
   color: #E1306C;
   font-weight: 800;
-  font-size: 20px;
+  font-size: 18px;
   text-decoration: none;
+  display: flex;
+  flex-direction: column;  /* emoji ve yazı dikey */
+  align-items: center;
+  gap: 4px;
 }
+
 
 /* ========== FOOTER ========== */
 footer {
