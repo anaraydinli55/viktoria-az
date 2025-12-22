@@ -105,12 +105,12 @@ h2, h3 {
 
 /* ========== CARDS ========== */
 .card {
-  background: #fff;
-  border-radius: 18px;
-  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+  background-color: #fff8c4; /* açık sarı */
+  border-radius: 12px;
   padding: 16px;
-  margin-bottom: 24px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* opsiyonel gölge */
 }
+
 
 /* ========== INSTAGRAM ========== */
 .instagram-footer {
