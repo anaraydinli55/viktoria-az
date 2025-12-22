@@ -104,11 +104,13 @@ h2, h3 {
 }
 
 /* ========== CARDS ========== */
+/* Card içi arka planı açık sarı/orta gri */
 .card {
-  background-color: #fff8c4; /* açık sarı */
+  background-color: #d3d3d3; /* orta gri */
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.05); /* opsiyonel gölge */
+  color: #000; /* metin rengi */
 }
 
 
@@ -211,11 +213,13 @@ footer {
 /* ===================== */
 /* CONTAINER ARKA PLAN */
 /* ===================== */
+/* Container dış arka planı koyu gri */
 .container {
-  background-color: #d9d9d9; /* Orta gri */
-  padding: 20px;             /* İstersen iç boşluk artırabilirsin */
-  border-radius: 12px;       /* Hafif köşeler için */
-  margin-bottom: 20px;       /* Alt boşluk */
+  background-color: #4b4b4b; /* koyu gri */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
 }
+
 
 
