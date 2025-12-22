@@ -86,6 +86,7 @@
       color: #4b0082;
     }
 
+    /* Normal button (Rənglərə bax) */
     .btn {
       display: inline-block;
       padding: 12px 20px;
@@ -96,6 +97,24 @@
       font-weight: 700;
     }
 
+    /* Tablo Style için ayrı mobil CTA */
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      max-width: 420px;
+      padding: 14px 20px;
+      min-height: 48px;
+      background: #4b2cff;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 12px;
+      margin: 30px auto;
+    }
+
     .card {
       background: #fff;
       border-radius: 18px;
@@ -104,14 +123,12 @@
       margin-bottom: 24px;
     }
 
-    /* Instagram Footer */
     .instagram-footer {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       gap: 8px;
-      margin: 20px 0 10px 0;
+      margin: 20px 0 10px;
       text-align: center;
     }
 
@@ -125,10 +142,6 @@
       font-weight: 800;
       font-size: 20px;
       text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 4px;
     }
 
     footer {
@@ -144,48 +157,9 @@
         grid-template-columns: 1fr 1fr;
         text-align: left;
       }
-      .instagram-footer img {
-        width: 70px;
-        height: 70px;
-      }
-      .instagram-footer a {
-        font-size: 22px;
-      }
-    }
-  </style>
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      width: 100%;
-      max-width: 420px;
-
-      padding: 14px 20px;
-      min-height: 48px;
-
-      background: #4b2cff;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 16px;
-
-      border-radius: 12px;
-      margin: 20px auto;
-    }
-
-    .btn:active {
-      transform: scale(0.98);
     }
   </style>
 </head>
-
 
 <body>
 
@@ -200,55 +174,47 @@
        target="_blank">
       WhatsApp
       <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 2.667C8.82 2.667 3 8.487 3 15.667c0 2.43.636 4.806 1.842 6.907L3 29.333l6.98-1.82a13.01 13.01 0 006.02 1.487h.006c7.18 0 13-5.82 13-13S23.18 2.667 16 2.667zm0 23.19a10.84 10.84 0 01-5.53-1.53l-.395-.233-4.14 1.08 1.11-4.03-.257-.414a10.8 10.8 0 1119.07-5.063A10.85 10.85 0 0116 25.857zm6.23-8.17c-.34-.17-2.02-.99-2.33-1.1-.31-.12-.54-.17-.77.17-.22.34-.88 1.1-1.08 1.32-.2.23-.4.26-.74.09-.34-.17-1.43-.53-2.72-1.7-1.01-.9-1.69-2.02-1.89-2.36-.2-.34-.02-.52.15-.69.15-.15.34-.4.51-.6.17-.2.23-.34.34-.57.11-.23.06-.43-.03-.6-.09-.17-.77-1.85-1.06-2.53-.28-.68-.57-.59-.77-.6h-.66c-.23 0-.6.09-.92.43-.31.34-1.2 1.17-1.2 2.86s1.23 3.32 1.4 3.55c.17.23 2.42 3.7 5.87 5.18.82.35 1.45.56 1.95.72.83.26 1.59.22 2.19.13.67-.1 2.02-.82 2.31-1.6.29-.78.29-1.45.2-1.6-.08-.14-.3-.23-.64-.4z"/>
+        <path d="M16 2.667C8.82 2.667 3 8.487 3 15.667c0 2.43.636 4.806 1.842 6.907L3 29.333l6.98-1.82a13.01 13.01 0 006.02 1.487h.006c7.18 0 13-5.82 13-13S23.18 2.667 16 2.667z"/>
       </svg>
     </a>
   </nav>
 </header>
 
-
-  <section class="container hero">
+<section class="container hero">
   <div>
     <h1>Viktoria Paltar Boyaları</h1>
-    <p><strong>Azərbaycanda ən geniş rəng çeşidinə sahib Viktoria paltar boyalarının onlayn vitrini.</strong></p>
-    <p>60 fərqli rəng • Hobbi və professional istifadə • Təhlükəsiz boyama</p>
+    <p><strong>Azərbaycanda ən geniş rəng çeşidi.</strong></p>
+    <p>60 fərqli rəng • Təhlükəsiz boyama</p>
     <a class="btn" href="/catalog.html">Rənglərə bax</a>
   </div>
 
-  <a href="/video.html">
-    <img src="images/30-siyah.jpg" alt="Viktoria paltar boyaları" />
-  </a>
+  <img src="images/30-siyah.jpg" alt="Viktoria paltar boyaları">
 </section>
 
-  <section class="container">
-   <h2>Çatdırılma xidməti</h2>
-
+<section class="container">
+  <h2>Çatdırılma xidməti</h2>
   <div class="card">
-    <h3>🔹 Azərpoçt ilə 📨</h3>
-    <p>Bakı şəhərinə 2-3 iş günü ərzində, digər şəhər və rayonlara 3-4 iş günü ərzində Azərpoçt ilə çatdırılır. Göndərildikdən sonra Azərpoçt izləmə kodunu da yazırıq. 🔍</p>
+    <p>Azərpoçt ilə Bakı və bölgələrə çatdırılma.</p>
   </div>
+</section>
 
 <section class="container">
   <h2>Haqqımızda</h2>
-
   <div class="card">
-    <h3>🔹 Haqqımızda</h3>
-    <p>Viktoria Boya, yüksək keyfiyyətli toz boyalar və tekstil məhsulları ilə
-      ev və sənaye istifadəsinə xidmət edən aparıcı şirkətlərdən biridir.</p>
-  </div>
-
-  <div class="card">
-    <h3>🔹 Məqsədimiz</h3>
-    <p>
-      Rəngi solmuş və istifadəyə yararsız kimi görünən paltarların ev şəraitində asan və təhlükəsiz şəkildə boyanaraq yenidən istifadəyə qaytarılmasını təmin etmək, həm ailə büdcəsinə qənaət etmək, həm də ekoloji baxımdan daha davamlı istehlak vərdişlərini təşviq etmək məqsədi daşıyır. Bu yanaşma paltarların ömrünü uzadır, israfın qarşısını alır və insanlara geyimlərini yenidən dəyərləndirmə imkanı yaradır. ♻️
-    </p>
+    <p>Viktoria Boya – keyfiyyətli paltar boyaları.</p>
   </div>
 </section>
 
-<!-- Instagram Footer -->
+<!-- TABLO STYLE CTA -->
+<section class="container">
+  <a href="https://tablo-style.vercel.app" class="btn-cta">
+    TABLO STYLE SƏHİFƏSİNƏ KEÇİN
+  </a>
+</section>
+
 <div class="instagram-footer">
   <a href="https://instagram.com/paltar_boyalari" target="_blank">
-    <img src="images/instagram.webp" alt="Instagram Logo">
+    <img src="images/instagram.webp" alt="Instagram">
     Instagram
   </a>
 </div>
