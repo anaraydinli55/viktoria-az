@@ -104,12 +104,12 @@ h2, h3 {
 }
 
 /* ========== CARDS ========== */
-/* Card içi arka planı açık mavi */
+/* Card içi arka planı koyu neon sarı */
 .card {
-  background-color: #d0f0ff; /* açık mavi */
+  background-color: #f2c200; /* neon sarı */
   border-radius: 12px;
   padding: 16px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   color: #000; /* metin rengi */
 }
 
@@ -213,9 +213,9 @@ footer {
 /* ===================== */
 /* CONTAINER ARKA PLAN */
 /* ===================== */
-/* Container dış arka planı orta gri */
+/* Container dış arka planı açık gri */
 .container {
-  background-color: #a0a0a0; /* orta gri */
+  background-color: #d3d3d3; /* açık gri */
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 12px;
