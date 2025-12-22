@@ -207,3 +207,21 @@ footer {
     padding: 20px 20px;
   }
 }
+
+/* Container arka planı için */
+.container {
+  background-color: #e0e0e0; /* orta gri ton */
+  padding: 20px;
+  border-radius: 12px;
+  margin: 20px auto;
+  max-width: 1200px;
+}
+
+/* Card arka planını da gri tonla eşleştirebiliriz veya biraz daha açık */
+.container .card {
+  background-color: #f5f5f5; /* biraz daha açık gri */
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
