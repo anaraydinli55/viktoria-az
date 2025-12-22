@@ -159,3 +159,46 @@ footer {
     font-size: 22px;
   }
 }
+
+/* ===============================
+   Sticky Neon Button
+   =============================== */
+.btn-neon-sticky {
+  position: sticky;
+  top: 10px;           /* ekranın yuxarısında məsafə */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  max-width: 400px;
+  padding: 14px 20px;
+  min-height: 50px;
+
+  background: #39ff14;  /* neon yaşıl */
+  color: #000000;
+  font-weight: 700;
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 12px;
+
+  box-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+  margin: 20px auto;
+  z-index: 1000;       /* scroll zamanı üstündə qalması üçün */
+}
+
+.btn-neon-sticky:hover {
+  box-shadow: 0 0 15px #39ff14, 0 0 30px #39ff14, 0 0 45px #39ff14;
+  transform: scale(1.05);
+  transition: all 0.2s ease-in-out;
+}
+
+/* Mobil Uyğunluq */
+@media (max-width: 768px) {
+  .btn-neon-sticky {
+    width: 95%;
+    font-size: 14px;
+    padding: 12px 16px;
+  }
+}
+
