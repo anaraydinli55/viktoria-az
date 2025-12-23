@@ -11,16 +11,20 @@
       background-color: #bfbfbf; /* orta gri */
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
-      font-size: 18px; /* masaüstü üçün oxunaqlı font */
+      font-size: 18px; 
       line-height: 1.7;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
     }
 
     .container {
       max-width: 900px;
-      margin: 40px auto;
+      margin: 40px auto 20px auto;
       background-color: #e6e6e6;
       padding: 30px;
       border-radius: 10px;
+      flex: 1;
     }
 
     h2 {
@@ -44,15 +48,15 @@
     /* Navigasiya buttonları */
     .nav {
       max-width: 900px;
-      margin: 20px auto 40px auto;
+      margin: 0 auto 40px auto;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between; /* Buttonlar eyni satırda */
       gap: 10px;
       flex-wrap: wrap;
     }
 
     .nav a {
-      flex: 1;
+      flex: 1; /* Eyni genişlikdə */
       text-align: center;
       padding: 12px 20px;
       background-color: #4a90e2;
@@ -79,7 +83,7 @@
         font-size: 16px;
       }
       .nav a {
-        flex: 100%;
+        flex: 1; /* mobil də tam genişlikdə */
       }
     }
   </style>
@@ -127,6 +131,6 @@
     <a href="https://viktoria-az.vercel.app">🏠 Ana səhifə</a>
     <a href="https://viktoria-az.vercel.app/bloq2.html">İrəli ➡</a>
   </div>
-  
+
 </body>
 </html>
