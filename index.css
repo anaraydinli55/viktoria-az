@@ -221,5 +221,9 @@ footer {
   border-radius: 12px;
 }
 
+.blog-hero img {
+  max-height: 360px;
+  object-fit: contain;
+}
 
 
