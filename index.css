@@ -216,6 +216,7 @@ footer {
 /* Container dış arka planı açık gri */
 .container {
   background-color: #d3d3d3; /* açık gri */
+  border: 2px solid #d0a3ff; /* Nazik bənövşəyi çərçivə */
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 12px;
@@ -227,7 +228,7 @@ footer {
 }
 
 .container.goal-extra {
-  background-color: #fff7ff; /* Yumşaq fon rəngi */
+  background-color: #d3d3d3; /* açık gri */
   border: 2px solid #d0a3ff; /* Nazik bənövşəyi çərçivə */
   padding: 20px;
   border-radius: 10px;
