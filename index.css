@@ -247,3 +247,13 @@ footer {
   border-radius: 8px;
 }
 
+/* Yalnız SEO bölməsini mərkəzləşdirmək */
+.seo-text-wrapper {
+  display: flex;
+  justify-content: center; /* üfüqi mərkəz */
+}
+
+.seo-text {
+  text-align: center; /* başlıq və siyahı mərkəzləşir */
+  max-width: 600px;  /* mobil üçün oxunaqlı en */
+}
