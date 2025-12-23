@@ -226,4 +226,23 @@ footer {
   object-fit: contain;
 }
 
+.container.goal-extra {
+  background-color: #fff7ff; /* Yumşaq fon rəngi */
+  border: 2px solid #d0a3ff; /* Nazik bənövşəyi çərçivə */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.container.goal-extra h3 {
+  color: #7a3fff;
+  margin-bottom: 15px;
+}
+
+.container.goal-extra img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
 
