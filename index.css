@@ -283,3 +283,14 @@ footer {
 }
 
 
+/* Button-un yuxarı və aşağısına boşluq */
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0; /* yuxarı + aşağı boşluq */
+}
+
+/* Altdakı container yuxarıdan nəfəs alsın */
+.container + .container {
+  margin-top: 30px;
+}
