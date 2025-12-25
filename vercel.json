@@ -1,5 +1,20 @@
 {
   "routes": [
-    { "src": "/(.*)", "dest": "/$1" }
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/sprey1",
+      "dest": "/sprey1.html"
+    },
+    {
+      "src": "/(.*\\.html)",
+      "dest": "/$1"
+    },
+    {
+      "src": "/(.*\\.(jpg|png|mp4))",
+      "dest": "/$1"
+    }
   ]
 }
