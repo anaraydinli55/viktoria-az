@@ -251,3 +251,26 @@ footer {
 .seo-text-wrapper h2 {
   text-align: center;
 }
+
+  <!-- Yeni button -->
+  <a href="https://viktoria-az.vercel.app/sprey1.html" class="mor-button">RƏNGLƏRƏ BAX</a>
+</section>
+
+<!-- Stil əlavə et -->
+<style>
+  .mor-button {
+    display: inline-block;
+    background-color: #8000ff; /* mor */
+    color: white;
+    padding: 10px 20px;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+  }
+
+  .mor-button:hover {
+    background-color: #b366ff;
+  }
+</style>
