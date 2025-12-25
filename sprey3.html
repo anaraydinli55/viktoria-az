@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <title>Sprey 100 ml</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    body {
+      margin: 0;
+      background: #d3d3d3;
+      font-family: Arial, sans-serif;
+      padding: 4mm;
+    }
+
+    /* Ana container */
+    .container {
+      position: relative;
+      max-width: 100%;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    /* Görsel */
+    .container img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain; /* KIRPMA YOK */
+    }
+
+    /* Alt yazı */
+    .label {
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 10px 0;
+      color: #000;
+    }
+
+    /* Buton alanı (container üstüne oturur) */
+    .nav {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .nav a {
+      background: purple;
+      color: #fff;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <img src="images/sprey-03.jpg" alt="Sprey">
+    <div class="label">100 ml</div>
+
+    <div class="nav">
+      <a href="index.html">⬅ Geri</a>
+      <a href="index.html">🏠 Ana səhifə</a>
+      <a href="sprey4.html">İrəli ➡</a>
+    </div>
+  </div>
+
+</body>
+</html>
