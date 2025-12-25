@@ -1,20 +1,17 @@
 {
   "routes": [
-    {
-      "src": "/",
-      "dest": "/index.html"
-    },
-    {
-      "src": "/sprey1",
-      "dest": "/sprey1.html"
-    },
-    {
-      "src": "/(.*\\.html)",
-      "dest": "/$1"
-    },
-    {
-      "src": "/(.*\\.(jpg|png|mp4|jpeg|webp|gif|svg))",
-      "dest": "/$1"
-    }
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/sprey1", "dest": "/sprey1.html" },
+    { "src": "/sprey2", "dest": "/sprey2.html" },
+    { "src": "/sprey3", "dest": "/sprey3.html" },
+    { "src": "/fiske", "dest": "/fiske.html" },
+    { "src": "/Kataloq", "dest": "/catalog.html" },
+        { "src": "/bloq11", "dest": "/bloq1.html" },
+        { "src": "/bloq2", "dest": "/bloq2.html" },
+        { "src": "/bloq3", "dest": "/bloq3.html" },
+        { "src": "/bloq4", "dest": "/bloq4.html" },
+    { "src": "/boyama qaydalari", "dest": "/boyama-qaydalari.html" },
+    { "src": "/(.*\\.html)", "dest": "/$1" },
+    { "src": "/(.*\\.(jpg|png|mp4|jpeg|webp|gif|svg))", "dest": "/$1" }
   ]
 }
