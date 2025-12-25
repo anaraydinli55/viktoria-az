@@ -1,94 +1,76 @@
-
 <!DOCTYPE html>
 <html lang="az">
 <head>
   <meta charset="UTF-8">
-  <title>Sprey boya</title>
+  <title>Sprey 100 ml</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* ===== GENEL ===== */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
       background: #d3d3d3;
       font-family: Arial, sans-serif;
-      padding-left: 4mm;
-      padding-right: 4mm;
+      padding: 4mm;
     }
 
-    /* ===== CONTAINER ===== */
-    .mobile-container {
+    /* Ana container */
+    .container {
       position: relative;
-      width: 100%;
       max-width: 100%;
-      background: #ffffff;
+      background: #fff;
       border-radius: 12px;
       overflow: hidden;
-      margin-top: 20px;
-      padding-bottom: 40px; /* butonlar için yer */
     }
 
-    /* ===== GÖRSEL ===== */
-    .mobile-container img {
+    /* Görsel */
+    .container img {
       width: 100%;
       height: auto;
       display: block;
-      object-fit: contain; /* kırpma yok */
+      object-fit: contain; /* KIRPMA YOK */
     }
 
-    /* ===== ALT YAZI ===== */
+    /* Alt yazı */
     .label {
       text-align: center;
       font-size: 18px;
       font-weight: bold;
+      padding: 10px 0;
       color: #000;
-      margin-top: 10px;
     }
 
-    /* ===== BUTONLAR (CONTAINER ÜZERİNDE) ===== */
-    .nav-overlay {
+    /* Buton alanı (container üstüne oturur) */
+    .nav {
       position: absolute;
-      bottom: 8px;
+      bottom: 10px;
       left: 50%;
       transform: translateX(-50%);
       display: flex;
       gap: 8px;
-      z-index: 10;
     }
 
-    .nav-overlay a {
-      background: #6a0dad; /* mor */
+    .nav a {
+      background: purple;
       color: #fff;
       text-decoration: none;
-      padding: 8px 14px;
+      padding: 8px 12px;
       border-radius: 8px;
       font-size: 14px;
-      font-weight: bold;
       white-space: nowrap;
-    }
-
-    .nav-overlay a:active {
-      opacity: 0.85;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="mobile-container">
-    <img src="images/sprey1.jpg" alt="viktoria sprey boya">
-
+  <div class="container">
+    <img src="images/sprey-01.jpg" alt="Sprey">
     <div class="label">100 ml</div>
 
-    <div class="nav-overlay">
-      <a href="#">⬅ Geri</a>
-      <a href="#">🏠 Ana səhifə</a>
-      <a href="#">İrəli ➡</a>
+    <div class="nav">
+      <a href="index.html">⬅ Geri</a>
+      <a href="index.html">🏠 Ana səhifə</a>
+      <a href="sprey2.html">İrəli ➡</a>
     </div>
   </div>
 
