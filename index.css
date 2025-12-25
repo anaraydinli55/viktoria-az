@@ -252,3 +252,34 @@ footer {
   text-align: center;
 }
 
+.button-container {
+  text-align: center;       /* Button ekranın ortasında */
+  margin: 20px 0;           /* Container arası boşluq */
+}
+
+.mor-button {
+  display: inline-block;       /* Button görünüşü */
+  background-color: #8000ff;   /* Mor rəng */
+  color: white;
+  padding: 12px 24px;
+  text-decoration: none;       /* Alt xətini silir */
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.mor-button:hover {
+  background-color: #b366ff;   /* Hover rəngi */
+}
+
+/* Mobil uyumlu (ekran 600px-dən kiçik olanda button bir az böyük və oxunaqlı olsun) */
+@media (max-width: 600px) {
+  .mor-button {
+    width: 80%;          /* Button mobil ekranlarda geniş olsun */
+    font-size: 18px;     /* Yazı ölçüsü artır */
+    padding: 14px 0;
+  }
+}
+
+
