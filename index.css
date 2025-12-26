@@ -40,12 +40,6 @@ nav a {
   fill: #25D366;
 }
 
-/* ========== LAYOUT ========== */
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
-}
 
 /* ========== HERO ========== */
 .hero {
@@ -210,22 +204,6 @@ footer {
   }
 }
 
-/* ===================== */
-/* CONTAINER ARKA PLAN */
-/* ===================== */
-/* Container dış arka planı açık gri */
-.container {
-  background-color: #d3d3d3; /* açık gri */
-  border: 2px solid #d0a3ff; /* Nazik bənövşəyi çərçivə */
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-}
-
-.blog-hero img {
-  max-height: 360px;
-  object-fit: contain;
-}
 
 .container.goal-extra {
   background-color: #d3d3d3; /* açık gri */
@@ -296,13 +274,6 @@ footer {
 }
 
 
-/* ==== ÜMUMİ CONTAINER (desktop-da böyüməsin) ==== */
-.container {
-  max-width: 1100px;   /* browser üçün normal ölçü */
-  margin: 0 auto;      /* mərkəzdə */
-  padding: 20px;
-}
-
 /* ==== ŞƏKİLLƏR RESPONSIVE QALSIN ==== */
 .container img {
   max-width: 100%;
@@ -330,7 +301,7 @@ footer {
   }
 }
 
-/* ==== CONTAINER FIX (SON HAL) ==== */
+/* ==== CONTAINER (TƏK və DÜZGÜN) ==== */
 .container {
   max-width: 1100px;
   margin: 20px auto;
@@ -338,20 +309,12 @@ footer {
   background-color: #d3d3d3;
   border: 2px solid #d0a3ff;
   border-radius: 12px;
-  box-sizing: border-box;
+  box-sizing: border-box; /* 🔑 ƏN VACİB */
 }
 
-
-/* ==== BLOG ŞƏKİL DAŞMA FIX ==== */
+/* ==== ŞƏKİLLƏR ==== */
 .container img {
   max-width: 100%;
   height: auto;
   display: block;
-  object-fit: contain;
-}
-
-/* Hero içində olan blog şəkilləri normal ölçüdə qalsın */
-.hero img {
-  max-width: 100%;
-  height: auto;
 }
