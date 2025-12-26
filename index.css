@@ -350,3 +350,8 @@ footer {
   object-fit: contain;
 }
 
+/* Hero içində olan blog şəkilləri normal ölçüdə qalsın */
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
