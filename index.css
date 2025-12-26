@@ -318,3 +318,35 @@ footer {
   height: auto;
   display: block;
 }
+
+/* ==== BLOQ ŞƏKİL + CONTAINER FIX ==== */
+.container {
+  max-width: 1100px;     /* Container-in maksimal eni */
+  margin: 20px auto;     /* mərkəz və yuxarı/aşağı boşluq */
+  padding: 20px;          /* iç boşluq */
+  background-color: #d3d3d3;
+  border: 2px solid #d0a3ff;
+  border-radius: 12px;
+  box-sizing: border-box; /* padding + border daxil edilsin */
+  overflow: hidden;       /* margin collapse və şəkil daşmalarını kəsir */
+}
+
+.container img {
+  display: block;         /* inline default problemi aradan qaldırır */
+  max-width: 100%;        /* container-dən kənara çıxmasın */
+  height: auto;
+  margin: 0;              /* margin collapse problemini aradan qaldırır */
+}
+
+.blog-image {
+  width: 100%;
+  margin: 0;
+}
+
+.blog-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+
