@@ -350,3 +350,30 @@ footer {
   margin: 0;
 }
 
+/* Mor button üslubu (əgər mövcud .mor-button varsa, əlavə etməyə ehtiyac yoxdur) */
+.mor-button {
+  display: inline-block;
+  background-color: #8000ff;
+  color: #fff;
+  padding: 12px 24px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  text-align: center;
+  margin: 20px auto; /* Üst-alt boşluq və mərkəzləşdirmə */
+}
+
+.mor-button:hover {
+  background-color: #b366ff;
+}
+
+/* Mobil uyumlu */
+@media (max-width: 600px) {
+  .mor-button {
+    width: 80%;
+    font-size: 18px;
+    padding: 14px 0;
+  }
+}
