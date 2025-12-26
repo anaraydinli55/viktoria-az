@@ -329,3 +329,24 @@ footer {
     padding: 20px;
   }
 }
+
+/* ==== CONTAINER FIX (SON HAL) ==== */
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #d3d3d3;
+  border: 2px solid #d0a3ff;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+
+/* ==== BLOG ŞƏKİL DAŞMA FIX ==== */
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
