@@ -1,45 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-<url>
-  <loc>https://viktoria-az.store/</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/</loc>
+    <priority>1.0</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/catalog.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/catalog.html</loc>
+    <priority>0.9</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/istifade-qaydalari.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/istifade-qaydalari.html</loc>
+    <priority>0.4</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/bloq1.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/bloq1.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/bloq2.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/bloq2.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/bloq3.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/bloq3.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/bloq4.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/bloq4.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/bloq5.html</loc>
-</url>
+  <url>
+    <loc>https://viktoria-az.store/bloq5.html</loc>
+    <priority>0.6</priority>
+  </url>
 
-<url>
-  <loc>https://viktoria-az.store/30-siyah.jpg</loc>
-</url>
-
-<url>
-  <loc>https://viktoria-az.store/51-lacivert-koyu.jpg</loc>
-</url>
-
-<url>
-  <loc>https://viktoria-az.store/41-haki.jpg</loc>
-</url>
-
+</urlset>
