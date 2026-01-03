@@ -378,20 +378,40 @@ footer {
   }
 }
 
+/* ===== BLOG NAVIGATION (Geri / Ana səhifə / İrəli) ===== */
+
 .nav {
-  margin-top: 40px;
+  max-width: 900px;
+  margin: 40px auto 60px auto;
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .nav a {
   flex: 1;
   text-align: center;
-  padding: 12px;
-  background: #4a90e2;
-  color: #fff;
+  padding: 14px 20px;
+  background-color: #4a90e2;
+  color: #ffffff;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 16px;
+  transition: background-color 0.25s ease, transform 0.15s ease;
 }
+
+.nav a:hover {
+  background-color: #357abd;
+  transform: translateY(-2px);
+}
+
+/* Mobil uyğunluq */
+@media (max-width: 768px) {
+  .nav a {
+    font-size: 15px;
+    padding: 14px 10px;
+  }
+}
+
