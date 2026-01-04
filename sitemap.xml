@@ -46,4 +46,34 @@
     <priority>0.6</priority>
   </url>
 
+    <url>
+    <loc>https://viktoria-az.store/sprey1.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://viktoria-az.store/30-siyah.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://viktoria-az.store/51-lacivert-koyu.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://viktoria-az.store/6-atresi-pembe.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://viktoria-az.store/19-kahve.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+      <url>
+    <loc>https://viktoria-az.store/pitturafelice.html</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
