@@ -2,6 +2,12 @@
   "redirects": [
     {
       "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "viktoria-az.store"
+        }
+      ],
       "destination": "https://www.viktoria-az.store/$1",
       "permanent": true
     }
