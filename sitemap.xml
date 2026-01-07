@@ -86,4 +86,14 @@
     <priority>0.6</priority>
   </url>
 
+    <url>
+    <loc>https://www.viktoria-az.store/qara-paltar-boyasi.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/tund-paltar-boyasi.html</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
