@@ -96,18 +96,28 @@
     <priority>0.6</priority>
   </url>
 
-    <url>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<url>
+  <loc>https://www.viktoria-az.store/</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.viktoria-az.store/polis-formasi-boyasi.html</loc>
+  <priority>0.6</priority>
+</url>
+
+<url>
+  <loc>https://www.viktoria-az.store/uniforma-boyasi.html</loc>
+  <priority>0.6</priority>
+</url>
+  
+<url>
     <loc>https://www.viktoria-az.store/paltarlarin-evde-renglenmesi.html</loc>
-    <priority>0.6</priority>
-  </url>
-
-    <url>
-    <loc>https://www.viktoria-az.store/uniforma-boyasi.html</loc>
-    <priority>0.6</priority>
-  </url>
-
-  <url>
-    <loc>https://www.viktoria-az.store/polis-formasi-boyasi.html</loc>
     <priority>0.6</priority>
   </url>
 
