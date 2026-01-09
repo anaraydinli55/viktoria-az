@@ -415,3 +415,17 @@ footer {
   }
 }
 
+<style>
+.seo-hidden-links {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.seo-hidden-links a {
+  display: block;
+  font-size: 14px;
+}
+</style>
