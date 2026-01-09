@@ -429,3 +429,23 @@ footer {
   font-size: 14px;
 }
 </style>
+
+.nav a {
+  background-color: #4CAF50;  /* Yaşıl arxa fon */
+  border: none;  /* Çərçivəsiz */
+  color: white;  /* Mətni ağ edir */
+  padding: 10px 20px;  /* İç boşluqlar */
+  text-align: center;  /* Mərkəzləşdirir */
+  text-decoration: none;  /* Alt xətti silir */
+  display: inline-block;  /* Düzgün yerleşmə */
+  font-size: 16px;  /* Mətni daha böyük edir */
+  border-radius: 5px;  /* Küncləri yuvarlaq edir */
+  cursor: pointer;  /* Üzərinə gələndə siçan işarəsi dəyişir */
+  transition: background-color 0.3s ease;  /* Arxa fon dəyişəndə effekt */
+  margin: 10px;  /* Buttonlar arasına boşluq qoyur */
+}
+
+.nav a:hover {
+  background-color: #45a049;  /* Üzərinə gəldikdə arxa fon dəyişir */
+}
+
