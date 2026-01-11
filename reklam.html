@@ -6,15 +6,37 @@
   <title>Viktoria parça və paltar boyaları</title>
 
   <style>
+    /* Ümumi tərtibat */
     body {
       margin: 0;
-      background: #e6e6e6;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.7;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
       color: #111;
     }
 
-    /* ================== REKLAM / VIDEO ================== */
+    /* HEADER */
+    header {
+      background: #6a0dad;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #fff;
+      margin: 0;
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px 15px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* VIDEO */
     .video-wrapper {
       width: 100%;
       display: flex;
@@ -40,76 +62,96 @@
       border-radius: 8px;
     }
 
-    /* ================== SEO MƏTN BLOKU ================== */
-    .cins-seo-box {
-      max-width: 900px;
-      margin: 20px auto 40px auto;
-      background: #f2f2f2;
-      padding: 28px;
-      border-radius: 10px;
-      box-sizing: border-box;
-    }
-
-    .cins-seo-box h1 {
-      font-size: 26px;
-      margin-top: 0;
-      margin-bottom: 18px;
-    }
-
-    .cins-seo-box h2 {
-      font-size: 22px;
+    /* SEO MƏTN BLOKU */
+    h2, h3 {
+      color: #333;
       margin-top: 26px;
       margin-bottom: 12px;
     }
 
-    .cins-seo-box p {
-      font-size: 18px;
+    p {
+      line-height: 1.7;
       margin-bottom: 16px;
+      font-size: 18px;
     }
 
-    .cins-seo-box ul {
+    ul {
       margin-left: 20px;
       font-size: 18px;
     }
 
-    .cins-seo-box li {
+    li {
       margin-bottom: 10px;
     }
 
-    /* ================== MOBIL ================== */
+    /* DÜYMƏLƏR */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 30px 0;
+    }
+
+    .mor-button {
+      background: #004080;
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+
+    .mor-button:hover {
+      background: #00264d;
+      transform: translateY(-2px);
+    }
+
+    /* MOBIL UYĞUNLUQ */
     @media (max-width: 768px) {
-      .cins-seo-box {
-        padding: 20px;
+      .container {
+        padding: 15px 10px;
       }
 
-      .cins-seo-box h1 {
-        font-size: 22px;
-      }
-
-      .cins-seo-box h2 {
-        font-size: 20px;
-      }
-
-      .cins-seo-box p,
-      .cins-seo-box ul {
+      p, ul, li {
         font-size: 16px;
       }
+
+      .mor-button {
+        font-size: 14px;
+        padding: 10px 16px;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background: #e6e6e6;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- ================== REKLAM (ƏN BAŞDA) ================== -->
+<header>
+  <h1>Viktoria parça və paltar boyaları</h1>
+</header>
+
+<div class="container">
+
+  <!-- VIDEO -->
   <div class="video-wrapper">
     <div class="video-container">
       <video src="images/reklam.mp4" autoplay muted loop playsinline></video>
     </div>
   </div>
 
-  <!-- ================== SEO MƏTN ================== -->
-  <div class="cins-seo-box">
-
+  <!-- SEO MƏTN -->
+  <main>
     <h1>Qara və Mavi Cins Boyama – Azərbaycanda Geyim və Forma Üçün Effektiv Həll</h1>
 
     <p>
@@ -159,12 +201,12 @@
 
     <!-- BUTTONS -->
     <div class="button-container">
-      <a href="https://viktoria-az.store/paltarlarin-evde-renglenmesi.html" class="mor-button">⬅ Geri</a>
+      <a href="https://viktoria-az.store/qara-paltar-boyasi.html" class="mor-button">⬅ Geri</a>
       <a href="https://viktoria-az.store" class="mor-button">🏠 Ana səhifə</a>
-      <a href="https://viktoria-az.store/uniforma-boyasi.html" class="mor-button">İrəli ➡</a>
+      <a href="https://viktoria-az.store/paltarlarin-evde-renglenmesi.html" class="mor-button">İrəli ➡</a>
     </div>
-
   </main>
+
 </div>
 
 <footer>
