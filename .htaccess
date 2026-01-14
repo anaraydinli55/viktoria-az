@@ -5,23 +5,18 @@
 RewriteEngine On
 
 # -------------------------------------
-# 1) http -> https
+# 1) http OR non-www  ->  https + www
 # -------------------------------------
-RewriteCond %{HTTPS} off
-RewriteRule ^ https://www.viktoria-az.store%{REQUEST_URI} [L,R=301]
-
-# -------------------------------------
-# 2) non-www -> www
-# -------------------------------------
+RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\.viktoria-az\.store$ [NC]
 RewriteRule ^ https://www.viktoria-az.store%{REQUEST_URI} [L,R=301]
 
 # -------------------------------------
-# 3) Prevent directory listing (security)
+# 2) Prevent directory listing (security)
 # -------------------------------------
 Options -Indexes
 
 # -------------------------------------
-# 4) Default charset
+# 3) Default charset
 # -------------------------------------
 AddDefaultCharset UTF-8
