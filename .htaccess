@@ -1,22 +1,16 @@
 # =====================================
 # VIKTORIA-AZ.STORE - MAIN .HTACCESS
+# Redirect YOK (Vercel yönetiyor)
 # =====================================
 
 RewriteEngine On
 
 # -------------------------------------
-# 1) http OR non-www  ->  https + www
-# -------------------------------------
-RewriteCond %{HTTPS} off [OR]
-RewriteCond %{HTTP_HOST} !^www\.viktoria-az\.store$ [NC]
-RewriteRule ^ https://www.viktoria-az.store%{REQUEST_URI} [L,R=301]
-
-# -------------------------------------
-# 2) Prevent directory listing (security)
+# Security: dizin listelemeyi kapat
 # -------------------------------------
 Options -Indexes
 
 # -------------------------------------
-# 3) Default charset
+# Charset
 # -------------------------------------
 AddDefaultCharset UTF-8
