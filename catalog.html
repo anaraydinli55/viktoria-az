@@ -77,94 +77,92 @@
 
 <script>
 const colors = [
-    {file:"1-pembe.jpg", color:"Pəmbə", price:"5 AZN"},
-    {file:"2-kavunici.jpg", color:"Yemiş rəngi", price:"5 AZN"},
-    {file:"3-yavruagzi.jpg", color:"Yavruağzı", price:"5 AZN"},
-    {file:"4-koyu-pembe.jpg", color:"Tünd Pəmbə", price:"5 AZN"},
-    {file:"5-al.jpg", color:"Al qırmızı", price:"5 AZN"},
-    {file:"6-atresi-pembe.jpg", color:"Atəşi Pəmbə", price:"5 AZN"},
-    {file:"7-nar-cicegi.jpg", color:"Nar Çiçəyi", price:"5 AZN"},
-    {file:"8-kirmizi.jpg", color:"Qırmızı", price:"5 AZN"},
-    {file:"9-koyu-kirmizi.jpg", color:"Tünd Qırmızı", price:"5 AZN"},
-    {file:"10-visne-curugu.jpg", color:"Vişnə Çürüyü", price:"5 AZN"},
-    {file:"11-sari.jpg", color:"Sarı", price:"5 AZN"},
-    {file:"12-turuncu.jpg", color:"Narıncı", price:"5 AZN"},
-    {file:"13-gul-kurusu.jpg", color:"Gül Kurusu", price:"5 AZN"},
-    {file:"14-bej-acik.jpg", color:"Açıq Bej", price:"4 AZN"},
-    {file:"15-bej-koyu.jpg", color:"Tünd Bej", price:"5 AZN"},
-    {file:"16-tutun-rengi.jpg", color:"Tütün Rəngi", price:"5 AZN"},
-    {file:"17-acik-kahve.jpg", color:"Açıq Qəhvəyi", price:"5 AZN"},
-    {file:"18-kahve-orta.jpg", color:"Orta Qəhvəyi", price:"5 AZN"},
-    {file:"19-kahve.jpg", color:"Qəhvəyi", price:"5 AZN"},
-    {file:"20-kahve-koyu.jpg", color:"Tünd Qəhvəyi", price:"5 AZN"},
-    {file:"21-fes-rengi.jpg", color:"Fəs Rəngi", price:"5 AZN"},
-    {file:"22-guvez.jpg", color:"Güvəz", price:"5 AZN"},
-    {file:"23-acik-mavi.jpg", color:"Açıq Mavi", price:"5 AZN"},
-    {file:"24-mavi-orta.jpg", color:"Orta Mavi", price:"5 AZN"},
-    {file:"25-mavi-koyu.jpg", color:"Tünd Mavi", price:"5 AZN"},
-    {file:"26-mor-acik.jpg", color:"Açıq Mor", price:"5 AZN"},
-    {file:"27-mor-koyu.jpg", color:"Tünd Mor", price:"5 AZN"},
-    {file:"28-lacivert-acik.jpg", color:"Açıq göy", price:"5 AZN"},
-    {file:"29-lacivert-orta.jpg", color:"Orta göy", price:"5 AZN"},
-    {file:"30-siyah.jpg", color:"Qara", price:"5 AZN"},
-    {file:"31-eflatun.jpg", color:"Əflatun", price:"5 AZN"},
-    {file:"32-bej.jpg", color:"Bej", price:"5 AZN"},
-    {file:"33-kursuni-acik.jpg", color:"Açıq boz", price:"5 AZN"},
-    {file:"34-kursuni-koyu.jpg", color:"Tünd boz", price:"5 AZN"},
-    {file:"35-cam-gobegi.jpg", color:"Şam Göbəyi", price:"5 AZN"},
-    {file:"36-filizi-acik.jpg", color:"Açıq Filizi", price:"5 AZN"},
-    {file:"37-filizi-koyu.jpg", color:"Tünd Filizi", price:"5 AZN"},
-    {file:"38-yesil.jpg", color:"Yaşıl", price:"5 AZN"},
-    {file:"39-koyu-yesil.jpg", color:"Tünd Yaşıl", price:"5 AZN"},
-    {file:"40-nefti.jpg", color:"Nefti", price:"5 AZN"},
-    {file:"41-haki.jpg", color:"xaki", price:"5 AZN"},
-    {file:"42-kanarya.jpg", color:"Kanarya", price:"5 AZN"},
-    {file:"43-sarabi.jpg", color:"Şərabi", price:"5 AZN"},
-    {file:"44-portakal.jpg", color:"Portağal", price:"5 AZN"},
-    {file:"45-zumrut.jpg", color:"Zümrüd", price:"5 AZN"},
-    {file:"46-petrol.jpg", color:"Petrol", price:"5 AZN"},
-    {file:"47-zeytini.jpg", color:"Zeytini", price:"5 AZN"},
-    {file:"48-saksonya.jpg", color:"Saksonya", price:"5 AZN"},
-    {file:"49-civit-mavi.jpg", color:"Çivit Mavi", price:"5 AZN"},
-    {file:"50-m-lacivert.jpg", color:"Mor göy", price:"5 AZN"},
-    {file:"51-lacivert-koyu.jpg", color:"Tünd göy", price:"5 AZN"},
-    {file:"52-yanik-kahve.jpg", color:"Yanıq Qəhvəyi", price:"5 AZN"},
-    {file:"53-sarabi-koyu.jpg", color:"Tünd Şərabi", price:"5 AZN"},
-    {file:"54-eflatun-koyu.jpg", color:"Tünd əflatun", price:"5 AZN"},
-    {file:"55-menekse.jpg", color:"Bənövşə", price:"5 AZN"},
-    {file:"56-altin-sari.jpg", color:"Qızılı Sarı", price:"5 AZN"},
-    {file:"57-k-sari.jpg", color:"K Sarı", price:"5 AZN"},
-    {file:"60-boncuk-mavi.jpg", color:"Boncuq Mavi", price:"5 AZN"},
-    {file:"61-blujin-mavisi.jpg", color:"Cins Mavisi", price:"5 AZN"},
-    {file:"62-fiske.jpg", color:"Sabitləşdirici", price:"5 AZN", link:"/fiske.html"}
+  {file:"1-pembe.jpg", color:"Pəmbə", price:"5 AZN"},
+  {file:"2-kavunici.jpg", color:"Yemiş rəngi", price:"5 AZN"},
+  {file:"3-yavruagzi.jpg", color:"Yavruağzı", price:"5 AZN"},
+  {file:"4-koyu-pembe.jpg", color:"Tünd Pəmbə", price:"5 AZN"},
+  {file:"5-al.jpg", color:"Al qırmızı", price:"5 AZN"},
+  {file:"6-atresi-pembe.jpg", color:"Atəşi Pəmbə", price:"5 AZN"},
+  {file:"7-nar-cicegi.jpg", color:"Nar Çiçəyi", price:"5 AZN"},
+  {file:"8-kirmizi.jpg", color:"Qırmızı", price:"5 AZN"},
+  {file:"9-koyu-kirmizi.jpg", color:"Tünd Qırmızı", price:"5 AZN"},
+  {file:"10-visne-curugu.jpg", color:"Vişnə Çürüyü", price:"5 AZN"},
+  {file:"11-sari.jpg", color:"Sarı", price:"5 AZN"},
+  {file:"12-turuncu.jpg", color:"Narıncı", price:"5 AZN"},
+  {file:"13-gul-kurusu.jpg", color:"Gül Kurusu", price:"5 AZN"},
+  {file:"14-bej-acik.jpg", color:"Açıq Bej", price:"4 AZN"},
+  {file:"15-bej-koyu.jpg", color:"Tünd Bej", price:"5 AZN"},
+  {file:"16-tutun-rengi.jpg", color:"Tütün Rəngi", price:"5 AZN"},
+  {file:"17-acik-kahve.jpg", color:"Açıq Qəhvəyi", price:"5 AZN"},
+  {file:"18-kahve-orta.jpg", color:"Orta Qəhvəyi", price:"5 AZN"},
+  {file:"19-kahve.jpg", color:"Qəhvəyi", price:"5 AZN"},
+  {file:"20-kahve-koyu.jpg", color:"Tünd Qəhvəyi", price:"5 AZN"},
+  {file:"21-fes-rengi.jpg", color:"Fəs Rəngi", price:"5 AZN"},
+  {file:"22-guvez.jpg", color:"Güvəz", price:"5 AZN"},
+  {file:"23-acik-mavi.jpg", color:"Açıq Mavi", price:"5 AZN"},
+  {file:"24-mavi-orta.jpg", color:"Orta Mavi", price:"5 AZN"},
+  {file:"25-mavi-koyu.jpg", color:"Tünd Mavi", price:"5 AZN"},
+  {file:"26-mor-acik.jpg", color:"Açıq Mor", price:"5 AZN"},
+  {file:"27-mor-koyu.jpg", color:"Tünd Mor", price:"5 AZN"},
+  {file:"28-lacivert-acik.jpg", color:"Açıq göy", price:"5 AZN"},
+  {file:"29-lacivert-orta.jpg", color:"Orta göy", price:"5 AZN"},
+  {file:"30-siyah.jpg", color:"Qara", price:"5 AZN"},
+  {file:"31-eflatun.jpg", color:"Əflatun", price:"5 AZN"},
+  {file:"32-bej.jpg", color:"Bej", price:"5 AZN"},
+  {file:"33-kursuni-acik.jpg", color:"Açıq boz", price:"5 AZN"},
+  {file:"34-kursuni-koyu.jpg", color:"Tünd boz", price:"5 AZN"},
+  {file:"35-cam-gobegi.jpg", color:"Şam Göbəyi", price:"5 AZN"},
+  {file:"36-filizi-acik.jpg", color:"Açıq Filizi", price:"5 AZN"},
+  {file:"37-filizi-koyu.jpg", color:"Tünd Filizi", price:"5 AZN"},
+  {file:"38-yesil.jpg", color:"Yaşıl", price:"5 AZN"},
+  {file:"39-koyu-yesil.jpg", color:"Tünd Yaşıl", price:"5 AZN"},
+  {file:"40-nefti.jpg", color:"Nefti", price:"5 AZN"},
+  {file:"41-haki.jpg", color:"Xaki", price:"5 AZN"},
+  {file:"42-kanarya.jpg", color:"Kanarya", price:"5 AZN"},
+  {file:"43-sarabi.jpg", color:"Şərabi", price:"5 AZN"},
+  {file:"44-portakal.jpg", color:"Portağal", price:"5 AZN"},
+  {file:"45-zumrut.jpg", color:"Zümrüd", price:"5 AZN"},
+  {file:"46-petrol.jpg", color:"Petrol", price:"5 AZN"},
+  {file:"47-zeytini.jpg", color:"Zeytini", price:"5 AZN"},
+  {file:"48-saksonya.jpg", color:"Saksonya", price:"5 AZN"},
+  {file:"49-civit-mavi.jpg", color:"Çivit Mavi", price:"5 AZN"},
+  {file:"50-m-lacivert.jpg", color:"Mor göy", price:"5 AZN"},
+  {file:"51-lacivert-koyu.jpg", color:"Tünd göy", price:"5 AZN"},
+  {file:"52-yanik-kahve.jpg", color:"Yanıq Qəhvəyi", price:"5 AZN"},
+  {file:"53-sarabi-koyu.jpg", color:"Tünd Şərabi", price:"5 AZN"},
+  {file:"54-eflatun-koyu.jpg", color:"Tünd Əflatun", price:"5 AZN"},
+  {file:"55-menekse.jpg", color:"Bənövşə", price:"5 AZN"},
+  {file:"56-altin-sari.jpg", color:"Qızılı Sarı", price:"5 AZN"},
+  {file:"57-k-sari.jpg", color:"K Sarı", price:"5 AZN"},
+  {file:"60-boncuk-mavi.jpg", color:"Boncuq Mavi", price:"5 AZN"},
+  {file:"61-blujin-mavisi.jpg", color:"Cins Mavisi", price:"5 AZN"},
+  {file:"62-fiske.jpg", color:"Sabitləşdirici", price:"5 AZN", link:"/fiske.html"}
 ];
 
+const grid = document.getElementById("colorGrid");
 
-  const grid = document.getElementById("colorGrid");
+colors.forEach((c, index) => {
+  const card = document.createElement("div");
+  card.className = "card";
 
-  colors.forEach((c, index) => {
-    const card = document.createElement("div");
-    card.className = "card";
+  const img = document.createElement("img");
+  img.src = `images/${c.file}`;
+  img.alt = c.color;
 
-    const img = document.createElement("img");
-    img.src = `images/${c.file}`;
-    img.alt = c.name;
+  if (index < 59) {
+    img.onclick = () => window.location.href = "/boyama-qaydalari.html";
+  } else if (c.link) {
+    img.onclick = () => window.location.href = c.link;
+  }
 
-    // 1-dən 59-a qədər boyama-qaydalari.html, 62-fiske isə fiske.html
-    if (index < 59) {
-      img.onclick = () => window.location.href = "/boyama-qaydalari.html";
-    } else if (c.link) {
-      img.onclick = () => window.location.href = c.link;
-    }
+  const price = document.createElement("p");
+  price.className = "price";
+  price.textContent = `${c.color} – ${c.price}`;
 
-    const price = document.createElement("p");
-    price.className = "price";
-    price.textContent = c.name;
-
-    card.appendChild(img);
-    card.appendChild(price);
-    grid.appendChild(card);
-  });
+  card.appendChild(img);
+  card.appendChild(price);
+  grid.appendChild(card);
+});
 </script>
 
 </body>
