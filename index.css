@@ -339,13 +339,13 @@ section.container.onekg {
 .instagram-footer,
 .tiktok-footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
 .instagram-footer a,
 .tiktok-footer a {
-  color: #E1306C;
   font-weight: 800;
   font-size: 18px;
   text-decoration: none;
@@ -353,18 +353,23 @@ section.container.onekg {
   flex-direction: column;
   align-items: center;
   gap: 6px;
+  line-height: 1.2;
 }
 
 .instagram-footer img,
 .tiktok-footer img {
   width: 60px;
   height: 60px;
-  border-radius: 14px; /* İkonların kenarlarını yuvarlatır */
+  border-radius: 14px;
+  display: block;
 }
 
-/* Mobil uyum */
-@media (max-width: 768px) {
-  .instagram-tiktok {
-    gap: 20px;
-  }
+/* Instagram yazısı */
+.instagram-footer a {
+  color: #E1306C;
+}
+
+/* TikTok yazısı (siyah) */
+.tiktok-footer a {
+  color: #000;
 }
