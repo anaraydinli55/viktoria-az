@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viktoria Paltar Boyaları Kataloqu</title>
+
+<style>
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: #f5f6fb;
+    margin:0;
+    padding:0;
+    color:#222;
+  }
+  header {
+    background:#4b0082;
+    padding:14px 16px;
+    text-align:center;
+  }
+  nav a {
+    color:#fff;
+    text-decoration:none;
+    margin:0 10px;
+    font-weight:700; /* qalın */
+    font-size:16px;
+    text-decoration:underline; /* altı cizgili */
+  }
+  nav a:hover { color:#ffea00; }
+  .grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+    gap:16px;
+    padding:20px;
+  }
+  .card {
+    background:#fff;
+    border-radius:18px;
+    box-shadow:0 8px 24px rgba(0,0,0,.08);
+    padding:12px;
+    text-align:center;
+  }
+  .card img {
+    width:100%;
+    border-radius:14px;
+    cursor:pointer;
+    transition: transform .2s;
+  }
+  .card img:hover { transform:scale(1.05); }
+  h1 {
+    text-align:center;
+    color:#4b0082;
+    margin:20px 0;
+  }
+  /* Qiymət yazısı eyni rəng və qalınlıq, biraz böyük */
+  .price {
+    color: #4b0082;       /* h1 ilə eyni rəng */
+    font-weight: 700;
+    font-size: 18px;       /* ölçü artırıldı */
+    margin-top: 8px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="/">Ana səhifə</a>
+    <a href="/catalog.html">Kataloq</a>
+  </nav>
+</header>
+
+<h1>Viktoria Paltar Boyaları Kataloqu</h1>
+
+<div class="grid" id="colorGrid"></div>
+
+<script>
+const colors = [
+  {file:"01-pembe-1kg.jpg", color:"Çəhrayı", price:"220 AZN"},
+  {file:"02-kavunici-1kg.jpg", color:"Yemiş rəngi", price:"220 AZN"},
+  {file:"03-yavruagzi-1kg.jpg", color:"Yavruağzı", price:"220 AZN"},
+  {file:"04-koyu-pembe-1kg.jpg", color:"Tünd Çəhrayı", price:"220 AZN"},
+  {file:"05-al-1kg.jpg", color:"Al qırmızı", price:"220 AZN"},
+  {file:"06-atesi-pembe-1kg.jpg", color:"Atəşi Çəhrayı", price:"220 AZN"},
+  {file:"07-nar-cicegi-1kg.jpg", color:"Nar Çiçəyi", price:"220 AZN"},
+  {file:"08-kirmizi-1kg.jpg", color:"Qırmızı", price:"220 AZN"},
+  {file:"09-koyu-kirmizi-1kg.jpg", color:"Tünd Qırmızı", price:"220 AZN"},
+  {file:"10-visne-curugu-1kg.jpg", color:"Vişnə Çürüyü", price:"220 AZN"},
+  {file:"11-sari-1kg.jpg", color:"Sarı", price:"220 AZN"},
+  {file:"12-turuncu-1kg.jpg", color:"Narıncı", price:"220 AZN"},
+  {file:"13-gul-kurusu-1kg.jpg", color:"Gül Kurusu", price:"220 AZN"},
+  {file:"14-bej-acik-1kg.jpg", color:"Açıq Bej", price:"220 AZN"},
+  {file:"15-bej-koyu-1kg.jpg", color:"Tünd Bej", price:"220 AZN"},
+  {file:"16-tutun-rengi-1kg.jpg", color:"Tütün Rəngi", price:"220 AZN"},
+  {file:"17-acik-kahve-1kg.jpg", color:"Açıq Qəhvəyi", price:"220 AZN"},
+  {file:"18-kahve-orta-1kg.jpg", color:"Orta Qəhvəyi", price:"220 AZN"},
+  {file:"19-kahve-1kg.jpg", color:"Qəhvəyi", price:"220 AZN"},
+  {file:"20-kahve-koyu-1kg.jpg", color:"Tünd Qəhvəyi", price:"220 AZN"},
+  {file:"21-fes-rengi-1kg.jpg", color:"Fəs Rəngi", price:"220 AZN"},
+  {file:"22-guvez-1kg.jpg", color:"Güvəz", price:"220 AZN"},
+  {file:"23-acik-mavi-1kg.jpg", color:"Açıq Mavi", price:"220 AZN"},
+  {file:"24-mavi-orta-1kg.jpg", color:"Orta Mavi", price:"220 AZN"},
+  {file:"25-mavi-koyu-1kg.jpg", color:"Tünd Mavi", price:"220 AZN"},
+  {file:"26-mor-acik-1kg.jpg", color:"Açıq Mor", price:"220 AZN"},
+  {file:"27-mor-koyu-1kg.jpg", color:"Tünd Mor", price:"220 AZN"},
+  {file:"28-lacivert-acik-1kg.jpg", color:"Açıq göy", price:"220 AZN"},
+  {file:"29-lacivert-orta-1kg.jpg", color:"Orta göy", price:"220 AZN"},
+  {file:"30-siyah-1kg.jpg", color:"Qara", price:"220 AZN"},
+  {file:"31-eflatun-1kg.jpg", color:"Əflatun", price:"220 AZN"},
+  {file:"32-bej-1kg.jpg", color:"Bej", price:"220 AZN"},
+  {file:"33-kursuni-acik-1kg.jpg", color:"Açıq boz", price:"220 AZN"},
+  {file:"34-kursuni-koyu-1kg.jpg", color:"Tünd boz", price:"220 AZN"},
+  {file:"35-cam-gobegi-1kg.jpg", color:"Şam Göbəyi", price:"220 AZN"},
+  {file:"36-filizi-acik-1kg.jpg", color:"Açıq Filizi", price:"220 AZN"},
+  {file:"37-filizi-koyu-1kg.jpg", color:"Tünd Filizi", price:"220 AZN"},
+  {file:"38-yesil-1kg.jpg", color:"Yaşıl", price:"220 AZN"},
+  {file:"39-koyu-yesil-1kg.jpg", color:"Tünd Yaşıl", price:"220 AZN"},
+  {file:"40-nefti-1kg.jpg", color:"Nefti", price:"220 AZN"},
+  {file:"41-haki-1kg.jpg", color:"Xaki", price:"220 AZN"},
+  {file:"42-kanarya-1kg.jpg", color:"Kanarya", price:"220 AZN"},
+  {file:"43-sarabi-1kg.jpg", color:"Şərabi", price:"220 AZN"},
+  {file:"44-portakal-1kg.jpg", color:"Portağal", price:"220 AZN"},
+  {file:"45-zumrut-1kg.jpg", color:"Zümrüd", price:"220 AZN"},
+  {file:"46-petrol-1kg.jpg", color:"Petrol", price:"220 AZN"},
+  {file:"47-zeytini-1kg.jpg", color:"Zeytini", price:"220 AZN"},
+  {file:"48-saksonya-1kg.jpg", color:"Saksonya", price:"220 AZN"},
+  {file:"49-civit-mavi-1kg.jpg", color:"Çivit Mavi", price:"220 AZN"},
+  {file:"50-m-lacivert-1kg.jpg", color:"Mor göy", price:"220 AZN"},
+  {file:"51-lacivert-koyu-1kg.jpg", color:"Tünd göy", price:"220 AZN"},
+  {file:"52-yanik-kahve-1kg.jpg", color:"Yanıq Qəhvəyi", price:"220 AZN"},
+  {file:"53-sarabi-koyu-1kg.jpg", color:"Tünd Şərabi", price:"220 AZN"},
+  {file:"54-eflatun-koyu-1kg.jpg", color:"Tünd Əflatun", price:"220 AZN"},
+  {file:"55-menekse-1kg.jpg", color:"Bənövşə", price:"220 AZN"},
+  {file:"56-altin-sari-1kg.jpg", color:"Qızılı Sarı", price:"220 AZN"},
+  {file:"57-k-sari-1kg.jpg", color:"K Sarı", price:"220 AZN"},
+  {file:"60-boncuk-mavi-1kg.jpg", color:"Boncuq Mavi", price:"220 AZN"},
+  {file:"61-blujin-mavisi-1kg.jpg", color:"Cins Mavisi", price:"220 AZN"},
+  {file:"62-fiske-1lt.jpg", color:"Sabitləşdirici", price:"220 AZN", link:"/fiske.html"}
+];
+
+const grid = document.getElementById("colorGrid");
+
+colors.forEach((c, index) => {
+  const card = document.createElement("div");
+  card.className = "card";
+
+  const img = document.createElement("img");
+  img.src = `images/${c.file}`;
+  img.alt = c.color;
+
+  if (index < 59) {
+    img.onclick = () => window.location.href = "/boyama-qaydalari.html";
+  } else if (c.link) {
+    img.onclick = () => window.location.href = c.link;
+  }
+
+  const price = document.createElement("p");
+  price.className = "price";
+  price.textContent = `${c.color} – ${c.price}`;
+
+  card.appendChild(img);
+  card.appendChild(price);
+  grid.appendChild(card);
+});
+</script>
+
+</body>
+</html>
