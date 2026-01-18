@@ -123,6 +123,27 @@ section.container.onekg {
   padding: 40px 30px;
 }
 
+/* ONEKG SECTION - GÖRSEL GÖZÜKƏN HAL */
+section.container.onekg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 24px;
+}
+
+section.container.onekg img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+@media (max-width: 768px) {
+  section.container.onekg {
+    grid-template-columns: 1fr;
+  }
+}
+
+
 /* ========== CARDS ========== */
 .card {
   background-color: #f2c200;
