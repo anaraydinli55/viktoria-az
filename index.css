@@ -411,3 +411,12 @@ section.container.onekg {
   }
 }
 
+.color-change {
+  animation: colorShift 4s infinite;
+}
+
+@keyframes colorShift {
+  0%   { color: #1e90ff; }  /* mavi */
+  50%  { color: #ff0000; }  /* qırmızı */
+  100% { color: #00a000; }  /* yaşıl */
+}
