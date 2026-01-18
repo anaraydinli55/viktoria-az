@@ -336,40 +336,34 @@ section.container.onekg {
   flex-wrap: wrap;
 }
 
-.instagram-footer,
-.tiktok-footer {
+.instagram-tiktok a {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.instagram-footer a,
-.tiktok-footer a {
-  font-weight: 800;
-  font-size: 18px;
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   gap: 6px;
-  line-height: 1.2;
+  text-decoration: none;
 }
 
-.instagram-footer img,
-.tiktok-footer img {
+.instagram-tiktok img {
   width: 60px;
   height: 60px;
   border-radius: 14px;
   display: block;
 }
 
-/* Instagram yazısı */
-.instagram-footer a {
+/* Yazı renkleri */
+.instagram-tiktok .instagram-footer a {
   color: #E1306C;
 }
 
-/* TikTok yazısı (siyah) */
-.tiktok-footer a {
+.instagram-tiktok .tiktok-footer a {
   color: #000;
+}
+
+/* Mobilde düzgün hizalama */
+@media (max-width: 768px) {
+  .instagram-tiktok {
+    gap: 20px;
+  }
 }
