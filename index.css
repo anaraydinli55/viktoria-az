@@ -326,3 +326,42 @@ section.container.onekg {
     font-size: 18px;
   }
 }
+
+.instagram-tiktok {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+
+.instagram-footer a,
+.tiktok-footer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  text-decoration: none;
+  font-weight: 800;
+  color: #222;
+}
+
+.instagram-footer img,
+.tiktok-footer img {
+  width: 60px;   /* Instagram ile aynı boyut */
+  height: 60px;  /* Instagram ile aynı boyut */
+}
+
+@media (max-width: 768px) {
+  .instagram-tiktok {
+    gap: 18px;
+  }
+
+  .instagram-footer img,
+  .tiktok-footer img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
