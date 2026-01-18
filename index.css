@@ -372,3 +372,42 @@ section.container.onekg {
     gap: 25px;
   }
 }
+
+/* ======= Məqsədimiz və Məlumatlar üçün eyni container stili ======= */
+.container.goal-extra,
+.container.mehsullar,
+.container.melumatlar,
+.container.haqqimizda,
+.container.catdirilma {
+  background-color: #d3d3d3;
+  border: 2px solid #d0a3ff;
+  border-radius: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Məqsədimiz və Məlumatlar üçün iç container */
+.container.goal-extra .card,
+.container.melumatlar .card,
+.container.haqqimizda .card,
+.container.catdirilma .card {
+  background-color: #d3d3d3; /* ana container ilə eyni */
+  border: 2px solid #d0a3ff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Məqsədimiz və Məlumatlar section-larının hündürlüyü bərabər olsun */
+.container.goal-extra .card p,
+.container.melumatlar .card p {
+  line-height: 1.6;
+}
+
+/* Mobil üçün */
+@media (max-width: 768px) {
+  .container.goal-extra,
+  .container.melumatlar {
+    padding: 18px;
+  }
+}
+
