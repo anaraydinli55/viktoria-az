@@ -336,40 +336,35 @@ section.container.onekg {
   flex-wrap: wrap;
 }
 
-.instagram-tiktok .instagram-footer,
-.instagram-tiktok .tiktok-footer {
+.instagram-footer a,
+.tiktok-footer a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-}
-
-.instagram-tiktok img {
-  width: 60px;
-  height: 60px;
-  border-radius: 14px;
-  display: block;
-}
-
-/* Yazıların aynı kalınlıkta olması için */
-.instagram-tiktok .instagram-footer a,
-.instagram-tiktok .tiktok-footer a {
+  gap: 6px;           /* İkon ile yazı arası boşluk */
+  text-decoration: none;
   font-weight: 800;
   font-size: 18px;
-  text-decoration: none;
 }
 
-/* Renkler */
-.instagram-tiktok .instagram-footer a {
+.instagram-footer img,
+.tiktok-footer img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px; /* TikTok ikonuna da aynı yuvarlaklık */
+}
+
+.instagram-footer a {
   color: #E1306C;
 }
-.instagram-tiktok .tiktok-footer a {
-  color: #000;
+
+.tiktok-footer a {
+  color: #000; /* TikTok yazısı siyah */
 }
 
-/* Mobilde düzgün hizalama */
+/* Mobil uyumlu */
 @media (max-width: 768px) {
   .instagram-tiktok {
-    gap: 20px;
+    gap: 25px;
   }
 }
