@@ -336,13 +336,12 @@ section.container.onekg {
   flex-wrap: wrap;
 }
 
-.instagram-tiktok a {
+.instagram-tiktok .instagram-footer,
+.instagram-tiktok .tiktok-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 6px;
-  text-decoration: none;
 }
 
 .instagram-tiktok img {
@@ -352,11 +351,18 @@ section.container.onekg {
   display: block;
 }
 
-/* Yazı renkleri */
+/* Yazıların aynı kalınlıkta olması için */
+.instagram-tiktok .instagram-footer a,
+.instagram-tiktok .tiktok-footer a {
+  font-weight: 800;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+/* Renkler */
 .instagram-tiktok .instagram-footer a {
   color: #E1306C;
 }
-
 .instagram-tiktok .tiktok-footer a {
   color: #000;
 }
