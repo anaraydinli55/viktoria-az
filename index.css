@@ -294,3 +294,35 @@ section.container.onekg {
   }
 }
 
+/* ====== BUTTON CONTAINER ====== */
+.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ====== DİGƏR RƏNGLƏRƏ BAX BUTTONLARI ÜSLUBU ====== */
+.mor-button {
+  display: inline-block;
+  padding: 14px 28px;
+  background-color: #4b0082; /* digər buttonlarla eyni */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.mor-button:hover {
+  background-color: #360060;
+  transform: translateY(-2px);
+}
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+  .mor-button {
+    width: 90%;
+    padding: 14px 0;
+    font-size: 18px;
+  }
+}
