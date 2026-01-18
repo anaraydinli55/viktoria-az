@@ -449,3 +449,63 @@ footer {
   background-color: #45a049;  /* Üzərinə gəldikdə arxa fon dəyişir */
 }
 
+section.container.onekg {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: linear-gradient(135deg, #f3f4f8, #ffffff);
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+section.container.onekg h1 {
+  font-size: 32px;
+  color: #4b0082;
+  margin-bottom: 10px;
+}
+
+section.container.onekg p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+section.container.onekg p strong {
+  color: #4b0082;
+  font-size: 20px;
+}
+
+section.container.onekg .btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 28px;
+  background-color: #4b0082;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+section.container.onekg .btn:hover {
+  background-color: #360060;
+  transform: translateY(-2px);
+}
+
+/* 📱 Mobil uyğunluq */
+@media (max-width: 768px) {
+  section.container.onekg {
+    padding: 25px 18px;
+  }
+
+  section.container.onekg h1 {
+    font-size: 24px;
+  }
+
+  section.container.onekg p {
+    font-size: 16px;
+  }
+}
+
+
