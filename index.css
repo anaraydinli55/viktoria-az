@@ -40,7 +40,6 @@ nav a {
   fill: #25D366;
 }
 
-
 /* ========== HERO ========== */
 .hero {
   display: grid;
@@ -87,7 +86,6 @@ h2, h3 {
   width: 100%;
   max-width: 420px;
   padding: 14px 20px;
-  min-height: 48px;
   background: #4b2cff;
   color: #ffffff;
   text-decoration: none;
@@ -97,21 +95,47 @@ h2, h3 {
   margin: 30px auto;
 }
 
+/* ========== CONTAINER (TEK VE DUZGUN) ========== */
+.container {
+  max-width: 1100px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #d3d3d3; /* 🔑 hamısı eyni */
+  border: 2px solid #d0a3ff;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.container + .container {
+  margin-top: 30px;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== ONEKG (SADECE FARKLI OLANLAR) ========== */
+section.container.onekg {
+  margin: 60px auto;
+  padding: 40px 30px;
+}
+
 /* ========== CARDS ========== */
-/* Card içi arka planı koyu neon sarı */
 .card {
-  background-color: #f2c200; /* neon sarı */
+  background-color: #f2c200;
   border-radius: 12px;
   padding: 16px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  color: #000; /* metin rengi */
+  color: #000;
 }
-
 
 /* ========== INSTAGRAM ========== */
 .instagram-footer {
   display: flex;
-  flex-direction: column;  /* dikey hizalama */
+  flex-direction: column;
   align-items: center;
   gap: 4px;
   margin: 20px 0 10px;
@@ -129,11 +153,10 @@ h2, h3 {
   font-size: 18px;
   text-decoration: none;
   display: flex;
-  flex-direction: column;  /* emoji ve yazı dikey */
+  flex-direction: column;
   align-items: center;
   gap: 4px;
 }
-
 
 /* ========== FOOTER ========== */
 footer {
@@ -144,242 +167,7 @@ footer {
   font-size: 14px;
 }
 
-/* ========== DESKTOP ========== */
-@media (min-width: 768px) {
-  .hero {
-    grid-template-columns: 1fr 1fr;
-    text-align: left;
-  }
-
-  .instagram-footer img {
-    width: 70px;
-    height: 70px;
-  }
-
-  .instagram-footer a {
-    font-size: 22px;
-  }
-}
-
-/* ===============================
-   Sticky Neon Button
-   =============================== */
-/* Sticky Neon Button Navbar Altında */
-.btn-neon-sticky {
-  position: sticky;
-  top: 0;                  /* Navbarın altında yapışması */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 85%;
-  max-width: 320px;
-  padding: 20px 20px;
-  min-height: 25px;
-
-  background: #32cd32;      /* Soft neon yaşıl */
-  color: #000000;
-  font-weight: 700;
-  font-size: 16px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 10px;
-
-  box-shadow: 0 0 8px #32cd32, 0 0 15px #32cd32;
-  margin: 10px auto;
-  z-index: 1000;
-}
-
-.btn-neon-sticky:hover {
-  box-shadow: 0 0 12px #32cd32, 0 0 25px #32cd32;
-  transform: scale(1.03);
-  transition: all 0.2s ease-in-out;
-}
-
-/* Mobil Uyğunluq */
-@media (max-width: 768px) {
-  .btn-neon-sticky {
-    width: 85%;
-    font-size: 16px;
-    padding: 20px 20px;
-  }
-}
-
-
-.container.goal-extra {
-  background-color: #d3d3d3; /* açık gri */
-  border: 2px solid #d0a3ff; /* Nazik bənövşəyi çərçivə */
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
-}
-
-.container.goal-extra h3 {
-  color: #7a3fff;
-  margin-bottom: 15px;
-}
-
-.container.goal-extra img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 8px;
-}
-
-/* Yalnız SEO bölməsinin başlığını mərkəzləşdirmək */
-.seo-text-wrapper h2 {
-  text-align: center;
-}
-
-.button-container {
-  text-align: center;       /* Button ekranın ortasında */
-  margin: 20px 0;           /* Container arası boşluq */
-}
-
-.mor-button {
-  display: inline-block;       /* Button görünüşü */
-  background-color: #8000ff;   /* Mor rəng */
-  color: white;
-  padding: 12px 24px;
-  text-decoration: none;       /* Alt xətini silir */
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-  font-size: 16px;
-}
-
-.mor-button:hover {
-  background-color: #b366ff;   /* Hover rəngi */
-}
-
-/* Mobil uyumlu (ekran 600px-dən kiçik olanda button bir az böyük və oxunaqlı olsun) */
-@media (max-width: 600px) {
-  .mor-button {
-    width: 80%;          /* Button mobil ekranlarda geniş olsun */
-    font-size: 18px;     /* Yazı ölçüsü artır */
-    padding: 14px 0;
-  }
-}
-
-
-/* Button-un yuxarı və aşağısına boşluq */
-.button-container {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0; /* yuxarı + aşağı boşluq */
-}
-
-/* Altdakı container yuxarıdan nəfəs alsın */
-.container + .container {
-  margin-top: 30px;
-}
-
-
-/* ==== ŞƏKİLLƏR RESPONSIVE QALSIN ==== */
-.container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ==== YALNIZ DESKTOP ÜÇÜN ÖLÇÜ TƏNZİMLƏMƏ ==== */
-@media (min-width: 992px) {
-  h1 {
-    font-size: 32px;
-  }
-
-  h2 {
-    font-size: 26px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  .card {
-    padding: 20px;
-  }
-}
-
-/* ==== CONTAINER (TƏK və DÜZGÜN) ==== */
-.container {
-  max-width: 1100px;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #d3d3d3;
-  border: 2px solid #d0a3ff;
-  border-radius: 12px;
-  box-sizing: border-box; /* 🔑 ƏN VACİB */
-}
-
-/* ==== ŞƏKİLLƏR ==== */
-.container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ==== BLOQ ŞƏKİL + CONTAINER FIX ==== */
-.container {
-  max-width: 1100px;     /* Container-in maksimal eni */
-  margin: 20px auto;     /* mərkəz və yuxarı/aşağı boşluq */
-  padding: 20px;          /* iç boşluq */
-  background-color: #d3d3d3;
-  border: 2px solid #d0a3ff;
-  border-radius: 12px;
-  box-sizing: border-box; /* padding + border daxil edilsin */
-  overflow: hidden;       /* margin collapse və şəkil daşmalarını kəsir */
-}
-
-.container img {
-  display: block;         /* inline default problemi aradan qaldırır */
-  max-width: 100%;        /* container-dən kənara çıxmasın */
-  height: auto;
-  margin: 0;              /* margin collapse problemini aradan qaldırır */
-}
-
-.blog-image {
-  width: 100%;
-  margin: 0;
-}
-
-.blog-image img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 0;
-}
-
-/* Mor button üslubu (əgər mövcud .mor-button varsa, əlavə etməyə ehtiyac yoxdur) */
-.mor-button {
-  display: inline-block;
-  background-color: #8000ff;
-  color: #fff;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background-color 0.3s;
-  font-size: 16px;
-  text-align: center;
-  margin: 20px auto; /* Üst-alt boşluq və mərkəzləşdirmə */
-}
-
-.mor-button:hover {
-  background-color: #b366ff;
-}
-
-/* Mobil uyumlu */
-@media (max-width: 600px) {
-  .mor-button {
-    width: 80%;
-    font-size: 18px;
-    padding: 14px 0;
-  }
-}
-
-/* ===== BLOG NAVIGATION (Geri / Ana səhifə / İrəli) ===== */
-
+/* ========== BLOG NAV BUTTONS ========== */
 .nav {
   max-width: 900px;
   margin: 40px auto 60px auto;
@@ -393,7 +181,7 @@ footer {
   flex: 1;
   text-align: center;
   padding: 14px 20px;
-  background-color: #4a90e2;
+  background-color: #4CAF50;
   color: #ffffff;
   text-decoration: none;
   border-radius: 8px;
@@ -403,109 +191,40 @@ footer {
 }
 
 .nav a:hover {
-  background-color: #357abd;
+  background-color: #45a049;
   transform: translateY(-2px);
 }
 
-/* Mobil uyğunluq */
+/* ========== STICKY NEON BUTTON ========== */
+.btn-neon-sticky {
+  position: sticky;
+  top: 0;
+  display: inline-flex;
+  justify-content: center;
+  width: 85%;
+  max-width: 320px;
+  padding: 20px;
+  background: #32cd32;
+  color: #000;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #32cd32, 0 0 15px #32cd32;
+  margin: 10px auto;
+  z-index: 1000;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+}
+
 @media (max-width: 768px) {
   .nav a {
     font-size: 15px;
     padding: 14px 10px;
   }
 }
-
-<style>
-.seo-hidden-links {
-  position: absolute;
-  left: -9999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.seo-hidden-links a {
-  display: block;
-  font-size: 14px;
-}
-</style>
-
-.nav a {
-  background-color: #4CAF50;  /* Yaşıl arxa fon */
-  border: none;  /* Çərçivəsiz */
-  color: white;  /* Mətni ağ edir */
-  padding: 10px 20px;  /* İç boşluqlar */
-  text-align: center;  /* Mərkəzləşdirir */
-  text-decoration: none;  /* Alt xətti silir */
-  display: inline-block;  /* Düzgün yerleşmə */
-  font-size: 16px;  /* Mətni daha böyük edir */
-  border-radius: 5px;  /* Küncləri yuvarlaq edir */
-  cursor: pointer;  /* Üzərinə gələndə siçan işarəsi dəyişir */
-  transition: background-color 0.3s ease;  /* Arxa fon dəyişəndə effekt */
-  margin: 10px;  /* Buttonlar arasına boşluq qoyur */
-}
-
-.nav a:hover {
-  background-color: #45a049;  /* Üzərinə gəldikdə arxa fon dəyişir */
-}
-
-section.container.onekg {
-  max-width: 1100px;
-  margin: 60px auto;
-  padding: 40px 30px;
-  background: linear-gradient(135deg, #f3f4f8, #ffffff);
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-section.container.onekg h1 {
-  font-size: 32px;
-  color: #4b0082;
-  margin-bottom: 10px;
-}
-
-section.container.onekg p {
-  font-size: 18px;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 14px;
-}
-
-section.container.onekg p strong {
-  color: #4b0082;
-  font-size: 20px;
-}
-
-section.container.onekg .btn {
-  display: inline-block;
-  margin-top: 18px;
-  padding: 14px 28px;
-  background-color: #4b0082;
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  border-radius: 10px;
-  transition: all 0.25s ease;
-}
-
-section.container.onekg .btn:hover {
-  background-color: #360060;
-  transform: translateY(-2px);
-}
-
-/* 📱 Mobil uyğunluq */
-@media (max-width: 768px) {
-  section.container.onekg {
-    padding: 25px 18px;
-  }
-
-  section.container.onekg h1 {
-    font-size: 24px;
-  }
-
-  section.container.onekg p {
-    font-size: 16px;
-  }
-}
-
-
