@@ -249,3 +249,48 @@ footer {
     padding: 14px 10px;
   }
 }
+
+/* =========================
+   BUTTON DÜZƏLİŞİ (HAMISI ÜÇÜN)
+   ========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  background: #4b0082;     /* bütün saytda eyni rəng */
+  color: #fff;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform .2s ease, background .2s ease;
+}
+
+.btn:hover {
+  background: #360060;
+  transform: translateY(-2px);
+}
+
+/* Mobil üçün buttonlar tam görünən olsun */
+@media (max-width: 768px) {
+  .btn {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* ONEKG SECTION - ARALIĞI NORMAL ET */
+section.container.onekg {
+  margin: 20px auto;   /* digər containerlərlə eyni */
+  padding: 40px 30px;
+}
+
+/* Mobil üçün də uyğun */
+@media (max-width: 768px) {
+  section.container.onekg {
+    margin: 20px auto;
+    padding: 25px 18px;
+  }
+}
+
