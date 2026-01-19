@@ -420,3 +420,13 @@ section.container.onekg {
   50%  { color: #ff0000; }  /* qırmızı */
   100% { color: #00a000; }  /* yaşıl */
 }
+
+.blink-text {
+  animation: blinkText 1.6s infinite;
+}
+
+@keyframes blinkText {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.35; }
+  100% { opacity: 1; }
+}
