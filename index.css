@@ -422,11 +422,17 @@ section.container.onekg {
 }
 
 .blink-text {
-  animation: blinkText 1.6s infinite;
+  animation: textBlink 1.5s infinite;
 }
 
-@keyframes blinkText {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.35; }
-  100% { opacity: 1; }
+@keyframes textBlink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
