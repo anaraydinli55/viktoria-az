@@ -5,12 +5,11 @@
       "has": [
         {
           "type": "host",
-          "value": "viktoria-az.store"
+          "value": "www.viktoria-az.store"
         }
       ],
-      "destination": "https://www.viktoria-az.store/$1",
+      "destination": "https://viktoria-az.store/$1",
       "permanent": true
     }
   ]
 }
-
