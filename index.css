@@ -437,16 +437,15 @@ section.container.onekg {
   }
 }
 
-.marker-wave {
+.marker {
   position: relative;
   z-index: 1;
   font-weight: 600;
   color: #111;
   display: inline-block;
-  overflow: visible;
 }
 
-.marker-wave::before {
+.marker::before {
   content: "";
   position: absolute;
   left: -8px;
