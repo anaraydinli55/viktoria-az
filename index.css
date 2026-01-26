@@ -439,7 +439,7 @@ section.container.onekg {
 
 .marker {
   position: relative;
-  z-index: 1;
+  z-index: 1;            /* Yazı markerin üstündə qalır */
   font-weight: 600;
   color: #111;
   display: inline-block;
@@ -453,7 +453,7 @@ section.container.onekg {
   bottom: 4px;
   height: 0.9em;
   background: #2cff6d;
-  z-index: 0;
+  z-index: -1;           /* Marker yazının arxasında qalır */
   border-radius: 12px 6px 14px 8px;
   transform: rotate(-2deg) skewX(-6deg);
   filter: saturate(1.1);
