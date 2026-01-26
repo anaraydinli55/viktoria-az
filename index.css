@@ -436,3 +436,30 @@ section.container.onekg {
     opacity: 1;
   }
 }
+
+.features {
+  color: #eaeaea;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.marker {
+  position: relative;
+  z-index: 1;
+  color: #111; /* boya üstünde okunur */
+  font-weight: 600;
+}
+
+.marker::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  bottom: 3px;
+  width: calc(100% + 12px);
+  height: 65%;
+  background: #2cff6d;
+  z-index: -1;
+  border-radius: 5px;
+  transform: rotate(-1.2deg);
+}
+
