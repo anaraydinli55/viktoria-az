@@ -446,7 +446,9 @@ section.container.onekg {
 .marker {
   position: relative;
   display: inline-block;
-  z-index: 2;  /* yazı üstə olsun */
+  z-index: 2;           /* yazı üstündə */
+  font-weight: 600;
+  color: #111;
 }
 
 .marker::before {
@@ -454,10 +456,10 @@ section.container.onekg {
   position: absolute;
   left: -8px;
   right: -8px;
-  bottom: 0.1em;
+  top: 50%;
+  transform: translateY(-50%) rotate(-2deg) skewX(-6deg);
   height: 0.9em;
   background: #2cff6d;
   border-radius: 12px 6px 14px 8px;
-  transform: rotate(-2deg) skewX(-6deg);
-  z-index: 1;  /* marker arxada olsun */
+  z-index: 1;           /* marker arxada */
 }
