@@ -437,17 +437,13 @@ section.container.onekg {
   }
 }
 
-.features {
-  color: #000;
-  font-size: 18px;
-  line-height: 1.7;
-}
-
 .marker-wave {
   position: relative;
   z-index: 1;
   font-weight: 600;
   color: #111;
+  display: inline-block;
+  overflow: visible;
 }
 
 .marker-wave::before {
@@ -458,9 +454,7 @@ section.container.onekg {
   bottom: 4px;
   height: 0.9em;
   background: #2cff6d;
-  z-index: -1;
-
-  /* BOYA EFEKTİ */
+  z-index: 0;
   border-radius: 12px 6px 14px 8px;
   transform: rotate(-2deg) skewX(-6deg);
   filter: saturate(1.1);
