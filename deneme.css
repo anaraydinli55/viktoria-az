@@ -1,156 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
 
-.patterns {
-  width: 100%;
-  height: 280px;
-}
-
-.hero-svg {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-/* ⚠️ DEFAULT QARA TEXTİ SÖNDÜRÜRÜK */
-.svg-text {
-  font-family: 'Lora', serif;
-  font-size: 64px;
-
-  fill: transparent;          /* ← qara yox olur */
-  stroke: #4b0082;
-  stroke-width: 2;
-
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-
-  animation: drawText 4s ease forwards;
-}
-
-/* Animasiya bitəndən sonra içi dolsun */
-@keyframes drawText {
-  0% {
-    stroke-dashoffset: 1400;
-    fill: transparent;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill: rgba(75, 0, 130, 0.15);
-  }
-}
-/* Hero Title (SVG) */
+/* ----------------- HERO TITLE ----------------- */
 .hero-title {
   width: 100%;
-  max-width: 1200px;
-  margin-bottom: 10px;
-}
-
-.hero-title svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* SVG text responsive font size */
-.hero-title .svg-text {
-  font-size: clamp(28px, 6vw, 64px);
-}
-
-/* Animation */
-@keyframes drawText {
-  0% {
-    stroke-dashoffset: 1400;
-  }
-  50% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: 1400;
-  }
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px 15px;
-  }
-
-  .hero .btn {
-    font-size: 14px;
-    padding: 12px 18px;
-  }
-
-  .features {
-    font-size: 14px;
-    line-height: 1.6;
-  }
-
-  .hero-title {
-    margin-bottom: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero h1 {
-    font-size: 28px; /* Bu hissə artıq SVG ilə əvəz olundu, amma saxlayıram */
-  }
-
-  .features {
-    font-size: 13px;
-  }
-
-  .hero-title .svg-text {
-    font-size: clamp(22px, 7vw, 48px);
-  }
-}
-
-
-.hero-title svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-title .svg-text {
-  font-size: 72px; /* desktop */
-}
-
-@media (max-width: 768px) {
-  .hero-title .svg-text {
-    font-size: 60px; /* tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title .svg-text {
-    font-size: 46px; /* mobile */
-  }
-}
-
-
-.hero-title svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-title .svg-text {
-  font-size: 72px; /* desktop */
-}
-
-@media (max-width: 768px) {
-  .hero-title .svg-text {
-    font-size: 60px; /* tablet */
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-title .svg-text {
-    font-size: 46px; /* mobile */
-  }
-}
-
-.hero-title {
-  padding: 0 12px; /* sağdan və soldan 12px boşluq */
+  padding: 0 5mm;      /* sağdan və soldan 5mm boşluq */
   box-sizing: border-box;
 }
 
@@ -160,11 +13,30 @@
   display: block;
 }
 
-.hero-title .svg-text {
-  font-size: 72px; /* desktop */
-  letter-spacing: 0.5px; /* harflər arasına boşluq */
+.svg-text {
+  font-family: 'Lora', serif;
+  fill: none;
+  stroke: #4b0082;
+  stroke-width: 2;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: drawText 4s ease-in-out infinite;
 }
 
+/* Animation */
+@keyframes drawText {
+  0% { stroke-dashoffset: 1400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1400; }
+}
+
+/* Desktop */
+.hero-title .svg-text {
+  font-size: 72px;
+  letter-spacing: 0.5px;
+}
+
+/* Tablet */
 @media (max-width: 768px) {
   .hero-title .svg-text {
     font-size: 60px;
@@ -172,21 +44,10 @@
   }
 }
 
+/* Mobile */
 @media (max-width: 480px) {
   .hero-title .svg-text {
     font-size: 46px;
     letter-spacing: 0.2px;
   }
-}
-
-
-.patterns {
-  padding: 0 2mm; /* container içi boşluq */
-  box-sizing: border-box;
-}
-
-.patterns svg {
-  width: 100%;
-  height: auto;
-  display: block;
 }
