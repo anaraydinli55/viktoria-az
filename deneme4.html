@@ -34,7 +34,7 @@
 
     /* HERO (TOP FIXED) */
     .hero{
-      position: absolute;
+      position: fixed; /* BURASI FIXED OLMALI */
       top: 0;
       left: 0;
       width: 100%;
@@ -60,6 +60,7 @@
 
       font-size: clamp(50px, 10vw, 140px);
       animation:textAnimate 5s infinite alternate;
+      paint-order: stroke fill; /* stroke yazıyı kapatmasın diye */
     }
 
     @keyframes textAnimate{
@@ -71,7 +72,7 @@
       100%{
         stroke-dasharray:50% 0;
         stroke-dashoffset:-20%;
-        fill:rgba(242,244,248,0);
+        fill:rgba(242,244,248,0.25); /* tamamen kaybolmasın */
       }
     }
 
@@ -79,9 +80,11 @@
     .content{
       width:100%;
       max-width:900px;
-      margin: 45vh  auto 0 auto;  /* hero hündürlüyü qədər boşluq */
+      margin: 45vh auto 0 auto;  /* hero hündürlüyü qədər boşluq */
       padding: 16px 20px 30px;
       box-sizing:border-box;
+      position: relative;
+      z-index: 2; /* içerik üstte olsun */
     }
 
     h2{ margin-top:24px; font-size:22px; }
@@ -97,6 +100,8 @@
       justify-content:space-between;
       gap:10px;
       flex-wrap:wrap;
+      position: relative;
+      z-index: 2;
     }
     .nav a{
       flex:1;
