@@ -41,42 +41,6 @@
   100% { stroke: #4b0082; }
 }
 
-/* ----------------- ÇATDIRILMA XİDMƏTİ (animated-text) ----------------- */
-.patterns{
-  width:100%;
-  height:auto; /* buranı auto et ki yazı kəsilməsin */
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.animated-text{
-  font-family: 'Lora', serif;
-  letter-spacing: 10px;
-  stroke:#ffa5d8;
-  fill:hsl(189, 68%, 75%);
-  font-weight:700;
-
-  font-size: clamp(40px, 8vw, 120px);
-  stroke-width: 6px;
-
-  animation: textAnimate 5s infinite alternate;
-}
-
-@keyframes textAnimate{
-  0%{
-    stroke-dasharray:0 1000;
-    stroke-dashoffset:20%;
-    fill:hsl(189, 68%, 75%);
-  }
-  100%{
-    stroke-dasharray:1000 0;
-    stroke-dashoffset:-20%;
-    fill:hsla(189, 68%, 75%, 0);
-  }
-}
-
-
 
 /* ----------------- ÇATDIRILMA XİDMƏTİ (cta-text) ----------------- */
 .patterns{
