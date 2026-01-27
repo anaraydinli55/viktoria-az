@@ -178,3 +178,15 @@
     letter-spacing: 0.2px;
   }
 }
+
+
+.patterns {
+  padding: 0 2mm; /* container içi boşluq */
+  box-sizing: border-box;
+}
+
+.patterns svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
