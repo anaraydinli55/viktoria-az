@@ -78,7 +78,41 @@ Solmuş geyimlər üçün tekstil boyaları – Viktoria AZ." />
 
 <section class="container hero">
   <div>
-    <h1>Viktoria Paltar Boyaları</h1>
+     <div class="hero-title">
+  <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+
+      .svg-text {
+        font-family: 'Lora', serif;
+        letter-spacing: 10px;
+
+        /* Responsive font size (büyütüldü ama taşmıyor) */
+        font-size: clamp(100px, 16vw, 300px);
+
+        fill: none;
+        stroke: #4b0082;
+        stroke-width: clamp(6px, 0.65vw, 14px);
+
+        stroke-dasharray: 1400;
+        stroke-dashoffset: 1400;
+
+        animation: drawText 5s ease-in-out infinite;
+      }
+
+      @keyframes drawText {
+        0% { stroke-dashoffset: 1400; }
+        50% { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 1400; }
+      }
+    </style>
+
+    <text class="svg-text" x="50%" y="60%" text-anchor="middle"
+          textLength="900" lengthAdjust="spacingAndGlyphs">
+      Viktoria Paltar Boyaları
+    </text>
+  </svg>
+</div>
     <p><strong class="color-change">Azərbaycanda ən geniş rəng çesidi</strong></p>
     <p class="features">
   60 <span class="marker">fərqli</span> rəng •
