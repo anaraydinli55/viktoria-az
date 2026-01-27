@@ -37,3 +37,68 @@
     fill: rgba(75, 0, 130, 0.15);
   }
 }
+/* Hero Title (SVG) */
+.hero-title {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 10px;
+}
+
+.hero-title svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG text responsive font size */
+.hero-title .svg-text {
+  font-size: clamp(28px, 6vw, 64px);
+}
+
+/* Animation */
+@keyframes drawText {
+  0% {
+    stroke-dashoffset: 1400;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 1400;
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 20px 15px;
+  }
+
+  .hero .btn {
+    font-size: 14px;
+    padding: 12px 18px;
+  }
+
+  .features {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .hero-title {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px; /* Bu hissə artıq SVG ilə əvəz olundu, amma saxlayıram */
+  }
+
+  .features {
+    font-size: 13px;
+  }
+
+  .hero-title .svg-text {
+    font-size: clamp(22px, 7vw, 48px);
+  }
+}
