@@ -9,25 +9,25 @@
       font-family: 'Lora', serif;
       font-size: 64px;
 
-      fill: #2b2b2b;            /* yazı HƏMİŞƏ görünür */
-      stroke: #6a0dad;
+      fill: none;
+      stroke: #4b0082;
       stroke-width: 2;
 
       stroke-dasharray: 1400;
       stroke-dashoffset: 1400;
 
-      animation: drawLine 4s ease-in-out infinite;
+      animation: drawText 5s ease-in-out infinite;
     }
 
-    @keyframes drawLine {
+    @keyframes drawText {
       0% {
         stroke-dashoffset: 1400;
       }
-      60% {
+      50% {
         stroke-dashoffset: 0;
       }
       100% {
-        stroke-dashoffset: 0;  /* geri silinmir */
+        stroke-dashoffset: -1400;
       }
     }
   </style>
