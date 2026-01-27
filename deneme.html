@@ -16,12 +16,18 @@
       stroke-dasharray: 1400;
       stroke-dashoffset: 1400;
 
-      animation: drawText 4s ease forwards;
+      animation: drawText 5s ease-in-out infinite;
     }
 
     @keyframes drawText {
-      to {
+      0% {
+        stroke-dashoffset: 1400;
+      }
+      50% {
         stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: -1400;
       }
     }
   </style>
@@ -44,4 +50,3 @@
 
 </svg>
 </div>
-
