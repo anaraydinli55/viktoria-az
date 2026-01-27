@@ -125,3 +125,26 @@
     font-size: 46px; /* mobile */
   }
 }
+
+
+.hero-title svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title .svg-text {
+  font-size: 72px; /* desktop */
+}
+
+@media (max-width: 768px) {
+  .hero-title .svg-text {
+    font-size: 60px; /* tablet */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title .svg-text {
+    font-size: 46px; /* mobile */
+  }
+}
