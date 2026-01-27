@@ -50,3 +50,33 @@
     letter-spacing: 0.3px;
   }
 }
+
+
+.hero-title .svg-text {
+  font-family: 'Lora', serif;
+  letter-spacing: 10px;
+  fill: none;
+  stroke-width: 2;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+
+  animation: drawText 4s ease-in-out infinite,
+             colorChange 6s linear infinite;
+}
+
+/* stroke çizim animasyonu */
+@keyframes drawText {
+  0% { stroke-dashoffset: 1400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 1400; }
+}
+
+/* renk değişimi */
+@keyframes colorChange {
+  0% { stroke: #4b0082; }
+  25% { stroke: #8a2be2; }
+  50% { stroke: #ff1493; }
+  75% { stroke: #1e90ff; }
+  100% { stroke: #4b0082; }
+}
+
