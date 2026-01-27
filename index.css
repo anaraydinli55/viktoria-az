@@ -57,6 +57,12 @@ nav a {
   box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 
+.hero p {
+  margin: 0;
+  padding: 0;
+}
+
+
 /* ========== TEXT ========== */
 h1 {
   font-size: clamp(24px,4vw,36px);
