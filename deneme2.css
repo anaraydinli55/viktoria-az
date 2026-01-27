@@ -18,7 +18,7 @@ body{
 .line h1{
   margin:0;
   font-family:'Lora', serif;
-  font-size: clamp(40px, 8vw, 90px);
+  font-size: clamp(40px, 10vw, 110px); /* mobil üçün daha uyğun */
   letter-spacing: 10px;
   color:#ffa5d8;
 
