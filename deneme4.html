@@ -30,7 +30,7 @@
       inset: 0;
       z-index: -2;
 
-      /* nöqtə pattern */
+      /* DOTS background */
       background:
         radial-gradient(circle at 20% 20%, rgba(255, 165, 216, 0.25), transparent 55%),
         radial-gradient(circle at 80% 30%, rgba(190, 157, 223, 0.25), transparent 60%),
@@ -56,6 +56,7 @@
       align-items: center;
       justify-content: center;
       margin: 0;
+      transform: translateY(-20px); /* 2sm yuxari cekildi */
     }
 
     svg {
@@ -67,7 +68,7 @@
       font-family: 'Lora', serif;
       letter-spacing: 10px;
       stroke: #ffa5d8;
-      fill: hsl(189, 68%, 75%);
+      fill: #f2f4f8; /* göz yormayan açıq rəng */
       font-weight: 700;
       font-size: 110px;
       stroke-width: 6px;
@@ -78,12 +79,12 @@
       0%{
         stroke-dasharray: 0 50%;
         stroke-dashoffset: 20%;
-        fill: hsl(189, 68%, 75%);
+        fill: #f2f4f8;
       }
       100%{
         stroke-dasharray: 50% 0;
         stroke-dashoffset: -20%;
-        fill: hsla(189, 68%, 75%, 0);
+        fill: rgba(242,244,248,0);
       }
     }
 
