@@ -8,34 +8,19 @@ body {
 }
 
 #text-container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
   text-align: center;
 }
 
-#text-container h1 {
+.line {
+  overflow: hidden;  /* burası çox önəmlidir */
+}
+
+.line h1 {
   margin: 0;
   font-family: 'Lora', serif;
   font-size: clamp(40px, 8vw, 90px);
   letter-spacing: 12px;
   color: #ffa5d8;
-  text-transform: uppercase;
-  animation: textAnimate 5s infinite alternate;
-}
-
-/* Animasiya */
-@keyframes textAnimate {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  50% {
-    opacity: 0.2;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  transform: translateY(100%);
+  opacity: 0;
 }
