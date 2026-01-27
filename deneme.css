@@ -55,3 +55,57 @@
     letter-spacing: 0.2px;
   }
 }
+
+
+/* ================= HERO TITLE (SVG) ================= */
+.hero-title {
+  width: 100%;
+  padding: 0 5mm;      /* sağdan və soldan 5mm boşluq */
+  box-sizing: border-box;
+}
+
+.hero-title svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* SVG text */
+.svg-text {
+  font-family: 'Lora', serif;
+  fill: none;
+  stroke: #4b0082;
+  stroke-width: 2;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+
+  animation: drawText 4s ease-in-out infinite;
+}
+
+/* Animation */
+@keyframes drawText {
+  0% { stroke-dashoffset: 1400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1400; }
+}
+
+/* ===== FONT SIZES ===== */
+/* Desktop */
+.hero-title .svg-text {
+  font-size: 110px;   /* daha böyük yazı üçün */
+  letter-spacing: 0.6px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .hero-title .svg-text {
+    font-size: 90px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .hero-title .svg-text {
+    font-size: 60px;
+  }
+}
