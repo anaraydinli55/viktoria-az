@@ -13,6 +13,7 @@
   display: block;
 }
 
+/* SVG Text */
 .svg-text {
   font-family: 'Lora', serif;
   fill: none;
@@ -20,6 +21,7 @@
   stroke-width: 2;
   stroke-dasharray: 1400;
   stroke-dashoffset: 1400;
+
   animation: drawText 4s ease-in-out infinite;
 }
 
@@ -29,6 +31,8 @@
   50% { stroke-dashoffset: 0; }
   100% { stroke-dashoffset: -1400; }
 }
+
+/* ----------------- FONT SIZES ----------------- */
 
 /* Desktop */
 .hero-title .svg-text {
