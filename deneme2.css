@@ -22,7 +22,6 @@ body{
   letter-spacing: 10px;
   color:#ffa5d8;
 
-  /* bu iki sətir olmadan animasiya görünməz */
   transform: translateY(100%);
   opacity: 0;
 }
