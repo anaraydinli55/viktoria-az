@@ -16,7 +16,10 @@
 .hero-svg text {
   font-family: 'Lora', serif;
   font-size: 64px;
-  fill: none;
+
+  /* əvvəl görünməsi üçün */
+  fill: rgba(75, 0, 130, 0.15);
+
   stroke: #4b0082;
   stroke-width: 2;
   stroke-linecap: round;
