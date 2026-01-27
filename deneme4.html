@@ -23,7 +23,7 @@
       background: #2e4057;
     }
 
-    /* ========= FULL PAGE DOT BACKGROUND ========= */
+    /* FULL PAGE DOT BACKGROUND */
     body::before {
       content: "";
       position: fixed;
@@ -46,15 +46,15 @@
       align-items: center;
     }
 
-    /* HERO ANIMATED TITLE */
+    /* HERO ANIMATED TITLE - TOP */
     .hero {
       width: 100%;
-      height: 520px; /* daha böyük hündürlük */
+      height: 520px; 
       display: flex;
-      align-items: center;
+      align-items: flex-start; /* üstə yapışdırır */
       justify-content: center;
       margin: 0;
-      transform: translateY(-20px);
+      padding-top: 0; /* üst boşluq sıfır */
     }
 
     svg {
@@ -68,7 +68,7 @@
       stroke: #ffa5d8;
       fill: #f2f4f8;
       font-weight: 700;
-      font-size: 150px; /* daha böyük font */
+      font-size: 150px;
       stroke-width: 6px;
       animation: textAnimate 5s infinite alternate;
     }
@@ -86,11 +86,12 @@
       }
     }
 
-    /* CONTENT */
+    /* CONTENT - 1cm boşluq */
     .content {
       width: 100%;
       max-width: 900px;
-      padding: 18px 30px 30px 30px; /* boşluq azaldıldı */
+      padding: 16px 30px 30px 30px; /* 1cm ≈ 16px */
+      margin-top: 0; /* boşluq sıfır */
       box-sizing: border-box;
       background: transparent;
       color: #111;
