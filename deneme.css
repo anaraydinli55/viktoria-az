@@ -41,7 +41,6 @@
   100% { stroke: #4b0082; }
 }
 
-
 /* ----------------- ÇATDIRILMA XİDMƏTİ (cta-text) ----------------- */
 .patterns{
   width:100%;
@@ -56,7 +55,7 @@
   letter-spacing: 10px;
 
   stroke:#ffa5d8;
-  fill:hsl(189, 68%, 75%);
+  fill: transparent;  /* burası vacibdir */
   font-weight:700;
 
   font-size: clamp(40px, 8vw, 120px);
@@ -67,13 +66,13 @@
 
 @keyframes textAnimate{
   0%{
-    stroke-dasharray:0 1000;
-    stroke-dashoffset:20%;
-    fill:hsl(189, 68%, 75%);
+    stroke-dasharray: 0 1200;
+    stroke-dashoffset: 0;
+    fill: transparent;
   }
   100%{
-    stroke-dasharray:1000 0;
-    stroke-dashoffset:-20%;
-    fill:hsla(189, 68%, 75%, 0);
+    stroke-dasharray: 1200 0;
+    stroke-dashoffset: -1200;
+    fill: transparent;
   }
 }
