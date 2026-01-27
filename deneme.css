@@ -148,3 +148,33 @@
     font-size: 46px; /* mobile */
   }
 }
+
+.hero-title {
+  padding: 0 12px; /* sağdan və soldan 12px boşluq */
+  box-sizing: border-box;
+}
+
+.hero-title svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-title .svg-text {
+  font-size: 72px; /* desktop */
+  letter-spacing: 0.5px; /* harflər arasına boşluq */
+}
+
+@media (max-width: 768px) {
+  .hero-title .svg-text {
+    font-size: 60px;
+    letter-spacing: 0.3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title .svg-text {
+    font-size: 46px;
+    letter-spacing: 0.2px;
+  }
+}
