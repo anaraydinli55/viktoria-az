@@ -1,37 +1,30 @@
-/* container */
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
+
 .patterns {
   width: 100%;
-  height: 260px;
-  overflow: hidden;
+  height: 280px; /* ⚠️ VACİB */
 }
 
-/* svg */
 .hero-svg {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-/* animated text */
 .hero-svg text {
   font-family: 'Lora', serif;
   font-size: 64px;
 
-  /* əvvəl görünməsi üçün */
-  fill: rgba(75, 0, 130, 0.15);
-
+  fill: rgba(75, 0, 130, 0.2); /* ⚠️ görünməsi üçün */
   stroke: #4b0082;
   stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
 
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
+  stroke-dasharray: 1200;
+  stroke-dashoffset: 1200;
 
   animation: drawText 4s ease forwards;
 }
 
-/* animation */
 @keyframes drawText {
   to {
     stroke-dashoffset: 0;
