@@ -1,33 +1,15 @@
 <div class="patterns">
-<svg viewBox="0 0 1200 300" class="hero-svg"
-     xmlns="http://www.w3.org/2000/svg">
+  <svg class="hero-svg" viewBox="0 0 1200 300" preserveAspectRatio="xMidYMid meet">
+    <defs>
+      <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+        <circle cx="25" cy="25" r="3" fill="#be9ddf"></circle>
+      </pattern>
+    </defs>
 
-  <defs>
-    <pattern id="polka-dots" x="0" y="0" width="100" height="100"
-             patternUnits="userSpaceOnUse">
-      <circle fill="#be9ddf" cx="25" cy="25" r="3"/>
-    </pattern>
-  </defs>
+    <rect width="100%" height="100%" fill="url(#polka-dots)"></rect>
 
-  <rect width="100%" height="100%" fill="url(#polka-dots)" />
-
-  <!-- TEXT → PATH -->
-  <path id="text-path"
-        d="M100 180 H1100"
-        fill="none" />
-
-  <text font-family="Lora, serif"
-        font-size="64"
-        fill="none"
-        stroke="#4b0082"
-        stroke-width="2"
-        stroke-dasharray="1000"
-        stroke-dashoffset="1000"
-        style="animation: draw 4s ease forwards">
-    <textPath href="#text-path" startOffset="50%" text-anchor="middle">
+    <text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle">
       Viktoria Paltar Boyaları
-    </textPath>
-  </text>
-
-</svg>
+    </text>
+  </svg>
 </div>
