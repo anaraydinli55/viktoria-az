@@ -108,7 +108,7 @@ h2, h3 {
 }
 
 .container + .container {
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .container img {
