@@ -1,48 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
 
-/* ----------------- HERO TITLE ----------------- */
-.hero-title {
-  width: 100%;
-  padding: 0 5mm;
-  box-sizing: border-box;
-}
-
-.hero-title svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-title .svg-text {
-  font-family: 'Lora', serif;
-  fill: none;
-  stroke: #4b0082;
-  stroke-width: 2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-  animation: drawText 4s ease-in-out infinite,
-             colorChange 6s linear infinite;
-
-  font-size: clamp(60px, 8vw, 110px);
-  letter-spacing: 0.6px;
-}
-
-@keyframes drawText {
-  0% { stroke-dashoffset: 1400; }
-  50% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -1400; }
-}
-
-@keyframes colorChange {
-  0% { stroke: #4b0082; }
-  25% { stroke: #8a2be2; }
-  50% { stroke: #ff1493; }
-  75% { stroke: #1e90ff; }
-  100% { stroke: #4b0082; }
-}
-
-
-/* ----------------- ÇATDIRILMA XİDMƏTİ (cta-text) ----------------- */
 .patterns{
   width:100%;
   height:auto;
@@ -51,30 +8,34 @@
   justify-content:center;
 }
 
+/* ----------------- ÇATDIRILMA XİDMƏTİ (cta-text) ----------------- */
 .cta-text{
   font-family: 'Lora', serif;
   letter-spacing: 10px;
 
   stroke:#ffa5d8;
-  fill: transparent;  /* bu mütləq */
+  fill: transparent; /* fill silindi, yalnız stroke görünsün */
   font-weight:700;
 
   font-size: clamp(40px, 8vw, 120px);
   stroke-width: 6px;
 
-  animation: ctaAnimate 5s infinite alternate;
+  /* ANIMASYON */
+  animation: ctaDraw 5s linear infinite;
 }
 
-/* YENİ KEYFRAMES ADI (dəyişdirdim ki qarışmasın) */
-@keyframes ctaAnimate{
+/* stroke animasiya */
+@keyframes ctaDraw{
   0%{
-    stroke-dasharray: 0 1200;
+    stroke-dasharray: 0 2000;
     stroke-dashoffset: 0;
-    fill: transparent;
+  }
+  50%{
+    stroke-dasharray: 2000 0;
+    stroke-dashoffset: -2000;
   }
   100%{
-    stroke-dasharray: 1200 0;
-    stroke-dashoffset: -1200;
-    fill: transparent;
+    stroke-dasharray: 0 2000;
+    stroke-dashoffset: -4000;
   }
 }
