@@ -1,17 +1,22 @@
-<div id="text-container">
-  <div class="line"><h1>VİKTORİA</h1></div>
-  <div class="line"><h1>BOYA</h1></div>
-  <div class="line"><h1>AZƏRBAYCAN</h1></div>
-</div>
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deneme</title>
 
-<script>
-  const lines = document.querySelectorAll(".line h1");
+  <!-- CSS qoşulur -->
+  <link rel="stylesheet" href="deneme2.css">
+</head>
+<body>
 
-  lines.forEach((h1, index) => {
-    setTimeout(() => {
-      h1.style.transition = "transform 0.7s ease, opacity 0.7s ease";
-      h1.style.transform = "translateY(0)";
-      h1.style.opacity = "1";
-    }, index * 350);
-  });
-</script>
+  <div id="text-container">
+    <div class="line"><h1>VİKTORİA</h1></div>
+    <div class="line"><h1>BOYA</h1></div>
+    <div class="line"><h1>AZƏRBAYCAN</h1></div>
+  </div>
+
+  <!-- JS qoşulur -->
+  <script src="deneme2.js"></script>
+</body>
+</html>
