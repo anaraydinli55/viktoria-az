@@ -1,19 +1,15 @@
 <div class="patterns">
-<svg viewBox="0 0 1200 300" xmlns="http://www.w3.org/2000/svg">
+<svg viewBox="0 0 1200 300"
+     xmlns="http://www.w3.org/2000/svg">
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
 
-    .text-fill {
+    .svg-text {
       font-family: 'Lora', serif;
       font-size: 64px;
-      fill: #2b2b2b; /* yazı həmişə görünür */
-    }
 
-    .text-stroke {
-      font-family: 'Lora', serif;
-      font-size: 64px;
-      fill: none;
+      fill: #2b2b2b;            /* yazı HƏMİŞƏ görünür */
       stroke: #6a0dad;
       stroke-width: 2;
 
@@ -24,9 +20,15 @@
     }
 
     @keyframes drawLine {
-      0% { stroke-dashoffset: 1400; }
-      60% { stroke-dashoffset: 0; }
-      100% { stroke-dashoffset: 0; }
+      0% {
+        stroke-dashoffset: 1400;
+      }
+      60% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: 0;  /* geri silinmir */
+      }
     }
   </style>
 
@@ -38,13 +40,11 @@
 
   <rect width="100%" height="100%" fill="url(#dots)"/>
 
-  <!-- fill text (həmişə görünən) -->
-  <text class="text-fill" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
-    Viktoria Paltar Boyaları
-  </text>
-
-  <!-- stroke text (animasiya) -->
-  <text class="text-stroke" x="50%" y="50%" text-anchor="middle" dominant-baseline="middle">
+  <text class="svg-text"
+        x="50%"
+        y="50%"
+        text-anchor="middle"
+        dominant-baseline="middle">
     Viktoria Paltar Boyaları
   </text>
 
