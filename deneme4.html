@@ -12,7 +12,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #bfbfbf;
+      background: #2e4057; /* arxa fon animasyon üçün əsas rəng */
       font-family: Arial, Helvetica, sans-serif;
       color: #111;
       font-size: 18px;
@@ -20,25 +20,42 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* PAGE BACKGROUND PATTERN */
+    body::before{
+      content:"";
+      position: fixed;
+      top:0;
+      left:0;
+      width:100vw;
+      height:100vh;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 165, 216, 0.25), transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(190, 157, 223, 0.25), transparent 55%),
+        radial-gradient(circle at 40% 80%, rgba(150, 220, 255, 0.25), transparent 60%);
+      z-index: -2;
     }
 
     .container {
-      max-width: 900px;
-      margin: 40px auto 20px auto;
-      background-color: #e6e6e6;
-      padding: 30px;
-      border-radius: 10px;
+      width: 100%;
+      padding: 0; /* boşluq sıfırlandı */
+      margin: 0;  /* üst alt boşluq sıfırlandı */
       flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     /* HERO ANIMATED TITLE */
     .hero {
       width: 100%;
-      height: 280px;
+      height: 380px; /* yüksəklik artırıldı */
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 20px;
+      margin: 0;
     }
 
     svg {
@@ -52,7 +69,7 @@
       stroke: #ffa5d8;
       fill: hsl(189, 68%, 75%);
       font-weight: 700;
-      font-size: 80px;
+      font-size: 110px; /* daha böyük edildi */
       stroke-width: 6px;
       animation: textAnimate 5s infinite alternate;
     }
@@ -68,6 +85,16 @@
         stroke-dashoffset: -20%;
         fill: hsla(189, 68%, 75%, 0);
       }
+    }
+
+    /* CONTENT */
+    .content {
+      width: 100%;
+      max-width: 900px;
+      padding: 30px;
+      box-sizing: border-box;
+      background: transparent; /* container arxa fonu silindi */
+      color: #111;
     }
 
     h2 {
@@ -89,6 +116,7 @@
     }
 
     .nav {
+      width: 100%;
       max-width: 900px;
       margin: 0 auto 40px auto;
       display: flex;
@@ -114,15 +142,15 @@
 
     @media (max-width: 768px) {
       body { font-size: 16px; }
-      .hero { height: 240px; }
-      .hero-text { font-size: 60px; letter-spacing: 6px; }
+      .hero { height: 320px; }
+      .hero-text { font-size: 80px; letter-spacing: 6px; }
       h2 { font-size: 20px; }
       ul { font-size: 16px; }
     }
 
     @media (max-width: 480px) {
-      .hero { height: 220px; }
-      .hero-text { font-size: 48px; letter-spacing: 4px; }
+      .hero { height: 280px; }
+      .hero-text { font-size: 62px; letter-spacing: 4px; }
     }
   </style>
 </head>
@@ -160,37 +188,39 @@
     </div>
 
     <!-- CONTENT -->
-    <h2>Viktoria paltar boyası metal qabda istifadə oluna bilərmi?</h2>
+    <div class="content">
+      <h2>Viktoria paltar boyası metal qabda istifadə oluna bilərmi?</h2>
 
-    <p>
-      <strong>Bəli, Viktoria paltar boyası ilə evdə metal qabda boyama etmək olar, amma bir neçə vacib şərtə əməl etmək lazımdır:</strong>
-    </p>
+      <p>
+        <strong>Bəli, Viktoria paltar boyası ilə evdə metal qabda boyama etmək olar, amma bir neçə vacib şərtə əməl etmək lazımdır:</strong>
+      </p>
 
-    <h2>✅ Hansı metal qab olar?</h2>
-    <ul>
-      <li>Paslanmayan polad (inox) və ya emallı qab uyğundur</li>
-      <li>Alüminium və mis qab tövsiyə edilmir – boya ilə reaksiya verə bilər</li>
-    </ul>
+      <h2>✅ Hansı metal qab olar?</h2>
+      <ul>
+        <li>Paslanmayan polad (inox) və ya emallı qab uyğundur</li>
+        <li>Alüminium və mis qab tövsiyə edilmir – boya ilə reaksiya verə bilər</li>
+      </ul>
 
-    <h2>⚠️ Vacib xəbərdarlıqlar</h2>
-    <ul>
-      <li>Metal qabı yaxşı yuyun, yağ və tozdan təmizləyin</li>
-      <li>Boyadan sonra qabı qida üçün istifadə etməyin</li>
-      <li>Boya qalığı metal səthə hopa bilər</li>
-      <li>Mümkünsə boyama üçün ayrıca qab saxlayın</li>
-    </ul>
+      <h2>⚠️ Vacib xəbərdarlıqlar</h2>
+      <ul>
+        <li>Metal qabı yaxşı yuyun, yağ və tozdan təmizləyin</li>
+        <li>Boyadan sonra qabı qida üçün istifadə etməyin</li>
+        <li>Boya qalığı metal səthə hopa bilər</li>
+        <li>Mümkünsə boyama üçün ayrıca qab saxlayın</li>
+      </ul>
 
-    <h2>🧵 Qısa boyama qaydası</h2>
-    <ul>
-      <li>Qabı su ilə doldurun</li>
-      <li>Boyanı tam həll edin</li>
-      <li>Paltarı isladıb içinə salın</li>
-      <li>Taxta və ya plastik qaşıqla qarışdırın</li>
-      <li>20–40 dəqiqə saxlayın</li>
-      <li>Soyuq suda durulayın və ayrı yuyun</li>
-    </ul>
+      <h2>🧵 Qısa boyama qaydası</h2>
+      <ul>
+        <li>Qabı su ilə doldurun</li>
+        <li>Boyanı tam həll edin</li>
+        <li>Paltarı isladıb içinə salın</li>
+        <li>Taxta və ya plastik qaşıqla qarışdırın</li>
+        <li>20–40 dəqiqə saxlayın</li>
+        <li>Soyuq suda durulayın və ayrı yuyun</li>
+      </ul>
 
-    <p><strong>Qeyd:</strong> Boyadan sonra metal qab qida üçün istifadə edilə bilməz.</p>
+      <p><strong>Qeyd:</strong> Boyadan sonra metal qab qida üçün istifadə edilə bilməz.</p>
+    </div>
 
   </div>
 
