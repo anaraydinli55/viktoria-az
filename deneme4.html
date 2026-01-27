@@ -15,7 +15,7 @@
       background:#2e4057;
       font-family: Arial, Helvetica, sans-serif;
       overflow-x:hidden;
-      color:#111;
+      color:#b7ff00; /* neon yaşıl */
       position: relative;
     }
 
@@ -34,7 +34,7 @@
 
     /* HERO (TOP FIXED) */
     .hero{
-      position: fixed; /* BURASI FIXED OLMALI */
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -57,10 +57,9 @@
       fill:#f2f4f8;
       font-weight:700;
       stroke-width:6px;
-
       font-size: clamp(50px, 10vw, 140px);
       animation:textAnimate 5s infinite alternate;
-      paint-order: stroke fill; /* stroke yazıyı kapatmasın diye */
+      paint-order: stroke fill;
     }
 
     @keyframes textAnimate{
@@ -72,24 +71,36 @@
       100%{
         stroke-dasharray:50% 0;
         stroke-dashoffset:-20%;
-        fill:rgba(242,244,248,0.25); /* tamamen kaybolmasın */
+        fill:rgba(242,244,248,0.25);
       }
     }
 
-    /* CONTENT (1cm below hero) */
+    /* CONTENT (below hero) */
     .content{
       width:100%;
       max-width:900px;
-      margin: 15vh auto 0 auto;  /* hero hündürlüyü qədər boşluq */
+      margin: 15vh auto 0 auto;
       padding: 16px 20px 30px;
       box-sizing:border-box;
       position: relative;
-      z-index: 2; /* içerik üstte olsun */
+      z-index: 2;
     }
 
-    h2{ margin-top:24px; font-size:22px; }
-    p{ font-size:18px; }
-    ul{ margin-left:20px; font-size:18px; }
+    /* NEON TEXT */
+    h2{
+      margin-top:24px;
+      font-size:22px;
+      color:#b7ff00;
+      text-shadow: 0 0 10px #b7ff00, 0 0 25px #00ff00, 0 0 40px #00ff00;
+    }
+
+    p, ul, li{
+      font-size:18px;
+      color:#b7ff00;
+      text-shadow: 0 0 6px #b7ff00, 0 0 12px #00ff00;
+    }
+
+    ul{ margin-left:20px; }
     li{ margin-bottom:10px; }
 
     .nav{
@@ -103,6 +114,7 @@
       position: relative;
       z-index: 2;
     }
+
     .nav a{
       flex:1;
       text-align:center;
@@ -114,6 +126,13 @@
       font-weight:bold;
     }
     .nav a:hover{ background:#357abd; }
+
+    /* MOBILE ADJUST */
+    @media (max-width: 768px){
+      .content{
+        margin-top: 25vh;
+      }
+    }
 
   </style>
 </head>
