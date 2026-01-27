@@ -3,7 +3,7 @@
 /* ----------------- HERO TITLE ----------------- */
 .hero-title {
   width: 100%;
-  padding: 0 5mm;      /* sağdan və soldan 5mm boşluq */
+  padding: 0 5mm;
   box-sizing: border-box;
 }
 
@@ -14,98 +14,39 @@
 }
 
 /* SVG Text */
-.svg-text {
+.hero-title .svg-text {
   font-family: 'Lora', serif;
   fill: none;
   stroke: #4b0082;
   stroke-width: 2;
   stroke-dasharray: 1400;
   stroke-dashoffset: 1400;
-
   animation: drawText 4s ease-in-out infinite;
-}
 
-/* Animation */
-@keyframes drawText {
-  0% { stroke-dashoffset: 1400; }
-  50% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -1400; }
-}
-
-/* ----------------- FONT SIZES ----------------- */
-
-/* Desktop */
-.hero-title .svg-text {
-  font-size: 72px;
-  letter-spacing: 0.5px;
-}
-
-/* Tablet */
-@media (max-width: 768px) {
-  .hero-title .svg-text {
-    font-size: 60px;
-    letter-spacing: 0.3px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .hero-title .svg-text {
-    font-size: 46px;
-    letter-spacing: 0.2px;
-  }
-}
-
-
-/* ================= HERO TITLE (SVG) ================= */
-.hero-title {
-  width: 100%;
-  padding: 0 5mm;      /* sağdan və soldan 5mm boşluq */
-  box-sizing: border-box;
-}
-
-.hero-title svg {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* SVG text */
-.svg-text {
-  font-family: 'Lora', serif;
-  fill: none;
-  stroke: #4b0082;
-  stroke-width: 2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-
-  animation: drawText 4s ease-in-out infinite;
-}
-
-/* Animation */
-@keyframes drawText {
-  0% { stroke-dashoffset: 1400; }
-  50% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -1400; }
-}
-
-/* ===== FONT SIZES ===== */
-/* Desktop */
-.hero-title .svg-text {
-  font-size: 110px;   /* daha böyük yazı üçün */
+  /* Responsive font size (taşmayı engeller) */
+  font-size: clamp(60px, 8vw, 110px);
   letter-spacing: 0.6px;
 }
 
+/* Animation */
+@keyframes drawText {
+  0% { stroke-dashoffset: 1400; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -1400; }
+}
+
+/* ----------------- Media Queries (opsiyonel) ----------------- */
 /* Tablet */
 @media (max-width: 1024px) {
   .hero-title .svg-text {
-    font-size: 90px;
+    font-size: clamp(50px, 9vw, 90px);
   }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
   .hero-title .svg-text {
-    font-size: 60px;
+    font-size: clamp(40px, 10vw, 60px);
+    letter-spacing: 0.3px;
   }
 }
