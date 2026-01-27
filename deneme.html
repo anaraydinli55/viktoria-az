@@ -135,7 +135,40 @@ Solmuş geyimlər üçün tekstil boyaları – Viktoria AZ." />
 </section>
 
 <section class="container">
-  <h2>🔷 Çatdırılma xidməti</h2>
+  <!-- Animasiya edilmiş başlıq -->
+  <div class="svg-title">
+    <svg viewBox="0 0 1000 200" preserveAspectRatio="xMidYMid meet" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
+      <style>
+        @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+
+        .svg-text {
+          font-family: 'Lora', serif;
+          letter-spacing: 10px;
+          font-size: clamp(60px, 9vw, 120px);
+          fill: none;
+          stroke: #ffa5d8;
+          stroke-width: clamp(4px, 0.6vw, 10px);
+
+          stroke-dasharray: 1400;
+          stroke-dashoffset: 1400;
+
+          animation: drawText 5s ease-in-out infinite;
+        }
+
+        @keyframes drawText {
+          0% { stroke-dashoffset: 1400; }
+          50% { stroke-dashoffset: 0; }
+          100% { stroke-dashoffset: 1400; }
+        }
+      </style>
+
+      <text class="svg-text" x="50%" y="60%" text-anchor="middle"
+            textLength="900" lengthAdjust="spacingAndGlyphs">
+        Çatdırılma xidməti
+      </text>
+    </svg>
+  </div>
+
   <div class="card">
     <p>
       Azərpoçt ilə Bakı və bütün bölgələrə çatdırılma. Bakıya təxmini 2 iş günü, bölgələrə 3-4 iş günü ərzində çatır. Minimum sifariş 2 ədəd. 5 ədəddən yuxarı sifarişlərdə çatdırılma pulsuzdur. Sifarişlər, sifariş olunan günün ertəsi iş günü poçta verilir. Poçt qəbzini göndəririk, Azərpoçt rəsmi 
@@ -143,6 +176,7 @@ Solmuş geyimlər üçün tekstil boyaları – Viktoria AZ." />
     </p>
   </div>
 </section>
+
 
 <section class="container">
   <h2>🔷 Haqqımızda</h2>
