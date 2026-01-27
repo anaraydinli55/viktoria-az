@@ -1,26 +1,28 @@
-body {
-  margin: 0;
-  background: #2e4057;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+body{
+  margin:0;
+  background:#2e4057;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
 }
 
-#text-container {
-  text-align: center;
+#text-container{
+  text-align:center;
 }
 
-.line {
-  overflow: hidden;  /* burası çox önəmlidir */
+.line{
+  overflow:hidden;
 }
 
-.line h1 {
-  margin: 0;
-  font-family: 'Lora', serif;
+.line h1{
+  margin:0;
+  font-family:'Lora', serif;
   font-size: clamp(40px, 8vw, 90px);
-  letter-spacing: 12px;
-  color: #ffa5d8;
+  letter-spacing: 10px;
+  color:#ffa5d8;
+
+  /* bu iki sətir olmadan animasiya görünməz */
   transform: translateY(100%);
   opacity: 0;
 }
