@@ -41,6 +41,7 @@
   100% { stroke: #4b0082; }
 }
 
+
 /* ----------------- ÇATDIRILMA XİDMƏTİ (cta-text) ----------------- */
 .patterns{
   width:100%;
@@ -55,16 +56,17 @@
   letter-spacing: 10px;
 
   stroke:#ffa5d8;
-  fill: transparent;  /* burası vacibdir */
+  fill: transparent;  /* bu mütləq */
   font-weight:700;
 
   font-size: clamp(40px, 8vw, 120px);
   stroke-width: 6px;
 
-  animation: textAnimate 5s infinite alternate;
+  animation: ctaAnimate 5s infinite alternate;
 }
 
-@keyframes textAnimate{
+/* YENİ KEYFRAMES ADI (dəyişdirdim ki qarışmasın) */
+@keyframes ctaAnimate{
   0%{
     stroke-dasharray: 0 1200;
     stroke-dashoffset: 0;
