@@ -13,7 +13,6 @@
   display: block;
 }
 
-/* SVG Text */
 .hero-title .svg-text {
   font-family: 'Lora', serif;
   fill: none;
@@ -21,57 +20,19 @@
   stroke-width: 2;
   stroke-dasharray: 1400;
   stroke-dashoffset: 1400;
-  animation: drawText 4s ease-in-out infinite;
+  animation: drawText 4s ease-in-out infinite,
+             colorChange 6s linear infinite;
 
-  /* Responsive font size (taşmayı engeller) */
   font-size: clamp(60px, 8vw, 110px);
   letter-spacing: 0.6px;
 }
 
-/* Animation */
 @keyframes drawText {
   0% { stroke-dashoffset: 1400; }
   50% { stroke-dashoffset: 0; }
   100% { stroke-dashoffset: -1400; }
 }
 
-/* ----------------- Media Queries (opsiyonel) ----------------- */
-/* Tablet */
-@media (max-width: 1024px) {
-  .hero-title .svg-text {
-    font-size: clamp(50px, 9vw, 90px);
-  }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-  .hero-title .svg-text {
-    font-size: clamp(40px, 10vw, 60px);
-    letter-spacing: 0.3px;
-  }
-}
-
-
-.hero-title .svg-text {
-  font-family: 'Lora', serif;
-  letter-spacing: 10px;
-  fill: none;
-  stroke-width: 2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-
-  animation: drawText 4s ease-in-out infinite,
-             colorChange 6s linear infinite;
-}
-
-/* stroke çizim animasyonu */
-@keyframes drawText {
-  0% { stroke-dashoffset: 1400; }
-  50% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: 1400; }
-}
-
-/* renk değişimi */
 @keyframes colorChange {
   0% { stroke: #4b0082; }
   25% { stroke: #8a2be2; }
@@ -80,41 +41,10 @@
   100% { stroke: #4b0082; }
 }
 
-/* ====== HERO TITLE SVG (MUTLAK ÇALIŞSIN) ====== */
-.hero-title .svg-text {
-  font-family: 'Lora', serif;
-  letter-spacing: 10px;
-
-  fill: none;
-  stroke-width: 2;
-  stroke-dasharray: 1400;
-  stroke-dashoffset: 1400;
-
-  /* çizim animasyonu */
-  animation: drawText 4s ease-in-out infinite,
-             colorChange 6s linear infinite !important;
-}
-
-/* çizim animasyonu */
-@keyframes drawText {
-  0% { stroke-dashoffset: 1400; }
-  50% { stroke-dashoffset: 0; }
-  100% { stroke-dashoffset: -1400; }
-}
-
-/* renk değişimi */
-@keyframes colorChange {
-  0% { stroke: #4b0082; }
-  25% { stroke: #8a2be2; }
-  50% { stroke: #ff1493; }
-  75% { stroke: #1e90ff; }
-  100% { stroke: #4b0082; }
-}
-
-
+/* ----------------- ÇATDIRILMA XİDMƏTİ (animated-text) ----------------- */
 .patterns{
   width:100%;
-  height:200px;
+  height:auto; /* buranı auto et ki yazı kəsilməsin */
   display:flex;
   align-items:center;
   justify-content:center;
@@ -126,44 +56,10 @@
   stroke:#ffa5d8;
   fill:hsl(189, 68%, 75%);
   font-weight:700;
-  font-size: 120px;
-  stroke-width: 6px;
-  animation: textAnimate 5s infinite alternate;
-}
 
-@keyframes textAnimate{
-  0%{
-    stroke-dasharray:0 50%;
-    stroke-dashoffset:20%;
-    fill:hsl(189, 68%, 75%);
-  }
-  100%{
-    stroke-dasharray:50% 0;
-    stroke-dashoffset:-20%;
-    fill:hsla(189, 68%, 75%, 0);
-  }
-}
-
-.patterns{
-  width:100%;
-  height:200px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.animated-text{
-  font-family: 'Lora', serif;
-  letter-spacing: 10px;
-
-  stroke:#ffa5d8;
-  fill:hsl(189, 68%, 75%);
-  font-weight:700;
-
-  font-size: 120px;
+  font-size: clamp(40px, 8vw, 120px);
   stroke-width: 6px;
 
-  /* ANIMASYON BURADA */
   animation: textAnimate 5s infinite alternate;
 }
 
