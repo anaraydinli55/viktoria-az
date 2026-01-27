@@ -9,26 +9,21 @@
   <link rel="canonical" href="https://viktoria-az.store/bloq1.html">
 
   <style>
-    body {
-      margin: 0;
-      padding: 0;
+    body{
+      margin:0;
+      padding:0;
+      background:#2e4057;
       font-family: Arial, Helvetica, sans-serif;
-      color: #111;
-      font-size: 18px;
-      line-height: 1.7;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      overflow-x: hidden;
-      background: #2e4057;
+      overflow-x:hidden;
+      color:#111;
     }
 
-    /* FULL PAGE DOT BACKGROUND */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -2;
+    /* DOT BACKGROUND */
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      z-index:-2;
       background:
         radial-gradient(circle at 20% 20%, rgba(255, 165, 216, 0.25), transparent 55%),
         radial-gradient(circle at 80% 30%, rgba(190, 157, 223, 0.25), transparent 60%),
@@ -36,194 +31,150 @@
         radial-gradient(circle, rgba(255,255,255,0.15) 2px, transparent 2px 22px);
     }
 
-    .container {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    /* HERO */
+    .hero{
+      width:100%;
+      height: 45vh;          /* ekranın 45%-i */
+      display:flex;
+      align-items:flex-start; /* üstə yapışdırır */
+      justify-content:center;
+      padding-top: 0;
     }
 
-    /* HERO ANIMATED TITLE - TOP */
-    .hero {
-      width: 100%;
-      height: 520px; 
-      display: flex;
-      align-items: flex-start; /* üstə yapışdırır */
-      justify-content: center;
-      margin: 0;
-      padding-top: 0; /* üst boşluq sıfır */
+    svg{
+      width:100%;
+      height:100%;
     }
 
-    svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .hero-text {
+    .hero-text{
       font-family: 'Lora', serif;
-      letter-spacing: 10px;
-      stroke: #ffa5d8;
-      fill: #f2f4f8;
-      font-weight: 700;
-      font-size: 150px;
-      stroke-width: 6px;
-      animation: textAnimate 5s infinite alternate;
+      letter-spacing: 0.12em;
+      stroke:#ffa5d8;
+      fill:#f2f4f8;
+      font-weight:700;
+      stroke-width:6px;
+
+      /* RESPONSIVE FONT */
+      font-size: clamp(50px, 10vw, 140px);
+      animation:textAnimate 5s infinite alternate;
     }
 
     @keyframes textAnimate{
       0%{
-        stroke-dasharray: 0 50%;
-        stroke-dashoffset: 20%;
-        fill: #f2f4f8;
+        stroke-dasharray:0 50%;
+        stroke-dashoffset:20%;
+        fill:#f2f4f8;
       }
       100%{
-        stroke-dasharray: 50% 0;
-        stroke-dashoffset: -20%;
-        fill: rgba(242,244,248,0);
+        stroke-dasharray:50% 0;
+        stroke-dashoffset:-20%;
+        fill:rgba(242,244,248,0);
       }
     }
 
-    /* CONTENT - 1cm boşluq */
-    .content {
-      width: 100%;
-      max-width: 900px;
-      padding: 16px 30px 30px 30px; /* 1cm ≈ 16px */
-      margin-top: 0; /* boşluq sıfır */
-      box-sizing: border-box;
-      background: transparent;
-      color: #111;
+    /* CONTENT */
+    .content{
+      width:100%;
+      max-width:900px;
+      margin:0 auto;
+      padding: 16px 20px 30px; /* 1cm ≈ 16px */
+      box-sizing:border-box;
     }
 
-    h2 {
-      margin-top: 24px;
-      font-size: 22px;
-    }
+    h2{ margin-top:24px; font-size:22px; }
+    p{ font-size:18px; }
+    ul{ margin-left:20px; font-size:18px; }
+    li{ margin-bottom:10px; }
 
-    p {
-      font-size: 18px;
+    .nav{
+      width:100%;
+      max-width:900px;
+      margin:0 auto 40px auto;
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      flex-wrap:wrap;
     }
-
-    ul {
-      margin-left: 20px;
-      font-size: 18px;
+    .nav a{
+      flex:1;
+      text-align:center;
+      padding:12px 20px;
+      background:#4a90e2;
+      color:#fff;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:bold;
     }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    .nav {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      display: flex;
-      justify-content: space-between;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .nav a {
-      flex: 1;
-      text-align: center;
-      padding: 12px 20px;
-      background-color: #4a90e2;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-
-    .nav a:hover {
-      background-color: #357abd;
-    }
-
-    @media (max-width: 768px) {
-      body { font-size: 16px; }
-      .hero { height: 420px; }
-      .hero-text { font-size: 120px; letter-spacing: 6px; }
-      h2 { font-size: 20px; }
-      ul { font-size: 16px; }
-    }
-
-    @media (max-width: 480px) {
-      .hero { height: 360px; }
-      .hero-text { font-size: 90px; letter-spacing: 4px; }
-    }
+    .nav a:hover{ background:#357abd; }
   </style>
 </head>
 
 <body>
 
-  <div class="container">
+  <!-- HERO -->
+  <div class="hero">
+    <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
+      <defs>
+        <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+          <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
+        </pattern>
+      </defs>
 
-    <!-- HERO ANIMATED TITLE (3 lines) -->
-    <div class="hero">
-      <svg viewBox="0 0 1000 300" preserveAspectRatio="xMidYMid meet">
-        <defs>
-          <pattern id="polka-dots" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
-            <circle fill="#be9ddf" cx="25" cy="25" r="3"></circle>
-          </pattern>
-        </defs>
+      <rect width="100%" height="100%" fill="url(#polka-dots)"></rect>
 
-        <rect width="100%" height="100%" fill="url(#polka-dots)"></rect>
+      <text x="50%" y="28%" text-anchor="middle" class="hero-text"
+            textLength="800" lengthAdjust="spacingAndGlyphs">
+        Viktoria
+      </text>
 
-        <text x="50%" y="32%" text-anchor="middle" class="hero-text"
-              textLength="800" lengthAdjust="spacingAndGlyphs">
-          Viktoria
-        </text>
+      <text x="50%" y="55%" text-anchor="middle" class="hero-text"
+            textLength="800" lengthAdjust="spacingAndGlyphs">
+        Paltar
+      </text>
 
-        <text x="50%" y="57%" text-anchor="middle" class="hero-text"
-              textLength="800" lengthAdjust="spacingAndGlyphs">
-          Paltar
-        </text>
-
-        <text x="50%" y="82%" text-anchor="middle" class="hero-text"
-              textLength="800" lengthAdjust="spacingAndGlyphs">
-          Boyaları
-        </text>
-      </svg>
-    </div>
-
-    <!-- CONTENT -->
-    <div class="content">
-      <h2>Viktoria paltar boyası metal qabda istifadə oluna bilərmi?</h2>
-
-      <p>
-        <strong>Bəli, Viktoria paltar boyası ilə evdə metal qabda boyama etmək olar, amma bir neçə vacib şərtə əməl etmək lazımdır:</strong>
-      </p>
-
-      <h2>✅ Hansı metal qab olar?</h2>
-      <ul>
-        <li>Paslanmayan polad (inox) və ya emallı qab uyğundur</li>
-        <li>Alüminium və mis qab tövsiyə edilmir – boya ilə reaksiya verə bilər</li>
-      </ul>
-
-      <h2>⚠️ Vacib xəbərdarlıqlar</h2>
-      <ul>
-        <li>Metal qabı yaxşı yuyun, yağ və tozdan təmizləyin</li>
-        <li>Boyadan sonra qabı qida üçün istifadə etməyin</li>
-        <li>Boya qalığı metal səthə hopa bilər</li>
-        <li>Mümkünsə boyama üçün ayrıca qab saxlayın</li>
-      </ul>
-
-      <h2>🧵 Qısa boyama qaydası</h2>
-      <ul>
-        <li>Qabı su ilə doldurun</li>
-        <li>Boyanı tam həll edin</li>
-        <li>Paltarı isladıb içinə salın</li>
-        <li>Taxta və ya plastik qaşıqla qarışdırın</li>
-        <li>20–40 dəqiqə saxlayın</li>
-        <li>Soyuq suda durulayın və ayrı yuyun</li>
-      </ul>
-
-      <p><strong>Qeyd:</strong> Boyadan sonra metal qab qida üçün istifadə edilə bilməz.</p>
-    </div>
-
+      <text x="50%" y="82%" text-anchor="middle" class="hero-text"
+            textLength="800" lengthAdjust="spacingAndGlyphs">
+        Boyaları
+      </text>
+    </svg>
   </div>
 
+  <!-- CONTENT (1cm boşluq) -->
+  <div class="content">
+    <h2>Viktoria paltar boyası metal qabda istifadə oluna bilərmi?</h2>
+
+    <p>
+      <strong>Bəli, Viktoria paltar boyası ilə evdə metal qabda boyama etmək olar, amma bir neçə vacib şərtə əməl etmək lazımdır:</strong>
+    </p>
+
+    <h2>✅ Hansı metal qab olar?</h2>
+    <ul>
+      <li>Paslanmayan polad (inox) və ya emallı qab uyğundur</li>
+      <li>Alüminium və mis qab tövsiyə edilmir – boya ilə reaksiya verə bilər</li>
+    </ul>
+
+    <h2>⚠️ Vacib xəbərdarlıqlar</h2>
+    <ul>
+      <li>Metal qabı yaxşı yuyun, yağ və tozdan təmizləyin</li>
+      <li>Boyadan sonra qabı qida üçün istifadə etməyin</li>
+      <li>Boya qalığı metal səthə hopa bilər</li>
+      <li>Mümkünsə boyama üçün ayrıca qab saxlayın</li>
+    </ul>
+
+    <h2>🧵 Qısa boyama qaydası</h2>
+    <ul>
+      <li>Qabı su ilə doldurun</li>
+      <li>Boyanı tam həll edin</li>
+      <li>Paltarı isladıb içinə salın</li>
+      <li>Taxta və ya plastik qaşıqla qarışdırın</li>
+      <li>20–40 dəqiqə saxlayın</li>
+      <li>Soyuq suda durulayın və ayrı yuyun</li>
+    </ul>
+
+    <p><strong>Qeyd:</strong> Boyadan sonra metal qab qida üçün istifadə edilə bilməz.</p>
+  </div>
+
+  <!-- NAV -->
   <div class="nav">
     <a href="https://viktoria-az.store">⬅ Geri</a>
     <a href="https://viktoria-az.store">🏠 Ana səhifə</a>
