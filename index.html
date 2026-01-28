@@ -1,120 +1,138 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş</title>
-  <meta name="description" content="Viktoria paltar boyaları:Pəmbə, Yemiş rəngi, Yavruağzı, Tünd Pəmbə, Al qırmızı, Atəşi Pəmbə, Nar Çiçəyi, Qırmızı, Tünd Qırmızı, Vişnə Çürüyü, Sarı, Narıncı, Gül Kurusu, Açıq Bej, Tünd Bej, Tütün Rəngi, Açıq Qəhvəyi, Orta Qəhvəyi, Qəhvəyi, Tünd Qəhvəyi, Fəs Rəngi, Güvəz, Açıq Mavi, Orta Mavi, Tünd Mavi, Açıq Mor, Tünd Mor, Açıq göy, Orta göy, Qara, Əflatun, Bej, Açıq boz, Tünd boz, Şam Göbəyi, Açıq Filizi, Tünd Filizi, Yaşıl, Tünd Yaşıl, Nefti, xaki, Kanarya, Şərabi, Portağal, Zümrüd, Petrol, Zeytini, Saksonya, Çivit Mavi, Mor göy, Tünd göy, Yanıq Qəhvəyi, Tünd Şərabi, Tünd əflatun, Bənövşə, Qızılı Sarı, K Sarı, Boncuq Mavi, Cins Mavisi, Sabitləşdirici.
-Solmuş geyimlər üçün tekstil boyaları – Viktoria AZ." />
-  <meta name="google-site-verification" content="0NZo2VZ37MTF0bjLMJhvjnW5m_ktFbvz_9H5qPhqNF8" />
-  <link rel="canonical" href="https://viktoria-az.store/" />
-  <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Şəfalı Bitkilər – Təbii Məhsullar Satışı</title>
+  <meta name="description" content="Şəfalı bitkilər, təbii məhsullar və bitki əsaslı məhsulların satışı üçün etibarlı mənbə.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <style>
-/* Gizli linklər üçün tərtibat */
-.seo-hidden-links {
-  position: relative; /* Linklərin normal yerləşməsi */
-}
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #2e4057;
+      font-family: Arial, sans-serif;
+      color: #fff;
+    }
 
-.seo-hidden-links a {
-  color: #888;  /* Mətni ağ rəngdə edir */
-  text-decoration: none;  /* Alt xətti silir */
-  font-size: 11px;  /* Mətnin ölçüsünü nizamlayır */
-  transition: color 0.3s ease;  /* Mətni dəyişərkən keçid effekti */
-}
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
 
-.seo-hidden-links a:hover {
-  color: #45a049;  /* Üzərinə gəldikdə mətni yaşıl edirik */
-}
-</style>
+    .hero-title {
+      width: 100%;
+      max-width: 1200px;
+    }
 
+    svg {
+      width: 100%;
+      height: auto;
+    }
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Viktoria Paltar Boyaları",
-  "url": "https://viktoria-az.store",
-  "logo": "https://viktoria-az.store/images/logo.png",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+994554828424",
-    "contactType": "customer service"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Viktoria Paltar Boyaları Azərbaycan",
-    "url": "https://viktoria-az.store"
-  }
-}
-</script>
+    @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
 
-  
+    .svg-text {
+      font-family: 'Lora', serif;
+      letter-spacing: 8px;
+      font-size: clamp(36px, 6vw, 110px);
+
+      fill: none;
+      stroke: #ffa5d8;
+      stroke-width: clamp(3px, 0.5vw, 6px);
+
+      stroke-dasharray: 1600;
+      stroke-dashoffset: 1600;
+      animation: drawText 5s ease-in-out infinite;
+    }
+
+    @keyframes drawText {
+      0% {
+        stroke-dashoffset: 1600;
+      }
+      50% {
+        stroke-dashoffset: 0;
+      }
+      100% {
+        stroke-dashoffset: 1600;
+      }
+    }
+
+    /* ALT NAVİQASİYA BUTTONLARI – BÜTÜN SƏHİFƏLƏRDƏ EYNİ */
+    .nav-buttons {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 999;
+    }
+
+    .nav-buttons a {
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 30px;
+      background: transparent;
+      border: 2px solid #ffa5d8;
+      color: #ffa5d8;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .nav-buttons a:hover {
+      background: #ffa5d8;
+      color: #2e4057;
+    }
+  </style>
 </head>
 
 <body>
 
 <header>
-  <nav>
-    <a href="/">Ana səhifə</a>
-    <a href="/catalog.html">Kataloq</a>
-    <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
+  <div class="hero-title">
+    <svg viewBox="0 0 1200 260"
+         preserveAspectRatio="xMidYMid meet"
+         xmlns="http://www.w3.org/2000/svg">
 
-    <a class="wa-link"
-       href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
-       target="_blank">
-      WhatsApp Əlaqə
-      <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 2.667C8.82 2.667 3 8.487 3 15.667c0 2.43.636 4.806 1.842 6.907L3 29.333l6.98-1.82a13.01 13.01 0 006.02 1.487h.006c7.18 0 13-5.82 13-13S23.18 2.667 16 2.667z"/>
-      </svg>
-    </a>
-  </nav>
+      <text class="svg-text"
+            x="50%" y="40%"
+            text-anchor="middle"
+            textLength="1000"
+            lengthAdjust="spacingAndGlyphs">
+        ŞƏFALI BİTKİLƏR
+      </text>
 
-  <!-- Sticky Neon Button navbarın hemen altında -->
-<a href="https://herbal-bazar.vercel.app/herbal-bazar.html"
-   class="btn-neon-sticky animated-link"
-   aria-label="Şəfalı bitkilər satış saytına keçin">
+      <text class="svg-text"
+            x="50%" y="75%"
+            text-anchor="middle"
+            textLength="1000"
+            lengthAdjust="spacingAndGlyphs">
+        SATIŞI SAYTINA KEÇİN
+      </text>
 
-  <svg viewBox="0 0 1200 120"
-       preserveAspectRatio="xMidYMid meet"
-       width="100%"
-       height="auto"
-       xmlns="http://www.w3.org/2000/svg">
+    </svg>
+  </div>
+</header>
 
-    <style>
-      .svg-link-text {
-        font-family: 'Lora', serif;
-        letter-spacing: 6px;
-        font-size: clamp(28px, 5vw, 60px);
+<!-- SABİT ALT BUTTONLAR -->
+<div class="nav-buttons">
+  <a href="/">Ana səhifə</a>
+  <a href="/sefali-bitkiler">İrəli</a>
+  <a href="javascript:history.back()">Geri</a>
+</div>
 
-        fill: none;
-        stroke: #ffa5d8;
-        stroke-width: 3;
-
-        stroke-dasharray: 1200;
-        stroke-dashoffset: 1200;
-
-        animation: drawLinkText 4.5s ease-in-out infinite;
-      }
-
-      @keyframes drawLinkText {
-        0%   { stroke-dashoffset: 1200; }
-        50%  { stroke-dashoffset: 0; }
-        100% { stroke-dashoffset: 1200; }
-      }
-    </style>
-
-    <text class="svg-link-text"
-          x="50%"
-          y="65%"
-          text-anchor="middle"
-          textLength="1050"
-          lengthAdjust="spacingAndGlyphs">
-      ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN
-    </text>
-
-  </svg>
-</a>
+</body>
+</html>
 
 </header>
 
