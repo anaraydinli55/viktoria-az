@@ -71,9 +71,51 @@ Solmuş geyimlər üçün tekstil boyaları – Viktoria AZ." />
   </nav>
 
   <!-- Sticky Neon Button navbarın hemen altında -->
-  <a href="https://herbal-bazar.vercel.app/bitkiler/bitkiler.html" class="btn-neon-sticky">
-   ⏩ ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN ⏩ 
-  </a>
+<a href="https://herbal-bazar.vercel.app/herbal-bazar.html"
+   class="btn-neon-sticky animated-link"
+   aria-label="Şəfalı bitkilər satış saytına keçin">
+
+  <svg viewBox="0 0 1200 120"
+       preserveAspectRatio="xMidYMid meet"
+       width="100%"
+       height="auto"
+       xmlns="http://www.w3.org/2000/svg">
+
+    <style>
+      .svg-link-text {
+        font-family: 'Lora', serif;
+        letter-spacing: 6px;
+        font-size: clamp(28px, 5vw, 60px);
+
+        fill: none;
+        stroke: #ffa5d8;
+        stroke-width: 3;
+
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+
+        animation: drawLinkText 4.5s ease-in-out infinite;
+      }
+
+      @keyframes drawLinkText {
+        0%   { stroke-dashoffset: 1200; }
+        50%  { stroke-dashoffset: 0; }
+        100% { stroke-dashoffset: 1200; }
+      }
+    </style>
+
+    <text class="svg-link-text"
+          x="50%"
+          y="65%"
+          text-anchor="middle"
+          textLength="1050"
+          lengthAdjust="spacingAndGlyphs">
+      ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN
+    </text>
+
+  </svg>
+</a>
+
 </header>
 
 <section class="container hero">
