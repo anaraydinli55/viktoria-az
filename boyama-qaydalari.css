@@ -106,3 +106,28 @@ li {
     padding: 10px 16px;
   }
 }
+
+/* Alt naviqasiya buttonları */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 40px 0;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  background: #6a0dad;          /* mor ton */
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background: #4e0b9b;
+  transform: translateY(-2px);
+}
+
