@@ -129,6 +129,54 @@
 }
 </script>
 
+      <script>
+(function () {
+
+  const baseUrl = "https://www.viktoria-az.store/";
+  const imageBase = baseUrl + "images/";
+
+  const productGroup = {
+    "@context": "https://schema.org",
+    "@type": "ProductGroup",
+    "name": "Viktoria 10-QR Parça Boyası",
+    "description": "Viktoria 10-QR seriyalı yüksək keyfiyyətli parça boyası. 62 fərqli rəng seçimi mövcuddur.",
+    "brand": {
+      "@type": "Brand",
+      "name": "Viktoria"
+    },
+    "url": baseUrl,
+    "variesBy": ["color"],
+    "hasVariant": []
+  };
+
+  colors.forEach((c, index) => {
+
+    productGroup.hasVariant.push({
+      "@type": "Product",
+      "name": `Viktoria 10-QR Parça Boyası – ${c.color}`,
+      "color": c.color,
+      "image": imageBase + c.file,
+      "sku": `V10QR-${index + 1}`,
+      "offers": {
+        "@type": "Offer",
+        "price": "5.00",
+        "priceCurrency": "AZN",
+        "availability": "https://schema.org/InStock",
+        "itemCondition": "https://schema.org/NewCondition",
+        "url": baseUrl
+      }
+    });
+
+  });
+
+  const script = document.createElement("script");
+  script.type = "application/ld+json";
+  script.text = JSON.stringify(productGroup);
+  document.head.appendChild(script);
+
+})();
+</script>
+
   
 </style>
 </head>
