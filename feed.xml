@@ -1,38 +1,40 @@
-<script>
-function downloadFeed() {
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>Viktoria 10-QR Parça Boyaları</title>
+    <link>https://www.viktoria-az.store/</link>
+    <description>62 farklı renk seçeneği ile Viktoria 10-QR parça boyaları</description>
+    <language>az</language>
 
-  const baseUrl = "https://www.viktoria-az.store/";
-  const imageBase = baseUrl + "images/";
+    <!-- Örnek 1. Ürün -->
+    <item>
+      <g:id>V10QR-1</g:id>
+      <g:title>Viktoria 10-QR Parça Boyası – Çəhrayı</g:title>
+      <g:description>Viktoria 10-QR parça boyası – Çəhrayı renk, yüksek kaliteli boyadır.</g:description>
+      <g:link>https://www.viktoria-az.store/</g:link>
+      <g:image_link>https://www.viktoria-az.store/images/1-pembe.jpg</g:image_link>
+      <g:price>5.00 AZN</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>Viktoria</g:brand>
+      <g:color>Çəhrayı</g:color>
+    </item>
 
-  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
-  xml += `<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">\n`;
-  xml += `<channel>\n`;
-  xml += `<title>Viktoria Feed</title>\n`;
-  xml += `<link>${baseUrl}</link>\n`;
+    <!-- Örnek 2. Ürün -->
+    <item>
+      <g:id>V10QR-2</g:id>
+      <g:title>Viktoria 10-QR Parça Boyası – Qırmızı</g:title>
+      <g:description>Viktoria 10-QR parça boyası – Qırmızı renk, yüksek kaliteli boyadır.</g:description>
+      <g:link>https://www.viktoria-az.store/</g:link>
+      <g:image_link>https://www.viktoria-az.store/images/8-kirmizi.jpg</g:image_link>
+      <g:price>5.00 AZN</g:price>
+      <g:availability>in_stock</g:availability>
+      <g:condition>new</g:condition>
+      <g:brand>Viktoria</g:brand>
+      <g:color>Qırmızı</g:color>
+    </item>
 
-  colors.forEach((c, i) => {
+    <!-- ... Diğer 60 ürün aynı formatta ... -->
 
-    xml += `<item>\n`;
-    xml += `<g:id>V10QR-${i+1}</g:id>\n`;
-    xml += `<g:title>Viktoria 10-QR – ${c.color}</g:title>\n`;
-    xml += `<g:image_link>${imageBase}${c.file}</g:image_link>\n`;
-    xml += `<g:price>5.00 AZN</g:price>\n`;
-    xml += `<g:availability>in stock</g:availability>\n`;
-    xml += `</item>\n`;
-
-  });
-
-  xml += `</channel>\n</rss>`;
-
-  const blob = new Blob([xml], { type: "text/xml" });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = "feed.xml";
-  a.click();
-
-}
-
-downloadFeed();
-</script>
+  </channel>
+</rss>
