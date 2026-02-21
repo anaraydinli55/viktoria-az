@@ -292,3 +292,43 @@ colors.forEach((c, index) => {
 
 </body>
 </html>
+
+<script>
+function generateXMLFeed() {
+
+  const baseUrl = "https://www.viktoria-az.store/";
+  const imageBase = baseUrl + "images/";
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  xml += `<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">\n`;
+  xml += `<channel>\n`;
+  xml += `<title>Viktoria 10-QR Parça Boyaları</title>\n`;
+  xml += `<link>${baseUrl}</link>\n`;
+  xml += `<description>62 rəngli avtomatik məhsul feedi</description>\n`;
+
+  colors.forEach((c, index) => {
+
+    xml += `<item>\n`;
+    xml += `<g:id>V10QR-${index + 1}</g:id>\n`;
+    xml += `<title>Viktoria 10-QR – ${c.color}</title>\n`;
+    xml += `<description>Viktoria 10-QR seriyası. Rəng: ${c.color}. Qiymət: ${c.price}</description>\n`;
+    xml += `<g:link>${baseUrl}</g:link>\n`;
+    xml += `<g:image_link>${imageBase}${c.file}</g:image_link>\n`;
+    xml += `<g:availability>in stock</g:availability>\n`;
+    xml += `<g:price>${c.price} AZN</g:price>\n`;
+    xml += `<g:brand>Viktoria</g:brand>\n`;
+    xml += `<g:condition>new</g:condition>\n`;
+    xml += `</item>\n`;
+
+  });
+
+  xml += `</channel>\n</rss>`;
+
+  console.log(xml);
+
+  return xml;
+}
+
+// Konsola yazdır
+generateXMLFeed();
+</script>
