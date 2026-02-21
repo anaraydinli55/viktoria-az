@@ -1,0 +1,38 @@
+<script>
+function downloadFeed() {
+
+  const baseUrl = "https://www.viktoria-az.store/";
+  const imageBase = baseUrl + "images/";
+
+  let xml = `<?xml version="1.0" encoding="UTF-8"?>\n`;
+  xml += `<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">\n`;
+  xml += `<channel>\n`;
+  xml += `<title>Viktoria Feed</title>\n`;
+  xml += `<link>${baseUrl}</link>\n`;
+
+  colors.forEach((c, i) => {
+
+    xml += `<item>\n`;
+    xml += `<g:id>V10QR-${i+1}</g:id>\n`;
+    xml += `<g:title>Viktoria 10-QR – ${c.color}</g:title>\n`;
+    xml += `<g:image_link>${imageBase}${c.file}</g:image_link>\n`;
+    xml += `<g:price>5.00 AZN</g:price>\n`;
+    xml += `<g:availability>in stock</g:availability>\n`;
+    xml += `</item>\n`;
+
+  });
+
+  xml += `</channel>\n</rss>`;
+
+  const blob = new Blob([xml], { type: "text/xml" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "feed.xml";
+  a.click();
+
+}
+
+downloadFeed();
+</script>
