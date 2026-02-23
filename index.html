@@ -157,22 +157,37 @@
         @media (max-width: 768px) { .mor-button { width: 90%; padding: 14px 0; font-size: 18px; } }
 
         /* ========== STICKY NEON BUTTON ========== */
-        .btn-neon-sticky {
-            position: sticky;
-            top: 0;
-            display: inline-flex;
+        .btn-neon-wrap {
+            display: flex;
             justify-content: center;
-            width: 85%;
-            max-width: 320px;
-            padding: 20px;
+            padding: 10px 16px 6px;
+        }
+        .btn-neon-sticky {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 640px;
+            padding: 13px 20px;
             background: #32cd32;
             color: #000;
             font-weight: 700;
+            font-size: clamp(12px, 2.5vw, 15px);
             text-decoration: none;
             border-radius: 10px;
-            box-shadow: 0 0 8px #32cd32, 0 0 15px #32cd32;
-            margin: 10px auto;
-            z-index: 1000;
+            box-shadow: 0 0 8px #32cd32, 0 0 18px #32cd32;
+            text-align: center;
+            line-height: 1.4;
+            white-space: normal;
+            word-break: break-word;
+            box-sizing: border-box;
+        }
+        .btn-neon-sticky:hover {
+            background: #28b828;
+            box-shadow: 0 0 12px #28b828, 0 0 24px #28b828;
+        }
+        @media (max-width: 480px) {
+            .btn-neon-sticky { font-size: 12px; padding: 11px 14px; }
         }
 
         /* ========== INSTAGRAM / TIKTOK ========== */
@@ -338,14 +353,13 @@
             <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
             <a class="wa-link" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">
                 WhatsApp Əlaqə
-                <svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true">
-                    <path d="M16 2.667C8.82 2.667 3 8.487 3 15.667c0 2.43.636 4.806 1.842 6.907L3 29.333l6.98-1.82a13.01 13.01 0 006.02 1.487h.006c7.18 0 13-5.82 13-13S23.18 2.667 16 2.667z"/>
-                </svg>
             </a>
         </nav>
-        <a href="https://herbal-az.store" class="btn-neon-sticky" rel="sponsored">
-            ⏩ ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN ⏩
-        </a>
+        <div class="btn-neon-wrap">
+            <a href="https://herbal-az.store" class="btn-neon-sticky" rel="sponsored">
+                ⏩ ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN ⏩
+            </a>
+        </div>
     </header>
 
     <main>
