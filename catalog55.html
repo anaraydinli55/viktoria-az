@@ -145,12 +145,15 @@
     /* ── GRID ── */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 16px;
-      padding: 0 20px 40px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 0 16px 40px;
       max-width: 960px;
       margin: 0 auto;
     }
+
+    @media (min-width: 600px) { .grid { grid-template-columns: repeat(4, 1fr); } }
+    @media (min-width: 900px) { .grid { grid-template-columns: repeat(6, 1fr); } }
 
     /* ── CARD ── */
     .card {
@@ -176,8 +179,8 @@
 
     .card img {
       border-radius: 12px;
-      aspect-ratio: 1 / 1;
-      object-fit: cover;
+      
+      
     }
 
     .card-name {
@@ -300,7 +303,7 @@
 <!-- FILTER -->
 <div class="filter-bar">
   <button class="filter-btn active" data-filter="all">Hamısı</button>
-  <button class="filter-btn" data-filter="qirmizi">Qırmızı tоnlar</button>
+  <button class="filter-btn" data-filter="qirmizi">Qırmızı tонlar</button>
   <button class="filter-btn" data-filter="mavi">Mavi/Göy</button>
   <button class="filter-btn" data-filter="yesil">Yaşıl</button>
   <button class="filter-btn" data-filter="qehveyi">Qəhvəyi/Bej</button>
@@ -408,12 +411,8 @@
     const dest = c.link || '/boyama-qaydalari.html';
     card.addEventListener('click', () => window.location.href = dest);
 
-    // <picture> → .webp with .jpg fallback
     card.innerHTML = `
-      <picture>
-        <source srcset="images/${baseName}.webp" type="image/webp">
-        <img src="images/${c.file}" alt="${c.color} paltar boyası – Viktoria" loading="lazy" width="200" height="200">
-      </picture>
+      <img src="images/${c.file}" alt="${c.color} paltar boyası – Viktoria" width="200" height="200">
       <p class="card-name">${c.color}</p>
       <p class="card-price">${c.price}</p>
     `;
