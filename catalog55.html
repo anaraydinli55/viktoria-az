@@ -161,11 +161,16 @@
       background: var(--white);
       border-radius: var(--radius);
       box-shadow: var(--card-shadow);
-      padding: 10px;
+      padding: 0;
       text-align: center;
       cursor: pointer;
       transition: transform 0.2s, box-shadow 0.2s;
       animation: fadeUp 0.4s ease both;
+      overflow: hidden;
+    }
+
+    .card-info {
+      padding: 8px 8px 10px;
     }
 
     .card:hover {
@@ -413,9 +418,11 @@
     card.addEventListener('click', () => window.location.href = dest);
 
     card.innerHTML = `
-      <img src="images/${c.file}" alt="${c.color} paltar boyası – Viktoria" width="200" height="200">
-      <p class="card-name">${c.color}</p>
-      <p class="card-price">${c.price}</p>
+      <img src="images/${c.file}" alt="${c.color} paltar boyası – Viktoria" width="300" height="200">
+      <div class="card-info">
+        <p class="card-name">${c.color}</p>
+        <p class="card-price">${c.price}</p>
+      </div>
     `;
     return card;
   }
