@@ -52,7 +52,7 @@
     /* ── HEADER ── */
     header {
       background: var(--purple);
-      padding: 0 20px;
+      padding: 8px 16px;
       position: sticky;
       top: 0;
       z-index: 100;
@@ -64,19 +64,20 @@
       margin: 0 auto;
       display: flex;
       align-items: center;
-      gap: 8px;
-      height: 56px;
+      gap: 4px;
       flex-wrap: wrap;
+      justify-content: center;
     }
 
     nav a {
       color: rgba(255,255,255,0.85);
       text-decoration: none;
       font-weight: 500;
-      font-size: 15px;
-      padding: 6px 14px;
+      font-size: 13px;
+      padding: 5px 10px;
       border-radius: 8px;
       transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
     }
 
     nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
