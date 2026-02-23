@@ -1,0 +1,32 @@
+name: Convert Images to WebP
+
+on:
+  push:
+    paths:
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install cwebp
+        run: sudo apt install webp -y
+
+      - name: Convert to WebP
+        run: |
+          find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read f; do
+            cwebp -q 80 "$f" -o "${f%.*}.webp"
+          done
+
+      - name: Commit WebP files
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add *.webp **/*.webp
+          git diff --cached --quiet || git commit -m "Auto: Convert images to WebP"
+          git push
