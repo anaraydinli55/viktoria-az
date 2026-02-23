@@ -1,11 +1,12 @@
 name: Convert Images to WebP
 
 on:
+  workflow_dispatch:  # Manuel tetikleme (butona bas)
   push:
     paths:
-      - '**.jpg'
-      - '**.jpeg'
-      - '**.png'
+      - 'images/**.jpg'
+      - 'images/**.jpeg'
+      - 'images/**.png'
 
 jobs:
   convert:
@@ -17,16 +18,22 @@ jobs:
       - name: Install cwebp
         run: sudo apt install webp -y
 
-      - name: Convert to WebP
+      - name: Convert all images to WebP
         run: |
-          find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read f; do
-            cwebp -q 80 "$f" -o "${f%.*}.webp"
+          find images/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read f; do
+            out="${f%.*}.webp"
+            if [ ! -f "$out" ]; then
+              echo "Converting: $f → $out"
+              cwebp -q 82 "$f" -o "$out"
+            else
+              echo "Skipping (already exists): $out"
+            fi
           done
 
       - name: Commit WebP files
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add *.webp **/*.webp
-          git diff --cached --quiet || git commit -m "Auto: Convert images to WebP"
+          git add images/*.webp
+          git diff --cached --quiet && echo "Nothing to commit" || git commit -m "Auto: Convert images to WebP"
           git push
