@@ -309,11 +309,12 @@
 <!-- FILTER -->
 <div class="filter-bar">
   <button class="filter-btn active" data-filter="all">Hamısı</button>
-  <button class="filter-btn" data-filter="qirmizi">Qırmızı tонlar</button>
+  <button class="filter-btn" data-filter="qirmizi">Qırmızı tоnlar</button>
   <button class="filter-btn" data-filter="mavi">Mavi/Göy</button>
-  <button class="filter-btn" data-filter="yesil">Yaşıl</button>
-  <button class="filter-btn" data-filter="qehveyi">Qəhvəyi/Bej</button>
+  <button class="filter-btn" data-filter="yesil">Yaşıl tonlar</button>
+  <button class="filter-btn" data-filter="qehveyi">Bej/Qəhvəyi</button>
   <button class="filter-btn" data-filter="mor">Mor/Əflatun</button>
+  <button class="filter-btn" data-filter="qara">Qara</button>
   <button class="filter-btn" data-filter="digər">Digər</button>
 </div>
 
@@ -346,7 +347,7 @@
   // ── RƏNG VERİLƏRİ ──
   const colors = [
     {file:"1-pembe.jpg",    color:"Çəhrayı",         price:"5 AZN", group:"qirmizi"},
-    {file:"2-kavunici.jpg", color:"Yemiş rəngi",      price:"5 AZN", group:"qirmizi"},
+    {file:"2-kavunici.jpg", color:"Yemiş rəngi",      price:"5 AZN", group:"digər"},
     {file:"3-yavruagzi.jpg",color:"Yavruağzı",        price:"5 AZN", group:"qirmizi"},
     {file:"4-koyu-pembe.jpg",color:"Tünd Çəhrayı",   price:"5 AZN", group:"qirmizi"},
     {file:"5-al.jpg",       color:"Al qırmızı",       price:"5 AZN", group:"qirmizi"},
@@ -359,14 +360,15 @@
     {file:"12-turuncu.jpg", color:"Narıncı",          price:"5 AZN", group:"digər"},
     {file:"13-gul-kurusu.jpg",color:"Gül Kurusu",    price:"5 AZN", group:"qirmizi"},
     {file:"14-bej-acik.jpg",color:"Açıq Bej",        price:"5 AZN", group:"qehveyi"},
+    {file:"32-bej.jpg",     color:"Bej",             price:"5 AZN", group:"qehveyi"},
     {file:"15-bej-koyu.jpg",color:"Tünd Bej",        price:"5 AZN", group:"qehveyi"},
     {file:"16-tutun-rengi.jpg",color:"Tütün Rəngi",  price:"5 AZN", group:"qehveyi"},
     {file:"17-acik-kahve.jpg",color:"Açıq Qəhvəyi",  price:"5 AZN", group:"qehveyi"},
     {file:"18-kahve-orta.jpg",color:"Orta Qəhvəyi",  price:"5 AZN", group:"qehveyi"},
     {file:"19-kahve.jpg",   color:"Qəhvəyi",         price:"5 AZN", group:"qehveyi"},
     {file:"20-kahve-koyu.jpg",color:"Tünd Qəhvəyi",  price:"5 AZN", group:"qehveyi"},
-    {file:"21-fes-rengi.jpg",color:"Fəs Rəngi",      price:"5 AZN", group:"qehveyi"},
-    {file:"22-guvez.jpg",   color:"Güvəz",           price:"5 AZN", group:"mor"},
+    {file:"21-fes-rengi.jpg",color:"Fəs Rəngi",      price:"5 AZN", group:"qirmizi"},
+    {file:"22-guvez.jpg",   color:"Güvəz",           price:"5 AZN", group:"qirmizi"},
     {file:"23-acik-mavi.jpg",color:"Açıq Mavi",      price:"5 AZN", group:"mavi"},
     {file:"24-mavi-orta.jpg",color:"Orta Mavi",      price:"5 AZN", group:"mavi"},
     {file:"25-mavi-koyu.jpg",color:"Tünd Mavi",      price:"5 AZN", group:"mavi"},
@@ -374,12 +376,11 @@
     {file:"27-mor-koyu.jpg",color:"Tünd Mor",        price:"5 AZN", group:"mor"},
     {file:"28-lacivert-acik.jpg",color:"Açıq göy",   price:"5 AZN", group:"mavi"},
     {file:"29-lacivert-orta.jpg",color:"Orta göy",   price:"5 AZN", group:"mavi"},
-    {file:"30-siyah.jpg",   color:"Qara",            price:"5 AZN", group:"digər"},
+    {file:"30-siyah.jpg",   color:"Qara",            price:"5 AZN", group:"qara"},
     {file:"31-eflatun.jpg", color:"Əflatun",         price:"5 AZN", group:"mor"},
-    {file:"32-bej.jpg",     color:"Bej",             price:"5 AZN", group:"qehveyi"},
     {file:"33-kursuni-acik.jpg",color:"Açıq boz",    price:"5 AZN", group:"digər"},
     {file:"34-kursuni-koyu.jpg",color:"Tünd boz",    price:"5 AZN", group:"digər"},
-    {file:"35-cam-gobegi.jpg",color:"Şam Göbəyi",    price:"5 AZN", group:"yesil"},
+    {file:"35-cam-gobegi.jpg",color:"Şam Göbəyi",    price:"5 AZN", group:"mavi"},
     {file:"36-filizi-acik.jpg",color:"Açıq Filizi",  price:"5 AZN", group:"yesil"},
     {file:"37-filizi-koyu.jpg",color:"Tünd Filizi",  price:"5 AZN", group:"yesil"},
     {file:"38-yesil.jpg",   color:"Yaşıl",           price:"5 AZN", group:"yesil"},
@@ -390,7 +391,7 @@
     {file:"43-sarabi.jpg",  color:"Şərabi",          price:"5 AZN", group:"qirmizi"},
     {file:"44-portakal.jpg",color:"Portağal",        price:"5 AZN", group:"digər"},
     {file:"45-zumrut.jpg",  color:"Zümrüd",          price:"5 AZN", group:"yesil"},
-    {file:"46-petrol.jpg",  color:"Petrol",          price:"5 AZN", group:"mavi"},
+    {file:"46-petrol.jpg",  color:"Petrol",          price:"5 AZN", group:"yesil"},
     {file:"47-zeytini.jpg", color:"Zeytini",         price:"5 AZN", group:"yesil"},
     {file:"48-saksonya.jpg",color:"Saksonya",        price:"5 AZN", group:"mavi"},
     {file:"49-civit-mavi.jpg",color:"Çivit Mavi",    price:"5 AZN", group:"mavi"},
@@ -496,3 +497,4 @@
 
 </body>
 </html>
+
