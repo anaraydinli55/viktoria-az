@@ -8,53 +8,90 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --purple:       #4b0082;
+      --purple-dark:  #36005e;
+      --purple-light: #7b2fbe;
+      --gold:         #f5c842;
+      --bg:           #f3f0f8;
+      --white:        #ffffff;
+      --text:         #1a1a2e;
+      --text-muted:   #6b6b8a;
+      --card-shadow:  0 4px 20px rgba(75,0,130,0.10);
+      --radius:       18px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f5f6fb;
-      color: #111;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
     }
 
+    /* HEADER */
     header {
-      background: #4b0082;
-      padding: 14px 16px;
-      text-align: center;
+      background: var(--purple);
+      padding: 8px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);
     }
 
-    header h1 {
-      color: #fff;
-      margin: 0;
-      font-size: clamp(18px, 4vw, 28px);
+    nav {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 13px;
+      padding: 5px 10px;
+      border-radius: 8px;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+
+    nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+    /* CONTAINER */
     .container {
       max-width: 900px;
-      margin: 20px auto;
-      padding: 20px;
-      background: #d3d3d3;
-      border: 2px solid #d0a3ff;
-      border-radius: 12px;
-      box-sizing: border-box;
+      margin: 28px auto;
+      padding: 28px 24px;
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
     }
 
+    /* VIDEO */
     .video-wrapper {
       width: 100%;
       display: flex;
       justify-content: center;
-      padding: 10px 0 20px;
-      box-sizing: border-box;
+      padding: 0 0 24px;
     }
 
     .video-container {
       width: 100%;
-      max-width: 860px;
-      background: #fff;
-      border: 2px solid #4b0082;
+      border: 2px solid var(--purple-light);
       border-radius: 12px;
-      padding: 10px;
-      box-sizing: border-box;
+      padding: 8px;
+      background: var(--white);
     }
 
     .video-container video {
@@ -64,97 +101,117 @@
       border-radius: 8px;
     }
 
-    h2, h3 {
-      color: #4b0082;
-      margin-top: 26px;
-      margin-bottom: 12px;
+    /* TYPOGRAPHY */
+    h1 {
+      font-family: 'DM Serif Display', serif;
+      color: var(--purple);
+      font-size: clamp(22px, 4vw, 34px);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
+
+    h2 {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--purple);
+      font-size: clamp(17px, 3vw, 22px);
+      margin-top: 28px;
+      margin-bottom: 10px;
     }
 
     p {
-      line-height: 1.7;
+      line-height: 1.75;
       margin-bottom: 16px;
-      font-size: 18px;
+      font-size: 17px;
+      color: var(--text);
     }
 
     ul {
-      margin-left: 20px;
-      font-size: 18px;
+      margin-left: 22px;
+      font-size: 17px;
+      color: var(--text);
     }
 
-    li { margin-bottom: 10px; }
+    li { margin-bottom: 10px; line-height: 1.6; }
 
+    /* BUTTONS */
     .button-container {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 12px;
-      margin: 30px 0;
+      margin: 32px 0 8px;
     }
 
     .mor-button {
-      background: #4b0082;
+      background: var(--purple);
       color: #fff;
-      padding: 12px 20px;
-      border-radius: 8px;
+      padding: 13px 22px;
+      border-radius: 12px;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-      transition: all 0.3s ease;
+      font-weight: 700;
+      font-size: 15px;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 4px 16px rgba(75,0,130,0.20);
     }
 
     .mor-button:hover {
-      background: #360060;
+      background: var(--purple-dark);
       transform: translateY(-2px);
     }
 
-    @media (max-width: 768px) {
-      .container { padding: 15px 10px; }
-      p, ul, li { font-size: 16px; }
-      .mor-button { font-size: 14px; padding: 10px 16px; }
-    }
-
+    /* FOOTER */
     footer {
       text-align: center;
-      padding: 15px 0;
-      background: #ececec;
-      margin-top: 20px;
-      font-size: 14px;
-      color: #555;
+      padding: 24px 20px 100px;
+      color: var(--text-muted);
+      font-size: 13px;
     }
 
-    /* ===== FLOATING WHATSAPP ===== */
-    .whatsapp-float {
+    /* FLOATING WHATSAPP */
+    .wa-btn {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 9999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      bottom: 20px;
+      right: 20px;
       background: #25D366;
+      color: #fff;
       text-decoration: none;
       padding: 14px;
       border-radius: 50%;
-      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.15s, box-shadow 0.15s;
       animation: waPulse 2.5s ease-in-out infinite;
     }
-    .whatsapp-float:hover {
+
+    .wa-btn:hover {
       transform: scale(1.1);
-      box-shadow: 0 6px 28px rgba(37,211,102,0.6);
+      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
       animation: none;
     }
-    .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; display: block; }
+
+    .wa-btn svg { width: 32px; height: 32px; fill: #fff; display: block; }
+
     @keyframes waPulse {
       0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
       50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      .container { padding: 18px 14px; margin: 16px; }
+      p, ul, li { font-size: 15px; }
+      .mor-button { font-size: 14px; padding: 11px 16px; }
     }
   </style>
 </head>
 <body>
 
 <!-- FLOATING WHATSAPP -->
-<a class="whatsapp-float"
+<a class="wa-btn"
    href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
    target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ilə əlaqə">
   <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
@@ -163,7 +220,12 @@
 </a>
 
 <header>
-  <h1>Viktoria parça və paltar boyaları</h1>
+  <nav>
+    <a href="/">Ana səhifə</a>
+    <a href="/catalog.html">Kataloq</a>
+    <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
+    <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm">WhatsApp</a>
+  </nav>
 </header>
 
 <div class="container">
@@ -175,7 +237,7 @@
   </div>
 
   <main>
-    <h1 style="color:#4b0082;">Qara və Mavi Cins Boyama – Azərbaycanda Geyim və Forma Üçün Effektiv Həll</h1>
+    <h1>Qara və Mavi Cins Boyama – Azərbaycanda Geyim və Forma Üçün Effektiv Həll</h1>
 
     <p>
       Azərbaycanda cins geyim gündəlik həyatın ayrılmaz hissəsidir. Zamanla cins şalvar,
@@ -231,9 +293,7 @@
 
 </div>
 
-<footer>
-  <p>&copy; 2026 Viktoria AZ</p>
-</footer>
+<footer>&copy; 2026 Viktoria AZ</footer>
 
 </body>
 </html>
