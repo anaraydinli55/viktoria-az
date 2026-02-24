@@ -137,16 +137,18 @@
     /* BUTTONS */
     .button-container {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      gap: 10px;
       margin: 32px 0 8px;
     }
 
     .mor-button {
+      flex: 1;
+      text-align: center;
       background: var(--purple);
       color: #fff;
-      padding: 13px 22px;
+      padding: 13px 10px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 700;
@@ -204,7 +206,7 @@
     @media (max-width: 768px) {
       .container { padding: 18px 14px; margin: 16px; }
       p, ul, li { font-size: 15px; }
-      .mor-button { font-size: 14px; padding: 11px 16px; }
+      .mor-button { font-size: 13px; padding: 11px 8px; }
     }
   </style>
 </head>
@@ -285,9 +287,9 @@
     </p>
 
     <div class="button-container">
-      <a href="https://www.viktoria-az.store/qara-paltar-boyasi.html" class="mor-button">⬅ Geri</a>
+      <a href="https://www.viktoria-az.store/boyama-qaydalari.html" class="mor-button">◀ Geri</a>
       <a href="https://www.viktoria-az.store" class="mor-button">🏠 Ana səhifə</a>
-      <a href="https://www.viktoria-az.store/paltarlarin-evde-renglenmesi.html" class="mor-button">İrəli ➡</a>
+      <a href="https://www.viktoria-az.store/paltarlarin-evde-renglenmesi.html" class="mor-button">İrəli ▶</a>
     </div>
   </main>
 
