@@ -1,39 +1,40 @@
 name: Convert Images to WebP
 
 on:
-  workflow_dispatch:  # Manuel tetikleme (butona bas)
   push:
+    branches: [ main ]
     paths:
-      - 'images/**.jpg'
-      - 'images/**.jpeg'
-      - 'images/**.png'
+      - '**.jpg'
+      - '**.jpeg'
+      - '**.png'
+  workflow_dispatch:
 
 jobs:
-  convert:
+  convert-webp:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
       - name: Install cwebp
-        run: sudo apt install webp -y
+        run: sudo apt-get install -y webp
 
-      - name: Convert all images to WebP
+      - name: Convert JPG/JPEG/PNG to WebP
         run: |
-          find images/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) | while read f; do
-            out="${f%.*}.webp"
-            if [ ! -f "$out" ]; then
-              echo "Converting: $f → $out"
-              cwebp -q 82 "$f" -o "$out"
-            else
-              echo "Skipping (already exists): $out"
-            fi
+          find . -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) \
+            ! -path "./.git/*" \
+            ! -name "favicon*" \
+            ! -name "apple-touch-icon*" | while read file; do
+            output="${file%.*}.webp"
+            cwebp -q 82 "$file" -o "$output"
+            echo "✅ Çevrildi: $file → $output"
           done
 
-      - name: Commit WebP files
+      - name: Commit and push WebP files
         run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add images/*.webp
-          git diff --cached --quiet && echo "Nothing to commit" || git commit -m "Auto: Convert images to WebP"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "🖼️ WebP şəkilləri avtomatik əlavə edildi"
           git push
