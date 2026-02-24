@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html lang="az">
+<html lang="tr">
 <head>
   <meta charset="UTF-8">
   <title>Sprey 100 ml</title>
 
-    <!-- Favicon (Brauzer İkonası) -->
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       background: #d3d3d3;
       font-family: Arial, sans-serif;
       padding: 4mm;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
 
-    /* Ana container */
+    /* Ana kapsayıcı */
     .container {
-      position: relative;
-      max-width: 100%;
+      width: 100%;
+      max-width: 480px;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
     }
 
     /* Görsel */
@@ -35,52 +44,51 @@
       width: 100%;
       height: auto;
       display: block;
-      object-fit: contain; /* KIRPMA YOK */
+      object-fit: contain;
     }
 
     /* Alt yazı */
-    .label {
+    .etiket {
       text-align: center;
       font-size: 18px;
       font-weight: bold;
-      padding: 10px 0;
+      padding: 10px 0 6px;
       color: #000;
     }
 
-    /* Buton alanı (container üstüne oturur) */
+    /* Buton alanı — görselin ALTINDA, normal akışta */
     .nav {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
       display: flex;
+      justify-content: center;
       gap: 8px;
+      padding: 10px 12px 14px;
     }
 
     .nav a {
       background: purple;
       color: #fff;
       text-decoration: none;
-      padding: 8px 12px;
+      padding: 8px 14px;
       border-radius: 8px;
       font-size: 14px;
       white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .nav a:hover {
+      background: #5a005a;
     }
   </style>
 </head>
-
 <body>
-
   <div class="container">
     <img src="images/sprey-02.jpg" alt="Sprey">
-    <div class="label">100 ml</div>
-
+    <div class="etiket">100 ml</div>
     <div class="nav">
       <a href="sprey1.html">⬅ Geri</a>
-      <a href="index.html">🏠 Ana səhifə</a>
-      <a href="sprey3.html">İrəli ➡</a>
+      <a href="index.html">🏠 Ana Sayfa</a>
+      <a href="sprey3.html">İleri ➡</a>
     </div>
   </div>
-
 </body>
 </html>
