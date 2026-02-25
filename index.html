@@ -56,6 +56,8 @@
             gap: 24px;
             align-items: center;
             text-align: center;
+            /* FIX: overflow:hidden was clipping SVG text — removed */
+            overflow: visible;
         }
         .hero img {
             max-width: 420px;
@@ -68,6 +70,17 @@
 
         @media (min-width: 768px) {
             .hero { grid-template-columns: 1fr 1fr; text-align: left; }
+        }
+
+        /* ========== HERO SVG TITLE — FİX ========== */
+        .hero-title {
+            width: 100%;
+            overflow: hidden; /* clip only inside this wrapper */
+        }
+        .hero-title svg {
+            display: block;
+            width: 100%;
+            height: auto;
         }
 
         /* ========== TEXT ========== */
@@ -102,6 +115,8 @@
             overflow: hidden;
         }
         .container + .container { margin-top: 10px; }
+        /* FIX: hero inside .container needs overflow visible for SVG */
+        .container.hero { overflow: visible; }
         .container img { max-width: 100%; height: auto; display: block; }
 
         /* ========== ONEKG ========== */
@@ -366,30 +381,37 @@
         <section class="container hero">
             <div>
                 <h1 class="visually-hidden">Viktoria Paltar Boyaları</h1>
+
+                <!-- FIX: SVG başlıq — textLength silinib, viewBox genişlənib, overflow:hidden wrapper-da -->
                 <div class="hero-title" aria-hidden="true">
-                    <svg viewBox="0 0 1000 150" preserveAspectRatio="xMidYMid meet" width="100%" height="auto" xmlns="http://www.w3.org/2000/svg">
-                        <style>
-                            @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
-                            .svg-text {
-                                font-family: 'Lora', serif;
-                                letter-spacing: 10px;
-                                font-size: clamp(60px, 12vw, 200px);
-                                fill: none;
-                                stroke: #4b0082;
-                                stroke-width: clamp(4px, 0.6vw, 12px);
-                                stroke-dasharray: 1400;
-                                stroke-dashoffset: 1400;
-                                animation: drawText 5s ease-in-out infinite;
-                            }
-                            @keyframes drawText {
-                                0%   { stroke-dashoffset: 1400; }
-                                50%  { stroke-dashoffset: 0; }
-                                100% { stroke-dashoffset: 1400; }
-                            }
-                        </style>
-                        <text class="svg-text" x="50%" y="50%" text-anchor="middle" textLength="900" lengthAdjust="spacingAndGlyphs">Viktoria Paltar Boyaları</text>
+                    <svg viewBox="0 0 1000 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <style>
+                                @import url("https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap");
+                                .svg-text {
+                                    font-family: 'Lora', serif;
+                                    font-size: 80px;
+                                    font-weight: 700;
+                                    fill: none;
+                                    stroke: #4b0082;
+                                    stroke-width: 3px;
+                                    stroke-dasharray: 3000;
+                                    stroke-dashoffset: 3000;
+                                    animation: drawText 5s ease-in-out infinite;
+                                }
+                                @keyframes drawText {
+                                    0%   { stroke-dashoffset: 3000; }
+                                    50%  { stroke-dashoffset: 0; }
+                                    100% { stroke-dashoffset: 3000; }
+                                }
+                            </style>
+                        </defs>
+                        <!-- İki sətir — PC-də kəsilmir -->
+                        <text class="svg-text" x="50%" y="62" text-anchor="middle">Viktoria</text>
+                        <text class="svg-text" x="50%" y="128" text-anchor="middle">Paltar Boyaları</text>
                     </svg>
                 </div>
+
                 <p><strong class="color-change">Azərbaycanda ən geniş rəng çesidi</strong></p>
                 <p class="features">
                     60 <span class="marker">fərqli</span> rəng •
