@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Müştəri Rəyləri</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Google JSON-LD Schema - SEO için -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Məhsullarımız",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "3",
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Ayşe K."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Əla məhsul, çox məmnun qaldım. Mütləq tövsiyə edirəm!",
+        "datePublished": "2024-12-01"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Mehmet T."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+        "reviewBody": "Keyfiyyəti həqiqətən çox yaxşıdır, qiymət-keyfiyyət baxımından mükəmməldir.",
+        "datePublished": "2024-11-20"
+      },
+      {
+        "@type": "Review",
+        "author": {"@type": "Person", "name": "Zeynep A."},
+        "reviewRating": {"@type": "Rating", "ratingValue": "4"},
+        "reviewBody": "Gözəl məhsul, çatdırılma da sürətli oldu. Təşəkkürlər.",
+        "datePublished": "2024-11-10"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf7f2;
+      --warm: #f0e8d8;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --dark: #1a1410;
+      --mid: #5c4a32;
+      --text: #3d2e1e;
+      --border: #e0d5c5;
+      --verified: #2d7a4f;
+      --verified-bg: #eaf5ee;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: var(--dark);
+      padding: 60px 20px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.1) 0%, transparent 60%);
+    }
+    .header-inner { position: relative; z-index: 1; }
+    .header-label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 72px);
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+    .header h1 span { color: var(--gold); }
+
+    /* Ortalama puan */
+    .avg-score {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 60px;
+      padding: 12px 28px;
+      margin-top: 10px;
+    }
+    .avg-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px;
+      font-weight: 700;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .avg-right { text-align: left; }
+    .avg-stars { color: var(--gold); font-size: 18px; letter-spacing: 1px; }
+    .avg-count { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    /* ── MAIN ── */
+    .main { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
+
+    /* ── YORUM KARTI ── */
+    .reviews-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 60px; }
+
+    .review-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 30px;
+      position: relative;
+      transition: box-shadow 0.3s, transform 0.3s;
+      animation: fadeUp 0.5s ease both;
+    }
+    .review-card:hover {
+      box-shadow: 0 12px 40px rgba(92,74,50,0.1);
+      transform: translateY(-2px);
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .review-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .review-author-block { display: flex; align-items: center; gap: 12px; }
+    .avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: var(--warm);
+      border: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--mid);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .author-name {
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--dark);
+    }
+    .review-date { font-size: 12px; color: #a08060; margin-top: 2px; }
+
+    .review-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .star-display { color: var(--gold); font-size: 17px; letter-spacing: 1px; }
+    .star-display .empty { color: #ddd; }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: var(--verified-bg);
+      color: var(--verified);
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.3px;
+    }
+    .verified-badge::before { content: '✓'; font-weight: 700; }
+
+    .review-text {
+      font-size: 15px;
+      line-height: 1.7;
+      color: var(--text);
+      margin-bottom: 14px;
+    }
+
+    .review-photo {
+      margin-top: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      display: inline-block;
+      max-width: 220px;
+      border: 1px solid var(--border);
+    }
+    .review-photo img { width: 100%; display: block; }
+
+    /* ── FORM ── */
+    .form-section {
+      background: var(--dark);
+      border-radius: 20px;
+      padding: 44px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .form-section::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
+    }
+    .form-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .form-subtitle { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } .form-section { padding: 30px 20px; } }
+
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+    }
+    input[type="text"], textarea {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 13px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: #fff;
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+      resize: none;
+    }
+    input[type="text"]::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
+    input[type="text"]:focus, textarea:focus {
+      border-color: var(--gold);
+      background: rgba(255,255,255,0.09);
+    }
+
+    /* Star picker */
+    .star-picker { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
+    .star-picker input { display: none; }
+    .star-picker label {
+      font-size: 32px;
+      color: rgba(255,255,255,0.2);
+      cursor: pointer;
+      letter-spacing: 0;
+      text-transform: none;
+      transition: color 0.15s, transform 0.15s;
+      padding: 0 2px;
+    }
+    .star-picker label:hover,
+    .star-picker label:hover ~ label,
+    .star-picker input:checked ~ label {
+      color: var(--gold);
+    }
+    .star-picker label:hover { transform: scale(1.2); }
+
+    /* File upload */
+    .file-upload-wrapper {
+      position: relative;
+      border: 1.5px dashed rgba(201,168,76,0.4);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .file-upload-wrapper:hover {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.05);
+    }
+    .file-upload-wrapper input[type="file"] {
+      position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
+    }
+    .upload-icon { font-size: 28px; margin-bottom: 6px; }
+    .upload-text { font-size: 13px; color: rgba(255,255,255,0.4); }
+    .upload-text span { color: var(--gold); }
+    #file-preview { margin-top: 12px; display: none; }
+    #file-preview img { max-width: 120px; border-radius: 8px; border: 1px solid var(--gold); }
+
+    .submit-btn {
+      margin-top: 8px;
+      width: 100%;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--dark);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .submit-btn:active { transform: translateY(0); }
+
+    .form-note {
+      margin-top: 16px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      text-align: center;
+      line-height: 1.6;
+    }
+    .form-note a { color: rgba(255,255,255,0.5); }
+
+    /* Success message */
+    .success-msg {
+      display: none;
+      background: var(--verified-bg);
+      color: var(--verified);
+      border-radius: 10px;
+      padding: 16px 20px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 16px;
+    }
+
+    /* Divider */
+    .divider {
+      display: flex; align-items: center; gap: 16px;
+      margin-bottom: 40px;
+    }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-text {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--mid);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-label">Müştəri Təcrübələri</div>
+      <h1>Onlar <span>Deyir</span></h1>
+      <div class="avg-score" id="avg-score-box">
+        <div class="avg-number" id="avg-number">4.7</div>
+        <div class="avg-right">
+          <div class="avg-stars" id="avg-stars">★★★★★</div>
+          <div class="avg-count" id="avg-count">3 qiymətləndirmə</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- YORUMLAR LİSTESİ -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-text">Rəylər</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="reviews-list" id="reviews-list">
+      <!-- Təsdiqlənmiş rəylər (yenisini əlavə etmək üçün bu bloku kopyalayın) -->
+
+      <article class="review-card" itemscope itemtype="https://schema.org/Review">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">A</div>
+            <div>
+              <div class="author-name" itemprop="author">Aytən K.</div>
+              <div class="review-date">1 Dekabr 2024</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Təsdiqlənmiş Alıcı</span>
+          </div>
+        </div>
+        <p class="review-text" itemprop="reviewBody">Əla məhsul, çox məmnun qaldım. Keyfiyyəti həqiqətən gözləntimdən yuxarı idi. Mütləq tövsiyə edirəm, ailəmə də aldım!</p>
+      </article>
+
+      <article class="review-card" itemscope itemtype="https://schema.org/Review">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">M</div>
+            <div>
+              <div class="author-name" itemprop="author">Müşfiq T.</div>
+              <div class="review-date">20 Noyabr 2024</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Təsdiqlənmiş Alıcı</span>
+          </div>
+        </div>
+        <p class="review-text" itemprop="reviewBody">Qiymət-keyfiyyət baxımından mükəmməldir. Çatdırılma çox sürətli oldu, qablaşdırma qayğıla aparılmışdı. Yenidən alacağam.</p>
+      </article>
+
+      <article class="review-card" itemscope itemtype="https://schema.org/Review">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">Z</div>
+            <div>
+              <div class="author-name" itemprop="author">Zəhra A.</div>
+              <div class="review-date">10 Noyabr 2024</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★<span class="empty">★</span></div>
+            <span class="verified-badge">Təsdiqlənmiş Alıcı</span>
+          </div>
+        </div>
+        <p class="review-text" itemprop="reviewBody">Gözəl məhsul, rəngi tam istədiyim kimi idi. Çatdırılma bir az daha sürətli olsaydı 5 ulduz verərdim, amma ümumiyyətlə çox məmnunam.</p>
+      </article>
+
+    </div>
+
+    <!-- RƏY FORMU -->
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-text">Rəy Yaz</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <section class="form-section">
+      <h2 class="form-title">Təcrübənizi Paylaşın</h2>
+      <p class="form-subtitle">Rəyiniz yoxlandıqdan sonra səhifədə dərc ediləcəkdir.</p>
+
+      <!--
+        ⚙️ FORMSPREE QURAŞDIRMASI:
+        1. formspree.io saytına gedin, pulsuz hesab açın
+        2. Yeni form yaradın
+        3. Aşağıdakı action="..." hissəsini öz Formspree URL-iniz ilə əvəz edin
+        Misal: action="https://formspree.io/f/xpwzabcd"
+      -->
+      <form id="review-form" action="https://formspree.io/f/xykdokza" method="POST">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Adınız Soyadınız</label>
+            <input type="text" id="name" name="name" placeholder="Aytən K." required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-poçt (dərc edilməz)</label>
+            <input type="text" id="email" name="email" placeholder="misal@email.com" required />
+          </div>
+
+          <div class="form-group full">
+            <label>Qiymətləndirin</label>
+            <div class="star-picker">
+              <input type="radio" id="s5" name="rating" value="5" required /><label for="s5" title="5 ulduz">★</label>
+              <input type="radio" id="s4" name="rating" value="4" /><label for="s4" title="4 ulduz">★</label>
+              <input type="radio" id="s3" name="rating" value="3" /><label for="s3" title="3 ulduz">★</label>
+              <input type="radio" id="s2" name="rating" value="2" /><label for="s2" title="2 ulduz">★</label>
+              <input type="radio" id="s1" name="rating" value="1" /><label for="s1" title="1 ulduz">★</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="comment">Rəyiniz</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Məhsul və ya xidmət haqqında təcrübənizi paylaşın..." required></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label>Şəkil Əlavə Et (İstəyə bağlı)</label>
+            <div class="file-upload-wrapper">
+              <input type="file" id="photo" name="photo" accept="image/*" />
+              <div class="upload-icon">📷</div>
+              <div class="upload-text">Şəkil seçmək üçün klikləyin və ya <span>sürükləyin</span></div>
+            </div>
+            <div id="file-preview"><img id="preview-img" src="" alt="Önbaxış" /></div>
+          </div>
+
+          <div class="form-group full">
+            <button type="submit" class="submit-btn">Rəyi Göndər →</button>
+          </div>
+        </div>
+
+        <div class="success-msg" id="success-msg">
+          ✓ Rəyiniz qəbul edildi! Yoxlandıqdan sonra dərc ediləcəkdir. Təşəkkürlər!
+        </div>
+
+        <p class="form-note">
+          Rəyiniz dərc edilməzdən əvvəl yoxlanılacaqdır.<br>
+          E-poçt ünvanınız gizli saxlanılır və paylaşılmır.
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <script>
+    // Fotoğraf önizleme
+    document.getElementById('photo').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        document.getElementById('preview-img').src = ev.target.result;
+        document.getElementById('file-preview').style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    // Form gönderimi (Formspree AJAX)
+    document.getElementById('review-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('.submit-btn');
+      btn.textContent = 'Göndərilir...';
+      btn.disabled = true;
+
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (res.ok) {
+          form.reset();
+          document.getElementById('file-preview').style.display = 'none';
+          document.getElementById('success-msg').style.display = 'block';
+          btn.textContent = '✓ Göndərildi';
+        } else {
+          btn.textContent = 'Xəta! Yenidən cəhd edin';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Xəta! Yenidən cəhd edin';
+        btn.disabled = false;
+      }
+    });
+
+    // Ortalama puan hesapla
+    function calcAvg() {
+      const stars = document.querySelectorAll('.review-card .star-display');
+      let total = 0, count = 0;
+      stars.forEach(el => {
+        const filled = (el.textContent.match(/★/g) || []).length;
+        total += filled; count++;
+      });
+      if (!count) return;
+      const avg = (total / count).toFixed(1);
+      document.getElementById('avg-number').textContent = avg;
+      document.getElementById('avg-count').textContent = count + ' qiymətləndirmə';
+    }
+    calcAvg();
+  </script>
+</body>
+</html>
