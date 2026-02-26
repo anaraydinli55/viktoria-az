@@ -60,7 +60,6 @@
             gap: 24px;
             align-items: center;
             text-align: center;
-            /* FIX: overflow:hidden was clipping SVG text — removed */
             overflow: visible;
         }
         .hero img {
@@ -76,10 +75,10 @@
             .hero { grid-template-columns: 1fr 1fr; text-align: left; }
         }
 
-        /* ========== HERO SVG TITLE — FİX ========== */
+        /* ========== HERO SVG TITLE ========== */
         .hero-title {
             width: 100%;
-            overflow: hidden; /* clip only inside this wrapper */
+            overflow: hidden;
         }
         .hero-title svg {
             display: block;
@@ -119,7 +118,6 @@
             overflow: hidden;
         }
         .container + .container { margin-top: 10px; }
-        /* FIX: hero inside .container needs overflow visible for SVG */
         .container.hero { overflow: visible; }
         .container img { max-width: 100%; height: auto; display: block; }
 
@@ -387,12 +385,10 @@
             <div>
                 <h1 class="visually-hidden">Viktoria Paltar Boyaları</h1>
 
-                <!-- FIX: SVG başlıq — textLength silinib, viewBox genişlənib, overflow:hidden wrapper-da -->
                 <div class="hero-title" aria-hidden="true">
                     <svg viewBox="0 0 1000 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                         <defs>
                             <style>
-                                
                                 .svg-text {
                                     font-family: 'Lora', serif;
                                     font-size: 80px;
@@ -411,7 +407,6 @@
                                 }
                             </style>
                         </defs>
-                        <!-- İki sətir — PC-də kəsilmir -->
                         <text class="svg-text" x="50%" y="62" text-anchor="middle">Viktoria</text>
                         <text class="svg-text" x="50%" y="128" text-anchor="middle">Paltar Boyaları</text>
                     </svg>
@@ -563,6 +558,12 @@
             </div>
         </section>
 
+        <section class="container" style="text-align:center; padding: 28px 20px; margin-top: 10px;">
+            <p style="font-size: 32px; margin-bottom: 6px; line-height:1;">⭐⭐⭐⭐⭐</p>
+            <p style="font-size: 24px; font-weight: 700; color: #4b0082; margin-bottom: 14px;">4.8 / 5 Reytinq</p>
+            <a href="https://www.viktoria-az.store/reyler.html" class="mor-button">👉 Rəylərə Bax</a>
+        </section>
+
         <section class="instagram-tiktok">
             <div class="social">
                 <a href="https://instagram.com/paltar_boyalari" target="_blank" rel="noopener">
@@ -586,6 +587,7 @@
                 </a>
             </div>
         </section>
+
     </main>
 
     <footer>
@@ -606,3 +608,4 @@
 
 </body>
 </html>
+
