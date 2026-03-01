@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Viktoria Paltar Boyaları | 60 Rəng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --white: #ffffff;
+            --off: #fafafa;
+            --ink: #111118;
+            --pink:   #ff4f81;
+            --orange: #ff7b2c;
+            --yellow: #ffd400;
+            --lime:   #7ed321;
+            --teal:   #00c9a7;
+            --blue:   #3d7eff;
+            --purple: #9b5de5;
+            --red:    #e63946;
+            --wa:     #25D366;
+            --border: #e8e8e8;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--white);
+            color: var(--ink);
+            overflow-x: hidden;
+        }
+
+        /* ── TOP BAR ── */
+        .top-bar {
+            background: var(--wa);
+            padding: 9px 20px;
+            text-align: center;
+            font-size: 12.5px;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #fff;
+        }
+        .top-bar a { color: #fff; text-decoration: none; }
+
+        /* ── HEADER ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            background: var(--white);
+            border-bottom: 2px solid var(--ink);
+            height: 62px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+        }
+
+        .logo {
+            font-family: 'Nunito', sans-serif;
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--ink);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            background: var(--pink);
+            display: inline-block;
+            animation: dotPop 2s ease-in-out infinite;
+        }
+
+        @keyframes dotPop {
+            0%,100% { background: var(--pink); transform: scale(1); }
+            25% { background: var(--orange); transform: scale(1.3); }
+            50% { background: var(--blue); transform: scale(1); }
+            75% { background: var(--lime); transform: scale(1.3); }
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        nav a {
+            color: var(--ink);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 6px 13px;
+            border-radius: 100px;
+            white-space: nowrap;
+            transition: background 0.15s, color 0.15s;
+        }
+        nav a:hover { background: var(--ink); color: var(--white); }
+
+        @media (max-width: 700px) {
+            header { padding: 0 16px; height: 56px; }
+            .logo { font-size: 18px; }
+            nav a { font-size: 11.5px; padding: 5px 9px; }
+        }
+        @media (max-width: 400px) {
+            nav a { font-size: 10.5px; padding: 4px 7px; }
+        }
+
+        /* ── FLOATING WA ── */
+        .wa-float {
+            position: fixed;
+            bottom: 24px; right: 24px;
+            z-index: 8000;
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            background: var(--wa);
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none;
+            box-shadow: 4px 4px 0 rgba(0,0,0,0.15);
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .wa-float:hover { transform: translate(-2px,-2px); box-shadow: 6px 6px 0 rgba(0,0,0,0.15); }
+        .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+
+        /* ── HERO ── */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 88vh;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .hero-left {
+            padding: 60px 56px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-right: 2px solid var(--ink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Confetti blobs */
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255,211,0,0.18) 0%, transparent 70%);
+            bottom: -80px; right: -80px;
+            pointer-events: none;
+        }
+
+        .hero-year {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            color: #888;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .hero-year::before {
+            content: '';
+            width: 24px; height: 2px;
+            background: var(--pink);
+        }
+
+        .hero-title {
+            font-size: clamp(52px, 6vw, 90px);
+            font-weight: 900;
+            line-height: 0.95;
+            letter-spacing: -0.03em;
+            margin-bottom: 24px;
+            animation: popIn 0.6s cubic-bezier(0.34,1.56,0.64,1) both;
+        }
+
+        .hero-title .line1 { color: var(--ink); }
+        .hero-title .line2 {
+            color: var(--white);
+            background: var(--pink);
+            display: inline-block;
+            padding: 0 12px;
+            transform: rotate(-1.5deg);
+            display: block;
+            width: fit-content;
+            margin: 4px 0;
+        }
+        .hero-title .line3 { color: var(--ink); }
+
+        @keyframes popIn {
+            from { opacity: 0; transform: scale(0.85) translateY(20px); }
+            to   { opacity: 1; transform: scale(1) translateY(0); }
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            font-weight: 600;
+            color: #555;
+            line-height: 1.6;
+            max-width: 380px;
+            margin-bottom: 36px;
+            animation: popIn 0.6s 0.15s cubic-bezier(0.34,1.56,0.64,1) both;
+        }
+
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 36px;
+            animation: popIn 0.6s 0.25s cubic-bezier(0.34,1.56,0.64,1) both;
+        }
+
+        .tag {
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.04em;
+            padding: 5px 14px;
+            border: 2px solid var(--ink);
+            border-radius: 100px;
+            background: var(--white);
+            color: var(--ink);
+            transition: background 0.15s, color 0.15s;
+        }
+
+        .tag.c1 { background: var(--yellow); border-color: var(--yellow); }
+        .tag.c2 { background: #ffe0f0; border-color: #ffb3d1; }
+        .tag.c3 { background: #e0f0ff; border-color: #b3d1ff; }
+        .tag.c4 { background: #e0ffe8; border-color: #b3ffca; }
+
+        .hero-btns {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            animation: popIn 0.6s 0.35s cubic-bezier(0.34,1.56,0.64,1) both;
+        }
+
+        .btn-solid {
+            background: var(--ink);
+            color: var(--white);
+            padding: 13px 28px;
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            border: 2px solid var(--ink);
+            border-radius: 100px;
+            transition: background 0.15s, color 0.15s, transform 0.15s;
+            display: inline-flex; align-items: center; gap: 6px;
+            box-shadow: 3px 3px 0 var(--pink);
+        }
+        .btn-solid:hover { background: var(--pink); border-color: var(--pink); transform: translate(-2px,-2px); box-shadow: 5px 5px 0 rgba(255,79,129,0.3); }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--ink);
+            padding: 13px 28px;
+            font-size: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            border: 2px solid var(--ink);
+            border-radius: 100px;
+            transition: background 0.15s, color 0.15s, transform 0.15s;
+            display: inline-flex; align-items: center; gap: 6px;
+        }
+        .btn-outline:hover { background: var(--ink); color: var(--white); transform: translate(-2px,-2px); }
+
+        /* Hero right — color mosaic */
+        .hero-right {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            gap: 0;
+        }
+
+        .hero-color-cell {
+            transition: opacity 0.2s;
+            cursor: pointer;
+        }
+        .hero-color-cell:hover { opacity: 0.75; }
+
+        /* Center overlay text */
+        .hero-right-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+
+        .hero-right-wrap {
+            position: relative;
+        }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .stat-cell {
+            padding: 28px 24px;
+            border-right: 2px solid var(--ink);
+            text-align: center;
+        }
+        .stat-cell:last-child { border-right: none; }
+
+        .stat-num {
+            font-size: clamp(28px, 3.5vw, 44px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            color: var(--ink);
+        }
+
+        .stat-num.c-pink   { color: var(--pink); }
+        .stat-num.c-blue   { color: var(--blue); }
+        .stat-num.c-orange { color: var(--orange); }
+        .stat-num.c-lime   { color: var(--lime); }
+
+        .stat-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #999;
+            margin-top: 4px;
+        }
+
+        /* ── SECTION LABEL ── */
+        .section-label {
+            font-family: 'Space Mono', monospace;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #aaa;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-label::before {
+            content: '';
+            width: 20px; height: 2px;
+            background: currentColor;
+        }
+
+        .section-title {
+            font-size: clamp(32px, 4vw, 56px);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1;
+            color: var(--ink);
+        }
+
+        /* ── COLOR CATALOG GRID ── */
+        .catalog-section {
+            padding: 80px 40px;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .catalog-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 48px;
+            gap: 20px;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 12px;
+        }
+
+        .color-card {
+            border: 2px solid var(--ink);
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.15s, box-shadow 0.15s;
+            background: var(--white);
+        }
+        .color-card:hover {
+            transform: translateY(-4px) rotate(1deg);
+            box-shadow: 4px 6px 0 var(--ink);
+        }
+        .color-swatch { height: 60px; }
+        .color-name {
+            font-size: 9px;
+            font-weight: 800;
+            text-align: center;
+            padding: 6px 4px;
+            letter-spacing: 0.04em;
+            color: var(--ink);
+            text-transform: uppercase;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* ── BENTO GRID ── */
+        .bento-section {
+            padding: 80px 40px;
+            background: var(--off);
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: auto;
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .bento-card {
+            background: var(--white);
+            border: 2px solid var(--ink);
+            border-radius: 16px;
+            padding: 32px 28px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .bento-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 5px 5px 0 var(--ink);
+        }
+
+        .bento-card.span2 { grid-column: span 2; }
+        .bento-card.span3 { grid-column: span 3; }
+        .bento-card.span4 { grid-column: span 4; }
+
+        .bento-card.bg-pink   { background: #fff0f4; }
+        .bento-card.bg-yellow { background: #fffbe0; }
+        .bento-card.bg-blue   { background: #f0f4ff; }
+        .bento-card.bg-lime   { background: #f0ffe4; }
+        .bento-card.bg-purple { background: #f5f0ff; }
+
+        .bento-icon { font-size: 42px; margin-bottom: 16px; display: block; }
+        .bento-num {
+            font-size: 72px;
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            color: var(--ink);
+        }
+        .bento-card h3 {
+            font-size: 20px;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .bento-card p {
+            font-size: 14px;
+            font-weight: 500;
+            color: #555;
+            line-height: 1.65;
+        }
+
+        .bento-accent {
+            position: absolute;
+            bottom: -20px; right: -20px;
+            width: 80px; height: 80px;
+            border-radius: 50%;
+            opacity: 0.12;
+        }
+
+        /* ── ORDER SECTION ── */
+        .order-section {
+            padding: 80px 40px;
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .order-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            margin-top: 48px;
+            border: 2px solid var(--ink);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .order-card {
+            padding: 44px 36px;
+            border-right: 2px solid var(--ink);
+            position: relative;
+        }
+        .order-card:last-child { border-right: none; }
+
+        .order-step-num {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            color: #bbb;
+            margin-bottom: 20px;
+        }
+
+        .order-icon { font-size: 38px; margin-bottom: 16px; display: block; }
+
+        .order-card h3 {
+            font-size: 22px;
+            font-weight: 800;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+        .order-card p { font-size: 14px; font-weight: 500; color: #666; line-height: 1.65; }
+
+        .order-badge {
+            position: absolute;
+            top: 20px; right: 20px;
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px;
+            font-weight: 900;
+            color: var(--white);
+        }
+
+        /* ── BLOG ── */
+        .blog-section {
+            padding: 80px 40px;
+            background: var(--off);
+            border-bottom: 2px solid var(--ink);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 48px;
+        }
+
+        .blog-card {
+            background: var(--white);
+            border: 2px solid var(--ink);
+            border-radius: 16px;
+            padding: 28px 24px;
+            text-decoration: none;
+            color: var(--ink);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .blog-card:hover {
+            transform: translate(-3px, -3px);
+            box-shadow: 5px 5px 0 var(--ink);
+        }
+
+        .blog-card-num {
+            font-family: 'Space Mono', monospace;
+            font-size: 11px;
+            color: #bbb;
+            font-weight: 700;
+        }
+
+        .blog-card-bar {
+            height: 4px;
+            border-radius: 2px;
+            width: 32px;
+        }
+
+        .blog-card-text {
+            font-size: 14.5px;
+            font-weight: 700;
+            line-height: 1.45;
+            color: var(--ink);
+        }
+
+        .blog-card-arrow {
+            font-size: 18px;
+            margin-top: auto;
+            align-self: flex-end;
+            transition: transform 0.2s;
+        }
+        .blog-card:hover .blog-card-arrow { transform: translate(4px,-4px); }
+
+        /* ── RATING ── */
+        .rating-section {
+            background: var(--yellow);
+            border-bottom: 2px solid var(--ink);
+            padding: 64px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .rating-left { display: flex; align-items: center; gap: 28px; }
+
+        .rating-score-big {
+            font-size: 100px;
+            font-weight: 900;
+            letter-spacing: -0.06em;
+            line-height: 1;
+            color: var(--ink);
+        }
+
+        .rating-info {}
+        .rating-stars { font-size: 28px; letter-spacing: 3px; display: block; margin-bottom: 4px; }
+        .rating-sub {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(17,17,24,0.5);
+        }
+
+        /* ── SOCIAL ── */
+        .social-section {
+            padding: 60px 40px;
+            border-bottom: 2px solid var(--ink);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .social-title {
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--ink);
+        }
+
+        .social-pills { display: flex; gap: 12px; flex-wrap: wrap; }
+
+        .soc-pill {
+            display: flex; align-items: center; gap: 8px;
+            padding: 11px 22px;
+            font-size: 13.5px;
+            font-weight: 800;
+            text-decoration: none;
+            border: 2px solid var(--ink);
+            border-radius: 100px;
+            color: var(--ink);
+            background: var(--white);
+            transition: background 0.15s, color 0.15s, transform 0.15s;
+        }
+        .soc-pill:hover { background: var(--ink); color: var(--white); transform: translateY(-2px); }
+        .soc-pill img { width: 22px; height: 22px; border-radius: 5px; }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.5);
+            padding: 56px 40px 36px;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 48px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin-bottom: 28px;
+        }
+
+        .footer-logo {
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--yellow);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 14px;
+            letter-spacing: -0.02em;
+        }
+        .footer-brand p { font-size: 13.5px; line-height: 1.7; max-width: 220px; }
+
+        .footer-col h5 {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 18px;
+        }
+        .footer-col a {
+            display: block;
+            color: rgba(255,255,255,0.55);
+            text-decoration: none;
+            font-size: 13.5px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--yellow); }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .color-grid { grid-template-columns: repeat(6, 1fr); }
+            .bento-grid { grid-template-columns: repeat(4, 1fr); }
+            .bento-card.span4 { grid-column: span 4; }
+            .bento-card.span3 { grid-column: span 2; }
+            .bento-card.span2 { grid-column: span 2; }
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 860px) {
+            .hero { grid-template-columns: 1fr; min-height: auto; }
+            .hero-right { display: none; }
+            .hero-left { border-right: none; padding: 48px 24px; }
+
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .stat-cell:nth-child(2) { border-right: none; }
+            .stat-cell:nth-child(3) { border-top: 2px solid var(--ink); }
+            .stat-cell:nth-child(4) { border-top: 2px solid var(--ink); border-right: none; }
+
+            .catalog-section { padding: 60px 20px; }
+            .catalog-header { flex-direction: column; align-items: flex-start; }
+            .color-grid { grid-template-columns: repeat(5, 1fr); gap: 8px; }
+            .color-swatch { height: 44px; }
+
+            .bento-section { padding: 60px 20px; }
+            .bento-grid { grid-template-columns: 1fr 1fr; }
+            .bento-card.span2, .bento-card.span3, .bento-card.span4 { grid-column: span 2; }
+
+            .order-section { padding: 60px 20px; }
+            .order-grid { grid-template-columns: 1fr; border-radius: 16px; }
+            .order-card { border-right: none; border-bottom: 2px solid var(--ink); }
+            .order-card:last-child { border-bottom: none; }
+
+            .blog-section { padding: 60px 20px; }
+            .blog-grid { grid-template-columns: 1fr 1fr; }
+
+            .rating-section { padding: 48px 20px; }
+            .rating-score-big { font-size: 72px; }
+
+            .social-section { padding: 48px 20px; flex-direction: column; align-items: flex-start; }
+
+            footer { padding: 44px 20px 28px; }
+            .footer-top { grid-template-columns: 1fr; gap: 32px; }
+        }
+
+        @media (max-width: 520px) {
+            .color-grid { grid-template-columns: repeat(4, 1fr); }
+            .blog-grid { grid-template-columns: 1fr; }
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-card.span2, .bento-card.span3, .bento-card.span4 { grid-column: span 1; }
+            .hero-btns { flex-direction: column; }
+            .btn-solid, .btn-outline { width: 100%; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WA -->
+    <a class="wa-float" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 48 48"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/></svg>
+    </a>
+
+    <!-- Top bar -->
+    <div class="top-bar">
+        <a href="https://herbal-az.store" rel="sponsored">⏩ ŞƏFALI BİTKİLƏR SAYTINA KEÇİN → herbal-az.store</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="/" class="logo"><span class="logo-dot"></span> Viktoria</a>
+        <nav>
+            <a href="/">Ana Səhifə</a>
+            <a href="/catalog.html">Kataloq</a>
+            <a href="/boyama-qaydalari.html">Boyama Qaydaları</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-left">
+                <div class="hero-year">1901 — Azərbaycan</div>
+                <h1 class="hero-title">
+                    <span class="line1">Paltar</span>
+                    <span class="line2">Boyaları</span>
+                    <span class="line3">60 Rəng</span>
+                </h1>
+                <p class="hero-sub">Solmuş, köhnəlmiş, xlor ləkəli paltarlarınıza yenidən rəng verin. Bütün Azərbaycana çatdırılma!</p>
+                <div class="hero-tags">
+                    <span class="tag c1">60 Rəng</span>
+                    <span class="tag c2">Xlor Ləkəsi</span>
+                    <span class="tag c3">Forma & Uniforma</span>
+                    <span class="tag c4">Pulsuz Çatdırılma 5+</span>
+                </div>
+                <div class="hero-btns">
+                    <a class="btn-solid" href="/catalog.html">Rənglərə Bax →</a>
+                    <a class="btn-outline" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">Sifariş Ver</a>
+                </div>
+            </div>
+
+            <!-- Color mosaic — 4×5 grid of colors -->
+            <div class="hero-right">
+                <div class="hero-color-cell" style="background:#ffb6c1"></div>
+                <div class="hero-color-cell" style="background:#ff69b4"></div>
+                <div class="hero-color-cell" style="background:#ff4081"></div>
+                <div class="hero-color-cell" style="background:#dc143c"></div>
+                <div class="hero-color-cell" style="background:#8b0000"></div>
+                <div class="hero-color-cell" style="background:#6b0a2d"></div>
+                <div class="hero-color-cell" style="background:#ff6700"></div>
+                <div class="hero-color-cell" style="background:#ff8c00"></div>
+                <div class="hero-color-cell" style="background:#ffd700"></div>
+                <div class="hero-color-cell" style="background:#f0c040"></div>
+                <div class="hero-color-cell" style="background:#e8c49a"></div>
+                <div class="hero-color-cell" style="background:#d2b48c"></div>
+                <div class="hero-color-cell" style="background:#8b4513"></div>
+                <div class="hero-color-cell" style="background:#5c2e00"></div>
+                <div class="hero-color-cell" style="background:#87ceeb"></div>
+                <div class="hero-color-cell" style="background:#4169e1"></div>
+                <div class="hero-color-cell" style="background:#00008b"></div>
+                <div class="hero-color-cell" style="background:#1c3a6e"></div>
+                <div class="hero-color-cell" style="background:#008080"></div>
+                <div class="hero-color-cell" style="background:#228b22"></div>
+            </div>
+        </section>
+
+        <!-- STATS BAR -->
+        <div class="stats-bar">
+            <div class="stat-cell">
+                <div class="stat-num c-pink">60+</div>
+                <div class="stat-label">Rəng Variantı</div>
+            </div>
+            <div class="stat-cell">
+                <div class="stat-num c-blue">4.8★</div>
+                <div class="stat-label">Müştəri Reytinqi</div>
+            </div>
+            <div class="stat-cell">
+                <div class="stat-num c-orange">2gün</div>
+                <div class="stat-label">Bakıya Çatdırılma</div>
+            </div>
+            <div class="stat-cell">
+                <div class="stat-num c-lime">1901</div>
+                <div class="stat-label">Quruluş İli</div>
+            </div>
+        </div>
+
+        <!-- COLOR CATALOG GRID -->
+        <section class="catalog-section">
+            <div class="catalog-header">
+                <div>
+                    <p class="section-label">Rəng Palitramız</p>
+                    <h2 class="section-title">Rənglər</h2>
+                </div>
+                <a class="btn-solid" href="/catalog.html">Tam Katalog →</a>
+            </div>
+            <div class="color-grid">
+                <div class="color-card"><div class="color-swatch" style="background:#ffb6c1"></div><div class="color-name">Pəmbə</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#ff69b4"></div><div class="color-name">T. Pəmbə</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#ff4081"></div><div class="color-name">Atəşi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#dc143c"></div><div class="color-name">Qırmızı</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#8b0000"></div><div class="color-name">T.Qırmızı</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#6b0a2d"></div><div class="color-name">Vişnə</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#722f37"></div><div class="color-name">Şərabi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#ff6700"></div><div class="color-name">Portağal</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#ff8c00"></div><div class="color-name">Narıncı</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#ffd700"></div><div class="color-name">Sarı</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#f0c040"></div><div class="color-name">Q.Sarı</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#e8c49a"></div><div class="color-name">Bej</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#d2b48c"></div><div class="color-name">A.Bej</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#8b4513"></div><div class="color-name">Qəhvəyi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#5c2e00"></div><div class="color-name">T.Qəhvəyi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#87ceeb"></div><div class="color-name">A.Mavi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#4169e1"></div><div class="color-name">Mavi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#00008b"></div><div class="color-name">T.Mavi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#1e90ff"></div><div class="color-name">Cins</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#1c3a6e"></div><div class="color-name">Saksonya</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#003366"></div><div class="color-name">T.Göy</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#008080"></div><div class="color-name">Petrol</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#00827f"></div><div class="color-name">Nefti</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#50c878"></div><div class="color-name">A.Filizi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#228b22"></div><div class="color-name">Yaşıl</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#006400"></div><div class="color-name">T.Yaşıl</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#6b8e23"></div><div class="color-name">Zeytun</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#556b2f"></div><div class="color-name">Xaki</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#50e3c2"></div><div class="color-name">Zümrüd</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#dda0dd"></div><div class="color-name">A.Mor</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#6a0dad"></div><div class="color-name">Mor</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#4b0082"></div><div class="color-name">Güvəz</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#00bcd4"></div><div class="color-name">Boncuq</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#4a0020"></div><div class="color-name">T.Şərabi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#6e260e"></div><div class="color-name">Y.Qəhvəyi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#b5651d"></div><div class="color-name">A.Qəhvəyi</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#c4a265"></div><div class="color-name">T.Bej</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#e6e6fa"></div><div class="color-name">Əflatun</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#ff0040"></div><div class="color-name">Al Qırmızı</div></div>
+                <div class="color-card"><div class="color-swatch" style="background:#111111"></div><div class="color-name">Qara</div></div>
+            </div>
+        </section>
+
+        <!-- BENTO FEATURES -->
+        <section class="bento-section">
+            <p class="section-label">Niyə Viktoria?</p>
+            <h2 class="section-title">Üstünlüklərimiz</h2>
+            <div class="bento-grid">
+
+                <div class="bento-card span3 bg-pink">
+                    <span class="bento-icon">🚚</span>
+                    <h3>Sürətli Çatdırılma</h3>
+                    <p>Azərpoçt ilə Bakı və bütün bölgələrə. Bakıya ~2 iş günü, bölgələrə 3–4 gün. 5+ ədəddə <strong>pulsuz çatdırılma!</strong></p>
+                    <div class="bento-accent" style="background:var(--pink)"></div>
+                </div>
+
+                <div class="bento-card span3 bg-yellow">
+                    <div class="bento-num">60+</div>
+                    <h3>Rəng Variantı</h3>
+                    <p>Azərbaycanda ən geniş palitra</p>
+                    <div class="bento-accent" style="background:var(--yellow)"></div>
+                </div>
+
+                <div class="bento-card span2 bg-lime">
+                    <span class="bento-icon">🌱</span>
+                    <h3>Ekoloji</h3>
+                    <p>Paltarınızın ömrünü uzadın, israfın qarşısını alın.</p>
+                </div>
+
+                <div class="bento-card span2 bg-blue">
+                    <span class="bento-icon">🎨</span>
+                    <h3>Hər Parça</h3>
+                    <p>Pambıq, kətan, yun, ipək — hamısı üçün.</p>
+                </div>
+
+                <div class="bento-card span2 bg-purple">
+                    <span class="bento-icon">⚡</span>
+                    <h3>Xlor Ləkəsi</h3>
+                    <p>Xlor ləkəli, solmuş formaları boyayın.</p>
+                </div>
+
+                <div class="bento-card span3" style="background:var(--ink); color:#fff;">
+                    <span class="bento-icon">📦</span>
+                    <h3 style="color:#fff;">1 KQ Peşəkar Paketlər</h3>
+                    <p style="color:rgba(255,255,255,0.65);">Quru təmizləmələr, otellər, xalça boyama xidmətləri üçün. <a href="/catalog-1kg.html" style="color:var(--yellow);font-weight:800;">Bax →</a></p>
+                </div>
+
+                <div class="bento-card span3 bg-yellow" style="display:flex;align-items:center;justify-content:space-between;gap:20px;">
+                    <div>
+                        <h3>İndi Sifariş Ver!</h3>
+                        <p>WhatsApp-da 1 mesajla sifariş ver, sabah yola düşür.</p>
+                    </div>
+                    <a class="btn-solid" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" style="white-space:nowrap;flex-shrink:0;">📱 Sifariş Ver</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ORDER STEPS -->
+        <section class="order-section">
+            <p class="section-label">Necə Sifariş Vermək Olar?</p>
+            <h2 class="section-title">3 Addım</h2>
+            <div class="order-grid">
+                <div class="order-card" style="background:#fff0f4;">
+                    <div class="order-step-num">ADDIM 01</div>
+                    <span class="order-icon">💬</span>
+                    <div class="order-badge" style="background:var(--pink);">1</div>
+                    <h3>Yazın</h3>
+                    <p>WhatsApp-a yazın, istədiyiniz rəngi və miqdarı bildirin. Hər şey 1 mesajda!</p>
+                </div>
+                <div class="order-card" style="background:#f0f4ff;">
+                    <div class="order-step-num">ADDIM 02</div>
+                    <span class="order-icon">📬</span>
+                    <div class="order-badge" style="background:var(--blue);">2</div>
+                    <h3>Göndərilir</h3>
+                    <p>Ertəsi iş günü Azərpoçta verilir, sizə izləmə kodu göndərilir.</p>
+                </div>
+                <div class="order-card" style="background:#f0ffe4;">
+                    <div class="order-step-num">ADDIM 03</div>
+                    <span class="order-icon">🎉</span>
+                    <div class="order-badge" style="background:var(--lime);">3</div>
+                    <h3>Qapınızda!</h3>
+                    <p>Bakıya ~2, bölgəyə 3–4 iş günü. Minimum sifariş 2 ədəd.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section class="blog-section">
+            <div style="display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:48px;flex-wrap:wrap;gap:16px;">
+                <div>
+                    <p class="section-label">Faydalı Məlumat</p>
+                    <h2 class="section-title">Bloq</h2>
+                </div>
+                <a class="btn-outline" href="/catalog.html">Kataloqa Bax →</a>
+            </div>
+            <div class="blog-grid">
+                <a class="blog-card" href="bloq1.html">
+                    <div class="blog-card-num">01</div>
+                    <div class="blog-card-bar" style="background:var(--pink)"></div>
+                    <div class="blog-card-text">Metal qabda boyama etmək olarmı?</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq2.html">
+                    <div class="blog-card-num">02</div>
+                    <div class="blog-card-bar" style="background:var(--blue)"></div>
+                    <div class="blog-card-text">Paltaryuyanda boyaya bilərəm?</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq3.html">
+                    <div class="blog-card-num">03</div>
+                    <div class="blog-card-bar" style="background:var(--orange)"></div>
+                    <div class="blog-card-text">Sabitləşdirici istifadə məcburidir?</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq4.html">
+                    <div class="blog-card-num">04</div>
+                    <div class="blog-card-bar" style="background:var(--lime)"></div>
+                    <div class="blog-card-text">Viktoria boya nə qədər qalıcıdır?</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq5.html">
+                    <div class="blog-card-num">05</div>
+                    <div class="blog-card-bar" style="background:var(--purple)"></div>
+                    <div class="blog-card-text">Hansı materialları qaynatmaq olar?</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq7.html">
+                    <div class="blog-card-num">06</div>
+                    <div class="blog-card-bar" style="background:var(--teal)"></div>
+                    <div class="blog-card-text">Qara paltar boyası — istifadə bələdçisi</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq9.html">
+                    <div class="blog-card-num">07</div>
+                    <div class="blog-card-bar" style="background:var(--red)"></div>
+                    <div class="blog-card-text">Qara sinka nədir? Boya ilə eynidirmi?</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+                <a class="blog-card" href="bloq10.html">
+                    <div class="blog-card-num">08</div>
+                    <div class="blog-card-bar" style="background:var(--yellow)"></div>
+                    <div class="blog-card-text">Solmuş geyimlərə yeni həyat — WhatsApp sifariş</div>
+                    <div class="blog-card-arrow">↗</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- RATING -->
+        <div class="rating-section">
+            <div class="rating-left">
+                <div class="rating-score-big">4.8</div>
+                <div class="rating-info">
+                    <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+                    <span class="rating-sub">5 üzərindən · Müştəri Reytinqi</span>
+                </div>
+            </div>
+            <a class="btn-solid" href="/reyler.html">Bütün Rəylər →</a>
+        </div>
+
+        <!-- SOCIAL -->
+        <section class="social-section">
+            <div class="social-title">Bizi İzləyin 👋</div>
+            <div class="social-pills">
+                <a class="soc-pill" href="https://instagram.com/paltar_boyalari" target="_blank" rel="noopener">
+                    <img src="images/instagram.webp" alt="">Instagram
+                </a>
+                <a class="soc-pill" href="https://tiktok.com/@paltar_boyalari" target="_blank" rel="noopener">
+                    <img src="images/tiktok.webp" alt="">TikTok
+                </a>
+                <a class="soc-pill" href="https://t.me/paltar_boyalari" target="_blank" rel="noopener" style="color:#29ABE2;border-color:#29ABE2;">
+                    <svg width="22" height="22" viewBox="0 0 60 60" fill="none" style="border-radius:5px;flex-shrink:0;"><rect width="60" height="60" rx="6" fill="#29ABE2"/><path d="M44.5 16.5L38.2 45.1c-.4 1.8-1.6 2.3-3.2 1.4l-8.8-6.5-4.3 4.1c-.5.5-.9.9-1.8.9l.6-9 16.2-14.6c.7-.6-.2-.9-1.1-.3L14.4 32.6l-8.6-2.7c-1.9-.6-1.9-1.9.4-2.8l35.9-13.8c1.6-.6 3 .4 2.4 3.2z" fill="white"/></svg>
+                    Telegram
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="footer-logo">Viktoria</a>
+                <p>1901-ci ildən bu günə yüksək keyfiyyətli tekstil boyaları ilə Azərbaycanda xidmətinizdəyik.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Məhsullar</h5>
+                <a href="/catalog.html">Kataloq</a>
+                <a href="/catalog-1kg.html">1KQ Paketlər</a>
+                <a href="/sprey1.html">Sprey Boyalar</a>
+                <a href="/pitturafelice.html">Dəri & Nubuk</a>
+            </div>
+            <div class="footer-col">
+                <h5>Səhifələr</h5>
+                <a href="/boyama-qaydalari.html">Boyama Qaydaları</a>
+                <a href="/qara-paltar-boyasi.html">Qara Paltar Boyası</a>
+                <a href="/uniforma-boyasi.html">Uniforma Boyaları</a>
+                <a href="/reyler.html">Rəylər</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Viktoria Paltar Boyaları — Bütün hüquqlar qorunur.
+        </div>
+    </footer>
+
+</body>
+</html>
