@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Viktoria Paltar Boyaları | 60 Rəng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black:   #0a0a08;
+            --off-black: #141410;
+            --charcoal: #1e1e18;
+            --warm-gray: #2c2c24;
+            --sand:    #e8dcc8;
+            --cream:   #f5f0e8;
+            --amber:   #d4a017;
+            --amber-bright: #f0bc2a;
+            --rust:    #c44a1a;
+            --sage:    #7a8c6e;
+            --text-dim: rgba(232,220,200,0.5);
+            --text-mid: rgba(232,220,200,0.75);
+            --wa: #25D366;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: var(--black);
+            color: var(--sand);
+            overflow-x: hidden;
+        }
+
+        /* Grain texture */
+        body::after {
+            content: '';
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 9000;
+            opacity: 0.035;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)'/%3E%3C/svg%3E");
+        }
+
+        /* ── GREEN BANNER ── */
+        .top-bar {
+            background: var(--wa);
+            padding: 8px 24px;
+            text-align: center;
+            font-size: 12.5px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            color: #fff;
+        }
+        .top-bar a { color: #fff; text-decoration: none; }
+
+        /* ── HEADER ── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 500;
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            background: rgba(10,10,8,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(212,160,23,0.15);
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--amber-bright);
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 2px;
+        }
+
+        nav a {
+            color: var(--text-mid);
+            text-decoration: none;
+            font-size: 12.5px;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 4px;
+            transition: color 0.2s, background 0.2s;
+            white-space: nowrap;
+        }
+        nav a:hover { color: var(--sand); background: rgba(212,160,23,0.08); }
+
+        /* mobile: shrink nav */
+        @media (max-width: 700px) {
+            header { padding: 0 16px; height: 56px; }
+            .logo { font-size: 20px; }
+            nav a { font-size: 11px; padding: 5px 8px; letter-spacing: 0.04em; }
+        }
+        @media (max-width: 420px) {
+            nav a { font-size: 10px; padding: 4px 6px; }
+        }
+
+        /* ── FLOATING WA ── */
+        .wa-float {
+            position: fixed;
+            bottom: 24px; right: 24px;
+            z-index: 8000;
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            background: var(--wa);
+            display: flex; align-items: center; justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.2s;
+        }
+        .wa-float::before {
+            content: '';
+            position: absolute;
+            inset: -4px;
+            border-radius: 50%;
+            border: 2px solid rgba(37,211,102,0.3);
+            animation: pulse 2.5s ease-out infinite;
+        }
+        .wa-float:hover { transform: scale(1.08) translateY(-2px); }
+        .wa-float svg { width: 26px; height: 26px; fill: #fff; }
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.5; }
+            100% { transform: scale(1.6); opacity: 0; }
+        }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding: 100px 0 80px;
+        }
+
+        /* Big background number */
+        .hero-bg-num {
+            position: absolute;
+            right: -40px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(260px, 30vw, 420px);
+            font-weight: 700;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212,160,23,0.1);
+            pointer-events: none;
+            user-select: none;
+            letter-spacing: -0.05em;
+        }
+
+        /* Vertical label */
+        .hero-label {
+            position: absolute;
+            left: 40px;
+            top: 50%;
+            transform: translateY(-50%) rotate(-90deg);
+            transform-origin: center;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            white-space: nowrap;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 100px 0 120px;
+            position: relative;
+            z-index: 2;
+            width: 100%;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 32px;
+            opacity: 0;
+            animation: rise 0.7s 0.1s forwards;
+        }
+
+        .hero-tag-line {
+            width: 40px;
+            height: 1px;
+            background: var(--amber);
+        }
+
+        .hero-tag span {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--amber);
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(64px, 8vw, 130px);
+            line-height: 0.92;
+            font-weight: 300;
+            color: var(--cream);
+            margin-bottom: 12px;
+            opacity: 0;
+            animation: rise 0.8s 0.2s forwards;
+        }
+
+        .hero-title strong {
+            font-weight: 700;
+            font-style: italic;
+            color: var(--amber-bright);
+            display: block;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--text-mid);
+            font-size: 0.55em;
+            display: block;
+            letter-spacing: 0.05em;
+            margin-top: 8px;
+        }
+
+        .hero-body {
+            max-width: 480px;
+            font-size: 16px;
+            line-height: 1.75;
+            color: var(--text-mid);
+            margin: 36px 0 44px;
+            opacity: 0;
+            animation: rise 0.8s 0.35s forwards;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            opacity: 0;
+            animation: rise 0.8s 0.45s forwards;
+        }
+
+        .btn-amber {
+            background: var(--amber);
+            color: var(--black);
+            padding: 14px 34px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--amber);
+            transition: background 0.2s, color 0.2s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-amber:hover {
+            background: transparent;
+            color: var(--amber);
+            transform: translateY(-2px);
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--sand);
+            padding: 14px 34px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 1px solid rgba(232,220,200,0.25);
+            transition: border-color 0.2s, color 0.2s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-ghost:hover {
+            border-color: var(--sand);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* Hero stats row */
+        .hero-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 64px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(212,160,23,0.15);
+            opacity: 0;
+            animation: rise 0.8s 0.55s forwards;
+        }
+
+        .stat-item {}
+        .stat-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--amber-bright);
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-top: 6px;
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── MARQUEE STRIP ── */
+        .marquee-strip {
+            background: var(--amber);
+            padding: 14px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-track {
+            display: inline-flex;
+            gap: 0;
+            animation: marquee 22s linear infinite;
+        }
+
+        .marquee-item {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 20px;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--black);
+            padding: 0 28px;
+        }
+
+        .marquee-dot {
+            color: var(--black);
+            opacity: 0.4;
+            font-size: 20px;
+            padding: 0 4px;
+        }
+
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to   { transform: translateX(-50%); }
+        }
+
+        /* ── COLOR GRID ── */
+        .colors-section {
+            padding: 120px 60px;
+            background: var(--off-black);
+            position: relative;
+        }
+
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 64px;
+            gap: 24px;
+        }
+
+        .section-kicker {
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section-kicker::before {
+            content: '';
+            width: 28px; height: 1px;
+            background: var(--amber);
+            flex-shrink: 0;
+        }
+
+        .section-h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(36px, 5vw, 72px);
+            font-weight: 300;
+            line-height: 1;
+            color: var(--cream);
+        }
+        .section-h2 em {
+            font-style: italic;
+            font-weight: 600;
+            color: var(--amber-bright);
+        }
+
+        /* Swatch mosaic */
+        .swatch-mosaic {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            gap: 6px;
+            margin-bottom: 48px;
+        }
+
+        .sw {
+            aspect-ratio: 1;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: transform 0.18s, box-shadow 0.18s;
+            position: relative;
+            overflow: hidden;
+        }
+        .sw::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(255,255,255,0);
+            transition: background 0.2s;
+        }
+        .sw:hover {
+            transform: scale(1.15) translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            z-index: 2;
+        }
+
+        /* ── DIAGONAL SPLIT SECTION ── */
+        .split-section {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 580px;
+        }
+
+        .split-left {
+            background: var(--charcoal);
+            padding: 80px 70px 80px 80px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            clip-path: polygon(0 0, 100% 0, 92% 100%, 0 100%);
+            z-index: 2;
+        }
+
+        .split-right {
+            background: var(--warm-gray);
+            padding: 80px 80px 80px 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .split-img-wrap {
+            width: 100%;
+            aspect-ratio: 1;
+            max-width: 340px;
+            background: linear-gradient(135deg, #2a2218, #1a1a12);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(212,160,23,0.15);
+        }
+
+        .split-img-wrap::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 40% 40%, rgba(212,160,23,0.12), transparent 70%);
+        }
+
+        .split-img-wrap img {
+            width: 75%;
+            object-fit: contain;
+            filter: drop-shadow(0 12px 40px rgba(0,0,0,0.6));
+            position: relative;
+        }
+
+        /* Corner accent */
+        .split-img-wrap::after {
+            content: '';
+            position: absolute;
+            top: 12px; left: 12px;
+            width: 40px; height: 40px;
+            border-top: 2px solid var(--amber);
+            border-left: 2px solid var(--amber);
+        }
+
+        .split-overline {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 16px;
+        }
+
+        .split-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(32px, 3.5vw, 52px);
+            font-weight: 600;
+            line-height: 1.1;
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+
+        .split-body {
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--text-mid);
+            margin-bottom: 36px;
+            max-width: 380px;
+        }
+
+        /* ── FEATURES ROW ── */
+        .features-section {
+            background: var(--black);
+            padding: 100px 60px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(212,160,23,0.1);
+            border: 1px solid rgba(212,160,23,0.1);
+            margin-top: 64px;
+        }
+
+        .feature-card {
+            background: var(--off-black);
+            padding: 52px 44px;
+            position: relative;
+            transition: background 0.25s;
+        }
+
+        .feature-card:hover { background: var(--charcoal); }
+
+        .feature-num {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 72px;
+            font-weight: 700;
+            color: rgba(212,160,23,0.08);
+            line-height: 1;
+            position: absolute;
+            top: 28px; right: 32px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 24px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 26px;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 14px;
+        }
+
+        .feature-card p {
+            font-size: 14.5px;
+            line-height: 1.75;
+            color: var(--text-mid);
+        }
+
+        .feature-line {
+            width: 32px; height: 2px;
+            background: var(--amber);
+            margin-bottom: 20px;
+        }
+
+        /* ── ORDER SECTION ── */
+        .order-section {
+            padding: 120px 60px;
+            background: var(--charcoal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .order-section::before {
+            content: 'SİFARİŞ';
+            position: absolute;
+            right: -60px; top: 50%;
+            transform: translateY(-50%) rotate(90deg);
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 180px;
+            font-weight: 700;
+            color: transparent;
+            -webkit-text-stroke: 1px rgba(212,160,23,0.06);
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .order-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            position: relative;
+            z-index: 2;
+        }
+
+        .order-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .order-step {
+            display: flex;
+            gap: 28px;
+            padding: 32px 0;
+            border-bottom: 1px solid rgba(212,160,23,0.1);
+        }
+        .order-step:first-child { padding-top: 0; }
+        .order-step:last-child { border-bottom: none; }
+
+        .step-no {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 52px;
+            font-weight: 700;
+            color: rgba(212,160,23,0.18);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 60px;
+        }
+
+        .step-info h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--cream);
+            margin-bottom: 8px;
+        }
+
+        .step-info p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--text-mid);
+        }
+
+        .order-box {
+            background: var(--black);
+            border: 1px solid rgba(212,160,23,0.2);
+            padding: 52px 44px;
+            position: relative;
+        }
+
+        .order-box::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: 40px; right: 40px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--amber), var(--amber-bright));
+        }
+
+        .order-big {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--amber-bright);
+            margin-bottom: 4px;
+        }
+
+        .order-label {
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--text-dim);
+            margin-bottom: 32px;
+        }
+
+        .order-box p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: var(--text-mid);
+            margin-bottom: 36px;
+        }
+
+        /* ── BLOG ── */
+        .blog-section {
+            padding: 100px 60px;
+            background: var(--off-black);
+        }
+
+        .blog-list {
+            margin-top: 64px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .blog-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(212,160,23,0.08);
+            text-decoration: none;
+            color: inherit;
+            gap: 24px;
+            transition: background 0.2s;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        .blog-row:first-child { border-top: 1px solid rgba(212,160,23,0.08); }
+        .blog-row:hover { background: rgba(212,160,23,0.04); }
+        .blog-row:hover .blog-arrow { transform: translateX(6px); color: var(--amber); }
+
+        .blog-row-left {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        .blog-idx {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-dim);
+            width: 28px;
+            flex-shrink: 0;
+        }
+
+        .blog-text {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--sand);
+            letter-spacing: 0.01em;
+        }
+
+        .blog-arrow {
+            font-size: 18px;
+            color: var(--text-dim);
+            transition: transform 0.2s, color 0.2s;
+            flex-shrink: 0;
+        }
+
+        /* ── RATING BANNER ── */
+        .rating-banner {
+            background: var(--amber);
+            padding: 72px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .rating-banner::before {
+            content: '★★★★★';
+            position: absolute;
+            font-size: 200px;
+            color: rgba(0,0,0,0.05);
+            top: -30px; left: 50%;
+            transform: translateX(-50%);
+            letter-spacing: -10px;
+            white-space: nowrap;
+        }
+
+        .rating-stars {
+            font-size: 36px;
+            letter-spacing: 6px;
+            color: var(--black);
+            display: block;
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .rating-score {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 100px;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--black);
+            display: block;
+            position: relative;
+        }
+
+        .rating-sub {
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(10,10,8,0.55);
+            margin: 8px 0 36px;
+            display: block;
+            position: relative;
+        }
+
+        .btn-dark {
+            background: var(--black);
+            color: var(--amber);
+            padding: 14px 36px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border: 2px solid var(--black);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, color 0.2s;
+            position: relative;
+        }
+        .btn-dark:hover { background: transparent; color: var(--black); }
+
+        /* ── SOCIAL ── */
+        .social-section {
+            padding: 80px 60px;
+            background: var(--black);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 44px;
+        }
+
+        .social-row {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-pill {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 26px;
+            background: var(--charcoal);
+            border: 1px solid rgba(232,220,200,0.1);
+            text-decoration: none;
+            color: var(--sand);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            transition: border-color 0.2s, background 0.2s, transform 0.2s;
+        }
+        .social-pill:hover {
+            border-color: var(--amber);
+            background: var(--warm-gray);
+            transform: translateY(-2px);
+        }
+        .social-pill img { width: 28px; height: 28px; border-radius: 6px; }
+
+        /* ── FOOTER ── */
+        footer {
+            background: var(--off-black);
+            border-top: 1px solid rgba(212,160,23,0.1);
+            padding: 64px 60px 40px;
+        }
+
+        .footer-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.2fr 2fr;
+            gap: 64px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(232,220,200,0.07);
+        }
+
+        .footer-brand .logo { font-size: 24px; display: block; margin-bottom: 16px; }
+        .footer-brand p { font-size: 13.5px; line-height: 1.75; color: var(--text-dim); max-width: 220px; }
+
+        .footer-links-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .footer-col h5 {
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--amber);
+            margin-bottom: 20px;
+        }
+
+        .footer-col a {
+            display: block;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 13.5px;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        .footer-col a:hover { color: var(--sand); }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 28px auto 0;
+            text-align: center;
+            font-size: 12px;
+            color: var(--text-dim);
+            letter-spacing: 0.04em;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 1024px) {
+            .hero-inner { padding: 0 60px 0 80px; }
+            .swatch-mosaic { grid-template-columns: repeat(8, 1fr); }
+        }
+
+        @media (max-width: 860px) {
+            .hero-label { display: none; }
+            .hero-inner { padding: 0 24px; }
+            .hero-bg-num { display: none; }
+            .hero-stats { gap: 32px; flex-wrap: wrap; }
+
+            .colors-section { padding: 80px 24px; }
+            .swatch-mosaic { grid-template-columns: repeat(8, 1fr); gap: 5px; }
+            .section-head { flex-direction: column; align-items: flex-start; }
+
+            .split-section { grid-template-columns: 1fr; }
+            .split-left { clip-path: none; padding: 60px 28px; }
+            .split-right { padding: 60px 28px; }
+
+            .features-section { padding: 80px 24px; }
+            .features-grid { grid-template-columns: 1fr; }
+
+            .order-section { padding: 80px 24px; }
+            .order-inner { grid-template-columns: 1fr; gap: 48px; }
+
+            .blog-section { padding: 80px 24px; }
+            .blog-text { font-size: 14px; }
+
+            .rating-banner { padding: 56px 24px; }
+            .rating-score { font-size: 72px; }
+
+            .social-section { padding: 60px 24px; }
+
+            footer { padding: 48px 24px 32px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+        }
+
+        @media (max-width: 560px) {
+            .swatch-mosaic { grid-template-columns: repeat(5, 1fr); }
+            .hero-stats { gap: 24px; }
+            .stat-num { font-size: 36px; }
+            .hero-ctas { flex-direction: column; }
+            .btn-amber, .btn-ghost { width: 100%; justify-content: center; }
+            .footer-links-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating WhatsApp -->
+    <a class="wa-float" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 48 48"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/></svg>
+    </a>
+
+    <!-- Top bar -->
+    <div class="top-bar">
+        <a href="https://herbal-az.store" rel="sponsored">⏩ ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN — herbal-az.store ⏩</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <a href="/" class="logo">Viktoria</a>
+        <nav>
+            <a href="/">Ana Səhifə</a>
+            <a href="/catalog.html">Kataloq</a>
+            <a href="/boyama-qaydalari.html">Boyama Qaydaları</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-bg-num">60</div>
+            <span class="hero-label">Viktoria Paltar Boyaları — Azərbaycan</span>
+
+            <div class="hero-inner">
+                <div class="hero-tag">
+                    <span class="hero-tag-line"></span>
+                    <span>1901-dən bu günə · Tekstil Boyaları</span>
+                </div>
+
+                <h1 class="hero-title">
+                    Paltarına
+                    <strong>Yeni Həyat</strong>
+                    <em>60 rəng · Bütün Azərbaycana çatdırılma</em>
+                </h1>
+
+                <p class="hero-body">
+                    Solmuş, xlor ləkəli, köhnəlmiş geyimlərinizi professional boya ilə yeniləyin. Pambıq, kətan, yun, ipək — hər parça üçün mükəmməl rəng.
+                </p>
+
+                <div class="hero-ctas">
+                    <a class="btn-amber" href="/catalog.html">Rənglərə Bax →</a>
+                    <a class="btn-ghost" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">WhatsApp Sifariş</a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-num">60+</div>
+                        <div class="stat-label">Rəng</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">4.8★</div>
+                        <div class="stat-label">Müştəri Reytinqi</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">1901</div>
+                        <div class="stat-label">Quruluş İli</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-num">2gün</div>
+                        <div class="stat-label">Bakıya Çatdırılma</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MARQUEE -->
+        <div class="marquee-strip" aria-hidden="true">
+            <div class="marquee-track">
+                <!-- repeat twice for seamless loop -->
+                <span class="marquee-item">Pəmbə</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Qırmızı</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Şərabi</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Narıncı</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Sarı</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Bej</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Qəhvəyi</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Mavi</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Petrol</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Yaşıl</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Mor</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Qara</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Xaki</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Zümrüd</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Pəmbə</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Qırmızı</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Şərabi</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Narıncı</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Sarı</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Bej</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Qəhvəyi</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Mavi</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Petrol</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Yaşıl</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Mor</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Qara</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Xaki</span><span class="marquee-dot">·</span>
+                <span class="marquee-item">Zümrüd</span><span class="marquee-dot">·</span>
+            </div>
+        </div>
+
+        <!-- COLOR SWATCHES -->
+        <section class="colors-section">
+            <div class="section-head">
+                <div>
+                    <p class="section-kicker">Rəng Palitramız</p>
+                    <h2 class="section-h2">60 <em>Fərqli</em> Rəng</h2>
+                </div>
+                <a class="btn-ghost" href="/catalog.html" style="font-size:12px;">Tam Kataloqua →</a>
+            </div>
+            <div class="swatch-mosaic">
+                <div class="sw" style="background:#ffb6c1"></div>
+                <div class="sw" style="background:#ff69b4"></div>
+                <div class="sw" style="background:#ff4081"></div>
+                <div class="sw" style="background:#ff0040"></div>
+                <div class="sw" style="background:#dc143c"></div>
+                <div class="sw" style="background:#8b0000"></div>
+                <div class="sw" style="background:#6b0a2d"></div>
+                <div class="sw" style="background:#722f37"></div>
+                <div class="sw" style="background:#4a0020"></div>
+                <div class="sw" style="background:#ff6700"></div>
+                <div class="sw" style="background:#ff8c00"></div>
+                <div class="sw" style="background:#ffd700"></div>
+                <div class="sw" style="background:#f0c040"></div>
+                <div class="sw" style="background:#e8c49a"></div>
+                <div class="sw" style="background:#d2b48c"></div>
+                <div class="sw" style="background:#c4a265"></div>
+                <div class="sw" style="background:#b5651d"></div>
+                <div class="sw" style="background:#8b4513"></div>
+                <div class="sw" style="background:#5c2e00"></div>
+                <div class="sw" style="background:#6e260e"></div>
+                <div class="sw" style="background:#87ceeb"></div>
+                <div class="sw" style="background:#4169e1"></div>
+                <div class="sw" style="background:#00008b"></div>
+                <div class="sw" style="background:#00bcd4"></div>
+                <div class="sw" style="background:#1e90ff"></div>
+                <div class="sw" style="background:#1c3a6e"></div>
+                <div class="sw" style="background:#003366"></div>
+                <div class="sw" style="background:#008080"></div>
+                <div class="sw" style="background:#00827f"></div>
+                <div class="sw" style="background:#50c878"></div>
+                <div class="sw" style="background:#228b22"></div>
+                <div class="sw" style="background:#006400"></div>
+                <div class="sw" style="background:#6b8e23"></div>
+                <div class="sw" style="background:#556b2f"></div>
+                <div class="sw" style="background:#50e3c2"></div>
+                <div class="sw" style="background:#dda0dd"></div>
+                <div class="sw" style="background:#6a0dad"></div>
+                <div class="sw" style="background:#4b0082"></div>
+                <div class="sw" style="background:#e6e6fa"></div>
+                <div class="sw" style="background:#111111"></div>
+            </div>
+            <div style="text-align:center;">
+                <a class="btn-amber" href="/catalog.html">Bütün Rəngləri Gör →</a>
+            </div>
+        </section>
+
+        <!-- SPLIT: product showcase -->
+        <div class="split-section">
+            <div class="split-left">
+                <p class="split-overline">Peşəkar Həll</p>
+                <h2 class="split-title">Viktoria<br>1 KQ Paketlər</h2>
+                <p class="split-body">Quru təmizləmələr, otellər, xalça boyama xidmətləri üçün ən sərfəli seçim. Böyük həcmdə stabil keyfiyyət.</p>
+                <a class="btn-amber" href="/catalog-1kg.html">Paketlərə Bax →</a>
+            </div>
+            <div class="split-right" style="display:flex;align-items:center;justify-content:center;">
+                <div class="split-img-wrap">
+                    <img src="1kg-paketler.webp" alt="Viktoria 1KG Paket" loading="lazy">
+                </div>
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <section class="features-section">
+            <div style="max-width:1100px; margin:0 auto;">
+                <p class="section-kicker">Niyə Viktoria?</p>
+                <h2 class="section-h2">Fərqimiz <em>Keyfiyyətdir</em></h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-num">01</div>
+                        <span class="feature-icon">🚚</span>
+                        <div class="feature-line"></div>
+                        <h3>Sürətli Çatdırılma</h3>
+                        <p>Azərpoçt ilə bütün Azərbaycana. Bakıya ~2 iş günü, bölgələrə 3–4 gün. 5+ ədəddə çatdırılma <strong style="color:var(--amber)">pulsuzdur</strong>.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-num">02</div>
+                        <span class="feature-icon">🎨</span>
+                        <div class="feature-line"></div>
+                        <h3>60 Rəng Variantı</h3>
+                        <p>Pambıq, kətan, yun, ipək — hər parça növü üçün uyğun. Xlor ləkəsi, solmuş formalar, uniformalar.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-num">03</div>
+                        <span class="feature-icon">🌱</span>
+                        <div class="feature-line"></div>
+                        <h3>Ekoloji Yanaşma</h3>
+                        <p>Paltarlarınızın ömrünü uzadın, israfın qarşısını alın. Köhnə geyimə yeni həyat vermək ən ağıllı seçimdir.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ORDER -->
+        <section class="order-section">
+            <div class="order-inner">
+                <div class="order-steps">
+                    <p class="section-kicker" style="margin-bottom:28px;">Sifariş Prosesi</p>
+                    <div class="order-step">
+                        <div class="step-no">01</div>
+                        <div class="step-info">
+                            <h4>WhatsApp-a Yazın</h4>
+                            <p>İstədiyiniz rəngi, miqdarı bildirin. Hər şey 1 mesajla həll olur.</p>
+                        </div>
+                    </div>
+                    <div class="order-step">
+                        <div class="step-no">02</div>
+                        <div class="step-info">
+                            <h4>Göndərilir</h4>
+                            <p>Ertəsi iş günü Azərpoçta verilir, izləmə kodu əlinizə çatır.</p>
+                        </div>
+                    </div>
+                    <div class="order-step">
+                        <div class="step-no">03</div>
+                        <div class="step-info">
+                            <h4>Qapınıza Gəlir</h4>
+                            <p>Bakıya ~2, bölgəyə 3–4 iş günü. Minimum sifariş 2 ədəd.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="order-box">
+                    <div class="order-big">60+</div>
+                    <div class="order-label">Rəng Variantı</div>
+                    <p>Sifarişinizi WhatsApp üzərindən bir dəqiqəyə vermək mümkündür. Heç bir qeydiyyat, heç bir gözləmə.</p>
+                    <a class="btn-amber" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" style="width:100%;justify-content:center;font-size:13px;">
+                        📱 İndi Sifariş Ver
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section class="blog-section">
+            <div style="max-width:1100px;margin:0 auto;">
+                <p class="section-kicker">Faydalı Məlumat</p>
+                <h2 class="section-h2">Bloq <em>Məqalələri</em></h2>
+                <div class="blog-list">
+                    <a class="blog-row" href="bloq1.html"><div class="blog-row-left"><span class="blog-idx">01</span><span class="blog-text">Metal qabda boyama etmək olarmı?</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq2.html"><div class="blog-row-left"><span class="blog-idx">02</span><span class="blog-text">Paltaryuyanda boyaya bilərəm?</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq3.html"><div class="blog-row-left"><span class="blog-idx">03</span><span class="blog-text">Sabitləşdirici istifadə məcburidir?</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq4.html"><div class="blog-row-left"><span class="blog-idx">04</span><span class="blog-text">Viktoria boya nə qədər qalıcıdır?</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq5.html"><div class="blog-row-left"><span class="blog-idx">05</span><span class="blog-text">Hansı materialları qaynatmaq olar?</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq7.html"><div class="blog-row-left"><span class="blog-idx">06</span><span class="blog-text">Qara paltar boyası — istifadə bələdçisi</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq9.html"><div class="blog-row-left"><span class="blog-idx">07</span><span class="blog-text">Qara sinka nədir? Boya ilə eynidirmi?</span></div><span class="blog-arrow">→</span></a>
+                    <a class="blog-row" href="bloq10.html"><div class="blog-row-left"><span class="blog-idx">08</span><span class="blog-text">Solmuş geyimlərə yeni həyat — WhatsApp sifariş</span></div><span class="blog-arrow">→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- RATING -->
+        <div class="rating-banner">
+            <span class="rating-stars">⭐⭐⭐⭐⭐</span>
+            <span class="rating-score">4.8</span>
+            <span class="rating-sub">5 üzərindən müştəri reytinqi</span>
+            <a class="btn-dark" href="/reyler.html">Bütün Rəylər →</a>
+        </div>
+
+        <!-- SOCIAL -->
+        <section class="social-section">
+            <div style="text-align:center;">
+                <p class="section-kicker" style="justify-content:center;">Bizi İzləyin</p>
+                <h2 class="section-h2" style="color:var(--cream);">Sosial <em>Media</em></h2>
+            </div>
+            <div class="social-row">
+                <a class="social-pill" href="https://instagram.com/paltar_boyalari" target="_blank" rel="noopener">
+                    <img src="images/instagram.webp" alt=""> Instagram
+                </a>
+                <a class="social-pill" href="https://tiktok.com/@paltar_boyalari" target="_blank" rel="noopener">
+                    <img src="images/tiktok.webp" alt=""> TikTok
+                </a>
+                <a class="social-pill" href="https://t.me/paltar_boyalari" target="_blank" rel="noopener" style="color:#29ABE2;border-color:rgba(41,171,226,0.2);">
+                    <svg width="28" height="28" viewBox="0 0 60 60" fill="none" style="border-radius:6px;flex-shrink:0;"><rect width="60" height="60" rx="6" fill="#29ABE2"/><path d="M44.5 16.5L38.2 45.1c-.4 1.8-1.6 2.3-3.2 1.4l-8.8-6.5-4.3 4.1c-.5.5-.9.9-1.8.9l.6-9 16.2-14.6c.7-.6-.2-.9-1.1-.3L14.4 32.6l-8.6-2.7c-1.9-.6-1.9-1.9.4-2.8l35.9-13.8c1.6-.6 3 .4 2.4 3.2z" fill="white"/></svg>
+                    Telegram
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="/" class="logo">Viktoria</a>
+                <p>1901-ci ildən bu günə yüksək keyfiyyətli tekstil boyaları ilə Azərbaycanda xidmətinizdəyik.</p>
+            </div>
+            <div class="footer-links-grid">
+                <div class="footer-col">
+                    <h5>Məhsullar</h5>
+                    <a href="/catalog.html">Kataloq</a>
+                    <a href="/catalog-1kg.html">1KQ Paketlər</a>
+                    <a href="/sprey1.html">Sprey Boyalar</a>
+                    <a href="/pitturafelice.html">Dəri & Nubuk</a>
+                </div>
+                <div class="footer-col">
+                    <h5>Faydalı</h5>
+                    <a href="/boyama-qaydalari.html">Boyama Qaydaları</a>
+                    <a href="/qara-paltar-boyasi.html">Qara Paltar Boyası</a>
+                    <a href="/uniforma-boyasi.html">Uniforma Boyaları</a>
+                    <a href="/reyler.html">Rəylər</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Viktoria Paltar Boyaları — Bütün hüquqlar qorunur.
+        </div>
+    </footer>
+
+</body>
+</html>
