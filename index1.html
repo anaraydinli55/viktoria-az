@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viktoria Paltar Boyaları | 60 Rəng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0f0a1a;
+            --ink-soft: #2a1f3d;
+            --cream: #faf7f2;
+            --cream-deep: #f0ead8;
+            --violet: #6b2fa0;
+            --violet-deep: #4b0082;
+            --violet-pale: #e8d9f7;
+            --gold: #c9922a;
+            --gold-light: #f0c05a;
+            --green-neon: #32cd32;
+            --wa-green: #25D366;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--cream);
+            color: var(--ink);
+            overflow-x: hidden;
+        }
+
+        /* ───── NOISE OVERLAY ───── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* ───── HEADER ───── */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15,10,26,0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201,146,42,0.25);
+            padding: 0 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .logo-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--gold-light);
+            letter-spacing: 0.04em;
+            text-decoration: none;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+
+        nav a {
+            color: rgba(255,255,255,0.75);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--gold-light); }
+
+        .nav-wa {
+            background: var(--wa-green);
+            color: #fff !important;
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-weight: 600 !important;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: transform 0.2s, background 0.2s !important;
+        }
+
+        .nav-wa:hover {
+            background: #1ea855 !important;
+            transform: translateY(-1px);
+        }
+
+        .herbal-banner {
+            background: linear-gradient(90deg, var(--green-neon), #28b828);
+            text-align: center;
+            padding: 10px 20px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+            color: #000;
+        }
+
+        .herbal-banner a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        /* ───── HERO ───── */
+        .hero {
+            min-height: 90vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 80px 80px 100px;
+            gap: 60px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 60% at 80% 50%, rgba(107,47,160,0.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 80% at 10% 80%, rgba(201,146,42,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(201,146,42,0.15);
+            border: 1px solid rgba(201,146,42,0.4);
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 16px;
+            border-radius: 100px;
+            margin-bottom: 28px;
+            animation: fadeUp 0.6s ease both;
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 5.5vw, 80px);
+            line-height: 1.05;
+            color: var(--ink);
+            margin-bottom: 24px;
+            animation: fadeUp 0.7s 0.1s ease both;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--violet-deep);
+            display: block;
+        }
+
+        .hero-title .gold-line {
+            display: block;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-desc {
+            font-size: 17px;
+            line-height: 1.7;
+            color: #4a3a5e;
+            max-width: 480px;
+            margin-bottom: 40px;
+            animation: fadeUp 0.7s 0.2s ease both;
+        }
+
+        .hero-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 40px;
+            animation: fadeUp 0.7s 0.3s ease both;
+        }
+
+        .pill {
+            background: var(--violet-pale);
+            color: var(--violet-deep);
+            font-size: 13px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border-radius: 100px;
+            letter-spacing: 0.03em;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeUp 0.7s 0.4s ease both;
+        }
+
+        .btn-primary {
+            background: var(--violet-deep);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            border-color: var(--violet-deep);
+            color: var(--violet-deep);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--violet-deep);
+            border: 2px solid var(--violet-deep);
+            padding: 14px 32px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 15px;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-outline:hover {
+            background: var(--violet-deep);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ───── HERO IMAGE ───── */
+        .hero-image-wrap {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fadeUp 0.9s 0.2s ease both;
+        }
+
+        .hero-image-ring {
+            position: absolute;
+            width: 440px;
+            height: 440px;
+            border-radius: 50%;
+            border: 2px dashed rgba(107,47,160,0.25);
+            animation: spin 20s linear infinite;
+        }
+
+        .hero-image-ring::before {
+            content: '';
+            position: absolute;
+            top: -6px;
+            left: 50%;
+            width: 12px;
+            height: 12px;
+            background: var(--gold);
+            border-radius: 50%;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        .hero-image-inner {
+            width: 360px;
+            height: 360px;
+            background: linear-gradient(135deg, var(--violet-pale) 0%, #d6c4f0 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 30px 80px rgba(75,0,130,0.2);
+            overflow: hidden;
+        }
+
+        .hero-image-inner img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.15));
+        }
+
+        .hero-stat {
+            position: absolute;
+            background: #fff;
+            border-radius: 16px;
+            padding: 14px 20px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .hero-stat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: var(--violet-deep);
+            line-height: 1;
+        }
+
+        .hero-stat-label {
+            font-size: 11px;
+            font-weight: 600;
+            color: #888;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .stat-1 { top: 40px; left: -20px; }
+        .stat-2 { bottom: 60px; right: -20px; }
+        .stat-3 { top: 50%; right: -40px; transform: translateY(-50%); }
+
+        /* ───── COLOR PALETTE ───── */
+        .palette-section {
+            padding: 100px 60px;
+            text-align: center;
+            background: var(--ink);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .palette-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(107,47,160,0.3) 0%, transparent 70%);
+        }
+
+        .section-eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 54px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .section-subtitle {
+            font-size: 17px;
+            color: rgba(255,255,255,0.6);
+            max-width: 500px;
+            margin: 0 auto 60px;
+            line-height: 1.6;
+        }
+
+        .color-swatches {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            max-width: 900px;
+            margin: 0 auto 50px;
+        }
+
+        .swatch {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+        }
+
+        .swatch:hover {
+            transform: scale(1.25);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            z-index: 2;
+        }
+
+        /* ───── 3-COLUMN INFO ───── */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: #e5ddf5;
+        }
+
+        .info-card {
+            background: var(--cream);
+            padding: 60px 50px;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
+        }
+
+        .info-card:hover { background: #fff; }
+
+        .info-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 0;
+            background: var(--gold);
+            transition: height 0.3s ease;
+        }
+
+        .info-card:hover::before { height: 100%; }
+
+        .info-icon {
+            font-size: 36px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .info-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: var(--ink);
+            margin-bottom: 14px;
+        }
+
+        .info-card p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #5a4e70;
+        }
+
+        /* ───── 1KG SECTION ───── */
+        .onekg-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+            overflow: hidden;
+        }
+
+        .onekg-visual {
+            background: linear-gradient(135deg, var(--violet-deep), #8b30c8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 80px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .onekg-visual::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            border: 60px solid rgba(255,255,255,0.05);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .onekg-visual img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.4));
+            position: relative;
+        }
+
+        .onekg-content {
+            background: var(--ink);
+            color: #fff;
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .onekg-content .section-eyebrow { color: var(--gold); margin-bottom: 12px; }
+
+        .onekg-content .section-title { color: #fff; margin-bottom: 16px; }
+
+        .onekg-content p {
+            color: rgba(255,255,255,0.65);
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 36px;
+            max-width: 440px;
+        }
+
+        /* ───── DELIVERY ───── */
+        .delivery-section {
+            padding: 100px 60px;
+            background: var(--cream-deep);
+        }
+
+        .delivery-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .delivery-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            color: var(--ink);
+        }
+
+        .delivery-content p {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #5a4e70;
+            margin-bottom: 32px;
+        }
+
+        .delivery-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .step-num {
+            width: 40px;
+            height: 40px;
+            background: var(--violet-deep);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 14px;
+            flex-shrink: 0;
+        }
+
+        .step-text { font-size: 15px; color: #4a3a5e; line-height: 1.55; padding-top: 8px; }
+
+        .delivery-visual {
+            background: #fff;
+            border-radius: 24px;
+            padding: 48px;
+            box-shadow: 0 20px 60px rgba(75,0,130,0.1);
+            text-align: center;
+        }
+
+        .delivery-visual .big-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 100px;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--violet-deep), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .delivery-visual p {
+            font-size: 16px;
+            color: #888;
+            margin-top: 8px;
+        }
+
+        /* ───── BLOG ───── */
+        .blog-section {
+            padding: 100px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .blog-header {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            margin-bottom: 60px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 28px 32px;
+            border: 1px solid #e5ddf5;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            transition: all 0.2s;
+            box-shadow: 0 4px 16px rgba(75,0,130,0.05);
+        }
+
+        .blog-card:hover {
+            border-color: var(--violet-deep);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(75,0,130,0.12);
+        }
+
+        .blog-card-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--violet-pale);
+            line-height: 1;
+            flex-shrink: 0;
+            width: 50px;
+            transition: color 0.2s;
+        }
+
+        .blog-card:hover .blog-card-num { color: var(--violet-deep); }
+
+        .blog-card-text {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            padding-top: 8px;
+        }
+
+        /* ───── RATING ───── */
+        .rating-section {
+            background: var(--violet-deep);
+            padding: 80px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .rating-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 80% at 50% 50%, rgba(201,146,42,0.15) 0%, transparent 70%);
+        }
+
+        .stars { font-size: 48px; letter-spacing: 4px; display: block; margin-bottom: 16px; }
+
+        .rating-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 80px;
+            font-weight: 900;
+            color: #fff;
+            line-height: 1;
+            display: block;
+        }
+
+        .rating-label {
+            font-size: 16px;
+            color: rgba(255,255,255,0.6);
+            margin: 8px 0 40px;
+            display: block;
+        }
+
+        /* ───── SOCIAL ───── */
+        .social-section {
+            padding: 80px 60px;
+            background: var(--cream);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 28px;
+            background: #fff;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+            border: 2px solid transparent;
+        }
+
+        .social-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        }
+
+        .social-link img { width: 32px; height: 32px; border-radius: 8px; }
+
+        .social-link.instagram { color: #E1306C; border-color: rgba(225,48,108,0.2); }
+        .social-link.tiktok { color: #000; border-color: rgba(0,0,0,0.15); }
+        .social-link.telegram { color: #29ABE2; border-color: rgba(41,171,226,0.2); }
+
+        /* ───── FOOTER ───── */
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.5);
+            padding: 60px;
+        }
+
+        .footer-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 60px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .logo-text { display: block; margin-bottom: 14px; }
+
+        .footer-brand p { font-size: 14px; line-height: 1.7; max-width: 240px; }
+
+        .footer-links h4 {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover { color: var(--gold-light); }
+
+        .footer-bottom {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* ───── FLOATING WA ───── */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            background: var(--wa-green);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+            text-decoration: none;
+            animation: waPulse 2.5s ease-in-out infinite;
+            transition: transform 0.2s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            animation: none;
+        }
+
+        .whatsapp-float svg { width: 30px; height: 30px; fill: #fff; }
+
+        @keyframes waPulse {
+            0%,100% { box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
+            50% { box-shadow: 0 8px 50px rgba(37,211,102,0.75); }
+        }
+
+        /* ───── ANIMATIONS ───── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ───── RESPONSIVE ───── */
+        @media (max-width: 900px) {
+            header { padding: 0 20px; }
+            nav { gap: 16px; }
+            .hero { grid-template-columns: 1fr; padding: 60px 30px; text-align: center; min-height: auto; }
+            .hero-pills { justify-content: center; }
+            .hero-actions { justify-content: center; }
+            .hero-image-wrap { order: -1; }
+            .hero-image-ring { width: 300px; height: 300px; }
+            .hero-image-inner { width: 250px; height: 250px; }
+            .hero-image-inner img { width: 200px; height: 200px; }
+            .stat-3 { display: none; }
+            .info-grid { grid-template-columns: 1fr; }
+            .info-card { padding: 40px 30px; }
+            .onekg-section { grid-template-columns: 1fr; }
+            .onekg-visual { padding: 60px 30px; min-height: 300px; }
+            .onekg-content { padding: 60px 30px; }
+            .delivery-inner { grid-template-columns: 1fr; gap: 40px; }
+            .delivery-section { padding: 60px 30px; }
+            .blog-section { padding: 60px 30px; }
+            .blog-grid { grid-template-columns: 1fr; }
+            .blog-header { flex-direction: column; gap: 20px; align-items: flex-start; }
+            .palette-section { padding: 80px 30px; }
+            .rating-section { padding: 60px 30px; }
+            .footer-inner { grid-template-columns: 1fr; gap: 40px; }
+            footer { padding: 40px 30px; }
+            .social-section { padding: 60px 30px; }
+            .stat-1, .stat-2 { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="whatsapp-float" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" rel="noopener" aria-label="WhatsApp">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
+        </svg>
+    </a>
+
+    <!-- HERBAL BANNER -->
+    <div class="herbal-banner">
+        <a href="https://herbal-az.store" rel="sponsored">⏩ ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN ⏩</a>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+        <a href="/" class="logo-text">Viktoria</a>
+        <nav>
+            <a href="/">Ana Səhifə</a>
+            <a href="/catalog.html">Kataloq</a>
+            <a href="/boyama-qaydalari.html">Boyama Qaydaları</a>
+            <a class="nav-wa" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">
+                <svg width="16" height="16" viewBox="0 0 48 48" fill="white"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4z"/></svg>
+                WhatsApp
+            </a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero">
+            <div>
+                <div class="hero-badge">✦ 1901-dən Bu Günə</div>
+                <h1 class="hero-title">
+                    <em>Viktoria</em>
+                    Paltar
+                    <span class="gold-line">Boyaları</span>
+                </h1>
+                <p class="hero-desc">
+                    Azərbaycanda ən geniş rəng çeşidi — 60 fərqli rənglə solmuş paltarlarınıza yenidən həyat verin.
+                </p>
+                <div class="hero-pills">
+                    <span class="pill">60 Rəng</span>
+                    <span class="pill">Xlor Ləkəsi</span>
+                    <span class="pill">Solmuş Paltarlar</span>
+                    <span class="pill">Forma & Uniforma</span>
+                </div>
+                <div class="hero-actions">
+                    <a class="btn-primary" href="/catalog.html">Rənglərə Bax →</a>
+                    <a class="btn-outline" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">Sifariş Ver</a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <div class="hero-image-ring"></div>
+                <div class="hero-image-inner">
+                    <img src="images/30-siyah.webp" alt="Qara paltar boyası" loading="eager">
+                </div>
+                <div class="hero-stat stat-1">
+                    <div class="hero-stat-num">60</div>
+                    <div class="hero-stat-label">Rəng</div>
+                </div>
+                <div class="hero-stat stat-2">
+                    <div class="hero-stat-num">4.8★</div>
+                    <div class="hero-stat-label">Reytinq</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COLOR SWATCHES -->
+        <section class="palette-section">
+            <p class="section-eyebrow">Rəng Palitramız</p>
+            <h2 class="section-title">60 Fərqli Rəng Seçin</h2>
+            <p class="section-subtitle">Pəmbədən qaraya, vişnədən neftiyə — paltarınız üçün mükəmməl rəngi tapın.</p>
+            <div class="color-swatches">
+                <!-- 40 color swatches -->
+                <div class="swatch" style="background:#ffb6c1" title="Pəmbə"></div>
+                <div class="swatch" style="background:#ff69b4" title="Tünd Pəmbə"></div>
+                <div class="swatch" style="background:#ff4081" title="Atəşi Pəmbə"></div>
+                <div class="swatch" style="background:#ff0040" title="Al Qırmızı"></div>
+                <div class="swatch" style="background:#dc143c" title="Qırmızı"></div>
+                <div class="swatch" style="background:#8b0000" title="Tünd Qırmızı"></div>
+                <div class="swatch" style="background:#6b0a2d" title="Vişnə Çürüyü"></div>
+                <div class="swatch" style="background:#722f37" title="Şərabi"></div>
+                <div class="swatch" style="background:#4a0020" title="Tünd Şərabi"></div>
+                <div class="swatch" style="background:#ff6700" title="Portağal"></div>
+                <div class="swatch" style="background:#ff8c00" title="Narıncı"></div>
+                <div class="swatch" style="background:#ffd700" title="Sarı"></div>
+                <div class="swatch" style="background:#f0c040" title="Qızılı Sarı"></div>
+                <div class="swatch" style="background:#e8c49a" title="Bej"></div>
+                <div class="swatch" style="background:#d2b48c" title="Açıq Bej"></div>
+                <div class="swatch" style="background:#c4a265" title="Tünd Bej"></div>
+                <div class="swatch" style="background:#b5651d" title="Açıq Qəhvəyi"></div>
+                <div class="swatch" style="background:#8b4513" title="Qəhvəyi"></div>
+                <div class="swatch" style="background:#5c2e00" title="Tünd Qəhvəyi"></div>
+                <div class="swatch" style="background:#6e260e" title="Yanıq Qəhvəyi"></div>
+                <div class="swatch" style="background:#87ceeb" title="Açıq Mavi"></div>
+                <div class="swatch" style="background:#4169e1" title="Orta Mavi"></div>
+                <div class="swatch" style="background:#00008b" title="Tünd Mavi"></div>
+                <div class="swatch" style="background:#00bcd4" title="Boncuq Mavi"></div>
+                <div class="swatch" style="background:#1e90ff" title="Cins Mavisi"></div>
+                <div class="swatch" style="background:#1c3a6e" title="Saksonya"></div>
+                <div class="swatch" style="background:#003366" title="Tünd Göy"></div>
+                <div class="swatch" style="background:#008080" title="Petrol"></div>
+                <div class="swatch" style="background:#00827f" title="Nefti"></div>
+                <div class="swatch" style="background:#50c878" title="Açıq Filizi"></div>
+                <div class="swatch" style="background:#228b22" title="Yaşıl"></div>
+                <div class="swatch" style="background:#006400" title="Tünd Yaşıl"></div>
+                <div class="swatch" style="background:#6b8e23" title="Zeytuni"></div>
+                <div class="swatch" style="background:#556b2f" title="Xaki"></div>
+                <div class="swatch" style="background:#50e3c2" title="Zümrüd"></div>
+                <div class="swatch" style="background:#dda0dd" title="Açıq Mor"></div>
+                <div class="swatch" style="background:#6a0dad" title="Tünd Mor"></div>
+                <div class="swatch" style="background:#4b0082" title="Güvəz"></div>
+                <div class="swatch" style="background:#e6e6fa" title="Əflatun"></div>
+                <div class="swatch" style="background:#111111" title="Qara"></div>
+            </div>
+            <a class="btn-primary" href="/catalog.html" style="margin: 0 auto; display: inline-flex;">Tam Kataloqa Bax →</a>
+        </section>
+
+        <!-- INFO CARDS -->
+        <div class="info-grid">
+            <div class="info-card">
+                <span class="info-icon">🚚</span>
+                <h3>Sürətli Çatdırılma</h3>
+                <p>Azərpoçt ilə Bakı və bütün bölgələrə çatdırılma. Bakıya ~2 iş günü, bölgələrə 3–4 iş günü. 5 ədəddən yuxarı sifarişlərdə çatdırılma <strong>pulsuzdur</strong>.</p>
+            </div>
+            <div class="info-card">
+                <span class="info-icon">🎨</span>
+                <h3>Geniş Rəng Çeşidi</h3>
+                <p>60-dan çox rəng variantı ilə istənilən paltarı, formanı, uniformanı, xlor ləkəsini boyayın. Pambıq, kətan, yun, ipək — hər parça üçün uyğun.</p>
+            </div>
+            <div class="info-card">
+                <span class="info-icon">🌱</span>
+                <h3>Ekoloji Yanaşma</h3>
+                <p>Solmuş geyimlərə yenidən həyat verin. Paltarların ömrünü uzadın, israfın qarşısını alın və ailəyə qənaət etməyə kömək edin.</p>
+            </div>
+        </div>
+
+        <!-- 1KG SECTION -->
+        <section class="onekg-section">
+            <div class="onekg-visual">
+                <img src="1kg-paketler.webp" alt="Viktoria 1KG Paket" loading="lazy">
+            </div>
+            <div class="onekg-content">
+                <p class="section-eyebrow">Peşəkar İstifadə</p>
+                <h2 class="section-title" style="font-size: clamp(28px, 3.5vw, 46px);">Viktoria 1 KQ Paketlər</h2>
+                <p>Quru təmizləmələr, otellər, xalça və xalı boyama xidmətləri üçün ən sərfəli seçim. Böyük həcmli istifadədə belə stabil keyfiyyəti qoruyur.</p>
+                <a class="btn-primary" href="/catalog-1kg.html" style="max-width: 220px;">Rənglərə Bax →</a>
+            </div>
+        </section>
+
+        <!-- DELIVERY -->
+        <section class="delivery-section">
+            <div class="delivery-inner">
+                <div class="delivery-content">
+                    <h2>Sifariş Vermək<br>Çox Asandır</h2>
+                    <p>WhatsApp üzərindən bir kliklə sifariş verin — sizi vaxtında məlumatlandırırıq.</p>
+                    <div class="delivery-steps">
+                        <div class="step">
+                            <div class="step-num">1</div>
+                            <div class="step-text">WhatsApp-a yazın, istədiyiniz rəng və miqdarı bildirin.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">2</div>
+                            <div class="step-text">Sifarişiniz ertəsi iş günü Azərpoçta verilir, izləmə kodu göndərilir.</div>
+                        </div>
+                        <div class="step">
+                            <div class="step-num">3</div>
+                            <div class="step-text">Bakıya ~2, bölgəyə 3–4 iş günündə çatır. Minimum sifariş 2 ədəd.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="delivery-visual">
+                    <div class="big-num">60+</div>
+                    <p>Rəng Variantı</p>
+                    <div style="margin-top: 32px;">
+                        <a class="btn-primary" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" style="width: 100%; justify-content: center;">📱 İndi Sifariş Ver</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section class="blog-section">
+            <div class="blog-header">
+                <div>
+                    <p class="section-eyebrow" style="color: var(--gold);">Bloq & Məlumat</p>
+                    <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(28px,4vw,46px); color: var(--ink); line-height:1.1;">Faydalı Məqalələr</h2>
+                </div>
+                <a class="btn-outline" href="/catalog.html">Kataloqa Bax →</a>
+            </div>
+            <div class="blog-grid">
+                <a class="blog-card" href="bloq1.html">
+                    <div class="blog-card-num">01</div>
+                    <div class="blog-card-text">Metal qabda boyama etmək olarmı?</div>
+                </a>
+                <a class="blog-card" href="bloq2.html">
+                    <div class="blog-card-num">02</div>
+                    <div class="blog-card-text">Paltaryuyanda boyaya bilərəm?</div>
+                </a>
+                <a class="blog-card" href="bloq3.html">
+                    <div class="blog-card-num">03</div>
+                    <div class="blog-card-text">Sabitləşdirici istifadə məcburidir?</div>
+                </a>
+                <a class="blog-card" href="bloq4.html">
+                    <div class="blog-card-num">04</div>
+                    <div class="blog-card-text">Viktoria boya nə qədər qalıcıdır?</div>
+                </a>
+                <a class="blog-card" href="bloq5.html">
+                    <div class="blog-card-num">05</div>
+                    <div class="blog-card-text">Hansı materialları qaynatmaq olar?</div>
+                </a>
+                <a class="blog-card" href="bloq7.html">
+                    <div class="blog-card-num">06</div>
+                    <div class="blog-card-text">Qara paltar boyası — istifadə bələdçisi</div>
+                </a>
+                <a class="blog-card" href="bloq9.html">
+                    <div class="blog-card-num">07</div>
+                    <div class="blog-card-text">Qara sinka nədir? Boya ilə eynidirmi?</div>
+                </a>
+                <a class="blog-card" href="bloq10.html">
+                    <div class="blog-card-num">08</div>
+                    <div class="blog-card-text">Solmuş geyimlərə yeni həyat — WhatsApp sifariş</div>
+                </a>
+            </div>
+        </section>
+
+        <!-- RATING -->
+        <section class="rating-section">
+            <span class="stars">⭐⭐⭐⭐⭐</span>
+            <span class="rating-num">4.8</span>
+            <span class="rating-label">5 üzərindən müştəri reytinqi</span>
+            <a class="btn-primary" href="/reyler.html" style="margin: 0 auto; display: inline-flex; background: var(--gold); color: #000;">Rəylərə Bax →</a>
+        </section>
+
+        <!-- SOCIAL -->
+        <section class="social-section">
+            <div>
+                <p class="section-eyebrow" style="text-align:center; color: var(--gold);">Bizi İzləyin</p>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 32px; text-align: center; color: var(--ink); margin-bottom: 0;">Sosial Mediada</h2>
+            </div>
+            <div class="social-links">
+                <a class="social-link instagram" href="https://instagram.com/paltar_boyalari" target="_blank" rel="noopener">
+                    <img src="images/instagram.webp" alt="Instagram">
+                    Instagram
+                </a>
+                <a class="social-link tiktok" href="https://tiktok.com/@paltar_boyalari" target="_blank" rel="noopener">
+                    <img src="images/tiktok.webp" alt="TikTok">
+                    TikTok
+                </a>
+                <a class="social-link telegram" href="https://t.me/paltar_boyalari" target="_blank" rel="noopener">
+                    <svg width="32" height="32" viewBox="0 0 60 60" fill="none" style="border-radius:8px;flex-shrink:0;">
+                        <rect width="60" height="60" rx="8" fill="#29ABE2"/>
+                        <path d="M44.5 16.5L38.2 45.1c-.4 1.8-1.6 2.3-3.2 1.4l-8.8-6.5-4.3 4.1c-.5.5-.9.9-1.8.9l.6-9 16.2-14.6c.7-.6-.2-.9-1.1-.3L14.4 32.6l-8.6-2.7c-1.9-.6-1.9-1.9.4-2.8l35.9-13.8c1.6-.6 3 .4 2.4 3.2z" fill="white"/>
+                    </svg>
+                    Telegram
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="/" class="logo-text">Viktoria</a>
+                <p>1901-ci ildən bu günə yüksək keyfiyyətli tekstil boyaları ilə Azərbaycanda xidmətinizdəyik.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Faydalı Linklər</h4>
+                <ul>
+                    <li><a href="/paltarlarin-evde-renglenmesi.html">Evdə Rəngləmə</a></li>
+                    <li><a href="/polis-formasi-boyasi.html">Polis Forması Boyası</a></li>
+                    <li><a href="/uniforma-boyasi.html">Uniforma Boyaları</a></li>
+                    <li><a href="/qara-paltar-boyasi.html">Qara Paltar Boyası</a></li>
+                    <li><a href="/catalog.html">Kataloq</a></li>
+                    <li><a href="/sprey1.html">Sprey Boyalar</a></li>
+                    <li><a href="/pitturafelice.html">Dəri & Nubuk</a></li>
+                    <li><a href="/reyler.html">Rəylər</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Viktoria Paltar Boyaları — Bütün hüquqlar qorunur.
+        </div>
+    </footer>
+
+</body>
+</html>
