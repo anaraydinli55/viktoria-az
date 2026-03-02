@@ -262,5 +262,45 @@
     <a href="https://www.viktoria-az.store/catalog.html">İrəli ▶</a>
   </div>
 
+  <!-- Background music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="/music/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Music toggle — WA butonunun üstündə (bottom: 96px) -->
+  <button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
+    style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
+    🔇
+  </button>
+
+  <script>
+  (function() {
+    const music = document.getElementById('bgMusic');
+    const btn   = document.getElementById('muteBtn');
+    music.volume = 0.25;
+
+    function playMusic() {
+      music.play().then(function() {
+        btn.textContent = '🔊';
+      }).catch(function(e) {
+        console.warn('Audio blocked:', e);
+      });
+    }
+
+    window.addEventListener('scroll', function() {
+      if (music.paused) playMusic();
+    }, { once: true, passive: true });
+
+    window.toggleMute = function() {
+      if (music.paused) {
+        playMusic();
+      } else {
+        music.pause();
+        btn.textContent = '🔇';
+      }
+    };
+  })();
+  </script>
+
 </body>
 </html>
