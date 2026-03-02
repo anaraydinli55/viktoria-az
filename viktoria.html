@@ -558,7 +558,7 @@
 
   <!-- Background music (başlanğıcda susturulmuş, istifadəçi düymə ilə açar) -->
   <audio id="bgMusic" loop preload="auto">
-<source src="https://anaraydinli55.github.io/viktoria-az/music/background.mp3" type="audio/mpeg">
+    <source src="/music/background.mp3" type="audio/mpeg">
   </audio>
 
   <!-- Music toggle — WA butonunun üstündə (bottom: 96px) -->
@@ -571,27 +571,45 @@
     (function() {
       const music = document.getElementById('bgMusic');
       const btn   = document.getElementById('muteBtn');
-      let started = false;
-      let muted   = true;
       music.volume = 0.25;
-      music.muted  = true;
+      music.muted  = false;
+      let started  = false;
 
       function startMusic() {
         if (started) return;
         started = true;
-        music.play().catch(function(){});
+        music.play().then(function() {
+          btn.textContent = '🔊';
+        }).catch(function() {
+          // Brauzer blokladı — istifadəçi düyməyə bassın
+        });
       }
 
-      // İlk istifadəçi əməliyyatında başlat
-      ['click','scroll','keydown','touchstart'].forEach(function(ev) {
-        document.addEventListener(ev, startMusic, { once: true, passive: true });
-      });
+      // Scroll edəndə avtomatik başlat (ən etibarlı gesture)
+      window.addEventListener('scroll', function() {
+        startMusic();
+      }, { once: true, passive: true });
 
+      // Hər hansı klikdə də başlat
+      document.addEventListener('click', function() {
+        startMusic();
+      }, { once: true, passive: true });
+
+      // Düymə: mute/unmute toggle
       window.toggleMute = function() {
-        if (!started) startMusic();
-        muted = !muted;
-        music.muted = muted;
-        btn.textContent = muted ? '🔇' : '🔊';
+        if (!started) {
+          // Düyməyə basılmışsa — gesture var, dərhal başlat
+          started = true;
+          music.muted = false;
+          music.play().then(function() {
+            btn.textContent = '🔊';
+          }).catch(function(e) {
+            console.warn('Audio blocked:', e);
+          });
+          return;
+        }
+        music.muted = !music.muted;
+        btn.textContent = music.muted ? '🔇' : '🔊';
       };
     })();
   </script>
