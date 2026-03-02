@@ -606,7 +606,7 @@
         </p>
     </footer>
 
-    <!-- Background music -->
+<!-- Background music -->
   <audio id="bgMusic" loop preload="auto">
     <source src="/music/background.mp3" type="audio/mpeg">
   </audio>
@@ -622,28 +622,31 @@
       const music = document.getElementById('bgMusic');
       const btn   = document.getElementById('muteBtn');
       music.volume = 0.25;
-      music.muted  = false;
-      let started  = false;
 
-      function startMusic() {
-        if (started) return;
-        started = true;
+      function playMusic() {
         music.play().then(function() {
           btn.textContent = '🔊';
-        }).catch(function() {});
+        }).catch(function(e) {
+          console.warn('Audio blocked:', e);
+        });
       }
 
+      // Scroll edəndə avtomatik başlat
       window.addEventListener('scroll', function() {
-        startMusic();
+        if (music.paused) playMusic();
       }, { once: true, passive: true });
 
-      document.addEventListener('click', function() {
-        startMusic();
-      }, { once: true, passive: true });
-
+      // Düymə: oyna/dayan toggle
       window.toggleMute = function() {
-        if (!started) {
-          started = true;
+        if (music.paused) {
+          playMusic();
+        } else {
+          music.pause();
+          btn.textContent = '🔇';
+        }
+      };
+    })();
+  </script>
 
 </body>
 </html>
