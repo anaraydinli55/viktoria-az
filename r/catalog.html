@@ -25,7 +25,7 @@
   /* H1 */
   h1 { font-family:'DM Serif Display', serif; text-align:center; color:#4b0082; margin:28px 0 8px; font-size:clamp(22px,4vw,32px); }
 
-  /* GRID — toxunulmadı */
+  /* GRID */
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:16px; padding:20px; }
   .card { background:#fff; border-radius:18px; box-shadow:0 8px 24px rgba(0,0,0,.08); padding:12px; text-align:center; }
   .card img { width:100%; height:auto; border-radius:14px; cursor:pointer; transition:transform .2s; }
@@ -101,7 +101,7 @@
 
 <script>
 const colors = [
-  {file:"../1-pembe.webp",         color:"Çəhrayı"},
+  {file:"1-pembe.webp",          color:"Çəhrayı"},
   {file:"2-kavunici.webp",       color:"Yemiş rəngi"},
   {file:"3-yavruagzi.webp",      color:"Yavruağzı"},
   {file:"4-koyu-pembe.webp",     color:"Tünd Çəhrayı"},
@@ -169,7 +169,8 @@ colors.forEach((c, i) => {
   card.className = "card";
 
   const img = document.createElement("img");
-  img.src = `images/${c.file}`;
+  // ✅ Absolute path — /r/ qovluğundan asılı deyil
+  img.src = `/images/${c.file}`;
   img.alt = c.color;
   img.loading = i < 8 ? "eager" : "lazy";
   img.decoding = "async";
@@ -225,6 +226,46 @@ colors.forEach((c, i) => {
   <a href="https://www.viktoria-az.store/r/viktoria.html">🏠 Ana səhifə</a>
   <a href="https://www.viktoria-az.store/r/catalog-1kg.html">İrəli ▶</a>
 </div>
+
+<!-- Background music -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="/music/background.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Music toggle — WA butonunun üstündə (bottom: 96px) -->
+<button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
+  style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
+  🔇
+</button>
+
+<script>
+(function() {
+  const music = document.getElementById('bgMusic');
+  const btn   = document.getElementById('muteBtn');
+  music.volume = 0.25;
+
+  function playMusic() {
+    music.play().then(function() {
+      btn.textContent = '🔊';
+    }).catch(function(e) {
+      console.warn('Audio blocked:', e);
+    });
+  }
+
+  window.addEventListener('scroll', function() {
+    if (music.paused) playMusic();
+  }, { once: true, passive: true });
+
+  window.toggleMute = function() {
+    if (music.paused) {
+      playMusic();
+    } else {
+      music.pause();
+      btn.textContent = '🔇';
+    }
+  };
+})();
+</script>
 
 </body>
 </html>
