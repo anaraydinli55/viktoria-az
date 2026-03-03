@@ -136,4 +136,29 @@
     <priority>0.6</priority>
   </url>
 
+    <url>
+    <loc>https://www.viktoria-az.store/1-pembe.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://www.viktoria-az.store/30-siyah.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/51-lacivert-koyu.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/41-haki.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/20-kahve-koyu.jpg</loc>
+    <priority>0.6</priority>
+  </url>
+
 </urlset>
