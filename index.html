@@ -605,7 +605,7 @@
             </ul>
         </div>
 
-        <!-- ✅ Footer e-poçt linki — tətbiqi açır -->
+        <!-- ✅ Footer e-poçt linki -->
         <p style="text-align:center; margin-bottom: 14px;">
             📧 <a href="#" onclick="openGmail(event)" style="color:#4b0082; font-weight:600; text-decoration:underline;">
                 info@viktoria-az.store
@@ -632,24 +632,19 @@
         /* ========== GMail DEEP LINK ========== */
         function openGmail(e) {
             e.preventDefault();
-            var to      = "info@viktoria-az.store";
-            var subject = "Viktoria%20boya%20haqqinda%20melumat%20almaq%20isteyirem";
+            var to             = "info@viktoria-az.store";
+            var subjectEncoded = encodeURIComponent("Viktoria boya haqqinda melumat almaq isteyirem");
+            var isIOS          = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-            var isAndroid = /Android/i.test(navigator.userAgent);
-            var isIOS     = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
-            if (isAndroid) {
-                // Android — Gmail tətbiqini birbaşa aç
-                window.location.href = "intent://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subject + "#Intent;package=com.google.android.gm;scheme=https;end";
-            } else if (isIOS) {
+            if (isIOS) {
                 // iOS — Gmail tətbiqini aç, quraşdırılmayıbsa 1.5 san sonra brauzerə keç
-                window.location.href = "googlegmail://co?to=" + to + "&subject=" + subject;
+                window.location.href = "googlegmail://co?to=" + to + "&subject=" + subjectEncoded;
                 setTimeout(function () {
-                    window.open("https://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subject, "_blank");
+                    window.open("https://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subjectEncoded, "_blank");
                 }, 1500);
             } else {
-                // Masaüstü — brauzerdə Gmail aç
-                window.open("https://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subject, "_blank");
+                // Android və Masaüstü — mailto: sistemi e-poçt tətbiqini (Gmail) birbaşa açır
+                window.location.href = "mailto:" + to + "?subject=" + subjectEncoded;
             }
         }
 
