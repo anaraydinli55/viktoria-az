@@ -176,8 +176,11 @@
         /* ========== STICKY NEON BUTTON ========== */
         .btn-neon-wrap {
             display: flex;
+            flex-direction: column;
+            align-items: center;
             justify-content: center;
             padding: 10px 16px 6px;
+            gap: 3px;
         }
         .btn-neon-sticky {
             display: flex;
@@ -205,6 +208,23 @@
         }
         @media (max-width: 480px) {
             .btn-neon-sticky { font-size: 12px; padding: 11px 14px; }
+        }
+
+        /* ========== REKLAM ETİKETİ ========== */
+        .sponsored-label {
+            font-size: 9px;
+            color: #ccc;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.12);
+            padding: 1px 6px;
+            border-radius: 3px;
+            line-height: 1.4;
+            align-self: flex-end;
+            max-width: 640px;
+            width: 100%;
+            text-align: right;
+            box-sizing: border-box;
         }
 
         /* ========== INSTAGRAM / TIKTOK ========== */
@@ -372,11 +392,16 @@
             <a class="wa-link" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">
                 WhatsApp Əlaqə
             </a>
-            <!-- ✅ E-poçt — tətbiqi açır -->
             <a href="#" onclick="openGmail(event)">📧 E-poçt</a>
         </nav>
+
+        <!-- ✅ REKLAM ETİKETLİ BANNER -->
         <div class="btn-neon-wrap">
-            <a href="https://herbal-az.store" class="btn-neon-sticky" rel="sponsored">
+            <span class="sponsored-label">🔹 Reklam</span>
+            <a href="https://herbal-az.store"
+               class="btn-neon-sticky"
+               rel="sponsored noopener"
+               target="_blank">
                 ⏩ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN⏩
             </a>
         </div>
@@ -605,7 +630,6 @@
             </ul>
         </div>
 
-        <!-- ✅ Footer e-poçt linki -->
         <p style="text-align:center; margin-bottom: 14px;">
             📧 <a href="#" onclick="openGmail(event)" style="color:#4b0082; font-weight:600; text-decoration:underline;">
                 info@viktoria-az.store
@@ -637,13 +661,11 @@
             var isIOS          = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
             if (isIOS) {
-                // iOS — Gmail tətbiqini aç, quraşdırılmayıbsa 1.5 san sonra brauzerə keç
                 window.location.href = "googlegmail://co?to=" + to + "&subject=" + subjectEncoded;
                 setTimeout(function () {
                     window.open("https://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subjectEncoded, "_blank");
                 }, 1500);
             } else {
-                // Android və Masaüstü — mailto: sistemi e-poçt tətbiqini (Gmail) birbaşa açır
                 window.location.href = "mailto:" + to + "?subject=" + subjectEncoded;
             }
         }
