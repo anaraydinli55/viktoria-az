@@ -15,6 +15,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet"></noscript>
     <meta name="google-site-verification" content="0NZo2VZ37MTF0bjLMJhvjnW5m_ktFbvz_9H5qPhqNF8" />
     <link rel="canonical" href="https://viktoria-az.store/" />
+    <link rel="alternate" hreflang="az" href="https://viktoria-az.store/" />
+    <link rel="alternate" hreflang="ru" href="https://viktoria-az.store/ru/" />
     <meta property="og:title" content="Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş" />
     <meta property="og:description" content="Azərbaycanda rəngi solmuş paltarları evdə boyamaq üçün ən geniş rəng çeşidi. Keyfiyyətli tekstil boyaları Viktoria." />
     <meta property="og:image" content="https://viktoria-az.store/images/og-image.jpg" />
@@ -28,6 +30,36 @@
             font-family: Arial, sans-serif;
             background: #f5f6fb;
             color: #222;
+        }
+
+        /* ========== DİL SEÇİCİ ========== */
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 16px;
+            background: #3a0068;
+        }
+        .lang-switcher a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 6px;
+            border: 1px solid rgba(255,255,255,0.3);
+            transition: background 0.2s, color 0.2s;
+        }
+        .lang-switcher a:hover {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+        .lang-switcher a.active {
+            background: #fff;
+            color: #4b0082;
+            font-weight: 700;
+            border-color: #fff;
         }
 
         /* ========== HEADER ========== */
@@ -384,6 +416,12 @@
         <span>WhatsApp Sifariş</span>
     </a>
 
+    <!-- ✅ DİL SEÇİCİ -->
+    <div class="lang-switcher">
+        <a href="https://viktoria-az.store/" class="active">🇦🇿 Azərbaycanca</a>
+        <a href="https://viktoria-az.store/ru/">🇷🇺 Русский</a>
+    </div>
+
     <header>
         <nav>
             <a href="/">Ana səhifə</a>
@@ -641,25 +679,21 @@
         </p>
     </footer>
 
-    <!-- Background music -->
     <audio id="bgMusic" loop preload="auto">
         <source src="/music/background.mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Music toggle -->
     <button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
         style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
         🔇
     </button>
 
     <script>
-        /* ========== GMail DEEP LINK ========== */
         function openGmail(e) {
             e.preventDefault();
             var to             = "info@viktoria-az.store";
             var subjectEncoded = encodeURIComponent("Viktoria boya haqqında məlumat almaq istəyirəm");
             var isIOS          = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-
             if (isIOS) {
                 window.location.href = "googlegmail://co?to=" + to + "&subject=" + subjectEncoded;
                 setTimeout(function () {
@@ -670,12 +704,10 @@
             }
         }
 
-        /* ========== MUSİQİ ========== */
         (function () {
             var music = document.getElementById('bgMusic');
             var btn   = document.getElementById('muteBtn');
             music.volume = 0.25;
-
             function playMusic() {
                 music.play().then(function () {
                     btn.textContent = '🔊';
@@ -683,11 +715,9 @@
                     console.warn('Audio blocked:', e);
                 });
             }
-
             window.addEventListener('scroll', function () {
                 if (music.paused) playMusic();
             }, { once: true, passive: true });
-
             window.toggleMute = function () {
                 if (music.paused) {
                     playMusic();
