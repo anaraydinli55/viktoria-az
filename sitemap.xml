@@ -166,4 +166,45 @@
     <priority>0.6</priority>
   </url>
 
+   <url>
+    <loc>https://www.viktoria-az.store/ru/index.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/ru/faq.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/ru/bloq1.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/ru/bloq2.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+    <url>
+    <loc>https://www.viktoria-az.store/ru/bloq3.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/ru/bloq4.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/ru/bloq5.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.viktoria-az.store/ru/bloq8.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+
 </urlset>
