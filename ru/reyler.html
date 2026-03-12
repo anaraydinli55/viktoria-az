@@ -1,9 +1,25 @@
+  <!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Отзывы покупателей – Viktoria AZ</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <meta name="description" content="Отзывы покупателей краски Viktoria для одежды. Реальные отзывы о качестве, доставке и результатах окрашивания.">
+  <link rel="canonical" href="https://viktoria-az.store/ru/reyler.html">
+  <link rel="alternate" hreflang="az" href="https://viktoria-az.store/reyler.html">
+  <link rel="alternate" hreflang="ru" href="https://viktoria-az.store/ru/reyler.html">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Viktoria краска для одежды",
-    "description": "Текстильная краска для домашнего использования в Азербайджане. 62 цвета.",
+    "description": "Текстильная краска для домашнего использования в Азербайджане. 60 цветов.",
     "brand": { "@type": "Brand", "name": "Viktoria" },
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -17,7 +33,7 @@
         "@type": "Review",
         "author": {"@type": "Person", "name": "Алёна"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-        "reviewBody": "Всем доброго времени суток! Начну с того зачем я купила этот краситель. Пришла мне как то, в голову идея сделать себе рваные штаны фиолетового цвета! Долго искала как штаны так и краситель, не могла определится какого лучше цвета штаны брать белые или все таки какого нибудь оттенка розового или сиреневого, так как на одном сайте прочла что если покрасить белые штаны в черный то выйдет темно серый но никак не черный. Изначально хотела универсальный краситель Атей плюс купить, цена была более чем доступная, но цвета гнусные. Увидела \"Викторию\" в швейном магазине, палитра отличная, цена малость кусается(как для красителя) 5манат. Купила 54 номер краски. Производитель Турция. Отличный краситель, огромная палитра!",
+        "reviewBody": "Всем доброго времени суток! Начну с того зачем я купила этот краситель. Пришла мне как то, в голову идея сделать себе рваные штаны фиолетового цвета! Увидела \"Викторию\" в швейном магазине, палитра отличная, цена малость кусается(как для красителя) 5манат. Купила 54 номер краски. Производитель Турция. Отличный краситель, огромная палитра!",
         "datePublished": "2025-11-06"
       },
       {
@@ -58,3 +74,389 @@
     ]
   }
   </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #faf7f2;
+      --warm: #f0e8d8;
+      --gold: #c9a84c;
+      --gold-light: #e8c97a;
+      --dark: #1a1410;
+      --mid: #5c4a32;
+      --text: #3d2e1e;
+      --border: #e0d5c5;
+      --verified: #2d7a4f;
+      --verified-bg: #eaf5ee;
+      --purple: #4b0082;
+    }
+
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); min-height: 100vh; }
+
+    .lang-switcher { display: flex; justify-content: center; align-items: center; gap: 10px; padding: 7px 16px; background: #3a0068; }
+    .lang-switcher a { color: #ccc; text-decoration: none; font-size: 13px; font-weight: 600; padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.3); transition: background 0.2s, color 0.2s; }
+    .lang-switcher a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+    .lang-switcher a.active { background: #fff; color: #4b0082; font-weight: 700; border-color: #fff; }
+
+    .header { background: var(--dark); padding: 60px 20px 50px; text-align: center; position: relative; overflow: hidden; }
+    .header::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.1) 0%, transparent 60%);
+    }
+    .header-inner { position: relative; z-index: 1; }
+    .header-label { font-size: 11px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 6vw, 72px); font-weight: 900; color: #fff; line-height: 1.05; margin-bottom: 20px; }
+    .header h1 span { color: var(--gold); }
+
+    .avg-score { display: inline-flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.3); border-radius: 60px; padding: 12px 28px; margin-top: 10px; }
+    .avg-number { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; }
+    .avg-right { text-align: left; }
+    .avg-stars { color: var(--gold); font-size: 18px; letter-spacing: 1px; }
+    .avg-count { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    .main { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
+
+    .reviews-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 60px; }
+    .review-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 28px 30px; position: relative; transition: box-shadow 0.3s, transform 0.3s; animation: fadeUp 0.5s ease both; }
+    .review-card:hover { box-shadow: 0 12px 40px rgba(92,74,50,0.1); transform: translateY(-2px); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    .review-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
+    .review-author-block { display: flex; align-items: center; gap: 12px; }
+    .avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--warm); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--mid); overflow: hidden; flex-shrink: 0; }
+    .author-name { font-weight: 500; font-size: 15px; color: var(--dark); }
+    .review-date { font-size: 12px; color: #a08060; margin-top: 2px; }
+
+    .review-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+    .star-display { color: var(--gold); font-size: 17px; letter-spacing: 1px; }
+    .star-display .empty { color: #ddd; }
+
+    .verified-badge { display: inline-flex; align-items: center; gap: 5px; background: var(--verified-bg); color: var(--verified); font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.3px; }
+    .verified-badge::before { content: '✓'; font-weight: 700; }
+
+    .review-text { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 14px; }
+
+    .form-section { background: var(--dark); border-radius: 20px; padding: 44px 40px; position: relative; overflow: hidden; }
+    .form-section::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+    .form-subtitle { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
+
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } .form-section { padding: 30px 20px; } }
+
+    .form-group { display: flex; flex-direction: column; gap: 8px; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    label { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    input[type="text"], textarea { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 13px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s, background 0.2s; resize: none; }
+    input[type="text"]::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
+    input[type="text"]:focus, textarea:focus { border-color: var(--gold); background: rgba(255,255,255,0.09); }
+
+    .star-picker { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
+    .star-picker input { display: none; }
+    .star-picker label { font-size: 32px; color: rgba(255,255,255,0.2); cursor: pointer; letter-spacing: 0; text-transform: none; transition: color 0.15s, transform 0.15s; padding: 0 2px; }
+    .star-picker label:hover, .star-picker label:hover ~ label, .star-picker input:checked ~ label { color: var(--gold); }
+    .star-picker label:hover { transform: scale(1.2); }
+
+    .file-upload-wrapper { position: relative; border: 1.5px dashed rgba(201,168,76,0.4); border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .file-upload-wrapper:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+    .file-upload-wrapper input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
+    .upload-icon { font-size: 28px; margin-bottom: 6px; }
+    .upload-text { font-size: 13px; color: rgba(255,255,255,0.4); }
+    .upload-text span { color: var(--gold); }
+    #file-preview { margin-top: 12px; display: none; }
+    #file-preview img { max-width: 120px; border-radius: 8px; border: 1px solid var(--gold); }
+
+    .submit-btn { margin-top: 8px; width: 100%; padding: 16px; background: var(--gold); color: var(--dark); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+    .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .submit-btn:active { transform: translateY(0); }
+
+    .form-note { margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.3); text-align: center; line-height: 1.6; }
+    .success-msg { display: none; background: var(--verified-bg); color: var(--verified); border-radius: 10px; padding: 16px 20px; font-size: 14px; font-weight: 500; text-align: center; margin-top: 16px; }
+
+    .divider { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
+    .divider-line { flex: 1; height: 1px; background: var(--border); }
+    .divider-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--mid); white-space: nowrap; }
+
+    .wa-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; text-decoration: none; padding: 14px; border-radius: 50%; box-shadow: 0 6px 24px rgba(37,211,102,0.45); z-index: 999; display: flex; align-items: center; justify-content: center; transition: transform 0.15s, box-shadow 0.15s; animation: waPulse 2.5s ease-in-out infinite; }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.55); animation: none; }
+    .wa-btn svg { width: 32px; height: 32px; fill: #fff; display: block; }
+    @keyframes waPulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); } 50% { box-shadow: 0 4px 32px rgba(37,211,102,0.75); } }
+
+    .page-nav { max-width: 860px; margin: 48px auto 0; padding: 0 20px 60px; }
+    .nav-buttons { display: flex; gap: 10px; }
+    .nav-btn { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 14px 8px; background: var(--dark); color: #fff; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 16px rgba(26,20,16,0.20); transition: background 0.2s, transform 0.15s; min-width: 0; }
+    .nav-btn:hover { background: var(--mid); transform: translateY(-2px); }
+    @media (max-width: 480px) { .nav-btn { font-size: 13px; padding: 12px 6px; } }
+  </style>
+</head>
+<body>
+
+  <a class="wa-btn" href="https://wa.me/994554828424?text=Здравствуйте!%20Хочу%20заказать%20краску%20для%20одежды%20Viktoria" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
+    </svg>
+  </a>
+
+  <div class="lang-switcher">
+    <a href="https://viktoria-az.store/reyler.html">🇦🇿 Azərbaycanca</a>
+    <a href="https://viktoria-az.store/ru/reyler.html" class="active">🇷🇺 Русский</a>
+  </div>
+
+  <header class="header">
+    <div class="header-inner">
+      <div class="header-label">Опыт покупателей</div>
+      <h1>Они <span>пишут</span></h1>
+      <div class="avg-score">
+        <div class="avg-number" id="avg-number">4.8</div>
+        <div class="avg-right">
+          <div class="avg-stars">★★★★★</div>
+          <div class="avg-count" id="avg-count">6 оценок</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-text">Отзывы</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="reviews-list" id="reviews-list">
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">А</div>
+            <div>
+              <div class="author-name">Алёна</div>
+              <div class="review-date">6 ноября 2025</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Подтверждённый покупатель</span>
+          </div>
+        </div>
+        <p class="review-text">Всем доброго времени суток! Начну с того зачем я купила этот краситель. Пришла мне как то, в голову идея сделать себе рваные штаны фиолетового цвета! Долго искала как штаны так и краситель, не могла определится какого лучше цвета штаны брать белые или все таки какого нибудь оттенка розового или сиреневого, так как на одном сайте прочла что если покрасить белые штаны в черный то выйдет темно серый но никак не черный. Изначально хотела универсальный краситель Атей плюс купить, цена была более чем доступная, но цвета гнусные. Увидела "Викторию" в швейном магазине, палитра отличная, цена малость кусается(как для красителя) 5манат. Купила 54 номер краски. Производитель Турция. Отличный краситель, огромная палитра!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">А</div>
+            <div>
+              <div class="author-name">Айтен Керимова</div>
+              <div class="review-date">19 декабря 2025</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Подтверждённый покупатель</span>
+          </div>
+        </div>
+        <p class="review-text">Отличная краска, очень довольна. Качество превзошло ожидания. Обязательно рекомендую, попробуйте и убедитесь сами!</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">М</div>
+            <div>
+              <div class="author-name">Мюшфиг Талыбов</div>
+              <div class="review-date">16 января 2026</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Подтверждённый покупатель</span>
+          </div>
+        </div>
+        <p class="review-text">Идеальное соотношение цены и качества. Доставка очень быстрая, джинсы стали как в первый день покупки. Куплю снова.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">З</div>
+            <div>
+              <div class="author-name">Захра Аббасзаде</div>
+              <div class="review-date">12 февраля 2026</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★<span class="empty">★</span></div>
+            <span class="verified-badge">Подтверждённый покупатель</span>
+          </div>
+        </div>
+        <p class="review-text">Получила отличный результат с Viktoria, цвет рубашки стал именно таким, каким я хотела. Цена ниже, чем на Trendyol, доставка быстрая, в целом довольна.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">С</div>
+            <div>
+              <div class="author-name">Сяттар Фярхадлы</div>
+              <div class="review-date">24 февраля 2026</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Подтверждённый покупатель</span>
+          </div>
+        </div>
+        <p class="review-text">В стиральной машине у вещей перемешались цвета. С Viktoria удалось вернуть им первоначальный вид. Результат супер.. очень благодарен.</p>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-author-block">
+            <div class="avatar">И</div>
+            <div>
+              <div class="author-name">Исмет Мамедов</div>
+              <div class="review-date">27 февраля 2026</div>
+            </div>
+          </div>
+          <div class="review-right">
+            <div class="star-display">★★★★★</div>
+            <span class="verified-badge">Подтверждённый покупатель</span>
+          </div>
+        </div>
+        <p class="review-text">Качество продукта отличное. Цвет получился очень насыщенным, спасибо.</p>
+      </article>
+
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-text">Написать отзыв</div>
+      <div class="divider-line"></div>
+    </div>
+
+    <section class="form-section">
+      <h2 class="form-title">Поделитесь своим опытом</h2>
+      <p class="form-subtitle">Ваш отзыв будет опубликован после проверки.</p>
+
+      <form id="review-form" action="https://formspree.io/f/xykdokza" method="POST">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Имя и фамилия</label>
+            <input type="text" id="name" name="name" placeholder="Елена М." required />
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail (не публикуется)</label>
+            <input type="text" id="email" name="email" placeholder="пример@email.com" required />
+          </div>
+
+          <div class="form-group full">
+            <label>Ваша оценка</label>
+            <div class="star-picker">
+              <input type="radio" id="s5" name="rating" value="5" required /><label for="s5" title="5 звёзд">★</label>
+              <input type="radio" id="s4" name="rating" value="4" /><label for="s4" title="4 звезды">★</label>
+              <input type="radio" id="s3" name="rating" value="3" /><label for="s3" title="3 звезды">★</label>
+              <input type="radio" id="s2" name="rating" value="2" /><label for="s2" title="2 звезды">★</label>
+              <input type="radio" id="s1" name="rating" value="1" /><label for="s1" title="1 звезда">★</label>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="comment">Ваш отзыв</label>
+            <textarea id="comment" name="comment" rows="4" placeholder="Поделитесь своим опытом использования товара или сервиса..." required></textarea>
+          </div>
+
+          <div class="form-group full">
+            <label>Добавить фото (необязательно)</label>
+            <div class="file-upload-wrapper">
+              <input type="file" id="photo" name="photo" accept="image/*" />
+              <div class="upload-icon">📷</div>
+              <div class="upload-text">Нажмите для выбора фото или <span>перетащите</span></div>
+            </div>
+            <div id="file-preview"><img id="preview-img" src="" alt="Предпросмотр" /></div>
+          </div>
+
+          <div class="form-group full">
+            <button type="submit" class="submit-btn">Отправить отзыв →</button>
+          </div>
+        </div>
+
+        <div class="success-msg" id="success-msg">
+          ✓ Ваш отзыв принят! После проверки он будет опубликован. Спасибо!
+        </div>
+
+        <p class="form-note">
+          Ваш отзыв будет проверен перед публикацией.<br>
+          Адрес электронной почты хранится конфиденциально и не публикуется.
+        </p>
+      </form>
+    </section>
+
+  </main>
+
+  <nav class="page-nav">
+    <div class="nav-buttons">
+      <a href="https://www.viktoria-az.store/ru/catalog.html" class="nav-btn">&#9664; Назад</a>
+      <a href="https://www.viktoria-az.store/ru/" class="nav-btn">&#127968; Главная</a>
+      <a href="https://www.viktoria-az.store/ru/bloq1.html" class="nav-btn">Вперёд &#9654;</a>
+    </div>
+  </nav>
+
+  <script>
+    document.getElementById('photo').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = function(ev) {
+        document.getElementById('preview-img').src = ev.target.result;
+        document.getElementById('file-preview').style.display = 'block';
+      };
+      reader.readAsDataURL(file);
+    });
+
+    document.getElementById('review-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const btn = form.querySelector('.submit-btn');
+      btn.textContent = 'Отправляется...';
+      btn.disabled = true;
+      try {
+        const data = new FormData(form);
+        const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
+        if (res.ok) {
+          form.reset();
+          document.getElementById('file-preview').style.display = 'none';
+          document.getElementById('success-msg').style.display = 'block';
+          btn.textContent = '✓ Отправлено';
+        } else {
+          btn.textContent = 'Ошибка! Попробуйте снова';
+          btn.disabled = false;
+        }
+      } catch {
+        btn.textContent = 'Ошибка! Попробуйте снова';
+        btn.disabled = false;
+      }
+    });
+
+    function calcAvg() {
+      const stars = document.querySelectorAll('.review-card .star-display');
+      let total = 0, count = 0;
+      stars.forEach(el => {
+        const filled = (el.textContent.match(/★/g) || []).length;
+        total += filled; count++;
+      });
+      if (!count) return;
+      const avg = (total / count).toFixed(1);
+      document.getElementById('avg-number').textContent = avg;
+      document.getElementById('avg-count').textContent = count + ' оценок';
+    }
+    calcAvg();
+  </script>
+
+</body>
+</html>
