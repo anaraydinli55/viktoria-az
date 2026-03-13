@@ -25,15 +25,12 @@
     <meta property="og:type" content="website" />
 
     <style>
-        /* ========== GENEL ========== */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
             background: #f5f6fb;
             color: #222;
         }
-
-        /* ========== DİL SEÇİCİ ========== */
         .lang-switcher {
             display: flex;
             justify-content: center;
@@ -62,8 +59,6 @@
             font-weight: 700;
             border-color: #fff;
         }
-
-        /* ========== HEADER ========== */
         header {
             background: #4b0082;
             padding: 14px 16px;
@@ -85,8 +80,6 @@
         }
         .wa-link { font-weight: 800; font-size: 18px; }
         .wa-icon { width: 30px; height: 30px; fill: #25D366; }
-
-        /* ========== HERO ========== */
         .hero {
             display: grid;
             grid-template-columns: 1fr;
@@ -103,12 +96,9 @@
             box-shadow: 0 10px 30px rgba(0,0,0,.15);
         }
         .hero p { margin: 0; padding: 0; }
-
         @media (min-width: 768px) {
             .hero { grid-template-columns: 1fr 1fr; text-align: left; }
         }
-
-        /* ========== HERO SVG TITLE ========== */
         .hero-title {
             width: 100%;
             overflow: hidden;
@@ -118,12 +108,8 @@
             width: 100%;
             height: auto;
         }
-
-        /* ========== TEXT ========== */
         h1 { font-size: clamp(24px,4vw,36px); color: #4b0082; margin-bottom: 10px; }
         h2, h3 { color: #4b0082; }
-
-        /* ========== BUTTONS ========== */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -138,8 +124,6 @@
         }
         .btn:hover { background: #360060; transform: translateY(-2px); }
         @media (max-width: 768px) { .btn { width: 100%; box-sizing: border-box; } }
-
-        /* ========== CONTAINER ========== */
         .container {
             max-width: 1100px;
             margin: 20px auto;
@@ -153,8 +137,6 @@
         .container + .container { margin-top: 10px; }
         .container.hero { overflow: visible; }
         .container img { max-width: 100%; height: auto; display: block; }
-
-        /* ========== ONEKG ========== */
         section.container.onekg {
             margin: 20px auto;
             padding: 40px 30px;
@@ -171,8 +153,6 @@
         @media (max-width: 768px) {
             section.container.onekg { grid-template-columns: 1fr; padding: 25px 18px; }
         }
-
-        /* ========== CARDS ========== */
         .card {
             background-color: #f2c200;
             border-radius: 12px;
@@ -189,8 +169,6 @@
             border-radius: 12px;
             padding: 20px;
         }
-
-        /* ========== BUTTON CONTAINER ========== */
         .button-container { text-align: center; margin: 20px 0; }
         .mor-button {
             display: inline-block;
@@ -205,8 +183,6 @@
         }
         .mor-button:hover { background-color: #360060; transform: translateY(-2px); }
         @media (max-width: 768px) { .mor-button { width: 90%; padding: 14px 0; font-size: 18px; } }
-
-        /* ========== STICKY NEON BUTTON ========== */
         .btn-neon-wrap {
             display: flex;
             flex-direction: column;
@@ -242,8 +218,6 @@
         @media (max-width: 480px) {
             .btn-neon-sticky { font-size: 12px; padding: 11px 14px; }
         }
-
-        /* ========== REKLAM ETİKETİ ========== */
         .sponsored-label {
             font-size: 9px;
             color: #ccc;
@@ -258,8 +232,6 @@
             text-align: center;
             box-sizing: border-box;
         }
-
-        /* ========== INSTAGRAM / TIKTOK ========== */
         .instagram-tiktok {
             display: flex;
             justify-content: center;
@@ -283,8 +255,6 @@
         .social:nth-child(2) span { color: #000; }
         .social-telegram span { color: #29ABE2; }
         @media (max-width: 768px) { .instagram-tiktok { gap: 25px; } }
-
-        /* ========== FOOTER ========== */
         footer {
             background: #ececec;
             padding: 26px;
@@ -307,8 +277,6 @@
         .footer-seo-links li { margin-bottom: 8px; }
         .footer-seo-links a { color: #4a90e2; text-decoration: none; transition: color 0.3s ease; }
         .footer-seo-links a:hover { color: #357abd; }
-
-        /* ========== ANİMASİYALAR ========== */
         .color-change { animation: colorShift 4s infinite; }
         @keyframes colorShift {
             0%   { color: #1e90ff; }
@@ -338,8 +306,6 @@
             transform: rotate(-2deg) skewX(-6deg);
             z-index: -1;
         }
-
-        /* ========== SEO GİZLİ H1 ========== */
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -351,8 +317,6 @@
             white-space: nowrap;
             border: 0;
         }
-
-        /* ========== FLOATING WHATSAPP ========== */
         .whatsapp-float {
             position: fixed;
             bottom: 28px;
@@ -382,6 +346,7 @@
         }
     </style>
 
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -393,18 +358,72 @@
             "@type": "ContactPoint",
             "telephone": "+994554828424",
             "contactType": "customer service"
+        }
+    }
+    </script>
+
+    <!-- Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Viktoria Paltar Boyası",
+        "description": "Paltar və parça üçün toz boya. 60 rəng. Evdə paltar boyama.",
+        "image": "https://viktoria-az.store/images/og-image.jpg",
+        "brand": { "@type": "Brand", "name": "Viktoria" },
+        "offers": {
+            "@type": "Offer",
+            "priceCurrency": "AZN",
+            "price": "5",
+            "priceValidUntil": "2026-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://viktoria-az.store/",
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": {
+                    "@type": "MonetaryAmount",
+                    "value": "0",
+                    "currency": "AZN"
+                },
+                "shippingDestination": {
+                    "@type": "DefinedRegion",
+                    "addressCountry": "AZ"
+                },
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "handlingTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 1,
+                        "maxValue": 2,
+                        "unitCode": "DAY"
+                    },
+                    "transitTime": {
+                        "@type": "QuantitativeValue",
+                        "minValue": 2,
+                        "maxValue": 4,
+                        "unitCode": "DAY"
+                    }
+                }
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "AZ",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+                "merchantReturnDays": 14,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+            }
         },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Viktoria Paltar Boyaları Azərbaycan",
-            "url": "https://viktoria-az.store"
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "120"
         }
     }
     </script>
 </head>
 <body>
 
-    <!-- FLOATING WHATSAPP DÜYMƏSİ -->
     <a class="whatsapp-float"
        href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
        target="_blank"
@@ -416,7 +435,6 @@
         <span>WhatsApp Sifariş</span>
     </a>
 
-    <!-- ✅ DİL SEÇİCİ -->
     <div class="lang-switcher">
         <a href="https://viktoria-az.store/" class="active">🇦🇿 Azərbaycanca</a>
         <a href="https://viktoria-az.store/ru/">🇷🇺 Русский</a>
@@ -432,8 +450,6 @@
             </a>
             <a href="#" onclick="openGmail(event)">📧 E-poçt</a>
         </nav>
-
-        <!-- ✅ REKLAM ETİKETLİ BANNER -->
         <div class="btn-neon-wrap">
             <span class="sponsored-label">🔹 Reklam</span>
             <a href="https://herbal-az.store"
@@ -449,7 +465,6 @@
         <section class="container hero">
             <div>
                 <h1 class="visually-hidden">Viktoria Paltar Boyaları</h1>
-
                 <div class="hero-title" aria-hidden="true">
                     <svg viewBox="0 0 1000 140" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
                         <defs>
@@ -476,7 +491,6 @@
                         <text class="svg-text" x="50%" y="128" text-anchor="middle">Paltar Boyaları</text>
                     </svg>
                 </div>
-
                 <p><strong class="color-change">Azərbaycanda ən geniş rəng çesidi</strong></p>
                 <p class="features">
                     60 <span class="marker">fərqli</span> rəng •
@@ -557,8 +571,7 @@
             <h2>🔷 Məqsədimiz</h2>
             <div class="card">
                 <p>Azərbaycanda rəngi solmuş və istifadəyə yararsız kimi görünən paltarların ev şəraitində asan və təhlükəsiz şəkildə boyanaraq yenidən istifadəyə qaytarılmasını təmin etmək,
-                    həm ailə büdcəsinə qənaət etmək, həm də ekoloji baxımdan daha davamlı istehlak vərdişlərini təşviq etmək məqsədi daşıyır.
-                    Bu yanaşma paltarların ömrünü uzadır, israfın qarşısını alır və insanlara geyimlərini yenidən dəyərləndirmə imkanı yaradır.</p>
+                    həm ailə büdcəsinə qənaət etmək, həm də ekoloji baxımdan daha davamlı istehlak vərdişlərini təşviq etmək məqsədi daşıyır.</p>
             </div>
         </section>
 
@@ -592,18 +605,13 @@
                 <div class="card">
                     <p style="word-break: break-word; line-height: 1.6;">
                         1 paket boya əgər öz rənginə boyayırsınızsa təxminən 2 cins şalvara bəs edir, ancaq rəng dəyişəndə, misal üçün göy rəngi qaraya boyayanda 1 şalvara 1 paket boya gedəcək.
-                        Boyama qaydalarını dəqiq öyrənmək üçün məhsulun arxasındakı təlimatları oxumaq,
-                        rəsmi satıcı saytlarındakı bələdçilərə və bloq yazılarına baxmaq tövsiyə olunur.
-                        Düzgün üsul və material seçimi rəngin daha qalıcı və bərabər olmasını təmin edir.
+                        Boyama qaydalarını dəqiq öyrənmək üçün məhsulun arxasındakı təlimatları oxumaq tövsiyə olunur.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="container blog">
-            <div class="blog-image">
-                <img src="images/bloq1.webp" alt="Viktoria paltar boyaları haqqında bloq yazıları" loading="lazy" decoding="async" width="400" height="300">
-            </div>
             <div class="seo-text-wrapper">
                 <section class="seo-text">
                     <h2>Klikləyin oxuyun</h2>
@@ -653,7 +661,6 @@
                 </a>
             </div>
         </section>
-
     </main>
 
     <footer>
@@ -673,7 +680,6 @@
                 info@viktoria-az.store
             </a>
         </p>
-
         <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">
             &copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.
         </p>
@@ -682,7 +688,6 @@
     <audio id="bgMusic" loop preload="auto">
         <source src="/music/background.mp3" type="audio/mpeg">
     </audio>
-
     <button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
         style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
         🔇
