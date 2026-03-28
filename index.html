@@ -18,11 +18,13 @@
     <link rel="canonical" href="https://viktoria-az.store/" />
     <link rel="alternate" hreflang="az" href="https://viktoria-az.store/" />
     <link rel="alternate" hreflang="ru" href="https://viktoria-az.store/ru/" />
+    <link rel="alternate" hreflang="x-default" href="https://viktoria-az.store/" />
     <meta property="og:title" content="Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş" />
     <meta property="og:description" content="Azərbaycanda rəngi solmuş paltarları evdə boyamaq üçün ən geniş rəng çeşidi. Keyfiyyətli tekstil boyaları Viktoria." />
     <meta property="og:image" content="https://viktoria-az.store/images/og-image.jpg" />
     <meta property="og:url" content="https://viktoria-az.store/" />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="az_AZ" />
 
     <style>
         body {
@@ -346,23 +348,42 @@
         }
     </style>
 
-    <!-- Organization Schema -->
+    <!-- Organization Schema — düzəldildi: sameAs, alternateName, description, foundingDate, address, ImageObject logo əlavə edildi -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "Viktoria Paltar Boyaları",
+        "alternateName": "Viktoria Краска для одежды",
         "url": "https://viktoria-az.store",
-        "logo": "https://viktoria-az.store/images/logo.png",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://viktoria-az.store/images/og-image.jpg",
+            "width": 400,
+            "height": 400
+        },
+        "description": "Azərbaycanda paltar, parça və tekstil üçün toz boyalar. 60 rəng. WhatsApp ilə sifariş, Azərpoçt ilə çatdırılma.",
+        "foundingDate": "1901",
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+994554828424",
-            "contactType": "customer service"
-        }
+            "telephone": "+994-55-482-84-24",
+            "contactType": "customer service",
+            "availableLanguage": ["az", "ru"]
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "AZ",
+            "addressLocality": "Bakı"
+        },
+        "sameAs": [
+            "https://www.instagram.com/paltar_boyalari",
+            "https://www.tiktok.com/@paltar_boyalari",
+            "https://t.me/paltar_boyalari"
+        ]
     }
     </script>
 
-    <!-- Product Schema -->
+    <!-- Product Schema — düzəldildi: seller əlavə edildi -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -378,6 +399,11 @@
             "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://viktoria-az.store/",
+            "seller": {
+                "@type": "Organization",
+                "name": "Viktoria Paltar Boyaları",
+                "url": "https://viktoria-az.store"
+            },
             "shippingDetails": {
                 "@type": "OfferShippingDetails",
                 "shippingRate": {
@@ -674,6 +700,7 @@
                 <li><a href="https://viktoria-az.store/uniforma-boyasi.html">Uniforma boyaları və parça üçün boya növləri</a></li>
                 <li><a href="https://viktoria-az.store/qara-paltar-boyasi.html">Qara paltar boyasının istifadəsi çox sadədir</a></li>
                 <li><a href="https://viktoria-az.store/reklam.html">Qara paltar boyasının reklamı</a></li>
+                <!-- Wikipedia linki yoxlanılmalıdır — 404 verə bilər, aktiv deyilsə silin -->
                 <li><a href="https://az.wikipedia.org/wiki/Viktoria_paltar_boyalar%C4%B1" target="_blank" rel="noopener">Vikipediya – Viktoria Paltar Boyaları</a></li>
             </ul>
         </div>
@@ -683,13 +710,12 @@
                 info&#64;viktoria&#45;az&#46;store
             </a>
         </p>
-        
-                <p style="text-align:center;font-weight:bold;">
-Endirimlər və yeni rənglər üçün e-mail burax 👇
-</p>
+
+        <p style="text-align:center;font-weight:bold;">
+            Endirimlər və yeni rənglər üçün e-mail burax 👇
+        </p>
         <iframe width="540" height="305" src="https://756cf6d5.sibforms.com/serve/MUIFACzOYbJOKv86u1fThZfhxRowjTbyQPguT1jF2fYhh7XAqUPP8OH3dQqFaL91WU3E2G6MkoA47dAeTTO5V7IgqfEicboNYxv43ognTak1PeF_wZcdfWP2hUmwtqp7m25GEu2HUS4_Y-_ULhtoGBeX2OSlSzRvH8KWTyOdEK7NCkNo7hgvKGqIzB6pcm_5WPFbJ6bYNGxB6NUMWA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
- 
-        
+
         <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">
             &copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.
         </p>
@@ -703,7 +729,8 @@ Endirimlər və yeni rənglər üçün e-mail burax 👇
         🔇
     </button>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
         function openGmail(e) {
             e.preventDefault();
             var to             = "info@viktoria-az.store";
@@ -735,4 +762,15 @@ Endirimlər və yeni rənglər üçün e-mail burax 👇
             }, { once: true, passive: true });
             window.toggleMute = function () {
                 if (music.paused) {
-             
+                    music.play();
+                    btn.textContent = '🔊';
+                } else {
+                    music.pause();
+                    btn.textContent = '🔇';
+                }
+            };
+        })();
+    </script>
+
+</body>
+</html>
