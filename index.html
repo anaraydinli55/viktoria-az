@@ -19,12 +19,23 @@
     <link rel="alternate" hreflang="az" href="https://viktoria-az.store/" />
     <link rel="alternate" hreflang="ru" href="https://viktoria-az.store/ru/" />
     <link rel="alternate" hreflang="x-default" href="https://viktoria-az.store/" />
-    <meta property="og:title" content="Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş" />
-    <meta property="og:description" content="Azərbaycanda rəngi solmuş paltarları evdə boyamaq üçün ən geniş rəng çeşidi. Keyfiyyətli tekstil boyaları Viktoria." />
-    <meta property="og:image" content="https://viktoria-az.store/images/og-image.jpg" />
-    <meta property="og:url" content="https://viktoria-az.store/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="az_AZ" />
+
+    <!-- Open Graph -->
+    <meta property="og:type"             content="website" />
+    <meta property="og:site_name"        content="Viktoria Paltar Boyaları" />
+    <meta property="og:locale"           content="az_AZ" />
+    <meta property="og:locale:alternate" content="ru_RU" />
+    <meta property="og:title"            content="Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş" />
+    <meta property="og:description"      content="Azərbaycanda rəngi solmuş paltarları evdə boyamaq üçün ən geniş rəng çeşidi. 60 rəng, Azərpoçt çatdırılması, WhatsApp sifariş." />
+    <meta property="og:image"            content="https://viktoria-az.store/images/og-image.jpg" />
+    <meta property="og:image:width"      content="1200" />
+    <meta property="og:image:height"     content="630" />
+    <meta property="og:image:alt"        content="Viktoria Paltar Boyaları – 60 rəng çeşidi" />
+    <meta property="og:url"              content="https://viktoria-az.store/" />
+    <meta name="twitter:card"            content="summary_large_image" />
+    <meta name="twitter:title"           content="Viktoria Paltar Boyaları | 60 Rəng" />
+    <meta name="twitter:description"     content="Azərbaycanda rəngi solmuş paltarları evdə boyamaq üçün ən geniş rəng çeşidi." />
+    <meta name="twitter:image"           content="https://viktoria-az.store/images/og-image.jpg" />
 
     <style>
         body {
@@ -51,20 +62,9 @@
             border: 1px solid rgba(255,255,255,0.3);
             transition: background 0.2s, color 0.2s;
         }
-        .lang-switcher a:hover {
-            background: rgba(255,255,255,0.15);
-            color: #fff;
-        }
-        .lang-switcher a.active {
-            background: #fff;
-            color: #4b0082;
-            font-weight: 700;
-            border-color: #fff;
-        }
-        header {
-            background: #4b0082;
-            padding: 14px 16px;
-        }
+        .lang-switcher a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+        .lang-switcher a.active { background: #fff; color: #4b0082; font-weight: 700; border-color: #fff; }
+        header { background: #4b0082; padding: 14px 16px; }
         nav {
             display: flex;
             justify-content: center;
@@ -72,16 +72,8 @@
             flex-wrap: wrap;
             align-items: center;
         }
-        nav a {
-            color: #fff;
-            text-decoration: underline;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        nav a { color: #fff; text-decoration: underline; font-weight: 600; display: flex; align-items: center; gap: 6px; }
         .wa-link { font-weight: 800; font-size: 18px; }
-        .wa-icon { width: 30px; height: 30px; fill: #25D366; }
         .hero {
             display: grid;
             grid-template-columns: 1fr;
@@ -90,26 +82,11 @@
             text-align: center;
             overflow: visible;
         }
-        .hero img {
-            max-width: 420px;
-            width: 100%;
-            margin: auto;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
-        }
+        .hero img { max-width: 420px; width: 100%; margin: auto; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
         .hero p { margin: 0; padding: 0; }
-        @media (min-width: 768px) {
-            .hero { grid-template-columns: 1fr 1fr; text-align: left; }
-        }
-        .hero-title {
-            width: 100%;
-            overflow: hidden;
-        }
-        .hero-title svg {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
+        @media (min-width: 768px) { .hero { grid-template-columns: 1fr 1fr; text-align: left; } }
+        .hero-title { width: 100%; overflow: hidden; }
+        .hero-title svg { display: block; width: 100%; height: auto; }
         h1 { font-size: clamp(24px,4vw,36px); color: #4b0082; margin-bottom: 10px; }
         h2, h3 { color: #4b0082; }
         .btn {
@@ -147,14 +124,8 @@
             align-items: center;
             gap: 24px;
         }
-        section.container.onekg img {
-            width: 100%;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.15);
-        }
-        @media (max-width: 768px) {
-            section.container.onekg { grid-template-columns: 1fr; padding: 25px 18px; }
-        }
+        section.container.onekg img { width: 100%; border-radius: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.15); }
+        @media (max-width: 768px) { section.container.onekg { grid-template-columns: 1fr; padding: 25px 18px; } }
         .card {
             background-color: #f2c200;
             border-radius: 12px;
@@ -185,6 +156,23 @@
         }
         .mor-button:hover { background-color: #360060; transform: translateY(-2px); }
         @media (max-width: 768px) { .mor-button { width: 90%; padding: 14px 0; font-size: 18px; } }
+        .trustpilot-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background-color: #00b67a;
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            border-radius: 12px;
+            font-size: 16px;
+            margin-top: 12px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .trustpilot-button:hover { background-color: #009e6a; transform: translateY(-2px); }
+        @media (max-width: 768px) { .trustpilot-button { width: 90%; padding: 14px 0; font-size: 16px; } }
         .btn-neon-wrap {
             display: flex;
             flex-direction: column;
@@ -213,13 +201,8 @@
             word-break: break-word;
             box-sizing: border-box;
         }
-        .btn-neon-sticky:hover {
-            background: #28b828;
-            box-shadow: 0 0 12px #28b828, 0 0 24px #28b828;
-        }
-        @media (max-width: 480px) {
-            .btn-neon-sticky { font-size: 12px; padding: 11px 14px; }
-        }
+        .btn-neon-sticky:hover { background: #28b828; box-shadow: 0 0 12px #28b828, 0 0 24px #28b828; }
+        @media (max-width: 480px) { .btn-neon-sticky { font-size: 12px; padding: 11px 14px; } }
         .sponsored-label {
             font-size: 9px;
             color: #ccc;
@@ -242,28 +225,14 @@
             margin: 20px 0;
             flex-wrap: wrap;
         }
-        .social a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 18px;
-        }
+        .social a { display: flex; flex-direction: column; align-items: center; gap: 10px; text-decoration: none; font-weight: 800; font-size: 18px; }
         .social img { width: 60px; height: 60px; border-radius: 12px; }
         .social span { display: block; }
         .social:nth-child(1) span { color: #E1306C; }
         .social:nth-child(2) span { color: #000; }
         .social-telegram span { color: #29ABE2; }
         @media (max-width: 768px) { .instagram-tiktok { gap: 25px; } }
-        footer {
-            background: #ececec;
-            padding: 26px;
-            margin-top: 10px;
-            text-align: center;
-            font-size: 14px;
-        }
+        footer { background: #ececec; padding: 26px; margin-top: 10px; text-align: center; font-size: 14px; }
         .footer-seo-links {
             max-width: 900px;
             margin: 0 auto 20px auto;
@@ -335,11 +304,7 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             animation: waPulse 2.5s ease-in-out infinite;
         }
-        .whatsapp-float:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 28px rgba(37,211,102,0.6);
-            animation: none;
-        }
+        .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); animation: none; }
         .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; display: block; }
         .whatsapp-float span { display: none; }
         @keyframes waPulse {
@@ -348,7 +313,7 @@
         }
     </style>
 
-    <!-- Organization Schema — düzəldildi: sameAs, alternateName, description, foundingDate, address, ImageObject logo əlavə edildi -->
+    <!-- Organization Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -359,11 +324,12 @@
         "logo": {
             "@type": "ImageObject",
             "url": "https://viktoria-az.store/images/og-image.jpg",
-            "width": 400,
-            "height": 400
+            "width": 1200,
+            "height": 630
         },
         "description": "Azərbaycanda paltar, parça və tekstil üçün toz boyalar. 60 rəng. WhatsApp ilə sifariş, Azərpoçt ilə çatdırılma.",
         "foundingDate": "1901",
+        "email": "info@viktoria-az.store",
         "contactPoint": {
             "@type": "ContactPoint",
             "telephone": "+994-55-482-84-24",
@@ -378,12 +344,14 @@
         "sameAs": [
             "https://www.instagram.com/paltar_boyalari",
             "https://www.tiktok.com/@paltar_boyalari",
-            "https://t.me/paltar_boyalari"
+            "https://t.me/paltar_boyalari",
+            "https://www.trustpilot.com/review/viktoria-az.store",
+            "https://www.linkedin.com/company/viktoria-boya-azerbaycan/"
         ]
     }
     </script>
 
-    <!-- Product Schema — düzəldildi: seller əlavə edildi -->
+    <!-- Product Schema -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -471,17 +439,12 @@
             <a href="/">Ana səhifə</a>
             <a href="/catalog.html">Kataloq</a>
             <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
-            <a class="wa-link" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">
-                WhatsApp Əlaqə
-            </a>
+            <a class="wa-link" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank">WhatsApp Əlaqə</a>
             <a href="mailto:info@viktoria-az.store">📧 E-poçt</a>
         </nav>
         <div class="btn-neon-wrap">
             <span class="sponsored-label">🔹 Reklam</span>
-            <a href="https://herbal-az.store"
-               class="btn-neon-sticky"
-               rel="sponsored noopener"
-               target="_blank">
+            <a href="https://herbal-az.store" class="btn-neon-sticky" rel="sponsored noopener" target="_blank">
                 ⏩ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN⏩
             </a>
         </div>
@@ -524,31 +487,24 @@
                     Rəngi <span class="marker">solmuş</span> paltarı boyamaq •
                     Uniformaları, habelə <span class="marker">polis</span> formalarını boyamaq
                 </p>
-                <a class="btn" href="/catalog.html">
-                    <span class="blink-text">Rənglərə bax</span>
-                </a>
+                <a class="btn" href="/catalog.html"><span class="blink-text">Rənglərə bax</span></a>
             </div>
             <a href="reklam.html">
-                <img
-                    src="images/30-siyah-small.webp"
-                    srcset="images/30-siyah-small.webp 200w, images/30-siyah.webp 400w"
-                    sizes="(max-width: 480px) 200px, 400px"
-                    alt="Qara paltar boyası – 10 qram toz boya"
-                    loading="eager"
-                    decoding="async"
-                    width="400" height="400">
+                <img src="images/30-siyah-small.webp"
+                     srcset="images/30-siyah-small.webp 200w, images/30-siyah.webp 400w"
+                     sizes="(max-width: 480px) 200px, 400px"
+                     alt="Qara paltar boyası – 10 qram toz boya"
+                     loading="eager" decoding="async" width="400" height="400">
             </a>
         </section>
 
         <section class="container">
             <h2>🔷 Çatdırılma xidməti</h2>
             <div class="card">
-                <p>
-                    Azərpoçt ilə Bakı və bütün bölgələrə çatdırılma. Bakıya təxmini 2 iş günü, bölgələrə 3-4 iş günü ərzində çatır.
-                    Minimum sifariş 2 ədəd. 5 ədəddən yuxarı sifarişlərdə çatdırılma pulsuzdur.
-                    Sifarişlər, sifariş olunan günün ertəsi iş günü poçta verilir.
-                    Poçt qəbzini göndəririk, Azərpoçt rəsmi <a href="https://www.azems.az" target="_blank" rel="noopener">www.azems.az</a> saytında izləmə kodu ilə təqib edə bilərsiz.
-                </p>
+                <p>Azərpoçt ilə Bakı və bütün bölgələrə çatdırılma. Bakıya təxmini 2 iş günü, bölgələrə 3-4 iş günü ərzində çatır.
+                Minimum sifariş 2 ədəd. 5 ədəddən yuxarı sifarişlərdə çatdırılma pulsuzdur.
+                Sifarişlər, sifariş olunan günün ertəsi iş günü poçta verilir.
+                Poçt qəbzini göndəririk, Azərpoçt rəsmi <a href="https://www.azems.az" target="_blank" rel="noopener">www.azems.az</a> saytında izləmə kodu ilə təqib edə bilərsiz.</p>
             </div>
         </section>
 
@@ -575,21 +531,16 @@
                 <h2>🔷 Viktoria 1 KQ Paketlər</h2>
                 <p><strong class="color-change">Daha Ucuz, Daha Sərfəli</strong></p>
                 <p>Quru təmizləmələr, otellər, xalça və xalı boyama xidmətləri üçün bu məhsul olduqca uyğundur.
-                    Peşəkar istifadəyə nəzərdə tutulduğu üçün rəngi bərabər tutur və uzunmüddətli nəticə verir.
-                    Böyük həcmli istifadələrdə belə stabil keyfiyyətini qoruyur.</p>
-                <a class="btn" href="/catalog-1kg.html">
-                    <span class="blink-text">Rənglərə bax</span>
-                </a>
+                Peşəkar istifadəyə nəzərdə tutulduğu üçün rəngi bərabər tutur və uzunmüddətli nəticə verir.
+                Böyük həcmli istifadələrdə belə stabil keyfiyyətini qoruyur.</p>
+                <a class="btn" href="/catalog-1kg.html"><span class="blink-text">Rənglərə bax</span></a>
             </div>
             <a href="catalog-1kg.html">
-                <img
-                    src="1kg-paketler-small.webp"
-                    srcset="1kg-paketler-small.webp 200w, 1kg-paketler.webp 400w"
-                    sizes="(max-width: 480px) 200px, 400px"
-                    alt="Sərfəli Viktoria 1 kiloqram paketlər – toz boya"
-                    loading="lazy"
-                    decoding="async"
-                    width="400" height="400">
+                <img src="1kg-paketler-small.webp"
+                     srcset="1kg-paketler-small.webp 200w, 1kg-paketler.webp 400w"
+                     sizes="(max-width: 480px) 200px, 400px"
+                     alt="Sərfəli Viktoria 1 kiloqram paketlər – toz boya"
+                     loading="lazy" decoding="async" width="400" height="400">
             </a>
         </section>
 
@@ -597,7 +548,7 @@
             <h2>🔷 Məqsədimiz</h2>
             <div class="card">
                 <p>Azərbaycanda rəngi solmuş və istifadəyə yararsız kimi görünən paltarların ev şəraitində asan və təhlükəsiz şəkildə boyanaraq yenidən istifadəyə qaytarılmasını təmin etmək,
-                    həm ailə büdcəsinə qənaət etmək, həm də ekoloji baxımdan daha davamlı istehlak vərdişlərini təşviq etmək məqsədi daşıyır.</p>
+                həm ailə büdcəsinə qənaət etmək, həm də ekoloji baxımdan daha davamlı istehlak vərdişlərini təşviq etmək məqsədi daşıyır.</p>
             </div>
         </section>
 
@@ -605,20 +556,15 @@
             <h2>🔷 Sprey Boyalar</h2>
             <div class="card">
                 <p>Paltar, ayaqqabı, çanta, denim və digər parçaları boyamaq üçün istifadə olunur.
-                    Spreyi yaxın məsafədən səpilməməsi üçün 20–25 sm aralı püskürtmək tövsiyə olunur.</p>
-                <img
-                    src="images/sprey-small.webp"
-                    srcset="images/sprey-small.webp 200w, images/sprey.webp 400w"
-                    sizes="(max-width: 480px) 200px, 400px"
-                    alt="Viktoria sprey paltar boyası - denim və ayaqqabı üçün"
-                    loading="lazy"
-                    decoding="async"
-                    width="400" height="400">
+                Spreyi yaxın məsafədən səpilməməsi üçün 20–25 sm aralı püskürtmək tövsiyə olunur.</p>
+                <img src="images/sprey-small.webp"
+                     srcset="images/sprey-small.webp 200w, images/sprey.webp 400w"
+                     sizes="(max-width: 480px) 200px, 400px"
+                     alt="Viktoria sprey paltar boyası - denim və ayaqqabı üçün"
+                     loading="lazy" decoding="async" width="400" height="400">
             </div>
             <div class="button-container">
-                <a href="https://viktoria-az.store/sprey1.html" class="mor-button">
-                    <span class="blink-text">Rənglərə bax</span>
-                </a>
+                <a href="https://viktoria-az.store/sprey1.html" class="mor-button"><span class="blink-text">Rənglərə bax</span></a>
             </div>
             <div class="button-container">
                 <a href="pitturafelice.html" class="mor-button">Dəri və Nubuk Boyaları</a>
@@ -660,17 +606,19 @@
             </div>
         </section>
 
+        <!-- Reytinq + Trustpilot -->
         <section class="container" style="text-align:center; padding: 28px 20px; margin-top: 10px;">
             <p style="font-size: 32px; margin-bottom: 6px; line-height:1;">⭐⭐⭐⭐⭐</p>
             <p style="font-size: 24px; font-weight: 700; color: #4b0082; margin-bottom: 14px;">4.8 / 5 Reytinq</p>
             <a href="https://www.viktoria-az.store/reyler.html" class="mor-button">👉 Rəylərə Bax</a>
+            <br>
+            <a href="https://www.trustpilot.com/review/viktoria-az.store"
+               class="trustpilot-button"
+               target="_blank"
+               rel="noopener">
+                ★ Trustpilot-da Rəyləri Oxu
+            </a>
         </section>
-
-        <!-- TrustBox widget - Review Collector -->
-<div class="trustpilot-widget" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="69c7fad07f67a081e389c89d" data-style-height="52px" data-style-width="100%" data-token="79dc8dcc-7630-446f-bfa7-c7d3ae122f67">
-  <a href="https://www.trustpilot.com/review/viktoria-az.store" target="_blank" rel="noopener">Trustpilot</a>
-</div>
-<!-- End TrustBox widget -->
 
         <section class="instagram-tiktok">
             <div class="social">
@@ -706,25 +654,15 @@
                 <li><a href="https://viktoria-az.store/uniforma-boyasi.html">Uniforma boyaları və parça üçün boya növləri</a></li>
                 <li><a href="https://viktoria-az.store/qara-paltar-boyasi.html">Qara paltar boyasının istifadəsi çox sadədir</a></li>
                 <li><a href="https://viktoria-az.store/reklam.html">Qara paltar boyasının reklamı</a></li>
-                <!-- Wikipedia linki yoxlanılmalıdır — 404 verə bilər, aktiv deyilsə silin -->
                 <li><a href="https://az.wikipedia.org/wiki/Viktoria_paltar_boyalar%C4%B1" target="_blank" rel="noopener">Vikipediya – Viktoria Paltar Boyaları</a></li>
             </ul>
         </div>
-
         <p style="text-align:center; margin-bottom: 14px;">
-            📧 <a href="mailto:info@viktoria-az.store" style="color:#4b0082; font-weight:600; text-decoration:underline;">
-                info&#64;viktoria&#45;az&#46;store
-            </a>
+            📧 <a href="mailto:info@viktoria-az.store" style="color:#4b0082; font-weight:600; text-decoration:underline;">info&#64;viktoria&#45;az&#46;store</a>
         </p>
-
-        <p style="text-align:center;font-weight:bold;">
-            Endirimlər və yeni rənglər üçün e-mail burax 👇
-        </p>
+        <p style="text-align:center;font-weight:bold;">Endirimlər və yeni rənglər üçün e-mail burax 👇</p>
         <iframe width="540" height="305" src="https://756cf6d5.sibforms.com/serve/MUIFACzOYbJOKv86u1fThZfhxRowjTbyQPguT1jF2fYhh7XAqUPP8OH3dQqFaL91WU3E2G6MkoA47dAeTTO5V7IgqfEicboNYxv43ognTak1PeF_wZcdfWP2hUmwtqp7m25GEu2HUS4_Y-_ULhtoGBeX2OSlSzRvH8KWTyOdEK7NCkNo7hgvKGqIzB6pcm_5WPFbJ6bYNGxB6NUMWA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-
-        <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">
-            &copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.
-        </p>
+        <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">&copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
     </footer>
 
     <audio id="bgMusic" loop preload="auto">
