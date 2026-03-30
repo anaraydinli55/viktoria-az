@@ -13,6 +13,14 @@
     <xhtml:link rel="alternate" hreflang="ru" href="https://www.viktoria-az.store/ru/"/>
   </url>
 
+          <url>
+    <loc>https://www.viktoria-az.store/</loc>
+    <lastmod>2026-03-31</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="az" href="https://www.viktoria-az.store/qara-paltar-boyalari-viktoria.html/"/>
+  </url>
+
   <url>
     <loc>https://www.viktoria-az.store/catalog.html</loc>
     <lastmod>2026-03-28</lastmod>
