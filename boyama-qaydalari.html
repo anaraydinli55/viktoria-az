@@ -3,163 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viktoria Toz Boya – Boyama Təlimatı</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --purple: #4b0082;
-      --purple-dark: #36005e;
-      --bg: #f3f0f8;
-      --white: #ffffff;
-      --text: #1a1a2e;
-      --text-muted: #6b6b8a;
-      --card-shadow: 0 4px 20px rgba(75,0,130,0.10);
-      --radius: 18px;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
 
-    /* ── HEADER ── */
-    header { background: var(--purple); padding: 8px 16px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.18); }
-    nav { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: center; }
-    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 500; font-size: 13px; padding: 5px 10px; border-radius: 8px; transition: background 0.15s, color 0.15s; white-space: nowrap; }
-    nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
-    nav a.active { color: #f5c842; font-weight: 700; }
+  <!-- ✅ SEO: Title -->
+  <title>Viktoria Toz Boya ilə Paltar Boyama Təlimatı | viktoria-az.store</title>
 
-    /* ── PAGE ── */
-    .page { max-width: 700px; margin: 28px auto; padding: 0 16px 100px; }
+  <!-- ✅ SEO: Meta Description -->
+  <meta name="description" content="Viktoria toz boya ilə evdə paltar boyamaq üçün addım-addım təlimat. Uyğun parçalar, isti su üsulu, yuma qaydaları və təhlükəsizlik məsləhətləri." />
 
-    /* ── PAGE TITLE ── */
-    .page-title {
-      font-family: 'DM Serif Display', serif;
-      color: var(--purple);
-      font-size: clamp(22px, 4vw, 34px);
-      line-height: 1.2;
-      margin-bottom: 10px;
-      text-align: center;
-    }
-    .page-subtitle {
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 15px;
-      margin-bottom: 28px;
-      line-height: 1.6;
-    }
+  <!-- ✅ SEO: Canonical (www-siz) -->
+  <link rel="canonical" href="https://viktoria-az.store/boyama-qaydalari.html" />
 
-    /* ── CARDS ── */
-    .card {
-      background: var(--white);
-      border-radius: var(--radius);
-      box-shadow: var(--card-shadow);
-      padding: 22px 24px;
-      margin-bottom: 14px;
-    }
-    .card h2 {
-      font-family: 'DM Sans', sans-serif;
-      color: var(--purple);
-      font-size: clamp(15px, 2.5vw, 19px);
-      margin-bottom: 14px;
-      font-weight: 700;
-    }
-    .card p { font-size: 15px; line-height: 1.75; color: var(--text); margin-bottom: 8px; }
-    .card ul, .card ol { padding-left: 22px; font-size: 15px; color: var(--text); }
-    .card li { margin-bottom: 10px; line-height: 1.65; }
-
-    .card.warning {
-      border-left: 4px solid #f5a623;
-      background: #fffbf0;
-    }
-    .card.warning h2 { color: #b45309; }
-
-    /* ── NAV BUTTONS ── */
-    .nav-buttons { display: flex; gap: 10px; margin-top: 32px; }
-    .nav-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 14px 8px;
-      background: var(--purple);
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 15px;
-      box-shadow: 0 4px 16px rgba(75,0,130,0.20);
-      transition: background 0.2s, transform 0.15s;
-      min-width: 0;
-    }
-    .nav-btn:hover { background: var(--purple-dark); transform: translateY(-2px); }
-
-    /* ── WHATSAPP ── */
-    .wa-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 50%;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s, box-shadow 0.15s;
-      animation: waPulse 2.5s ease-in-out infinite;
-    }
-    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.55); animation: none; }
-    .wa-btn svg { width: 32px; height: 32px; fill: #fff; display: block; }
-    @keyframes waPulse {
-      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
-      50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
-    }
-
-    @media (max-width: 480px) {
-      .nav-btn { font-size: 13px; padding: 12px 6px; }
-      .card { padding: 16px; }
-    }
-  </style>
+  <!-- ✅ Open Graph (sosial media paylaşımı üçün) -->
+  <meta property="og:title" content="Viktoria Toz Boya ilə Paltar Boyama Təlimatı" />
+  <meta property="og:description" content="Evdə paltar boyamaq üçün addım-addım Viktoria toz boya təlimatı. Pambıq, kətan, viskon və digər parçalar üçün uyğundur." />
+  <meta property="og:url" content="https://viktoria-az.store/boyama-qaydalari.html" />
+  <meta property="og:type" content="article" />
 </head>
 <body>
 
-<a class="wa-btn" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyas%C4%B1%20sifar%C4%B1%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-  <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
-  </svg>
-</a>
-
-<header>
+  <!-- ✅ NAVİQASİYA: www-siz linklər -->
   <nav>
-    <a href="/">Ana səhifə</a>
-    <a href="/catalog.html">Kataloq</a>
-    <a href="/boyama-qaydalari.html" class="active">Boyama qaydaları</a>
+    <a href="https://viktoria-az.store/">Ana səhifə</a>
+    <a href="https://viktoria-az.store/catalog.html">Kataloq</a>
+    <a href="https://viktoria-az.store/boyama-qaydalari.html">Boyama qaydaları</a>
     <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyas%C4%B1%20sifar%C4%B1%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m">WhatsApp</a>
   </nav>
-</header>
 
-<div class="page">
+  <main>
+    <h1>Viktoria Toz Boya ilə Paltar Boyama Təlimatı</h1>
 
-  <h1 class="page-title">Viktoria Toz Boya ilə Paltar Boyama Təlimatı</h1>
-  <p class="page-subtitle">
-    Viktoria toz boya ilə geyim və parça boyamaq üçün hazırlanmış bu təlimatda
-    uyğun parçalar, isti su üsulu, yuma və təhlükəsizlik qaydaları ətraflı izah olunur.
-  </p>
+    <p>
+      Viktoria toz boya ilə geyim və parça boyamaq üçün hazırlanmış bu təlimatda
+      uyğun parçalar, isti su üsulu, yuma və təhlükəsizlik qaydaları ətraflı izah olunur.
+    </p>
 
-  <div class="card">
     <h2>✅ Uyğun parçalar və parça növləri</h2>
     <p>Pambıq, kətan, viskon, yun, ipək və yarı sintetik parçalar üçün uyğundur. ✅</p>
     <p>%100 poliester və akril parçalar üçün uyğun deyil.</p>
-  </div>
 
-  <div class="card">
     <h2>🔷 Paltar boyamaq üçün lazım olan materiallar</h2>
     <ul>
       <li>🎨 Viktoria Toz Boya (1 paket – 10 qram)</li>
@@ -170,9 +51,7 @@
       <li>🧂 Duz (1 paket boya üçün 1 xörək qaşığı)</li>
       <li>🍋 Sirkə (1 paket boya üçün 1 xörək qaşığı — sarı və qırmızı rənglərə boyadıqda sirkə qoymayın, başqa bütün rənglərə qoymaq lazımdır)</li>
     </ul>
-  </div>
 
-  <div class="card">
     <h2>🔥 Viktoria paltar boyası ilə isti su üsulu</h2>
     <ol>
       <li>👗 Boyanacaq paltarı əvvəlcədən yuyun (yumşaldıcı istifadə etməyin).</li>
@@ -182,9 +61,7 @@
       <li>👕 Islanmış paltarı suya salın və 20–30 dəqiqə ərzində daim qarışdırın.</li>
       <li>✅ Boyandıqdan sonra təxminən yarım gün boyalı suda saxlamaq daha yaxşı effekt verə bilər.</li>
     </ol>
-  </div>
 
-  <div class="card">
     <h2>🚿 Boyadan sonra yuma və qurudulma qaydaları</h2>
     <ol>
       <li>🚰 Əvvəlcə soyuq su ilə yaxalayın.</li>
@@ -192,9 +69,7 @@
       <li>☂️ Kölgə yerdə qurudun.</li>
       <li>⚠️ İlk yumanı başqa paltarlardan ayrı yumağınız məsləhətdir.</li>
     </ol>
-  </div>
 
-  <div class="card warning">
     <h2>⚠️ Diqqət edilməli məqamlar</h2>
     <ul>
       <li>🥼 Açıq rəngli parçalarda nəticə daha canlı olur.</li>
@@ -202,19 +77,15 @@
       <li>🧤 Əlcək istifadə etmək tövsiyə olunur.</li>
       <li>🚻 Uşaqların əli çatmayan yerdə saxlayın.</li>
     </ul>
-  </div>
+  </main>
 
-  <div class="nav-buttons">
-    <a href="https://www.viktoria-az.store" class="nav-btn">&#9664; Geri</a>
-    <a href="https://www.viktoria-az.store" class="nav-btn">&#127968; Ana səhifə</a>
-    <a href="https://www.viktoria-az.store/catalog.html" class="nav-btn">İrəli &#9654;</a>
-  </div>
-
-</div>
-
-<footer style="text-align:center; padding:24px 20px; color:var(--text-muted); font-size:13px;">
-  &copy; 2026 Viktoria Paltar Boyaları – Paltar boyası və parça boyama məhsulları
-</footer>
+  <!-- ✅ FOOTER: www-siz linklər -->
+  <footer>
+    <a href="https://viktoria-az.store/">◀ Geri</a>
+    <a href="https://viktoria-az.store/">🏠 Ana səhifə</a>
+    <a href="https://viktoria-az.store/catalog.html">İrəli ▶</a>
+    <p>© 2026 Viktoria Paltar Boyaları – Paltar boyası və parça boyama məhsulları</p>
+  </footer>
 
 </body>
 </html>
