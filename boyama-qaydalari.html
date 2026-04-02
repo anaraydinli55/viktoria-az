@@ -1,47 +1,185 @@
 <!DOCTYPE html>
 <html lang="az">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- ✅ SEO: Title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Viktoria Toz Boya ilə Paltar Boyama Təlimatı | viktoria-az.store</title>
 
-  <!-- ✅ SEO: Meta Description -->
-  <meta name="description" content="Viktoria toz boya ilə evdə paltar boyamaq üçün addım-addım təlimat. Uyğun parçalar, isti su üsulu, yuma qaydaları və təhlükəsizlik məsləhətləri." />
+  <!-- Favicons -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
 
-  <!-- ✅ SEO: Canonical (www-siz) -->
+  <!-- ✅ Canonical -->
   <link rel="canonical" href="https://viktoria-az.store/boyama-qaydalari.html" />
 
-  <!-- ✅ Open Graph (sosial media paylaşımı üçün) -->
-  <meta property="og:title" content="Viktoria Toz Boya ilə Paltar Boyama Təlimatı" />
+  <!-- ✅ Meta Description -->
+  <meta name="description" content="Viktoria toz boya ilə evdə paltar boyamaq üçün addım-addım təlimat. Uyğun parçalar, isti su üsulu, yuma qaydaları və təhlükəsizlik məsləhətləri." />
+
+  <!-- ✅ Open Graph -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:site_name"   content="Viktoria Paltar Boyaları" />
+  <meta property="og:title"       content="Viktoria Toz Boya ilə Paltar Boyama Təlimatı" />
   <meta property="og:description" content="Evdə paltar boyamaq üçün addım-addım Viktoria toz boya təlimatı. Pambıq, kətan, viskon və digər parçalar üçün uyğundur." />
-  <meta property="og:url" content="https://viktoria-az.store/boyama-qaydalari.html" />
-  <meta property="og:type" content="article" />
+  <meta property="og:url"         content="https://viktoria-az.store/boyama-qaydalari.html" />
+
+  <!-- ✅ HowTo Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Viktoria Toz Boya ilə Paltar Boyama",
+    "description": "Viktoria toz boya ilə evdə paltar boyamaq üçün addım-addım təlimat.",
+    "supply": [
+      {"@type": "HowToSupply", "name": "Viktoria Toz Boya (10 qram)"},
+      {"@type": "HowToSupply", "name": "İsti su"},
+      {"@type": "HowToSupply", "name": "Duz"},
+      {"@type": "HowToSupply", "name": "Sirkə"}
+    ],
+    "tool": [
+      {"@type": "HowToTool", "name": "Dəmir və ya emaye qazan"},
+      {"@type": "HowToTool", "name": "Taxta və ya plastik qaşıq"},
+      {"@type": "HowToTool", "name": "Əlcək"}
+    ],
+    "step": [
+      {"@type": "HowToStep", "position": 1, "name": "Paltarı yuyun",            "text": "Boyanacaq paltarı əvvəlcədən yuyun, yumşaldıcı istifadə etməyin."},
+      {"@type": "HowToStep", "position": 2, "name": "Su hazırlayın",            "text": "Qazana paltarı tam örtəcək qədər 60–80°C isti su tökün."},
+      {"@type": "HowToStep", "position": 3, "name": "Boyanı həll edin",         "text": "Boyanı az miqdarda qaynar suda həll edib qazana əlavə edin."},
+      {"@type": "HowToStep", "position": 4, "name": "Duz və sirkə əlavə edin", "text": "1 xörək qaşığı duz və 1 xörək qaşığı sirkə əlavə edin."},
+      {"@type": "HowToStep", "position": 5, "name": "Paltarı boyayın",          "text": "Islanmış paltarı suya salın və 20–30 dəqiqə daim qarışdırın."},
+      {"@type": "HowToStep", "position": 6, "name": "Saxlayın",                 "text": "Boyandıqdan sonra təxminən yarım gün boyalı suda saxlayın."}
+    ]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple: #4b0082;
+      --purple-dark: #36005e;
+      --bg: #f3f0f8;
+      --white: #ffffff;
+      --text: #1a1a2e;
+      --text-muted: #6b6b8a;
+      --card-shadow: 0 4px 20px rgba(75,0,130,0.10);
+      --radius: 18px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+
+    header { background: var(--purple); padding: 8px 16px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.18); }
+    nav { max-width: 960px; margin: 0 auto; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; justify-content: center; }
+    nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-weight: 500; font-size: 13px; padding: 5px 10px; border-radius: 8px; transition: background 0.15s, color 0.15s; white-space: nowrap; }
+    nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+
+    .page { max-width: 700px; margin: 28px auto; padding: 0 16px 100px; }
+
+    .page-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: var(--purple);
+      text-align: center;
+      margin-bottom: 8px;
+      line-height: 1.3;
+    }
+    .page-subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 15px;
+      margin-bottom: 24px;
+      line-height: 1.6;
+    }
+
+    .card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--card-shadow);
+      padding: 22px 24px;
+      margin-bottom: 16px;
+    }
+    .card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 19px;
+      color: var(--purple);
+      margin-bottom: 14px;
+    }
+    .card p  { font-size: 15px; line-height: 1.75; color: var(--text); margin-bottom: 10px; }
+    .card p:last-child { margin-bottom: 0; }
+    .card ul, .card ol { padding-left: 20px; }
+    .card li { font-size: 15px; line-height: 1.85; color: var(--text); margin-bottom: 4px; }
+
+    .badge-ok   { display: inline-block; background: #e6f9f0; color: #1a7a4a; font-weight: 700; font-size: 13px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; margin-right: 6px; }
+    .badge-no   { display: inline-block; background: #fdecea; color: #c0392b; font-weight: 700; font-size: 13px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; margin-right: 6px; }
+    .badge-warn { display: inline-block; background: #fff8e1; color: #b7791f; font-weight: 700; font-size: 13px; padding: 3px 10px; border-radius: 20px; margin-bottom: 10px; }
+
+    .nav-buttons { display: flex; gap: 10px; margin-top: 8px; }
+    .nav-btn {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      text-align: center; padding: 14px 8px; background: var(--purple); color: #fff;
+      text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 15px;
+      box-shadow: 0 4px 16px rgba(75,0,130,0.20); transition: background 0.2s, transform 0.15s; min-width: 0;
+    }
+    .nav-btn:hover { background: var(--purple-dark); transform: translateY(-2px); }
+
+    .wa-btn {
+      position: fixed; bottom: 20px; right: 20px; background: #25D366;
+      text-decoration: none; padding: 14px; border-radius: 50%;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.45); z-index: 999;
+      display: flex; align-items: center; justify-content: center;
+      transition: transform 0.15s, box-shadow 0.15s;
+      animation: waPulse 2.5s ease-in-out infinite;
+    }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.55); animation: none; }
+    .wa-btn svg { width: 32px; height: 32px; fill: #fff; display: block; }
+    @keyframes waPulse {
+      0%,100%{ box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
+      50%    { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
+    }
+
+    @media (max-width: 480px) {
+      .nav-btn { font-size: 13px; padding: 12px 6px; }
+      .page-title { font-size: 21px; }
+      .card { padding: 18px 16px; }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ NAVİQASİYA: www-siz linklər -->
+<a class="wa-btn" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyas%C4%B1%20sifar%C4%B1%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
+  </svg>
+</a>
+
+<header>
   <nav>
     <a href="https://viktoria-az.store/">Ana səhifə</a>
     <a href="https://viktoria-az.store/catalog.html">Kataloq</a>
     <a href="https://viktoria-az.store/boyama-qaydalari.html">Boyama qaydaları</a>
     <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyas%C4%B1%20sifar%C4%B1%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m">WhatsApp</a>
   </nav>
+</header>
 
-  <main>
-    <h1>Viktoria Toz Boya ilə Paltar Boyama Təlimatı</h1>
+<div class="page">
 
-    <p>
-      Viktoria toz boya ilə geyim və parça boyamaq üçün hazırlanmış bu təlimatda
-      uyğun parçalar, isti su üsulu, yuma və təhlükəsizlik qaydaları ətraflı izah olunur.
-    </p>
+  <h1 class="page-title">Viktoria Toz Boya ilə<br>Paltar Boyama Təlimatı</h1>
+  <p class="page-subtitle">Uyğun parçalar, isti su üsulu, yuma qaydaları və təhlükəsizlik məsləhətləri</p>
 
+  <div class="card">
     <h2>✅ Uyğun parçalar və parça növləri</h2>
-    <p>Pambıq, kətan, viskon, yun, ipək və yarı sintetik parçalar üçün uyğundur. ✅</p>
-    <p>%100 poliester və akril parçalar üçün uyğun deyil.</p>
+    <span class="badge-ok">✔ Uyğundur</span>
+    <p>Pambıq, kətan, viskon, yun, ipək və yarı sintetik parçalar.</p>
+    <span class="badge-no">✘ Uyğun deyil</span>
+    <p>%100 poliester və akril parçalar.</p>
+  </div>
 
-    <h2>🔷 Paltar boyamaq üçün lazım olan materiallar</h2>
+  <div class="card">
+    <h2>🔷 Lazım olan materiallar</h2>
     <ul>
       <li>🎨 Viktoria Toz Boya (1 paket – 10 qram)</li>
       <li>👕 Boyanacaq paltar və ya parça</li>
@@ -49,43 +187,54 @@
       <li>💧 İsti su</li>
       <li>🥄 Taxta və ya plastik qaşıq</li>
       <li>🧂 Duz (1 paket boya üçün 1 xörək qaşığı)</li>
-      <li>🍋 Sirkə (1 paket boya üçün 1 xörək qaşığı — sarı və qırmızı rənglərə boyadıqda sirkə qoymayın, başqa bütün rənglərə qoymaq lazımdır)</li>
+      <li>🍋 Sirkə (1 xörək qaşığı — <strong>sarı və qırmızı rənglərə sirkə qoymayın</strong>, digər bütün rənglərə əlavə edin)</li>
     </ul>
+  </div>
 
-    <h2>🔥 Viktoria paltar boyası ilə isti su üsulu</h2>
+  <div class="card">
+    <h2>🔥 İsti su üsulu ilə boyama</h2>
     <ol>
-      <li>👗 Boyanacaq paltarı əvvəlcədən yuyun (yumşaldıcı istifadə etməyin).</li>
-      <li>💧 Qazana paltarı tam örtəcək qədər 60–80°C isti su tökün.</li>
+      <li>👗 Boyanacaq paltarı əvvəlcədən yuyun — <strong>yumşaldıcı istifadə etməyin</strong>.</li>
+      <li>💧 Qazana paltarı tam örtəcək qədər <strong>60–80°C</strong> isti su tökün.</li>
       <li>🎨 Boyanı az miqdarda qaynar suda həll edib suya əlavə edin.</li>
-      <li>🫗 Boyayacağınız qabdakı suya 1 xörək qaşığı duz, 1 xörək qaşığı sirkə (üzüm, alma) əlavə etməyi unutmayın.</li>
-      <li>👕 Islanmış paltarı suya salın və 20–30 dəqiqə ərzində daim qarışdırın.</li>
-      <li>✅ Boyandıqdan sonra təxminən yarım gün boyalı suda saxlamaq daha yaxşı effekt verə bilər.</li>
+      <li>🫗 1 xörək qaşığı duz və 1 xörək qaşığı sirkə əlavə edin.</li>
+      <li>👕 Islanmış paltarı suya salın və <strong>20–30 dəqiqə</strong> daim qarışdırın.</li>
+      <li>✅ Boyandıqdan sonra <strong>yarım gün</strong> boyalı suda saxlamaq daha yaxşı effekt verir.</li>
     </ol>
+  </div>
 
-    <h2>🚿 Boyadan sonra yuma və qurudulma qaydaları</h2>
+  <div class="card">
+    <h2>🚿 Boyadan sonra yuma və qurutma</h2>
     <ol>
       <li>🚰 Əvvəlcə soyuq su ilə yaxalayın.</li>
       <li>💦 Su şəffaflaşana qədər yuyun.</li>
       <li>☂️ Kölgə yerdə qurudun.</li>
-      <li>⚠️ İlk yumanı başqa paltarlardan ayrı yumağınız məsləhətdir.</li>
+      <li>⚠️ İlk yumanı başqa paltarlardan ayrı yumaq məsləhətdir.</li>
     </ol>
+  </div>
 
+  <div class="card">
     <h2>⚠️ Diqqət edilməli məqamlar</h2>
+    <span class="badge-warn">Məsləhət</span>
     <ul>
       <li>🥼 Açıq rəngli parçalarda nəticə daha canlı olur.</li>
       <li>🔰 Rəng tonu parça növünə görə dəyişə bilər.</li>
       <li>🧤 Əlcək istifadə etmək tövsiyə olunur.</li>
       <li>🚻 Uşaqların əli çatmayan yerdə saxlayın.</li>
     </ul>
-  </main>
+  </div>
 
-  <!-- ✅ FOOTER: www-siz linklər -->
-  <footer>
-    <a href="https://viktoria-az.store/">◀ Geri</a>
-    <a href="https://viktoria-az.store/">🏠 Ana səhifə</a>
-    <a href="https://viktoria-az.store/catalog.html">İrəli ▶</a>
-    <p>© 2026 Viktoria Paltar Boyaları – Paltar boyası və parça boyama məhsulları</p>
-  </footer>
+  <div class="nav-buttons">
+    <a href="https://viktoria-az.store/" class="nav-btn">◀ Geri</a>
+    <a href="https://viktoria-az.store/" class="nav-btn">🏠 Ana səhifə</a>
+    <a href="https://viktoria-az.store/catalog.html" class="nav-btn">İrəli ▶</a>
+  </div>
+
+</div>
+
+<footer style="text-align:center;padding:24px 20px;color:var(--text-muted);font-size:13px;">
+  &copy; 2026 <a href="https://viktoria-az.store/" style="color:var(--purple);text-decoration:none;">Viktoria Paltar Boyaları</a>
+</footer>
 
 </body>
 </html>
