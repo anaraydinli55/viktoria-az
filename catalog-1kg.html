@@ -21,30 +21,66 @@
 
   <!-- Schema -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Viktoria 1 KQ Paltar Boyaları Kataloqu",
-    "description": "Toplu istifadə üçün 1 kq paltar boyası — 60 rəng, 220 AZN",
-    "url": "https://viktoria-az.store/catalog-1kg.html",
-    "numberOfItems": 60,
-    "itemListElement": [
-      {
-        "@type": "Product",
-        "name": "Viktoria 1 KQ Paltar Boyası",
-        "description": "1 kq toplu paltar boyası, 60 rəng çeşidi",
-        "brand": {"@type": "Brand", "name": "Viktoria"},
-        "offers": {
-          "@type": "Offer",
-          "price": "220.00",
-          "priceCurrency": "AZN",
-          "availability": "https://schema.org/InStock",
-          "seller": {"@type": "Organization", "name": "Viktoria Paltar Boyaları"}
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Viktoria 1 KQ Paltar Boyaları Kataloqu",
+  "description": "Toplu istifadə üçün 1 kq paltar boyası — 60 rəng, 220 AZN",
+  "url": "https://viktoria-az.store/catalog-1kg.html",
+  "numberOfItems": 60,
+  "itemListElement": [
+    {
+      "@type": "Product",
+      "name": "Viktoria 1 KQ Paltar Boyası",
+      "description": "1 kq toplu paltar boyası, 60 rəng çeşidi",
+      "image": "https://viktoria-az.store/images/og-image.jpg",
+      "brand": {"@type": "Brand", "name": "Viktoria"},
+      "offers": {
+        "@type": "Offer",
+        "price": "220.00",
+        "priceCurrency": "AZN",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Viktoria Paltar Boyaları"},
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "AZN"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "AZ"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 3,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "AZ",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
         }
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
