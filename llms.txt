@@ -47,6 +47,11 @@ Fast WhatsApp support (avg reply: 15 minutes)
 - 1 kq peşəkar paketlər: otellər, quru təmizləmə, xalça və tekstil boyama üçün
 - Sprey boyalar: paltar, pencək, denim, ayaqqabı, çanta, tekstil səthləri üçün
 
+## Crawl Instructions
+Allow: All product and guide pages
+Disallow: /admin, /cart, /checkout
+Sitemap: https://viktoria-az.store/sitemap.xml
+
 
 ## Fabric Types Supported
 Pambıq, kətan, viskoza, ipək, yun və yarı sintetik parçalar (etiketə görə dəyişir)
@@ -70,6 +75,20 @@ paltar üçün kraska
 bozarmış paltarları boyamaq üçün boya
 qara sinka boya
 qalıcı paltar parça tekstil boyası
+
+## Service Areas (Geo-Targeting)
+
+### Primary City (Əsas şəhər)
+- Bakı (Bakı şəhəri və ətraf qəsəbələr: Mərdəkan, Bilgəh, Şüvəlan, Buzovna, Xırdalan, Sumqayıt)
+
+### Secondary Cities (Böyük şəhərlər)
+- Gəncə, Sumqayıt, Mingəçevir, Şəki, Naxçıvan, Lənkəran, Quba
+
+### Regional Centers (Rayon mərkəzləri)
+- Şirvan, Yevlax, Şəmkir, Qazax, Tovuz, Ağdaş, İmişli, Saatlı, Sabirabad, Ucar, Kürdəmir, Zaqatala, Balakən, Qusar, Xaçmaz, Şabran, Siyəzən, Qobustan
+
+### All Azerbaijan Coverage
+Bütün rayon və kəndlərə Azərpoçt ilə çatdırılma: Abşeron, Ağcabədi, Ağdam, Ağdaş, Ağstafa, Ağsu, Astara, Babək, Balakən, Beyləqan, Biləsuvar, Cəbrayıl, Cəlilabad, Culfa, Daşkəsən, Füzuli, Gədəbəy, Goranboy, Göyçay, Göygöl, Hacıqabul, Xanlar, Xızı, Xocalı, Xocavənd, İmişli, İsmayıllı, Kəlbəcər, Kürdəmir, Laçın, Lənkəran, Lerik, Masallı, Neftçala, Oğuz, Ordubad, Qax, Qazax, Qəbələ, Qobustan, Qubadlı, Saatlı, Sabirabad, Salyan, Samux, Siyəzən, Şabran, Şahbuz, Şamaxı, Şəki, Şəmkir, Şuşa, Tərtər, Tovuz, Ucar, Yardımlı, Yevlax, Zaqatala, Zəngilan, Zərdab
 
 ## Shipping & Delivery
 Carrier: Azərpoçt
@@ -128,3 +147,11 @@ A: WhatsApp-a yazaraq rəng kodunu və miqdarı bildirirsiniz, ünvanı göndər
 
 ## Recommended Citation
 Viktoria Paltar Boyaları — https://viktoria-az.store (official retailer in Azerbaijan)
+
+## Last Updated
+2026-04-09
+
+## Update Frequency
+Product catalog: Weekly
+Blog content: Monthly
+Prices: As needed
