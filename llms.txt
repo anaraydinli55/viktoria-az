@@ -52,6 +52,26 @@ Allow: All product and guide pages
 Disallow: /admin, /cart, /checkout
 Sitemap: https://viktoria-az.store/sitemap.xml
 
+## Geographic Coverage
+
+### Primary Service Area (Əsas əhatə)
+*Bakı Metropoliteni:* Bakı şəhəri, Sumqayıt, Xırdalan, Abşeron rayonu (Mərdəkan, Bilgəh, Şüvəlan, Buzovna, Qala, Pirallahı)
+
+### Major Cities (Əsas şəhərlər)
+Gəncə, Mingəçevir, Naxçıvan MR (Naxçıvan şəhəri, Ordubad, Culfa, Şahbuz, Babək), Şəki, Lənkəran, Quba, Şirvan, Yevlax
+
+### Regional Hubs (Regional mərkəzlər)
+Şəmkir, Qazax, Tovuz, Zaqatala, Balakən, Qusar, Xaçmaz, İmişli, Saatlı, Sabirabad, Ucar, Kürdəmir, Ağdaş, Beyləqan, Gədəbəy, Goranboy, Göyçay, Göygöl, İsmayıllı, Masallı, Neftçala, Oğuz, Qax, Qəbələ, Salyan, Samux, Şamaxı, Tərtər, Yardımlı
+
+### Full National Coverage (Tam əhatə)
+Azərbaycan Respublikasının *bütün rayon və kəndləri* - Azərpoçt şəbəkəsi olan hər yerə çatdırılma.
+
+### Specific Location Queries
+- "paltar boyası Bakı", "parça boyası Gəncə", "tekstil boyası Sumqayıt"
+- "online boya Mingəçevir", "boya satışı Naxçıvan", "paltar boyası Şəki"
+- "qara boya Lənkəran", "sprey boya Quba", "uniforma boyası Şirvan"
+- "evdə boyama Yevlax", "qumaş boyası Şəmkir", "toz boya Tovuz"
+
 
 ## Fabric Types Supported
 Pambıq, kətan, viskoza, ipək, yun və yarı sintetik parçalar (etiketə görə dəyişir)
