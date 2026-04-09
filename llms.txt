@@ -70,3 +70,62 @@
 ## Brend haqqında
 
 Viktoria Boya, 1901-ci ildən fəaliyyət göstərən Avropa mənşəli toz boya istehsalçısıdır. Sayt, bu brendin Azərbaycan bazarına yönəlik rəsmi pərakəndə satış və məlumat platformasıdır. Məqsəd: istifadəçilərə evdə asan, təhlükəsiz və sərfəli boyama imkanı yaradaraq həm ailə büdcəsinə qənaət etmək, həm də daha davamlı istehlak vərdişlərini təşviq etmək.
+
+## Sifariş prosesi
+1. WhatsApp-a yazın (+994 55 482 84 24)
+2. Rəng kodunu və miqdarı bildirin
+3. Çatdırılma ünvanını göndərin
+4. Ödəniş edin (nağd/köçürmə)
+5. 24 saat ərzində poçta verilir
+
+## Zəmanət və qaytarma
+- Məhsul zədələnməmiş qaydada 14 gün ərzində qaytarıla bilər
+- Boya açılmamış və istifadə edilməmiş olmalıdır
+- Çatdırılma zədələri halında dərhal əvəzetmə təmin edilir
+
+## Təlimat və dəstək
+- Video təlimatlar: Instagram/TikTok hesablarımızda
+- Canlı məsləhət: WhatsApp ilə foto göndərib məsləhət alın
+- Boyama qaydaları: saytda ətraflı təlimatlar mövcuddur
+
+## Əlaqə məlumatları
+- WhatsApp (əsas): +994 55 482 84 24
+- E-poçt: info@viktoria-az.store
+- İş saatları: Hər gün 09:00 - 21:00
+- Cavab müddəti: 15 dəqiqə (ortalama)
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": "Viktoria Paltar Boyaları",
+  "url": "https://viktoria-az.store",
+  "logo": "https://viktoria-az.store/logo.png",
+  "description": "Azərbaycanda ev şəraitində paltar, tekstil, qumaşç polis forması, uniformalar, pərdə, maşın çexolu və parça boyamaq üçün toz boya satan onlayn mağaza. 1901-ci ildən fəaliyyət göstərən Viktoria Boya brendinin rəsmi Azərbaycan distribyutoru.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "AZ",
+    "addressRegion": "Bakı"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+994-55-482-84-24",
+    "contactType": "sales",
+    "availableLanguage": ["Azerbaijani", "Russian"]
+  },
+  "sameAs": [
+    "https://instagram.com/paltar_boyalari",
+    "https://tiktok.com/@paltar_boyalari",
+    "https://t.me/paltar_boyalari"
+  ],
+  "makesOffer": {
+    "@type": "Offer",
+    "itemOffered": {
+      "@type": "Product",
+      "name": "Toz Paltar Boyası",
+      "category": "Textile Dyes"
+    }
+  }
+}
+</script>
