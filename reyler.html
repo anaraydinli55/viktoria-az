@@ -28,9 +28,7 @@
         "@type": "Review",
         "author": {"@type": "Person", "name": "Alyona"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
-        "reviewBody": "Hamınızın günü xeyirli olsun! Bu boyanı niyə aldığımı danışmaqla başlamaq istəyirəm. Bir gün ağlıma özümə bənövşəyi rəngdə cırıq şalvar hazırlamaq ideyası gəldi. Uzun müddət həm şalvar, həm də boya axtardım. Ağ şalvar alsam yaxşıdır, yoxsa çəhrayı və ya yasəməni çalara yaxın rəngdə şalvar alsam – qərar verə bilmirdim. Çünki bir saytda oxumuşdum ki, ağ şalvarı qara rəngə boyasan, nəticə qara yox, tünd boz olur.
-
-Əvvəlcə universal Atey Plus boyasını almaq istəyirdim. Qiyməti çox münasib idi, amma rəngləri xoşuma gəlmədi. Sonra dərzidə “Viktoria” boyasını gördüm. Rəng palitrası əla idi, amma qiyməti bir az baha idi (boya üçün) – 5 manat. 54 nömrəli rəngi aldım. İstehsalçı Türkiyədir. Çox yaxşı boyadır və rəng seçimi çox genişdir.",
+        "reviewBody": "Hamınızın günü xeyirli olsun! Bu boyanı niyə aldığımı danışmaqla başlamaq istəyirəm. Bir gün ağlıma özümə bənövşəyi rəngdə cırıq şalvar hazırlamaq ideyası gəldi. Uzun müddət həm şalvar, həm də boya axtardım. Ağ şalvar alsam yaxşıdır, yoxsa çəhrayı və ya yasəməni çalara yaxın rəngdə şalvar alsam – qərar verə bilmirdim. Çünki bir saytda oxumuşdum ki, ağ şalvarı qara rəngə boyasan, nəticə qara yox, tünd boz olur.\n\nƏvvəlcə universal Atey Plus boyasını almaq istəyirdim. Qiyməti çox münasib idi, amma rəngləri xoşuma gəlmədi. Sonra dərzidə \"Viktoria\" boyasını gördüm. Rəng palitrası əla idi, amma qiyməti bir az baha idi (boya üçün) – 5 manat. 54 nömrəli rəngi aldım. İstehsalçı Türkiyədir. Çox yaxşı boyadır və rəng seçimi çox genişdir.",
         "datePublished": "2025-11-06"
       },
       {
@@ -76,16 +74,19 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --cream: #faf7f2;
-      --warm: #f0e8d8;
-      --gold: #c9a84c;
-      --gold-light: #e8c97a;
-      --dark: #1a1410;
-      --mid: #5c4a32;
-      --text: #3d2e1e;
-      --border: #e0d5c5;
-      --verified: #2d7a4f;
-      --verified-bg: #eaf5ee;
+      /* ── Orijinal neytral rənglər ── */
+      --cream:        #faf7f2;
+      --warm:         #f9f4ff;          /* #f0e8d8 → açıq bənövşəyi */
+      --gold:         #c9a84c;
+      --gold-light:   #e8c97a;
+      /* ── Tünd fonlar → FAQ moru ── */
+      --dark:         #4b0082;          /* #1a1410 → bənövşəyi */
+      --dark-deeper:  #360060;          /* hover üçün */
+      --mid:          #7b1fa2;          /* #5c4a32 → orta bənövşəyi */
+      --text:         #3d2e1e;
+      --border:       #d0a3ff;          /* #e0d5c5 → bənövşəyi kənar */
+      --verified:     #2d7a4f;
+      --verified-bg:  #eaf5ee;
     }
 
     body {
@@ -154,7 +155,7 @@
     /* ── MAIN ── */
     .main { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
 
-    /* ── YORUM KARTI ── */
+    /* ── REVIEW CARD ── */
     .reviews-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 60px; }
 
     .review-card {
@@ -167,7 +168,7 @@
       animation: fadeUp 0.5s ease both;
     }
     .review-card:hover {
-      box-shadow: 0 12px 40px rgba(92,74,50,0.1);
+      box-shadow: 0 12px 40px rgba(75,0,130,0.12);
       transform: translateY(-2px);
     }
     @keyframes fadeUp {
@@ -193,7 +194,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 18px;
       font-weight: 700;
-      color: var(--mid);
+      color: var(--dark);          /* #mid → var(--dark) */
       overflow: hidden;
       flex-shrink: 0;
     }
@@ -228,6 +229,7 @@
       line-height: 1.7;
       color: var(--text);
       margin-bottom: 14px;
+      white-space: pre-line;
     }
 
     .review-photo {
@@ -385,7 +387,7 @@
       font-family: 'Playfair Display', serif;
       font-size: 22px;
       font-weight: 700;
-      color: var(--mid);
+      color: var(--dark);          /* #mid → var(--dark) */
       white-space: nowrap;
     }
 
@@ -434,18 +436,18 @@
       justify-content: center;
       text-align: center;
       padding: 14px 8px;
-      background: var(--dark);
+      background: var(--dark);          /* #1a1410 → var(--dark) */
       color: #fff;
       text-decoration: none;
       border-radius: 12px;
       font-weight: 700;
       font-size: 15px;
-      box-shadow: 0 4px 16px rgba(26,20,16,0.20);
+      box-shadow: 0 4px 16px rgba(75,0,130,0.20);
       transition: background 0.2s, transform 0.15s;
       min-width: 0;
     }
     .nav-btn:hover {
-      background: var(--mid);
+      background: var(--dark-deeper);   /* #mid → var(--dark-deeper) */
       transform: translateY(-2px);
     }
 
@@ -488,7 +490,7 @@
 
     <div class="reviews-list" id="reviews-list">
 
-            <article class="review-card">
+      <article class="review-card">
         <div class="review-top">
           <div class="review-author-block">
             <div class="avatar">A</div>
@@ -504,7 +506,7 @@
         </div>
         <p class="review-text">Hamınızın günü xeyirli olsun! Bu boyanı niyə aldığımı danışmaqla başlamaq istəyirəm. Bir gün ağlıma özümə bənövşəyi rəngdə cırıq şalvar hazırlamaq ideyası gəldi. Uzun müddət həm şalvar, həm də boya axtardım. Ağ şalvar alsam yaxşıdır, yoxsa çəhrayı və ya yasəməni çalara yaxın rəngdə şalvar alsam – qərar verə bilmirdim. Çünki bir saytda oxumuşdum ki, ağ şalvarı qara rəngə boyasan, nəticə qara yox, tünd boz olur.
 
-Əvvəlcə universal Atey Plus boyasını almaq istəyirdim. Qiyməti çox münasib idi, amma rəngləri xoşuma gəlmədi. Sonra dərzidə “Viktoria” boyasını gördüm. Rəng palitrası əla idi, amma qiyməti bir az baha idi (boya üçün) – 5 manat. 54 nömrəli rəngi aldım. İstehsalçı Türkiyədir. Çox yaxşı boyadır və rəng seçimi çox genişdir.</p>
+Əvvəlcə universal Atey Plus boyasını almaq istəyirdim. Qiyməti çox münasib idi, amma rəngləri xoşuma gəlmədi. Sonra dərzidə "Viktoria" boyasını gördüm. Rəng palitrası əla idi, amma qiyməti bir az baha idi (boya üçün) – 5 manat. 54 nömrəli rəngi aldım. İstehsalçı Türkiyədir. Çox yaxşı boyadır və rəng seçimi çox genişdir.</p>
       </article>
 
       <article class="review-card">
