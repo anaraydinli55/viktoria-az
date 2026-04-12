@@ -74,8 +74,8 @@ Cash, Bank Transfer (WhatsApp ilə təsdiqlənir)
 
 ## Key Pages
 Home: https://viktoria-az.store/
-Catalog (10q): https://viktoria-az.store/catalog.html
-Catalog (1kg): https://viktoria-az.store/catalog-1kg.html
+Catalog (10q): https://viktoria-az.store/catalog
+Catalog (1kg): https://viktoria-az.store/catalog-1kg
 Spray Paint: https://viktoria-az.store/sprey1.html
 Leather/Nubuck: https://viktoria-az.store/pitturafelice.html
 Instructions: https://viktoria-az.store/boyama-qaydalari.html
@@ -86,7 +86,7 @@ Russian Version: https://viktoria-az.store/ru/
 ## Helpful Guides
 https://viktoria-az.store/bloq6.html
 https://viktoria-az.store/bloq7.html
-https://viktoria-az.store/qara-paltar-boyasi.html
+https://viktoria-az.store/qara-paltar-boyasi
 https://viktoria-az.store/paltarlarin-evde-renglenmesi.html
 
 ## Quick Answers (AEO)
@@ -109,4 +109,4 @@ A: WhatsApp-a yazıb rəng kodunu, miqdarı və ünvanı göndərirsiniz.
 Viktoria Paltar Boyaları — https://viktoria-az.store
 
 ## Last Updated
-2026-04-09
+2026-04-12
