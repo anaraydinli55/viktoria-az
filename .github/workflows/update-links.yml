@@ -1,0 +1,42 @@
+name: Update Blog Links
+
+on:
+  workflow_dispatch:
+
+jobs:
+  replace-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Replace bloq links
+        run: |
+          declare -A map
+          map["bloq10.html"]="paltarlarin-evde-renglenmesi"
+          map["bloq9.html"]="qara-sinka-paltar-uchun"
+          map["bloq8.html"]="geyim-ve-tekstil-boyasi"
+          map["bloq7.html"]="paltar-boyasi-hardan-almaq-olar"
+          map["bloq6.html"]="paltar-boyasi-online-sifaris"
+          map["bloq5.html"]="boyanin-istifade-qaydalari"
+          map["bloq4.html"]="qaliciliga-tesir-eden-amiller"
+          map["bloq3.html"]="sabitlesdirici-nece-istifade-olunur"
+          map["bloq2.html"]="paltaryuyan-masinda-istifade-qaydalari"
+          map["bloq1.html"]="qabda-boyama-telimati"
+
+          for old in "${!map[@]}"; do
+            new="${map[$old]}"
+            echo "Replacing $old -> $new"
+            find . -type f -name "*.html" -exec sed -i "s/$old/$new/g" {} +
+            find . -type f -name "*.html" -exec sed -i "s/\/$old/\/$new/g" {} +
+            find . -type f -name "*.html" -exec sed -i "s|https://viktoria-az.store/$old|https://viktoria-az.store/$new|g" {} +
+          done
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Auto update blog links (bloq1-10 renamed)" || echo "No changes"
+          git push
