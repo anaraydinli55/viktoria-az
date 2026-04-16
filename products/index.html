@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Viktoria Paltar Boyaları Kataloq</title>
+  <meta name="description" content="58 rəng Viktoria paltar boyası kataloqu." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0713;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 18px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #4b0082, #b400ff);
+      transition: 0.2s;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(180,0,255,0.25);
+    }
+
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+
+      .btn {
+        font-size: 11px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  Viktoria Paltar Boyaları (58 Rəng)
+</header>
+
+<div class="container">
+
+  <div class="grid" id="grid"></div>
+
+</div>
+
+<script>
+const products = [
+  ["Qara", "viktoria-qara-paltar-boyasi"],
+  ["Ağ", "viktoria-beyaz-paltar-boyasi"],
+  ["Qırmızı", "viktoria-qirmizi-paltar-boyasi"],
+  ["Yaşıl", "viktoria-yasil-paltar-boyasi"],
+  ["Tünd Göy", "viktoria-tund-goy-paltar-boyasi"],
+  ["Tünd Mavi", "viktoria-tund-mavi-paltar-boyasi"],
+  ["Mavi", "viktoria-mavi-paltar-boyasi"],
+  ["Sarı", "viktoria-sari-paltar-boyasi"],
+  ["Narıncı", "viktoria-narinci-paltar-boyasi"],
+  ["Bordo", "viktoria-bordo-paltar-boyasi"],
+  ["Çəhrayı", "viktoria-cehrai-paltar-boyasi"],
+  ["Bənövşəyi", "viktoria-benovseyi-paltar-boyasi"],
+  ["Boz", "viktoria-boz-paltar-boyasi"],
+  ["Krem", "viktoria-krem-paltar-boyasi"],
+  ["Bej", "viktoria-bej-paltar-boyasi"],
+  ["Tünd Yaşıl", "viktoria-tund-yasil-paltar-boyasi"],
+  ["Açıq Yaşıl", "viktoria-aciq-yasil-paltar-boyasi"],
+  ["Göy", "viktoria-goy-paltar-boyasi"],
+  ["Dəniz Mavisi", "viktoria-deniz-mavisi"],
+  ["Şabalıdı", "viktoria-sabaliyi"],
+  ["Qəhvəyi", "viktoria-qehveyi"],
+  ["Tünd Qəhvəyi", "viktoria-tund-qehveyi"],
+  ["Açıq Qəhvəyi", "viktoria-aciq-qehveyi"],
+  ["Buz Mavisi", "viktoria-buz-mavisi"],
+  ["Limon", "viktoria-limon"],
+  ["Şaftalı", "viktoria-saftali"],
+  ["Kobalt", "viktoria-kobalt"],
+  ["Indigo", "viktoria-indigo"],
+  ["Turkuaz", "viktoria-turkuaz"],
+  ["Fuşya", "viktoria-fusya"],
+  ["Lavanda", "viktoria-lavanda"],
+  ["Gümüş", "viktoria-gumus"],
+  ["Qızılı", "viktoria-qizili"],
+  ["Neon Yaşıl", "viktoria-neon-yasil"],
+  ["Neon Sarı", "viktoria-neon-sari"],
+  ["Neon Çəhrayı", "viktoria-neon-cehrai"],
+  ["Albalı", "viktoria-albali"],
+  ["Şərab", "viktoria-serab"],
+  ["Zeytun", "viktoria-zeytun"],
+  ["Duman Boz", "viktoria-duman-boz"],
+  ["Açıq Mavi", "viktoria-aciq-mavi"],
+  ["Tünd Narıncı", "viktoria-tund-narinci"],
+  ["Qara 30°", "viktoria-qara-30"],
+  ["Qara 40°", "viktoria-qara-40"],
+  ["Premium Qara", "viktoria-premium-qara"],
+  ["Ultra Qara", "viktoria-ultra-qara"],
+  ["Soft Pink", "viktoria-soft-pink"],
+  ["Ice Blue", "viktoria-ice-blue"],
+  ["Forest Green", "viktoria-forest-green"],
+  ["Royal Blue", "viktoria-royal-blue"],
+  ["Sun Yellow", "viktoria-sun-yellow"],
+  ["Deep Red", "viktoria-deep-red"],
+  ["Classic White", "viktoria-classic-white"],
+  ["Metallic Grey", "viktoria-metallic-grey"]
+];
+
+const grid = document.getElementById("grid");
+
+products.forEach(p => {
+  const a = document.createElement("a");
+  a.className = "btn";
+  a.href = "/" + p[1];
+  a.textContent = p[0];
+  grid.appendChild(a);
+});
+</script>
+
+</body>
+</html>
