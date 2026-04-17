@@ -6,6 +6,9 @@ on:
     paths:
       - sitemap.xml
 
+      env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   update-sitemap:
     runs-on: ubuntu-latest
