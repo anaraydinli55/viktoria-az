@@ -1,72 +1,63 @@
-[14:14, 4/18/2026] Anar Aydinli: - name: Run replace script
-  run: |
-    python3 << 'EOF'
-    import os
-    import re
+name: Auto Replace Text
 
-    # 🔥 BURADA HANSI FAYLLARDA ISLESIN YAZ
-    TARGET_FILES = [
-        "viktoria-cehrayi-paltar-boyasi/index.html"
-    ]
+on:
+  push:
+    branches:
+      - main
 
-    def replace_text(content):
-        content = re.sub(r'viktoria-qara', 'viktoria-cehrayi', content, flags=re.IGNORECASE)
-        content = re.sub(r'\bQara\b', 'Çəhrayı', content)
-        content = re.sub(r'\bQARA\b', 'ÇƏHRAYI', content)
-        content = re.sub(r'\bqara\b', 'çəhrayı', content)
-        return content
+jobs:
+  replace:
+    runs-on: ubuntu-latest
 
-    for file in TARGET_FILES:
-        if os.path.exists(file):
-            try:
-                with open(file, 'r', encoding='utf-8') as f:
-                    content = f.read()
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
 
-                new…
-[14:15, 4/18/2026] Anar Aydinli: - name: Run replace script
-  run: |
-    python3 << 'EOF'
-    import os
-    import re
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
 
-    # 🔥 BURADA FAYLLARI TAM YOL İLƏ YAZ
-    TARGET_FILES = [
-        "viktoria-cehrayi-paltar-boyasi/index.html"
-    ]
+      - name: Run replace script
+        run: |
+          python3 <<'EOF'
+          import os
+          import re
 
-    def replace_text(content):
-        # URL-lər (case insensitive)
-        content = re.sub(r'viktoria-qara', 'viktoria-cehrayi', content, flags=re.IGNORECASE)
+          TARGET_FILES = [
+              "viktoria-cehrayi-paltar-boyasi/index.html"
+          ]
 
-        # Böyük hərf ilə başlayan
-        content = re.sub(r'\bQara\b', 'Çəhrayı', content)
+          def replace_text(content):
+              content = re.sub(r'viktoria-qara', 'viktoria-cehrayi', content, flags=re.IGNORECASE)
+              content = re.sub(r'\bQara\b', 'Çəhrayı', content)
+              content = re.sub(r'\bQARA\b', 'ÇƏHRAYI', content)
+              content = re.sub(r'\bqara\b', 'çəhrayı', content)
+              return content
 
-        # Tam böyük
-        content = re.sub(r'\bQARA\b', 'ÇƏHRAYI', content)
+          for file in TARGET_FILES:
+              if not os.path.exists(file):
+                  print(f"❌ Tapılmadı: {file}")
+                  continue
 
-        # Kiçik
-        content = re.sub(r'\bqara\b', 'çəhrayı', content)
+              with open(file, "r", encoding="utf-8") as f:
+                  content = f.read()
 
-        return content
+              new_content = replace_text(content)
 
-    for file in TARGET_FILES:
-        if not os.path.exists(file):
-            print(f"❌ Tapılmadı: {file}")
-            continue
+              if content != new_content:
+                  with open(file, "w", encoding="utf-8") as f:
+                      f.write(new_content)
+                  print(f"✅ Dəyişdirildi: {file}")
+              else:
+                  print(f"➖ Dəyişiklik yoxdur: {file}")
+          EOF
 
-        try:
-            with open(file, 'r', encoding='utf-8') as f:
-                content = f.read()
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
 
-            new_content = replace_text(content)
-
-            if content != new_content:
-                with open(file, 'w', encoding='utf-8') as f:
-                    f.write(new_content)
-                print(f"✅ Dəyişdirildi: {file}")
-            else:
-                print(f"➖ Dəyişiklik yoxdur: {file}")
-
-        except Exception as e:
-            print(f"⚠️ Xəta: {file} → {e}")
-    EOF
+          git add .
+          git diff --cached --quiet || git commit -m "Auto replace text"
+          git push
