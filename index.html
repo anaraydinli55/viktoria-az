@@ -89,20 +89,42 @@
         .hero-title svg { display: block; width: 100%; height: auto; }
         h1 { font-size: clamp(24px,4vw,36px); color: #4b0082; margin-bottom: 10px; }
         h2, h3 { color: #4b0082; }
-        .btn {
+
+        /* ========== UNİVERSAL DÜYMƏ STİLİ ========== */
+        .btn-boyalar {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background-color: #a855f7;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 12px 8px 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 6px 0 #7c3aed, 0 8px 16px rgba(120, 40, 200, 0.35);
+            position: relative;
+            transition: all 0.15s ease;
+            margin-top: 14px;
+        }
+        .btn-boyalar:hover {
+            box-shadow: 0 3px 0 #7c3aed, 0 5px 10px rgba(120, 40, 200, 0.35);
+            transform: translateY(3px);
+        }
+        .btn-icon {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 12px 20px;
-            background: #4b0082;
-            color: #fff;
-            border-radius: 14px;
-            text-decoration: none;
-            font-weight: 700;
-            transition: transform .2s ease, background .2s ease;
+            background-color: #9333ea;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            margin-left: 14px;
+            font-size: 1.1rem;
+            box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2);
         }
-        .btn:hover { background: #360060; transform: translateY(-2px); }
-        @media (max-width: 768px) { .btn { width: 100%; box-sizing: border-box; } }
+        /* ============================================ */
+
         .container {
             max-width: 1100px;
             margin: 20px auto;
@@ -143,36 +165,29 @@
             padding: 20px;
         }
         .button-container { text-align: center; margin: 20px 0; }
-        .mor-button {
-            display: inline-block;
-            padding: 14px 28px;
-            background-color: #4b0082;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 700;
-            border-radius: 12px;
-            font-size: 16px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-        .mor-button:hover { background-color: #360060; transform: translateY(-2px); }
-        @media (max-width: 768px) { .mor-button { width: 90%; padding: 14px 0; font-size: 18px; } }
         .trustpilot-button {
             display: inline-flex;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 14px 28px;
+            gap: 0;
             background-color: #00b67a;
-            color: #fff;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 700;
-            border-radius: 12px;
-            font-size: 16px;
-            margin-top: 12px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            font-size: 1rem;
+            padding: 12px 8px 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 6px 0 #008a5c, 0 8px 16px rgba(0, 180, 120, 0.35);
+            position: relative;
+            transition: all 0.15s ease;
+            margin-top: 14px;
         }
-        .trustpilot-button:hover { background-color: #009e6a; transform: translateY(-2px); }
-        @media (max-width: 768px) { .trustpilot-button { width: 90%; padding: 14px 0; font-size: 16px; } }
+        .trustpilot-button:hover {
+            box-shadow: 0 3px 0 #008a5c, 0 5px 10px rgba(0, 180, 120, 0.35);
+            transform: translateY(3px);
+        }
+        .trustpilot-button .btn-icon {
+            background-color: #009e6a;
+        }
         .btn-neon-wrap {
             display: flex;
             flex-direction: column;
@@ -311,44 +326,8 @@
             0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
             50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
         }
-
         .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 14px; }
-.use-case-item { background: #fff; border: 2px solid #d0a3ff; border-radius: 10px; padding: 14px; text-align: center; font-size: 15px; font-weight: 600; }
-
-.btn-boyalar {
-    display: inline-flex;
-    align-items: center;
-    gap: 0;
-    background-color: #a855f7;
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    padding: 12px 8px 12px 24px;
-    border-radius: 50px;
-    box-shadow: 0 6px 0 #7c3aed, 0 8px 16px rgba(120, 40, 200, 0.35);
-    position: relative;
-    transition: all 0.15s ease;
-    margin-top: 14px;
-}
-
-.btn-boyalar:hover {
-    box-shadow: 0 3px 0 #7c3aed, 0 5px 10px rgba(120, 40, 200, 0.35);
-    transform: translateY(3px);
-}
-
-.btn-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #9333ea;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    margin-left: 14px;
-    font-size: 1.1rem;
-    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2);
-}
+        .use-case-item { background: #fff; border: 2px solid #d0a3ff; border-radius: 10px; padding: 14px; text-align: center; font-size: 15px; font-weight: 600; }
     </style>
 
     <!-- Organization Schema -->
@@ -582,7 +561,13 @@
                     Rəngi <span class="marker">solmuş</span> paltarı boyamaq •
                     Uniformaları, habelə <span class="marker">polis</span> formalarını boyamaq
                 </p>
-                <a class="btn" href="/catalog"><span class="blink-text">Rənglərə bax</span></a>
+                <!-- 1. Rənglərə bax (Hero) -->
+                <div style="text-align: right;">
+                    <a class="btn-boyalar" href="/catalog">
+                        <span class="blink-text">Rənglərə bax</span>
+                        <span class="btn-icon">»</span>
+                    </a>
+                </div>
             </div>
             <a href="reklam.html">
                 <img src="images/30-siyah-small.webp"
@@ -610,22 +595,22 @@
             </div>
         </section>
 
-<section class="container">
-    <h2>🔷 Məhsullarımız</h2>
-    <div class="card">
-        <ul>
-            <li>Pambıq, kətan və viskon üçün toz boyalar</li>
-            <li>İpək, yun və yarı sintetik parçalar üçün boyalar</li>
-            <li>Rəng qarışıqları və DIY paketlər</li>
-        </ul>
-<div style="text-align: right;">
-    <a href="/products" class="btn-boyalar">
-        Stokda Olanlar
-        <span class="btn-icon">»</span>
-    </a>
-</div>
-    </div>
-</section>
+        <section class="container">
+            <h2>🔷 Məhsullarımız</h2>
+            <div class="card">
+                <ul>
+                    <li>Pambıq, kətan və viskon üçün toz boyalar</li>
+                    <li>İpək, yun və yarı sintetik parçalar üçün boyalar</li>
+                    <li>Rəng qarışıqları və DIY paketlər</li>
+                </ul>
+                <div style="text-align: right;">
+                    <a href="/products" class="btn-boyalar" style="display:inline-flex;">
+                        <span class="blink-text">Boyalar</span>
+                        <span class="btn-icon">»</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <section class="container onekg">
             <div>
@@ -634,7 +619,13 @@
                 <p>Quru təmizləmələr, otellər, xalça və xalı boyama xidmətləri üçün bu məhsul olduqca uyğundur.
                 Peşəkar istifadəyə nəzərdə tutulduğu üçün rəngi bərabər tutur və uzunmüddətli nəticə verir.
                 Böyük həcmli istifadələrdə belə stabil keyfiyyətini qoruyur.</p>
-                <a class="btn" href="/catalog-1kg"><span class="blink-text">Rənglərə bax</span></a>
+                <!-- 2. Rənglərə bax (1 KQ) -->
+                <div style="text-align: right;">
+                    <a class="btn-boyalar" href="/catalog-1kg">
+                        <span class="blink-text">Rənglərə bax</span>
+                        <span class="btn-icon">»</span>
+                    </a>
+                </div>
             </div>
             <a href="catalog-1kg">
                 <img src="1kg-paketler-small.webp"
@@ -664,27 +655,35 @@
                      alt="Viktoria sprey paltar boyası - denim və ayaqqabı üçün"
                      loading="lazy" decoding="async" width="400" height="400">
             </div>
-            <div class="button-container">
-                <a href="https://viktoria-az.store/sprey1.html" class="mor-button"><span class="blink-text">Rənglərə bax</span></a>
+            <!-- 3. Rənglərə bax (Sprey) -->
+            <div class="button-container" style="text-align: right;">
+                <a href="https://viktoria-az.store/sprey1.html" class="btn-boyalar" style="display:inline-flex;">
+                    <span class="blink-text">Rənglərə bax</span>
+                    <span class="btn-icon">»</span>
+                </a>
             </div>
-            <div class="button-container">
-                <a href="pitturafelice.html" class="mor-button">Dəri və Nubuk Boyaları</a>
+            <!-- 4. Dəri və Nubuk Boyaları -->
+            <div class="button-container" style="text-align: right;">
+                <a href="pitturafelice.html" class="btn-boyalar" style="display:inline-flex;">
+                    Dəri və Nubuk Boyaları
+                    <span class="btn-icon">»</span>
+                </a>
             </div>
         </section>
 
         <section class="container" id="why-us">
-    <h2>🔷 Niyə Bu Paltar Boyaları?</h2>
-    <div class="use-cases-grid">
-        <div class="use-case-item">👕 Köynək boyamaq</div>
-        <div class="use-case-item">👖 Cins boyamaq</div>
-        <div class="use-case-item">🧥 Gödəkçə rəngini yeniləmək</div>
-        <div class="use-case-item">👮 Forma və geyimlər</div>
-        <div class="use-case-item">🏢 Otel və kimyəvi təmizləmələr</div>
-        <div class="use-case-item">🏁 Xalça, kilim, parça və toxumalar</div>
-        <div class="use-case-item">🧴 Xlor ləkəsini boyamaq</div>
-        <div class="use-case-item">🎽 Solmuş geyim</div>
-    </div>
-</section>
+            <h2>🔷 Niyə Bu Paltar Boyaları?</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-item">👕 Köynək boyamaq</div>
+                <div class="use-case-item">👖 Cins boyamaq</div>
+                <div class="use-case-item">🧥 Gödəkçə rəngini yeniləmək</div>
+                <div class="use-case-item">👮 Forma və geyimlər</div>
+                <div class="use-case-item">🏢 Otel və kimyəvi təmizləmələr</div>
+                <div class="use-case-item">🏁 Xalça, kilim, parça və toxumalar</div>
+                <div class="use-case-item">🧴 Xlor ləkəsini boyamaq</div>
+                <div class="use-case-item">🎽 Solmuş geyim</div>
+            </div>
+        </section>
 
         <section class="container hero blog-hero">
             <div>
@@ -727,14 +726,21 @@
         <section class="container" style="text-align:center; padding: 28px 20px; margin-top: 10px;">
             <p style="font-size: 32px; margin-bottom: 6px; line-height:1;">⭐⭐⭐⭐⭐</p>
             <p style="font-size: 24px; font-weight: 700; color: #4b0082; margin-bottom: 14px;">4.8 / 5 Reytinq</p>
-            <a href="https://viktoria-az.store/reyler.html" class="mor-button">👉 Rəylərə Bax</a>
-            <br>
-            <a href="https://www.trustpilot.com/review/viktoria-az.store"
-               class="trustpilot-button"
-               target="_blank"
-               rel="noopener">
-                ★ Trustpilot-da Rəyləri Oxu
-            </a>
+            <!-- 5 + 6. Rəylərə Bax + Trustpilot -->
+            <div style="display:flex; flex-direction:column; align-items:flex-end; gap:10px; margin-top:14px;">
+                <a href="https://viktoria-az.store/reyler.html" class="btn-boyalar" style="display:inline-flex; justify-content:space-between; width:100%; max-width:300px; box-sizing:border-box;">
+                    👉 Rəylərə Bax
+                    <span class="btn-icon">»</span>
+                </a>
+                <a href="https://www.trustpilot.com/review/viktoria-az.store"
+                   class="trustpilot-button"
+                   style="display:inline-flex; justify-content:space-between; width:100%; max-width:300px; box-sizing:border-box;"
+                   target="_blank"
+                   rel="noopener">
+                    ★ Trustpilot-da Rəyləri Oxu
+                    <span class="btn-icon">»</span>
+                </a>
+            </div>
         </section>
 
         <section class="instagram-tiktok">
@@ -761,7 +767,6 @@
             </div>
         </section>
     </main>
-
 
     <footer>
         <div class="footer-seo-links">
@@ -835,3 +840,4 @@
 
 </body>
 </html>
+
