@@ -315,21 +315,39 @@
         .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; margin-top: 14px; }
 .use-case-item { background: #fff; border: 2px solid #d0a3ff; border-radius: 10px; padding: 14px; text-align: center; font-size: 15px; font-weight: 600; }
 
-        .btn-boyalar {
-    display: inline-block;
-    background-color: #6a0dad;
+.btn-boyalar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+    background-color: #a855f7;
     color: #ffffff;
-    padding: 12px 28px;
-    border-radius: 6px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 1rem;
+    padding: 12px 8px 12px 24px;
+    border-radius: 50px;
+    box-shadow: 0 6px 0 #7c3aed, 0 8px 16px rgba(120, 40, 200, 0.35);
+    position: relative;
+    transition: all 0.15s ease;
     margin-top: 14px;
-    transition: background-color 0.2s ease;
 }
 
 .btn-boyalar:hover {
-    background-color: #550b9e;
+    box-shadow: 0 3px 0 #7c3aed, 0 5px 10px rgba(120, 40, 200, 0.35);
+    transform: translateY(3px);
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #9333ea;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    margin-left: 14px;
+    font-size: 1.1rem;
+    box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2);
 }
     </style>
 
