@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Viktoria Paltar Boyaları Kataloq</title>
+  <meta name="description" content="Viktoria paltar boyası kataloqu." />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0713;
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 18px;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+      font-size: 13px;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      filter: brightness(1.15);
+    }
+    @media (max-width: 480px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+      .btn {
+        font-size: 11px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>Viktoria Paltar Boyaları</header>
+
+<div class="container">
+  <div class="grid" id="grid"></div>
+</div>
+
+<script>
+const products = [
+  ["Qara",               "viktoria-qara-paltar-boyasi"],
+  ["Tünd Göy",           "viktoria-tund-goy-paltar-boyasi"],
+  ["Qırmızı",            "viktoria-qirmizi-paltar-boyasi"],
+  ["Yaşıl",              "viktoria-yasil-paltar-boyasi"],
+  ["Sarı",               "viktoria-sari-paltar-boyasi"],
+  ["Tünd Mavi",          "viktoria-tund-mavi-paltar-boyasi"],
+  ["Qəhvəyi",            "viktoria-qehveyi-paltar-boyasi"],
+  ["Tünd Qəhvəyi",       "viktoria-tund-qehveyi-paltar-boyasi"],
+  ["Cəhrayı",            "viktoria-cehrayi-paltar-boyasi"],
+  ["Açıq Mavi",          "viktoria-aciq-mavi-paltar-boyasi"],
+  ["Orta Qəhvəyi",       "viktoria-orta-qehveyi-paltar-boyasi"],
+  ["Açıq Göy",           "viktoria-aciq-goy-paltar-boyasi"],
+  ["Mavi Orta",          "viktoria-orta-mavi-paltar-boyasi"],
+  ["Gül Qurusu",         "viktoria-gul-qurusu-paltar-boyasi"],
+  ["Bej",                "viktoria-bej-paltar-boyasi"],
+  ["Tünd Boz",           "viktoria-tund-boz-paltar-boyasi"],
+  ["Xaki",               "viktoria-xaki-paltar-boyasi"],
+  ["Açıq Mor",           "viktoria-aciq-mor-paltar-boyasi"],
+  ["Güvəz",              "viktoria-guvez-paltar-boyasi"],
+  ["Yanıq Qəhvəyi",      "viktoria-yaniq-qehveyi-paltar-boyasi"],
+  ["Narıncı",            "viktoria-narinci-paltar-boyasi"],
+  ["Fes Rəngi",          "viktoria-fes-rengi-paltar-boyasi"],
+  ["Yemiş Rəngi",        "viktoria-yemis-rengi-paltar-boyasi"],
+  ["Buz Mavisi",         "viktoria-buz-mavisi-paltar-boyasi"],
+  ["Yavruağzı",          "viktoria-yavruagzi-paltar-boyasi"],
+  ["Tünd Çəhrayı",       "viktoria-tund-cehrayi-paltar-boyasi"],
+  ["Al Qırmızı",         "viktoria-al-qirmizi-paltar-boyasi"],
+  ["Atəşi Çəhrayı",      "viktoria-atesi-cehrayi-paltar-boyasi"],
+  ["Nar Çiçəyi",         "viktoria-nar-ciceyi-paltar-boyasi"],
+  ["Tünd Qırmızı",       "viktoria-tund-qirmizi-paltar-boyasi"],
+  ["Vişnə Çürüyü",       "viktoria-visne-curuyu-paltar-boyasi"],
+  ["Açıq Bej",           "viktoria-aciq-bej-paltar-boyasi"],
+  ["Tütün Rəngi",        "viktoria-tutun-rengi-paltar-boyasi"],
+  ["Tünd Mor",           "viktoria-tund-mor-paltar-boyasi"],
+  ["Əflatun",            "viktoria-eflatun-paltar-boyasi"],
+  ["Açıq Boz",           "viktoria-aciq-boz-paltar-boyasi"],
+  ["Şam Göbəyi",         "viktoria-sam-gobeyi-paltar-boyasi"],
+  ["Şərabi",             "viktoria-serabi-paltar-boyasi"],
+  ["Açıq Filizi",        "viktoria-aciq-filizi-paltar-boyasi"],
+  ["Nefti",              "viktoria-nefti-paltar-boyasi"],
+  ["Kanarya",            "viktoria-kanarya-paltar-boyasi"],
+  ["Portağal",           "viktoria-portagal-paltar-boyasi"],
+  ["Zümrüd",             "viktoria-zumrud-paltar-boyasi"],
+  ["Petrol",             "viktoria-petrol-paltar-boyasi"],
+  ["Zeytuni",            "viktoria-zeytuni-paltar-boyasi"],
+  ["Çivit Mavi",         "viktoria-civit-mavi-paltar-boyasi"],
+  ["Mor Göy",            "viktoria-mor-goy-paltar-boyasi"],
+  ["Tünd Şərabi",        "viktoria-tund-serabi-paltar-boyasi"],
+  ["Tünd Əflatun",       "viktoria-tund-eflatun-paltar-boyasi"],
+  ["Bənövşə",            "viktoria-benovse-paltar-boyasi"],
+  ["Qızılı Sarı",        "viktoria-qizili-sari-paltar-boyasi"],
+  ["Tünd Sarı",          "viktoria-tund-sari-paltar-boyasi"],
+  ["Cins Mavisi",        "viktoria-cins-mavisi-paltar-boyasi"],
+  ["Orta Göy",           "viktoria-orta-goy-paltar-boyasi"],
+  ["--------",           "viktoria-bənövşə-paltar-boyasi"],
+  ["Tünd Bej",           "viktoria-tund-bej-paltar-boyasi"],
+  ["Açıq Qəhvəyi",       "viktoria-aciq-qehveyi-paltar-boyasi"],
+  ["Tünd Yaşıl",         "viktoria-tund-yasil-paltar-boyasi"],
+  ["Tünd Filizi",        "viktoria-tund-filizi-paltar-boyasi"],
+  ["Sabitləşdirici",     "viktoria-sabitlesdirici-paltar-boyasi"]
+];
+
+// bg: gradient, color: text color
+const colorMap = {
+  "Qara":            { bg: "linear-gradient(135deg,#1c1c1c,#3a3a3a)",     color: "#e0e0e0" },
+  "Tünd Göy":        { bg: "linear-gradient(135deg,#002a5c,#004488)",     color: "#fff" },
+  "Qırmızı":         { bg: "linear-gradient(135deg,#b80000,#e63030)",     color: "#fff" },
+  "Yaşıl":           { bg: "linear-gradient(135deg,#1a6e00,#28a800)",     color: "#fff" },
+  "Sarı":            { bg: "linear-gradient(135deg,#c8a800,#f0d000)",     color: "#222" },
+  "Tünd Mavi":       { bg: "linear-gradient(135deg,#00008b,#0000cc)",     color: "#cce0ff" },
+  "Qəhvəyi":         { bg: "linear-gradient(135deg,#5c3317,#8b4513)",     color: "#f5dcc8" },
+  "Tünd Qəhvəyi":    { bg: "linear-gradient(135deg,#2e1007,#4a2210)",     color: "#d4aa88" },
+  "Cəhrayı":         { bg: "linear-gradient(135deg,#e05580,#ff7faa)",     color: "#fff" },
+  "Açıq Mavi":       { bg: "linear-gradient(135deg,#3a90d0,#70bce8)",     color: "#fff" },
+  "Orta Qəhvəyi":    { bg: "linear-gradient(135deg,#7b4a28,#a0622d)",     color: "#f5dcc8" },
+  "Açıq Göy":        { bg: "linear-gradient(135deg,#4a82b8,#7ab0da)",     color: "#fff" },
+  "Mavi Orta":       { bg: "linear-gradient(135deg,#1055a0,#2272cc)",     color: "#fff" },
+  "Gül Qurusu":      { bg: "linear-gradient(135deg,#a87080,#c89aaa)",     color: "#fff" },
+  "Bej":             { bg: "linear-gradient(135deg,#c4a070,#d8b888)",     color: "#3a2800" },
+  "Tünd Boz":        { bg: "linear-gradient(135deg,#3a3a3a,#5a5a5a)",     color: "#e0e0e0" },
+  "Xaki":            { bg: "linear-gradient(135deg,#5e5e2e,#7c7c3c)",     color: "#e8e8c0" },
+  "Açıq Mor":        { bg: "linear-gradient(135deg,#8855bb,#aa77dd)",     color: "#fff" },
+  "Güvəz":           { bg: "linear-gradient(135deg,#aa0055,#d40070)",     color: "#fff" },
+  "Yanıq Qəhvəyi":   { bg: "linear-gradient(135deg,#5c2800,#7a3c10)",     color: "#f0c8a0" },
+  "Narıncı":         { bg: "linear-gradient(135deg,#c84400,#f06820)",     color: "#fff" },
+  "Fes Rəngi":       { bg: "linear-gradient(135deg,#7a1010,#aa2020)",     color: "#ffd0c0" },
+  "Yemiş Rəngi":     { bg: "linear-gradient(135deg,#8a3800,#b85c10)",     color: "#ffe0c0" },
+  "Buz Mavisi":      { bg: "linear-gradient(135deg,#88c8e8,#b8dff0)",     color: "#002244" },
+  "Yavruağzı":       { bg: "linear-gradient(135deg,#f0907a,#f8b8a8)",     color: "#3a1000" },
+  "Tünd Çəhrayı":    { bg: "linear-gradient(135deg,#b8005a,#e00080)",     color: "#fff" },
+  "Al Qırmızı":      { bg: "linear-gradient(135deg,#cc0000,#ff2222)",     color: "#fff" },
+  "Atəşi Çəhrayı":   { bg: "linear-gradient(135deg,#d40060,#ff2288)",     color: "#fff" },
+  "Nar Çiçəyi":      { bg: "linear-gradient(135deg,#b82020,#d44030)",     color: "#fff" },
+  "Tünd Qırmızı":    { bg: "linear-gradient(135deg,#6a0000,#990000)",     color: "#ffc0c0" },
+  "Vişnə Çürüyü":    { bg: "linear-gradient(135deg,#35001a,#580030)",     color: "#e8a0c0" },
+  "Açıq Bej":        { bg: "linear-gradient(135deg,#dbc8a8,#ecdcc0)",     color: "#3a2800" },
+  "Tütün Rəngi":     { bg: "linear-gradient(135deg,#6e5030,#907048)",     color: "#ffe8c0" },
+  "Tünd Mor":        { bg: "linear-gradient(135deg,#4b0082,#6800b8)",     color: "#e8c8ff" },
+  "Əflatun":         { bg: "linear-gradient(135deg,#9b59b6,#c080d8)",     color: "#fff" },
+  "Açıq Boz":        { bg: "linear-gradient(135deg,#999999,#bbbbbb)",     color: "#1a1a1a" },
+  "Şam Göbəyi":      { bg: "linear-gradient(135deg,#706000,#988000)",     color: "#fff8c0" },
+  "Şərabi":          { bg: "linear-gradient(135deg,#6e0e2e,#96183e)",     color: "#ffd0d8" },
+  "Açıq Filizi":     { bg: "linear-gradient(135deg,#50a040,#70c058)",     color: "#fff" },
+  "Nefti":           { bg: "linear-gradient(135deg,#004e5e,#007080)",     color: "#b0f0f8" },
+  "Kanarya":         { bg: "linear-gradient(135deg,#c8c000,#f0e800)",     color: "#222" },
+  "Portağal":        { bg: "linear-gradient(135deg,#d05000,#f07820)",     color: "#fff" },
+  "Zümrüd":          { bg: "linear-gradient(135deg,#006644,#009960)",     color: "#c0ffe8" },
+  "Petrol":          { bg: "linear-gradient(135deg,#003e58,#005878)",     color: "#a0d8f0" },
+  "Zeytuni":         { bg: "linear-gradient(135deg,#4a4a1e,#686830)",     color: "#e8e8a0" },
+  "Çivit Mavi":      { bg: "linear-gradient(135deg,#1e1870,#2e2898)",     color: "#c0c8ff" },
+  "Mor Göy":         { bg: "linear-gradient(135deg,#3c2272,#5830a0)",     color: "#e0d0ff" },
+  "Tünd Şərabi":     { bg: "linear-gradient(135deg,#3a0018,#580028)",     color: "#f0a0c0" },
+  "Tünd Əflatun":    { bg: "linear-gradient(135deg,#5800a0,#7800d0)",     color: "#f0d0ff" },
+  "Bənövşə":         { bg: "linear-gradient(135deg,#6600cc,#8822ee)",     color: "#f0d8ff" },
+  "Qızılı Sarı":     { bg: "linear-gradient(135deg,#9a6c00,#c89000)",     color: "#fff8d0" },
+  "Tünd Sarı":       { bg: "linear-gradient(135deg,#806000,#a08000)",     color: "#fffaaa" },
+  "Cins Mavisi":     { bg: "linear-gradient(135deg,#14325a,#204878)",     color: "#c0d8f8" },
+  "Orta Göy":        { bg: "linear-gradient(135deg,#1868a0,#2888c0)",     color: "#fff" },
+  "--------":        { bg: "linear-gradient(135deg,#2a2a2a,#404040)",     color: "#666" },
+  "Tünd Bej":        { bg: "linear-gradient(135deg,#887050,#a89070)",     color: "#fff8e8" },
+  "Açıq Qəhvəyi":    { bg: "linear-gradient(135deg,#b87840,#d0985a)",     color: "#fff" },
+  "Tünd Yaşıl":      { bg: "linear-gradient(135deg,#003300,#005500)",     color: "#a0f0a0" },
+  "Tünd Filizi":     { bg: "linear-gradient(135deg,#2c3c18,#3c5020)",     color: "#c8dca0" },
+  "Sabitləşdirici":  { bg: "linear-gradient(135deg,#7a5c10,#b08820)",     color: "#fff8c0" }
+};
+
+const grid = document.getElementById("grid");
+
+products.forEach(p => {
+  const name = p[0];
+  const slug = p[1];
+  const style = colorMap[name] || { bg: "linear-gradient(135deg,#333,#555)", color: "#fff" };
+
+  const a = document.createElement("a");
+  a.className = "btn";
+  a.href = "/" + slug;
+  a.textContent = name;
+  a.style.background = style.bg;
+  a.style.color = style.color;
+  grid.appendChild(a);
+});
+</script>
+
+</body>
+</html>
