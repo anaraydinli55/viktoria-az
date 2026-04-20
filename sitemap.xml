@@ -1,92 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- MAIN -->
-  <url>
-    <loc>https://viktoria-az.store/</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <!-- MAIN & CATALOG (AZ) -->
+  <url><loc>https://viktoria-az.store/</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://viktoria-az.store/catalog</loc><lastmod>2026-04-21</lastmod><changefreq>weekly</priority>0.9</priority></url>
+  <url><loc>https://viktoria-az.store/products</loc><lastmod>2026-04-21</lastmod><priority>0.9</priority></url>
 
-  <url>
-    <loc>https://viktoria-az.store/catalog</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-    <url>
-    <loc>https://viktoria-az.store/products</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://viktoria-az.store/dye-clothing-before-after</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://viktoria-az.store/catalog-1kg</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- CORE PAGES -->
-  <url>
-    <loc>https://viktoria-az.store/sprey1.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://viktoria-az.store/pitturafelice.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://viktoria-az.store/faq.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://viktoria-az.store/boyama-qaydalari.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://viktoria-az.store/reyler.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
-  <!-- BLOGS (CLEAN) -->
-  <url><loc>https://viktoria-az.store/paltarlarin-evde-renglenmesi</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/qara-sinka-paltar-uchun</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/geyim-ve-tekstil-boyasi</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltar-boyasi-hardan-almaq-olar</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltar-boyasi-online-sifaris</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/boyanin-istifade-qaydalari</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <!-- AZ BLOGS & GUIDES -->
+  <url><loc>https://viktoria-az.store/dye-clothing-before-after</loc><lastmod>2026-04-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/haqqimizda.html</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/faq.html</loc><lastmod>2026-04-21</lastmod><priority>0.8</priority></url>
   <url><loc>https://viktoria-az.store/qabda-boyama-telimati</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/boyanin-istifade-qaydalari</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltar-boyasi-online-sifaris</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltar-boyasi-hardan-almaq-olar</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/geyim-ve-tekstil-boyasi</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/qara-sinka-paltar-uchun</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltarlarin-evde-renglenmesi</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/parca-ucun-boyalar</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/bloq1-en.html</loc><lastmod>2026-04-21</lastmod><priority>0.6</priority></url>
 
-  <!-- RU CLEAN -->
+  <!-- RU VERSION & BLOGS -->
   <url><loc>https://viktoria-az.store/ru/</loc><lastmod>2026-04-21</lastmod><priority>0.9</priority></url>
   <url><loc>https://viktoria-az.store/ru/catalog</loc><lastmod>2026-04-21</lastmod><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/ru/faq.html</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/qabda-boyama-telimati</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/boyanin-istifade-qaydalari</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/geyim-ve-tekstil-boyasi</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/parca-ucun-boyalar.html</loc><lastmod>2026-04-21</lastmod><priority>0.7</priority></url>
+
+  <!-- PRODUCT COLORS (AZ URLS) -->
+  <url><loc>https://viktoria-az.store/viktoria-qara-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-goy-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-qirmizi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-yasil-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-sari-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-mavi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-qehveyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-qehveyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-cehrayi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-mavi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-orta-qehveyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-goy-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-orta-mavi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-gul-qurusu-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-bej-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-boz-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-xaki-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-mor-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-guvez-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-yaniq-qehveyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-narinci-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-fes-rengi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-yemis-rengi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-buz-mavisi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-yavruagzi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-cehrayi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-al-qirmizi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-atesi-cehrayi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-nar-ciceyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-qirmizi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-visne-curuyu-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-bej-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tutun-rengi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-mor-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-eflatun-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-boz-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-sam-gobeyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-serabi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-filizi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-nefti-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-kanarya-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-portagal-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-zumrud-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-petrol-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-zeytuni-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-civit-mavi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-mor-goy-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-serabi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-eflatun-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-benovse-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-qizili-sari-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-sari-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-cins-mavisi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-orta-goy-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-firuzeyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-bej-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-aciq-qehveyi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-yasil-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-tund-filizi-paltar-boyasi</loc><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/viktoria-sabitlesdirici-paltar-boyasi</loc><priority>0.8</priority></url>
 
 </urlset>
