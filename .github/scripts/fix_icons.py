@@ -92,7 +92,10 @@ for path in files:
     html = re.sub(r'@keyframes waPulse\s*\{[^}]*\}', '', html, flags=re.DOTALL)
 
     # 5. Yeni CSS ekle
+if '</style>' in html:
     html = html.replace('</style>', NEW_CSS_BLOCK + '\n  </style>', 1)
+else:
+    html = html.replace('</head>', '<style>' + NEW_CSS_BLOCK + '\n</style>\n</head>', 1)
 
     # 6. Yeni HTML+JS ekle
     html = html.replace('</body>', NEW_BLOCK + '\n</body>')
