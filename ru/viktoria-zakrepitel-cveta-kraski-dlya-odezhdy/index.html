@@ -239,6 +239,58 @@
       .product-grid img { width: 100%; }
       .card { padding: 18px; }
     }
+
+    /* ==============================
+   FLOATING BUTTONS
+============================== */
+.float-group {
+  position: fixed;
+  bottom: 22px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 8000;
+}
+.float-btn {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+}
+.float-btn:hover { transform: scale(1.12); }
+.float-wa {
+  background: linear-gradient(135deg, #25D366, #1cb554);
+  box-shadow: 0 4px 18px rgba(37,211,102,0.38);
+}
+.float-wa:hover { box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
+.float-music {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+  box-shadow: 0 4px 18px rgba(201,168,76,0.38);
+  opacity: 0;
+  transform: scale(0) translateY(10px);
+  pointer-events: none;
+  font-size: 22px;
+}
+.float-music.show {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+  pointer-events: all;
+}
+.float-music.playing { animation: musicPulse 1.8s ease-in-out infinite; }
+@keyframes musicPulse {
+  0%,100% { box-shadow: 0 4px 18px rgba(201,168,76,0.38); }
+  50% { box-shadow: 0 4px 30px rgba(201,168,76,0.75), 0 0 0 10px rgba(201,168,76,0.1); }
+}
+.float-btn svg { width: 25px; height: 25px; }
   
     /* WhatsApp float */
     .whatsapp-float{position:fixed;bottom:28px;right:28px;z-index:9999;display:flex;align-items:center;justify-content:center;background:#25D366;text-decoration:none;padding:14px;border-radius:50%;box-shadow:0 4px 20px rgba(37,211,102,0.45);transition:transform 0.2s ease,box-shadow 0.2s ease;animation:waPulse 2.5s ease-in-out infinite;}
