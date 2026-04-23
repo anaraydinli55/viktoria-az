@@ -114,11 +114,16 @@ def fix_html_body(html):
         '', html, flags=re.DOTALL
     )
 
-    # 2. Eski <a class="float-wa"...>...</a> anchor'ı sil (float-group dışındaki)
-    html = re.sub(
-        r'<a[^>]+class=["\']float-wa["\'][^>]*>.*?</a>',
-        '', html, flags=re.DOTALL
-    )
+# float-group dışındaki tüm float-wa anchor'larını sil
+html = re.sub(
+    r'<a[^>]+class=["\'][^"\']*float-wa[^"\']*["\'][^>]*>.*?</a>',
+    '', html, flags=re.DOTALL
+)
+# Eski whatsapp-float anchor (farklı class formatı)
+html = re.sub(
+    r'<a[^>]+(?:float-wa|whatsapp-float)[^>]*>.*?</a>',
+    '', html, flags=re.DOTALL
+)
 
     # 3. Eski whatsapp-float anchor'ı sil
     html = re.sub(
