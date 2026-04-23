@@ -90,11 +90,6 @@ for path in files:
     html = re.sub(r'/\*\s*FLOATING BUTTONS\s*\*/.*?(?=\n\s*</style>)', '', html, flags=re.DOTALL)
     html = re.sub(r'\.whatsapp-float[\w:> ]*\{[^}]*\}', '', html, flags=re.DOTALL)
     html = re.sub(r'@keyframes waPulse\s*\{[^}]*\}', '', html, flags=re.DOTALL)
-    # Kırık kalan eski CSS parçaları
-html = re.sub(r'\.wa-btn,\s*\.float-wa,\s*\n+\s*\.float-wa:hover.*?\}', '', html, flags=re.DOTALL)
-html = re.sub(r'\.float-wa\s+svg,\s*\.float-music\s+svg\s*\{[^}]*\}', '', html, flags=re.DOTALL)
-html = re.sub(r'50%\{box-shadow:[^}]*\}\}', '', html, flags=re.DOTALL)
-html = re.sub(r'\.wa-btn[^{]*\{[^}]*\}', '', html, flags=re.DOTALL)
 
     # 5. Yeni CSS ekle
 if '</style>' in html:
