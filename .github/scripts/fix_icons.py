@@ -42,10 +42,10 @@ MUSIC_CSS = """
 # ── Dosyaları bul ─────────────────────────────────────────────────────────────
 
 files = (
-    glob.glob("**/*dlya-odejdy*.html", recursive=True) +
-    glob.glob("**/*dlya-odezhdy*.html", recursive=True)
+    glob.glob("ru/*dlya-odejdy*/index.html") +
+    glob.glob("ru/*dlya-odezhdy*/index.html")
 )
-files = list(set(files))  # tekrar edenleri çıkar
+files = list(set(files))
 print(f"Bulunan dosya sayısı: {len(files)}")
 
 for path in files:
