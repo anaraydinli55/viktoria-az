@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Каталог красок Viktoria | 62 цвета | Краска для одежды</title>
-  <meta name="description" content="Каталог красок для одежды Viktoria — 62 цвета, 5 AZN. Для хлопка, шёлка, шерсти и смесовых тканей. Доставка по Баку и всему Азербайджану." />
+  <title>Каталог красок Viktoria | 60 цвета | Краска для одежды</title>
+  <meta name="description" content="Каталог красок для одежды Viktoria — 60 цвета, 5 AZN. Для хлопка, шёлка, шерсти и смесовых тканей. Доставка по Баку и всему Азербайджану." />
   <link rel="canonical" href="https://viktoria-az.store/ru/catalog" />
-  <meta property="og:title" content="Каталог красок Viktoria — 62 цвета" />
-  <meta property="og:description" content="62 цвета, 5 AZN. Для хлопка, шёлка, шерсти. Доставка по Азербайджану." />
+  <meta property="og:title" content="Каталог красок Viktoria — 60 цвета" />
+  <meta property="og:description" content="60 цвета, 5 AZN. Для хлопка, шёлка, шерсти. Доставка по Азербайджану." />
   <meta property="og:image" content="https://viktoria-az.store/images/og-image.jpg" />
   <meta property="og:url" content="https://viktoria-az.store/ru/catalog" />
   <meta property="og:type" content="website" />
@@ -67,7 +67,8 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
+      padding: 0 10px;
+      height: 56px;
       border-radius: 12px;
       text-decoration: none;
       font-weight: bold;
@@ -77,6 +78,7 @@
       border: none;
       cursor: pointer;
       line-height: 1.3;
+      word-break: break-word;
     }
     .btn:hover {
       transform: scale(1.05);
@@ -84,7 +86,7 @@
     }
     @media (max-width: 480px) {
       .grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
-      .btn { font-size: 11px; padding: 10px; }
+      .btn { font-size: 11px; padding: 0 6px; height: 50px; }
     }
 
     /* WhatsApp float */
@@ -121,7 +123,6 @@
 </div>
 
 <script>
-// [Rus adı, slug (eyni AZ URL-lər)]
 const products = [
   ["Чёрный",              "ru/viktoria-chernaya-kraska-dlya-odejdy"],
   ["Тёмно-синий",         "ru/viktoria-temno-sinyaya-kraska-dlya-odejdy"],
@@ -154,7 +155,7 @@ const products = [
   ["Цветок граната",      "ru/viktoria-tsvetok-granata-kraska-dlya-odejdy"],
   ["Тёмно-красный",       "ru/viktoria-temno-krasniy-kraska-dlya-odejdy"],
   ["Спелая вишня",        "ru/viktoria-vyshnevo-krasniy-kraska-dlya-odejdy"],
-  ["Светло бежевый",     "ru/viktoria-svetlo-bejeviy-kraska-dlya-odejdy"],
+  ["Светло бежевый",      "ru/viktoria-svetlo-bejeviy-kraska-dlya-odejdy"],
   ["Табачный",            "ru/viktoria-tabachniy-kraska-dlya-odejdy"],
   ["Тёмно-фиолетовый",    "ru/viktoria-temno-fioletovaya-kraska-dlya-odejdy"],
   ["Лавандовый",          "ru/viktoria-purpurniy-kraska-dlya-odejdy"],
@@ -178,13 +179,12 @@ const products = [
   ["Джинсовый",           "ru/iktoria-dzhinsovyy-siniy-kraska-dlya-odezhdy"],
   ["Средне-синий",        "ru/viktoria-sredne-siniy-kraska-dlya-odezhdy"],
   ["Бирюзовый",           "ru/viktoria-biryuzovaya-kraska-dlya-odezhdy"],
-  ["Темно-бежевый",      "ru/viktoria-temno-bej-kraska-dlya-odezhdy"],
+  ["Темно-бежевый",       "ru/viktoria-temno-bej-kraska-dlya-odezhdy"],
   ["Светло-коричневый",   "ru/viktoria-svetlo-korichnevaya-kraska-dlya-odezhdy"],
-  ["Темно-Зелёный",     "ru/viktoria-temno-zelyonaya-kraska-dlya-odezhdy"],
-  ["Темно-салатовый",         "ru/viktoria-temno-salatoviy-kraska-dlya-odezhdy"],
+  ["Темно-Зелёный",       "ru/viktoria-temno-zelyonaya-kraska-dlya-odezhdy"],
+  ["Темно-салатовый",     "ru/viktoria-temno-salatoviy-kraska-dlya-odezhdy"],
   ["Фиксатор",            "ru/viktoria-zakrepitel-cveta-kraski-dlya-odezhdy"]
 ];
-  
 
 const colorMap = {
   "Чёрный":             { bg: "linear-gradient(135deg,#1c1c1c,#3a3a3a)",   color: "#e0e0e0" },
@@ -218,7 +218,7 @@ const colorMap = {
   "Цветок граната":     { bg: "linear-gradient(135deg,#cc2200,#ee4410)",   color: "#fff" },
   "Тёмно-красный":      { bg: "linear-gradient(135deg,#6a0000,#990000)",   color: "#ffc0c0" },
   "Спелая вишня":       { bg: "linear-gradient(135deg,#35001a,#580030)",   color: "#e8a0c0" },
-  "Светло бежевый":    { bg: "linear-gradient(135deg,#dbc8a8,#ecdcc0)",   color: "#3a2800" },
+  "Светло бежевый":     { bg: "linear-gradient(135deg,#dbc8a8,#ecdcc0)",   color: "#3a2800" },
   "Табачный":           { bg: "linear-gradient(135deg,#6e5030,#907048)",   color: "#ffe8c0" },
   "Тёмно-фиолетовый":   { bg: "linear-gradient(135deg,#4b0082,#6800b8)",   color: "#e8c8ff" },
   "Лавандовый":         { bg: "linear-gradient(135deg,#9b59b6,#c080d8)",   color: "#fff" },
@@ -242,10 +242,10 @@ const colorMap = {
   "Джинсовый":          { bg: "linear-gradient(135deg,#14325a,#204878)",   color: "#c0d8f8" },
   "Средне-синий":       { bg: "linear-gradient(135deg,#1868a0,#2888c0)",   color: "#fff" },
   "Бирюзовый":          { bg: "linear-gradient(135deg,#00a8a8,#00d4d4)",   color: "#003838" },
-  "Темно-бежевый":     { bg: "linear-gradient(135deg,#887050,#a89070)",   color: "#fff8e8" },
+  "Темно-бежевый":      { bg: "linear-gradient(135deg,#887050,#a89070)",   color: "#fff8e8" },
   "Светло-коричневый":  { bg: "linear-gradient(135deg,#b87840,#d0985a)",   color: "#fff" },
-  "Темно-Зелёный":    { bg: "linear-gradient(135deg,#003300,#005500)",   color: "#a0f0a0" },
-  "Темно-салатовый":        { bg: "linear-gradient(135deg,#2c3c18,#3c5020)",   color: "#c8dca0" },
+  "Темно-Зелёный":      { bg: "linear-gradient(135deg,#003300,#005500)",   color: "#a0f0a0" },
+  "Темно-салатовый":    { bg: "linear-gradient(135deg,#2c3c18,#3c5020)",   color: "#c8dca0" },
   "Фиксатор":           { bg: "linear-gradient(135deg,#f0f0f0,#ffffff)",   color: "#444444" }
 };
 
