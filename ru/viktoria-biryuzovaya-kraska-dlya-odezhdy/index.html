@@ -134,6 +134,17 @@
 
   <style>
     :root {
+      --purple:      #4b0082;
+      --purple-dark: #2d004c;
+      --neon:        #c8972b;
+      --bg:          #f7f5f0;
+      --card:        #ffffff;
+      --border:      #d8d2c5;
+      --text:        #0d0d0d;
+      --muted:       #6b6b6b;
+      --radius:      22px;
+      --shadow:      0 4px 24px rgba(0,0,0,0.09);
+    }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -149,6 +160,11 @@
       position: sticky;
       top: 0;
       z-index: 99;
+      background: #4b0082;
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.12);
+      padding: 12px 16px;
+    }
 
     nav {
       max-width: 1100px;
@@ -206,6 +222,9 @@
       font-weight: 800;
       background: #ede9e0;
       border: 1px solid var(--border);
+      color: #4b0082;
+      margin-bottom: 12px;
+    }
 
     .btn {
       display: inline-block;
@@ -213,6 +232,11 @@
       border-radius: 14px;
       text-decoration: none;
       font-weight: 900;
+      background: linear-gradient(90deg, #4b0082, #6a1b9a);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(75,0,130,0.25);
+      transition: 0.2s;
+    }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(75,0,130,0.35); }
 
     .note { color: var(--muted); font-size: 14px; margin-top: 10px; }
@@ -225,6 +249,26 @@
       background: #ede9e0;
     }
     .faq-box strong { color: #0d0d0d; }
+
+    footer { text-align: center; padding: 26px 16px; font-size: 13px; color: rgba(255,255,255,0.60); background: #4b0082; }
+
+    .wa-btn {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      background: #25D366;
+      padding: 14px;
+      border-radius: 50%;
+      z-index: 999;
+      box-shadow: 0 10px 30px rgba(37,211,102,0.40);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.15s;
+    }
+    .wa-btn:hover { transform: scale(1.08); }
+    .wa-btn svg { width: 32px; height: 32px; fill: #fff; }
 
     @media (max-width: 520px) {
       h1 { font-size: 24px; }
@@ -239,6 +283,7 @@
     50%{box-shadow:0 4px 32px rgba(37,211,102,0.75);}}
   
     
+  /* ICONS-CSS-START */
     /* FLOATING BUTTONS */
     .float-group{position:fixed;bottom:22px;right:20px;display:flex;flex-direction:column;align-items:center;gap:12px;z-index:9999;}
     .float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;border:none;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 18px rgba(0,0,0,0.25);}
@@ -248,7 +293,8 @@
     .float-btn svg{width:30px;height:30px;fill:#fff;}
     .playing{animation:musicPulse 1.8s ease-in-out infinite;}
     @keyframes musicPulse{0%,100%{box-shadow:0 4px 18px rgba(75,0,130,0.38);}50%{box-shadow:0 4px 30px rgba(75,0,130,0.75);}}
-</style>
+    /* ICONS-CSS-END */
+  </style>
 </head>
 
 <body>
@@ -362,8 +408,7 @@
 
   
 
-  
-<!-- ICONS-START -->
+  <!-- ICONS-START -->
 <audio id="bgMusic" src="/music/musiqi.mpeg" preload="auto" loop></audio>
 <div class="float-group">
   <button id="musicBtn" class="float-btn float-music" aria-label="Play Music">
