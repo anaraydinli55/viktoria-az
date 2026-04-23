@@ -27,14 +27,6 @@
 
   <style>
     :root{
-      --purple:#4b0082;
-      --bg:#f7f5f0;
-      --card:#fff;
-      --border:#d8d2c5;
-      --text:#0d0d0d;
-      --radius:22px;
-      --shadow:0 4px 24px rgba(0,0,0,0.09);
-    }
 
     *{margin:0;padding:0;box-sizing:border-box;}
 
@@ -46,12 +38,6 @@
     }
 
     header{
-      background:#4b0082;
-      padding:12px;
-      position:sticky;
-      top:0;
-      z-index: 100;
-    }
 
     nav{
       display:flex;
@@ -122,13 +108,6 @@
     .btn{
       display:inline-block;
       padding:12px 20px;
-      background:#4b0082;
-      color:#fff;
-      border-radius:12px;
-      text-decoration:none;
-      font-weight: 700;
-      transition: 0.3s;
-    }
 
     .btn:hover {
       background: #2d004c;
@@ -141,9 +120,6 @@
     footer{
       text-align:center;
       padding:20px;
-      background:#4b0082;
-      color:#fff;
-    }
 
     @media (max-width: 600px) {
       .product-grid img { width: 100%; }
@@ -157,11 +133,7 @@
   
     
     
-    .float-music:hover{transform:scale(1.1);box-shadow:0 6px 24px rgba(75,0,130,0.7);}
-    .float-music svg{width:26px;height:26px;display:block;}
-  
     
-  /* ICONS-CSS-START */
     /* FLOATING BUTTONS */
     .float-group{position:fixed;bottom:22px;right:20px;display:flex;flex-direction:column;align-items:center;gap:12px;z-index:9999;}
     .float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;border:none;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 18px rgba(0,0,0,0.25);}
@@ -171,8 +143,7 @@
     .float-btn svg{width:30px;height:30px;fill:#fff;}
     .playing{animation:musicPulse 1.8s ease-in-out infinite;}
     @keyframes musicPulse{0%,100%{box-shadow:0 4px 18px rgba(75,0,130,0.38);}50%{box-shadow:0 4px 30px rgba(75,0,130,0.75);}}
-    /* ICONS-CSS-END */
-  </style>
+</style>
 </head>
 
 <body>
@@ -247,7 +218,8 @@
   © 2026 Viktoria AZ · Все права защищены
 </footer>
 
-  <!-- ICONS-START -->
+  
+<!-- ICONS-START -->
 <audio id="bgMusic" src="/music/musiqi.mpeg" preload="auto" loop></audio>
 <div class="float-group">
   <button id="musicBtn" class="float-btn float-music" aria-label="Play Music">
