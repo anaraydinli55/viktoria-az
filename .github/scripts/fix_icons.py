@@ -1,3 +1,10 @@
+import os
+for root, dirs, files_list in os.walk("."):
+    for f in files_list:
+        if f.endswith(".html"):
+            print(os.path.join(root, f))
+
+
 import os, re, glob
 
 # ── Doğru HTML blokları ──────────────────────────────────────────────────────
