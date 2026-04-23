@@ -43,28 +43,23 @@ CLEAN_FLOAT_CSS = """    /* FLOATING BUTTONS */
     .playing{animation:musicPulse 1.8s ease-in-out infinite;}
     @keyframes musicPulse{0%,100%{box-shadow:0 4px 18px rgba(75,0,130,0.38);}50%{box-shadow:0 4px 30px rgba(75,0,130,0.75);}}"""
 
+
 def fix_style(html):
-    """Style bloğundaki tüm icon CSS'ini temizleyip doğru olanı ekle."""
     m = re.search(r'(<style[^>]*>)(.*?)(</style>)', html, re.DOTALL)
     if not m:
-        # Style yok, head'e ekle
         return html.replace('</head>', '<style>\n' + CLEAN_FLOAT_CSS + '\n</style>\n</head>', 1)
 
     style_open, content, style_close = m.group(1), m.group(2), m.group(3)
 
-    # Satır satır tara, icon ile ilgili satırları çıkar
     bad_keywords = [
         'float-group', 'float-btn', 'float-wa', 'float-music',
         'whatsapp-float', 'waPulse', 'musicPulse', 'wa-btn',
         'ICONS-CSS', 'FLOATING BUTTONS', 'playing',
         '.playing', '25D366', '1cb554',
     ]
-    # Ayrıca kırık orphan satırları temizle
-    # "50%{box-shadow:..." gibi
     orphan_patterns = [
         r'^\s*50%\{box-shadow:[^}]*\}\}?\s*$',
         r'^\s*\.wa-btn\s*,\s*\.float-wa\s*,\s*$',
-        r'^\s*$',  # sadece boş satır — aşağıda kontrol edilecek
     ]
 
     lines = content.split('\n')
@@ -72,10 +67,7 @@ def fix_style(html):
     i = 0
     while i < len(lines):
         line = lines[i]
-        # Kötü keyword içeriyor mu?
         if any(kw in line for kw in bad_keywords):
-            # Bu satırı ve devamındaki bloğu atla
-            # Eğer { varsa kapanış } 'e kadar atla
             if '{' in line and '}' not in line:
                 depth = line.count('{') - line.count('}')
                 i += 1
@@ -86,9 +78,8 @@ def fix_style(html):
             else:
                 i += 1
                 continue
-        # Orphan satır mı?
         is_orphan = False
-        for pat in orphan_patterns[:2]:  # boş satır hariç
+        for pat in orphan_patterns:
             if re.match(pat, line):
                 is_orphan = True
                 break
@@ -98,34 +89,27 @@ def fix_style(html):
         clean.append(line)
         i += 1
 
-    # Fazla boş satırları temizle
     clean_content = re.sub(r'\n{3,}', '\n\n', '\n'.join(clean))
-
     new_style = style_open + clean_content + '\n' + CLEAN_FLOAT_CSS + '\n  ' + style_close
     return html[:m.start()] + new_style + html[m.end():]
 
 
 def fix_html_body(html):
-    """Body'deki eski icon HTML'lerini temizleyip doğruyu ekle."""
-
     # 1. ICONS marker arasını sil
     html = re.sub(
         re.escape(ICONS_START) + r'.*?' + re.escape(ICONS_END),
         '', html, flags=re.DOTALL
     )
 
-# float-group dışındaki tüm float-wa anchor'larını sil
-html = re.sub(
-    r'<a[^>]+class=["\'][^"\']*float-wa[^"\']*["\'][^>]*>.*?</a>',
-    '', html, flags=re.DOTALL
-)
-# Eski whatsapp-float anchor (farklı class formatı)
-html = re.sub(
-    r'<a[^>]+(?:float-wa|whatsapp-float)[^>]*>.*?</a>',
-    '', html, flags=re.DOTALL
-)
-
-    # 3. Eski whatsapp-float anchor'ı sil
+    # 2. Tüm standalone float-wa ve whatsapp-float anchor'larını sil
+    html = re.sub(
+        r'<a[^>]+class=["\'][^"\']*float-wa[^"\']*["\'][^>]*>.*?</a>',
+        '', html, flags=re.DOTALL
+    )
+    html = re.sub(
+        r'<a[^>]+(?:float-wa|whatsapp-float)[^>]*>.*?</a>',
+        '', html, flags=re.DOTALL
+    )
     html = re.sub(
         r'<!--\s*FLOATING WHATSAPP\s*-->.*?</a>',
         '', html, flags=re.DOTALL
@@ -135,8 +119,7 @@ html = re.sub(
         '', html, flags=re.DOTALL
     )
 
-    # 4. Eski float-group div'ini sil (içinde musicBtn var)
-    # Nested div'leri doğru saymak için manuel parse
+    # 3. Eski float-group div'ini sil (nested div sayarak)
     pattern = r'<div[^>]+class=["\']float-group["\'][^>]*>'
     while True:
         m = re.search(pattern, html)
@@ -158,23 +141,24 @@ html = re.sub(
                 pos = next_close + 6
         html = html[:start] + html[pos:]
 
-    # 5. Eski audio tag'ini sil
+    # 4. Eski audio tag'ini sil
     html = re.sub(r'<audio[^>]+bgMusic[^>]*>(?:.*?</audio>)?', '', html, flags=re.DOTALL)
     html = re.sub(r'<audio[^>]+bgMusic[^>]*/>', '', html, flags=re.DOTALL)
 
-    # 6. Eski müzik JS bloğunu sil
+    # 5. Eski müzik JS bloğunu sil
     html = re.sub(r'<script>\s*const music\s*=.*?</script>', '', html, flags=re.DOTALL)
 
-    # 7. Eski tek float-music button'ı sil
+    # 6. Eski tek float-music button'ı sil
     html = re.sub(r'<button[^>]+float-music[^>]*>.*?</button>', '', html, flags=re.DOTALL)
 
-    # 8. Eski yorum satırları
+    # 7. Eski yorum satırları
     html = re.sub(r'<!--\s*Music Button[^>]*-->', '', html, flags=re.DOTALL)
+    html = re.sub(r'<!--\s*WhatsApp Button\s*-->', '', html, flags=re.DOTALL)
 
-    # 9. Emoji
+    # 8. Emoji
     html = re.sub(r'[🎵🎶🔇]\s*', '', html)
 
-    # 10. Yeni bloğu </body> öncesine ekle
+    # 9. Yeni bloğu </body> öncesine ekle
     html = html.replace('</body>', NEW_HTML + '\n</body>')
 
     return html
@@ -204,4 +188,5 @@ for path in files:
         print(f"  ⏭  Değişiklik yok: {path}")
 
 print("Tamamlandı.")
+
 
