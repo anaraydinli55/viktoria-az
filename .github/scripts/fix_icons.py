@@ -1,11 +1,12 @@
 import re, glob
 
-# ── Markerlar ─────────────────────────────────────────────────────────────────
-ICONS_START = "<!-- ICONS-START -->"
-ICONS_END   = "<!-- ICONS-END -->"
+# ── Marker ───────────────────────────────────────────────────────────────────
+START = "<!-- ICONS-START -->"
+END   = "<!-- ICONS-END -->"
 
-# ── Temiz CSS (style bloğuna eklenecek) ───────────────────────────────────────
-CLEAN_CSS = """\n    /* FLOATING BUTTONS */
+# ── Doğru CSS ─────────────────────────────────────────────────────────────────
+NEW_CSS = """
+    /* FLOATING BUTTONS */
     .float-group{position:fixed;bottom:22px;right:20px;display:flex;flex-direction:column;align-items:center;gap:12px;z-index:9999;}
     .float-btn{width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;cursor:pointer;border:none;transition:all 0.3s cubic-bezier(0.34,1.56,0.64,1);box-shadow:0 4px 18px rgba(0,0,0,0.25);}
     .float-btn:hover{transform:scale(1.12);}
@@ -13,10 +14,10 @@ CLEAN_CSS = """\n    /* FLOATING BUTTONS */
     .float-music{background:#4b0082;}
     .float-btn svg{width:30px;height:30px;fill:#fff;}
     .playing{animation:musicPulse 1.8s ease-in-out infinite;}
-    @keyframes musicPulse{0%,100%{box-shadow:0 4px 18px rgba(75,0,130,0.38);}50%{box-shadow:0 4px 30px rgba(75,0,130,0.75);}}\n"""
+    @keyframes musicPulse{0%,100%{box-shadow:0 4px 18px rgba(75,0,130,0.38);}50%{box-shadow:0 4px 30px rgba(75,0,130,0.75);}}"""
 
-# ── HTML + JS bloğu ───────────────────────────────────────────────────────────
-NEW_HTML = ICONS_START + """
+# ── Doğru HTML + JS ───────────────────────────────────────────────────────────
+NEW_BLOCK = START + """
 <audio id="bgMusic" src="/music/musiqi.mpeg" preload="auto" loop></audio>
 <div class="float-group">
   <button id="musicBtn" class="float-btn float-music" aria-label="Play Music">
@@ -42,44 +43,12 @@ NEW_HTML = ICONS_START + """
   window.addEventListener("scroll", () => { if(!started) toggleMusic(); }, { once: true });
   musicBtn.addEventListener("click", toggleMusic);
 </script>
-""" + ICONS_END
+""" + END
 
-
-# ── Icon ile ilgili CSS satırlarını filtrele ──────────────────────────────────
-ICON_KEYWORDS = [
-    'float-group', 'float-btn', 'float-wa', 'float-music',
-    'whatsapp-float', 'waPulse', 'musicPulse', 'wa-btn',
-    'bgMusic', 'ICONS-CSS', 'FLOATING BUTTONS', 'playing',
-    # Kırık kalan parçalar
-    '25D366', '1cb554', '4b0082',
-]
-
-def clean_style_block(style_content):
-    """Style bloğundaki icon CSS'ini satır satır temizle."""
-    lines = style_content.split('\n')
-    clean_lines = []
-    skip = False
-    
-    for line in lines:
-        # Çok satırlı icon bloğu başlangıcı
-        if any(kw in line for kw in ICON_KEYWORDS):
-            skip = True
-        
-        # @keyframes waPulse veya musicPulse bloğu
-        if re.match(r'\s*@keyframes\s+(waPulse|musicPulse)', line):
-            skip = True
-        
-        if not skip:
-            clean_lines.append(line)
-        
-        # Blok bitti mi? (kapanış } veya boş satır sonrası)
-        if skip and (line.strip() == '}' or (line.strip() == '' and skip)):
-            skip = False
-    
-    # Birden fazla ardışık boş satırı temizle
-    result = re.sub(r'\n{3,}', '\n\n', '\n'.join(clean_lines))
-    return result
-
+# ── CSS marker ────────────────────────────────────────────────────────────────
+CSS_START = "/* ICONS-CSS-START */"
+CSS_END   = "/* ICONS-CSS-END */"
+NEW_CSS_BLOCK = CSS_START + NEW_CSS + "\n    " + CSS_END
 
 # ── Dosyaları bul ─────────────────────────────────────────────────────────────
 files = list(set(
@@ -93,40 +62,51 @@ for path in files:
         html = f.read()
     original = html
 
-    # ── 1. ICONS marker arasındaki HTML bloğunu sil ───────────────────────────
+    # 1. Marker arasındaki eski bloğu sil (varsa)
     html = re.sub(
-        re.escape(ICONS_START) + r'.*?' + re.escape(ICONS_END),
+        re.escape(START) + r'.*?' + re.escape(END),
         '', html, flags=re.DOTALL
     )
 
-    # ── 2. Markersız eski HTML yapılarını sil ────────────────────────────────
+    # 2. CSS marker arasındaki eski CSS'i sil (varsa)
+    html = re.sub(
+        re.escape(CSS_START) + r'.*?' + re.escape(CSS_END),
+        '', html, flags=re.DOTALL
+    )
+
+    # 3. Markersız eski yapıları temizle (ilk çalışmadan kalanlar)
     html = re.sub(r'<!--\s*FLOATING WHATSAPP\s*-->.*?</a>', '', html, flags=re.DOTALL)
-    html = re.sub(r'<!--\s*Music Button.*?-->', '', html, flags=re.DOTALL)
     html = re.sub(r'<a[^>]+class=["\']whatsapp-float["\'][^>]*>.*?</a>', '', html, flags=re.DOTALL)
     html = re.sub(r'<button[^>]+float-music[^>]*>.*?</button>', '', html, flags=re.DOTALL)
     html = re.sub(r'<audio[^>]+bgMusic[^>]*>(?:.*?</audio>)?', '', html, flags=re.DOTALL)
     html = re.sub(r'<script>\s*const music\s*=.*?</script>', '', html, flags=re.DOTALL)
+    # float-group: markersız olan (içinde musicBtn ve float-wa var)
+    html = re.sub(r'<div[^>]+float-group[^>]*>.*?(?:musicBtn|float-wa).*?</div>\s*(?:<script>.*?</script>)?', '', html, flags=re.DOTALL)
     html = re.sub(r'[🎵🎶🔇]\s*', '', html)
 
-    # ── 3. Style bloğunu bul ve icon CSS'ini temizle ──────────────────────────
-    style_match = re.search(r'(<style[^>]*>)(.*?)(</style>)', html, flags=re.DOTALL)
-    if style_match:
-        style_open    = style_match.group(1)
-        style_content = style_match.group(2)
-        style_close   = style_match.group(3)
-        
-        clean_content = clean_style_block(style_content)
-        new_style = style_open + clean_content + CLEAN_CSS + style_close
-        html = html[:style_match.start()] + new_style + html[style_match.end():]
-    else:
-        # Style bloğu yoksa head'e ekle
-        html = html.replace('</head>', '<style>' + CLEAN_CSS + '</style>\n</head>', 1)
+    # 4. Eski CSS temizle
+    html = re.sub(r'/\*\s*WhatsApp float\s*\*/.*?(?=\n\s*@|\n\s*\.|\n\s*</style>)', '', html, flags=re.DOTALL)
+    html = re.sub(r'/\*\s*Music float\s*\*/.*?(?=\n\s*@|\n\s*\.|\n\s*</style>)', '', html, flags=re.DOTALL)
+    html = re.sub(r'/\*\s*FLOATING BUTTONS\s*\*/.*?(?=\n\s*</style>)', '', html, flags=re.DOTALL)
+    html = re.sub(r'\.whatsapp-float[\w:> ]*\{[^}]*\}', '', html, flags=re.DOTALL)
+    html = re.sub(r'@keyframes waPulse\s*\{[^}]*\}', '', html, flags=re.DOTALL)
+    # Kırık kalan eski CSS parçaları
+html = re.sub(r'\.wa-btn,\s*\.float-wa,\s*\n+\s*\.float-wa:hover.*?\}', '', html, flags=re.DOTALL)
+html = re.sub(r'\.float-wa\s+svg,\s*\.float-music\s+svg\s*\{[^}]*\}', '', html, flags=re.DOTALL)
+html = re.sub(r'50%\{box-shadow:[^}]*\}\}', '', html, flags=re.DOTALL)
+html = re.sub(r'\.wa-btn[^{]*\{[^}]*\}', '', html, flags=re.DOTALL)
 
-    # ── 4. HTML + JS bloğunu </body> öncesine ekle ───────────────────────────
-    html = html.replace('</body>', NEW_HTML + '\n</body>')
+    # 5. Yeni CSS ekle
+if '</style>' in html:
+    html = html.replace('</style>', NEW_CSS_BLOCK + '\n  </style>', 1)
+else:
+    html = html.replace('</head>', '<style>' + NEW_CSS_BLOCK + '\n</style>\n</head>', 1)
 
-    # ── 5. Boş satır temizliği ────────────────────────────────────────────────
-    html = re.sub(r'\n{4,}', '\n\n', html)
+    # 6. Yeni HTML+JS ekle
+    html = html.replace('</body>', NEW_BLOCK + '\n</body>')
+
+    # 7. Boş satır temizliği
+    html = re.sub(r'\n{3,}', '\n\n', html)
 
     if html != original:
         with open(path, "w", encoding="utf-8") as f:
@@ -136,6 +116,5 @@ for path in files:
         print(f"  ⏭  Değişiklik yok: {path}")
 
 print("Tamamlandı.")
-
 
 
