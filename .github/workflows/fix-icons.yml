@@ -12,6 +12,9 @@ jobs:
  
       - name: Apply icons to all dlya-odejdy pages
         run: python3 .github/scripts/fix_icons.py
+
+        - name: Fix AZ WhatsApp icons
+        run: python3 .github/scripts/fix_az_icons.py
  
       - name: Commit changes
         run: |
