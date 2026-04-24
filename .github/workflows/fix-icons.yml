@@ -1,25 +1,24 @@
-name: Fix WhatsApp & Music Icons
- 
+name: Fix AZ WhatsApp Icons
+
 on:
   workflow_dispatch:
- 
+
+permissions:
+  contents: write
+
 jobs:
-  fix-icons:
+  fix-az-icons:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
- 
-      - name: Apply icons to all dlya-odejdy pages
-        run: python3 .github/scripts/fix_icons.py
+      - uses: actions/checkout@v4
 
-        - name: Fix AZ WhatsApp icons
+      - name: Fix AZ WhatsApp icons
         run: python3 .github/scripts/fix_az_icons.py
- 
+
       - name: Commit changes
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add ru/
-          git diff --cached --quiet || git commit -m "fix: WhatsApp & music icons on all dlya-odejdy pages"
+          git add .
+          git diff --cached --quiet || git commit -m "fix: remove duplicate WhatsApp icon from AZ pages"
           git push
