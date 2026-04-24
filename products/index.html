@@ -3,74 +3,166 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Viktoria Paltar Boyaları Kataloq</title>
-  <meta name="description" content="Viktoria paltar boyası kataloqu." />
+  <title>Viktoria Paltar Boyaları — Kataloq</title>
+  <meta name="description" content="Viktoria paltar boyası kataloqu — 60 rəng seçimi, cəmi 5 AZN. Bakı və bütün Azərbaycana çatdırılma." />
+  
   <style>
+    :root {
+      --purple: #4b0082;
+      --bg: #0b0713;
+      --card: #161122;
+      --text: #ffffff;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0713;
+      font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+    }
+
+    /* Navigation */
+    header {
+      background: var(--purple);
+      padding: 10px 16px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    nav {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    nav a {
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 13px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      transition: 0.2s;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
       color: #fff;
     }
-    header {
+
+    /* Content */
+    h1 {
       text-align: center;
-      padding: 18px;
-      font-size: 22px;
-      font-weight: bold;
+      padding: 30px 16px 10px;
+      font-size: clamp(20px, 5vw, 28px);
+      color: #e8d0ff;
     }
+
     .container {
       max-width: 1100px;
       margin: auto;
-      padding: 20px;
+      padding: 10px 20px 80px;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 10px;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 12px;
     }
+
     .btn {
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 12px;
-      border-radius: 12px;
+      height: 60px;
+      padding: 5px 10px;
+      border-radius: 14px;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.2s;
+      font-weight: 700;
+      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       font-size: 13px;
       text-align: center;
-      border: none;
+      border: 1px solid rgba(255,255,255,0.1);
       cursor: pointer;
+      line-height: 1.2;
     }
+
     .btn:hover {
-      transform: scale(1.05);
-      filter: brightness(1.15);
+      transform: translateY(-4px) scale(1.02);
+      filter: brightness(1.2);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
     }
+
+    /* WhatsApp Float */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      z-index: 10000;
+      background: #25D366;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+      transition: 0.3s;
+      animation: waPulse 2s infinite;
+    }
+
+    .whatsapp-float:hover { transform: scale(1.1); }
+
+    .whatsapp-float svg { width: 35px; height: 35px; fill: #fff; }
+
+    @keyframes waPulse {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
     @media (max-width: 480px) {
-      .grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 8px;
-      }
-      .btn {
-        font-size: 11px;
-        padding: 10px;
-      }
+      .grid { grid-template-columns: repeat(3, 1fr); gap: 8px; }
+      .btn { font-size: 11px; height: 55px; border-radius: 10px; }
+      nav a { font-size: 12px; padding: 5px 8px; }
     }
   </style>
 </head>
 <body>
 
-  <header>
+<!-- WhatsApp Float Icon -->
+<a href="https://wa.me/994554828424?text=Salam!%20Viktoria%20boyası%20sifariş%20etmək%20istəyirəm" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 48 48"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/></svg>
+</a>
+
+<header>
   <nav>
     <a href="/">Ana Səhifə</a>
     <a href="/catalog">Kataloq</a>
-    <a href="/boyama-qaydalari.html">Инструкция</a>
-    <a href="https://wa.me/994554828424?text=Salam!%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm">WhatsApp</a>
-    <a href="https://viktoria-az.store/ru/products">🇷🇺 RU</a>
+    <a href="/boyama-qaydalari.html">Təlimat</a>
+    <a href="https://wa.me/994554828424">WhatsApp</a>
+    <a href="/ru/catalog">
+      <svg width="18" height="12" viewBox="0 0 900 600">
+        <rect width="900" height="600" fill="#fff"/>
+        <rect width="900" height="400" y="200" fill="#0039a6"/>
+        <rect width="900" height="200" y="400" fill="#d52b1e"/>
+      </svg> RU
+    </a>
   </nav>
 </header>
 
-<header>Viktoria Paltar Boyaları</header>
+<h1>Viktoria — Rəng Kataloqu</h1>
 
 <div class="container">
   <div class="grid" id="grid"></div>
@@ -86,48 +178,48 @@ const products = [
   ["Tünd Mavi",          "viktoria-tund-mavi-paltar-boyasi"],
   ["Qəhvəyi",            "viktoria-qehveyi-paltar-boyasi"],
   ["Tünd Qəhvəyi",       "viktoria-tund-qehveyi-paltar-boyasi"],
-  ["Cəhrayı",            "viktoria-cehrayi-paltar-boyasi"],
+  ["Çəhrayı",            "viktoria-cehrayi-paltar-boyasi"],
   ["Açıq Mavi",          "viktoria-aciq-mavi-paltar-boyasi"],
   ["Orta Qəhvəyi",       "viktoria-orta-qehveyi-paltar-boyasi"],
-  ["Açıq Göy",           "viktoria-aciq-goy-paltar-boyasi"],
-  ["Mavi Orta",          "viktoria-orta-mavi-paltar-boyasi"],
+  ["Göy",                "viktoria-goy-paltar-boyasi"],
+  ["Orta Mavi",          "viktoria-orta-mavi-paltar-boyasi"],
   ["Gül Qurusu",         "viktoria-gul-qurusu-paltar-boyasi"],
   ["Bej",                "viktoria-bej-paltar-boyasi"],
   ["Tünd Boz",           "viktoria-tund-boz-paltar-boyasi"],
   ["Xaki",               "viktoria-xaki-paltar-boyasi"],
-  ["Açıq Mor",           "viktoria-aciq-mor-paltar-boyasi"],
-  ["Güvəz",              "viktoria-guvez-paltar-boyasi"],
-  ["Yanıq Qəhvəyi",      "viktoria-yaniq-qehveyi-paltar-boyasi"],
+  ["Açıq Bənövşəyi",     "viktoria-aciq-benovseyi-paltar-boyasi"],
+  ["Bordo",              "viktoria-bordo-paltar-boyasi"],
+  ["Yanmış Qəhvəyi",     "viktoria-yanmis-qehveyi-paltar-boyasi"],
   ["Narıncı",            "viktoria-narinci-paltar-boyasi"],
-  ["Açıq Bordovu",        "viktoria-bordoviy-paltar-boyasi"],
+  ["Şərabı Qırmızı",     "viktoria-serabi-qirmizi-paltar-boyasi"],
   ["Yemiş Rəngi",        "viktoria-yemis-rengi-paltar-boyasi"],
   ["Buz Mavisi",         "viktoria-buz-mavisi-paltar-boyasi"],
-  ["Yavruağzı",          "viktoria-yavruagzi-paltar-boyasi"],
+  ["Şaftalı",            "viktoria-saftali-paltar-boyasi"],
   ["Tünd Çəhrayı",       "viktoria-tund-cehrayi-paltar-boyasi"],
   ["Al Qırmızı",         "viktoria-al-qirmizi-paltar-boyasi"],
-  ["Atəşi Çəhrayı",      "viktoria-atesi-cehrayi-paltar-boyasi"],
+  ["Atəş Çəhrayı",       "viktoria-ates-cehrayi-paltar-boyasi"],
   ["Nar Çiçəyi",         "viktoria-nar-ciceyi-paltar-boyasi"],
   ["Tünd Qırmızı",       "viktoria-tund-qirmizi-paltar-boyasi"],
-  ["Vişnə Çürüyü",       "viktoria-visne-curuyu-paltar-boyasi"],
+  ["Gilas",              "viktoria-gilas-rengi-paltar-boyasi"],
   ["Açıq Bej",           "viktoria-aciq-bej-paltar-boyasi"],
   ["Tütün Rəngi",        "viktoria-tutun-rengi-paltar-boyasi"],
-  ["Tünd Mor",           "viktoria-tund-mor-paltar-boyasi"],
-  ["Əflatun",            "viktoria-eflatun-paltar-boyasi"],
+  ["Tünd Bənövşəyi",     "viktoria-tund-benovseyi-paltar-boyasi"],
+  ["Lavanda",            "viktoria-lavanda-paltar-boyasi"],
   ["Açıq Boz",           "viktoria-aciq-boz-paltar-boyasi"],
-  ["Şam Göbəyi",         "viktoria-sam-gobeyi-paltar-boyasi"],
-  ["Şərabi",             "viktoria-serabi-paltar-boyasi"],
-  ["Açıq Filizi",        "viktoria-aciq-filizi-paltar-boyasi"],
-  ["Nefti",              "viktoria-nefti-paltar-boyasi"],
-  ["Kanarya",            "viktoria-kanarya-paltar-boyasi"],
+  ["Dəniz Dalğası",      "viktoria-deniz-dalgasi-paltar-boyasi"],
+  ["Marsala",            "viktoria-marsala-paltar-boyasi"],
+  ["Açıq Salat",         "viktoria-aciq-salat-paltar-boyasi"],
+  ["Neft Rəngi",         "viktoria-neft-rengi-paltar-boyasi"],
+  ["Kanareyka",          "viktoria-kanareyka-paltar-boyasi"],
   ["Portağal",           "viktoria-portagal-paltar-boyasi"],
   ["Zümrüd",             "viktoria-zumrud-paltar-boyasi"],
   ["Petrol",             "viktoria-petrol-paltar-boyasi"],
-  ["Zeytuni",            "viktoria-zeytuni-paltar-boyasi"],
-  ["Çivit Mavi",         "viktoria-civit-mavi-paltar-boyasi"],
-  ["Mor Göy",            "viktoria-mor-goy-paltar-boyasi"],
-  ["Tünd Şərabi",        "viktoria-tund-serabi-paltar-boyasi"],
-  ["Tünd Əflatun",       "viktoria-tund-eflatun-paltar-boyasi"],
-  ["Bənövşə",            "viktoria-benovse-paltar-boyasi"],
+  ["Zeytun",             "viktoria-zeytun-paltar-boyasi"],
+  ["İndiqo",             "viktoria-indiqo-paltar-boyasi"],
+  ["Göy Bənövşəyi",      "viktoria-goy-benovseyi-paltar-boyasi"],
+  ["Tünd Marsala",       "viktoria-tund-marsala-paltar-boyasi"],
+  ["Tünd Lavanda",       "viktoria-tund-lavanda-paltar-boyasi"],
+  ["Bənövşəyi",          "viktoria-benovseyi-paltar-boyasi"],
   ["Qızılı Sarı",        "viktoria-qizili-sari-paltar-boyasi"],
   ["Tünd Sarı",          "viktoria-tund-sari-paltar-boyasi"],
   ["Cins Mavisi",        "viktoria-cins-mavisi-paltar-boyasi"],
@@ -136,11 +228,10 @@ const products = [
   ["Tünd Bej",           "viktoria-tund-bej-paltar-boyasi"],
   ["Açıq Qəhvəyi",       "viktoria-aciq-qehveyi-paltar-boyasi"],
   ["Tünd Yaşıl",         "viktoria-tund-yasil-paltar-boyasi"],
-  ["Tünd Filizi",        "viktoria-tund-filizi-paltar-boyasi"],
-  ["Sabitləşdirici",     "viktoria-sabitlesdirici-paltar-boyasi"]
+  ["Tünd Salat",         "viktoria-tund-salat-paltar-boyasi"],
+  ["Sabitləyici",        "viktoria-sabitleyici-paltar-boyasi"]
 ];
 
-// bg: gradient, color: text color
 const colorMap = {
   "Qara":            { bg: "linear-gradient(135deg,#1c1c1c,#3a3a3a)",     color: "#e0e0e0" },
   "Tünd Göy":        { bg: "linear-gradient(135deg,#002a5c,#004488)",     color: "#fff" },
@@ -150,48 +241,48 @@ const colorMap = {
   "Tünd Mavi":       { bg: "linear-gradient(135deg,#00008b,#0000cc)",     color: "#cce0ff" },
   "Qəhvəyi":         { bg: "linear-gradient(135deg,#5c3317,#8b4513)",     color: "#f5dcc8" },
   "Tünd Qəhvəyi":    { bg: "linear-gradient(135deg,#2e1007,#4a2210)",     color: "#d4aa88" },
-  "Cəhrayı":         { bg: "linear-gradient(135deg,#e05580,#ff7faa)",     color: "#fff" },
+  "Çəhrayı":         { bg: "linear-gradient(135deg,#e05580,#ff7faa)",     color: "#fff" },
   "Açıq Mavi":       { bg: "linear-gradient(135deg,#3a90d0,#70bce8)",     color: "#fff" },
   "Orta Qəhvəyi":    { bg: "linear-gradient(135deg,#7b4a28,#a0622d)",     color: "#f5dcc8" },
-  "Açıq Göy":        { bg: "linear-gradient(135deg,#4a82b8,#7ab0da)",     color: "#fff" },
-  "Mavi Orta":       { bg: "linear-gradient(135deg,#1055a0,#2272cc)",     color: "#fff" },
+  "Göy":             { bg: "linear-gradient(135deg,#4a82b8,#7ab0da)",     color: "#fff" },
+  "Orta Mavi":       { bg: "linear-gradient(135deg,#1055a0,#2272cc)",     color: "#fff" },
   "Gül Qurusu":      { bg: "linear-gradient(135deg,#c28880,#d8a898)",     color: "#3a1000" },
   "Bej":             { bg: "linear-gradient(135deg,#c4a070,#d8b888)",     color: "#3a2800" },
   "Tünd Boz":        { bg: "linear-gradient(135deg,#3a3a3a,#5a5a5a)",     color: "#e0e0e0" },
   "Xaki":            { bg: "linear-gradient(135deg,#8b7355,#a89060)",     color: "#fff" },
-  "Açıq Mor":        { bg: "linear-gradient(135deg,#8855bb,#aa77dd)",     color: "#fff" },
-  "Güvəz":           { bg: "linear-gradient(135deg,#880044,#aa0066)",     color: "#ffd0e8" },
-  "Yanıq Qəhvəyi":   { bg: "linear-gradient(135deg,#5c2800,#7a3c10)",     color: "#f0c8a0" },
+  "Açıq Bənövşəyi":  { bg: "linear-gradient(135deg,#8855bb,#aa77dd)",     color: "#fff" },
+  "Bordo":           { bg: "linear-gradient(135deg,#880044,#aa0066)",     color: "#ffd0e8" },
+  "Yanmış Qəhvəyi":  { bg: "linear-gradient(135deg,#5c2800,#7a3c10)",     color: "#f0c8a0" },
   "Narıncı":         { bg: "linear-gradient(135deg,#c84400,#f06820)",     color: "#fff" },
-  "Açıq Bordovu":    { bg: "linear-gradient(135deg,#7a1010,#aa2020)",     color: "#ffd0c0" },
+  "Şərabı Qırmızı":  { bg: "linear-gradient(135deg,#7a1010,#aa2020)",     color: "#ffd0c0" },
   "Yemiş Rəngi":     { bg: "linear-gradient(135deg,#b06030,#d08040)",     color: "#fff" },
   "Buz Mavisi":      { bg: "linear-gradient(135deg,#88c8e8,#b8dff0)",     color: "#002244" },
-  "Yavruağzı":       { bg: "linear-gradient(135deg,#f0907a,#f8b8a8)",     color: "#3a1000" },
+  "Şaftalı":         { bg: "linear-gradient(135deg,#f0907a,#f8b8a8)",     color: "#3a1000" },
   "Tünd Çəhrayı":    { bg: "linear-gradient(135deg,#b0006a,#d80088)",     color: "#fff" },
   "Al Qırmızı":      { bg: "linear-gradient(135deg,#cc0000,#ff2222)",     color: "#fff" },
-  "Atəşi Çəhrayı":   { bg: "linear-gradient(135deg,#ee0077,#ff44bb)",     color: "#fff" },
+  "Atəş Çəhrayı":    { bg: "linear-gradient(135deg,#ee0077,#ff44bb)",     color: "#fff" },
   "Nar Çiçəyi":      { bg: "linear-gradient(135deg,#cc2200,#ee4410)",     color: "#fff" },
   "Tünd Qırmızı":    { bg: "linear-gradient(135deg,#6a0000,#990000)",     color: "#ffc0c0" },
-  "Vişnə Çürüyü":    { bg: "linear-gradient(135deg,#35001a,#580030)",     color: "#e8a0c0" },
+  "Gilas":           { bg: "linear-gradient(135deg,#35001a,#580030)",     color: "#e8a0c0" },
   "Açıq Bej":        { bg: "linear-gradient(135deg,#dbc8a8,#ecdcc0)",     color: "#3a2800" },
   "Tütün Rəngi":     { bg: "linear-gradient(135deg,#6e5030,#907048)",     color: "#ffe8c0" },
-  "Tünd Mor":        { bg: "linear-gradient(135deg,#4b0082,#6800b8)",     color: "#e8c8ff" },
-  "Əflatun":         { bg: "linear-gradient(135deg,#9b59b6,#c080d8)",     color: "#fff" },
+  "Tünd Bənövşəyi":  { bg: "linear-gradient(135deg,#4b0082,#6800b8)",     color: "#e8c8ff" },
+  "Lavanda":         { bg: "linear-gradient(135deg,#9b59b6,#c080d8)",     color: "#fff" },
   "Açıq Boz":        { bg: "linear-gradient(135deg,#999999,#bbbbbb)",     color: "#1a1a1a" },
-  "Şam Göbəyi":      { bg: "linear-gradient(135deg, #008B8B, #00CED1)",   color: "#e0d0ff" },
-  "Şərabi":          { bg: "linear-gradient(135deg,#6e0e2e,#96183e)",     color: "#ffd0d8" },
-  "Açıq Filizi":     { bg: "linear-gradient(135deg,#50a040,#70c058)",     color: "#fff" },
-  "Nefti":           { bg: "linear-gradient(135deg,#004e5e,#007080)",     color: "#b0f0f8" },
-  "Kanarya":         { bg: "linear-gradient(135deg,#c8c000,#f0e800)",     color: "#222" },
+  "Dəniz Dalğası":   { bg: "linear-gradient(135deg, #008B8B, #00CED1)",   color: "#fff" },
+  "Marsala":         { bg: "linear-gradient(135deg,#6e0e2e,#96183e)",     color: "#ffd0d8" },
+  "Açıq Salat":      { bg: "linear-gradient(135deg,#50a040,#70c058)",     color: "#fff" },
+  "Neft Rəngi":      { bg: "linear-gradient(135deg,#004e5e,#007080)",     color: "#b0f0f8" },
+  "Kanareyka":       { bg: "linear-gradient(135deg,#c8c000,#f0e800)",     color: "#222" },
   "Portağal":        { bg: "linear-gradient(135deg,#d05000,#f07820)",     color: "#fff" },
   "Zümrüd":          { bg: "linear-gradient(135deg,#006644,#009960)",     color: "#c0ffe8" },
   "Petrol":          { bg: "linear-gradient(135deg,#003e58,#005878)",     color: "#a0d8f0" },
-  "Zeytuni":         { bg: "linear-gradient(135deg,#4a4a1e,#686830)",     color: "#e8e8a0" },
-  "Çivit Mavi":      { bg: "linear-gradient(135deg,#1e1870,#2e2898)",     color: "#c0c8ff" },
-  "Mor Göy":         { bg: "linear-gradient(135deg,#3c2272,#5830a0)",     color: "#e0d0ff" },
-  "Tünd Şərabi":     { bg: "linear-gradient(135deg,#3a0018,#580028)",     color: "#f0a0c0" },
-  "Tünd Əflatun":    { bg: "linear-gradient(135deg,#5800a0,#7800d0)",     color: "#f0d0ff" },
-  "Bənövşə":         { bg: "linear-gradient(135deg,#6600cc,#8822ee)",     color: "#f0d8ff" },
+  "Zeytun":          { bg: "linear-gradient(135deg,#4a4a1e,#686830)",     color: "#e8e8a0" },
+  "İndiqo":          { bg: "linear-gradient(135deg,#1e1870,#2e2898)",     color: "#c0c8ff" },
+  "Göy Bənövşəyi":   { bg: "linear-gradient(135deg,#3c2272,#5830a0)",     color: "#e0d0ff" },
+  "Tünd Marsala":    { bg: "linear-gradient(135deg,#3a0018,#580028)",     color: "#f0a0c0" },
+  "Tünd Lavanda":    { bg: "linear-gradient(135deg,#5800a0,#7800d0)",     color: "#f0d0ff" },
+  "Bənövşəyi":       { bg: "linear-gradient(135deg,#6600cc,#8822ee)",     color: "#f0d8ff" },
   "Qızılı Sarı":     { bg: "linear-gradient(135deg,#d4a000,#f0c000)",     color: "#222" },
   "Tünd Sarı":       { bg: "linear-gradient(135deg,#c4a000,#e0bc00)",     color: "#222" },
   "Cins Mavisi":     { bg: "linear-gradient(135deg,#14325a,#204878)",     color: "#c0d8f8" },
@@ -200,9 +291,8 @@ const colorMap = {
   "Tünd Bej":        { bg: "linear-gradient(135deg,#887050,#a89070)",     color: "#fff8e8" },
   "Açıq Qəhvəyi":    { bg: "linear-gradient(135deg,#b87840,#d0985a)",     color: "#fff" },
   "Tünd Yaşıl":      { bg: "linear-gradient(135deg,#003300,#005500)",     color: "#a0f0a0" },
-  "Tünd Filizi":     { bg: "linear-gradient(135deg,#2c3c18,#3c5020)",     color: "#c8dca0" },
-  "Sabitləşdirici":  { bg: "linear-gradient(135deg,#f0f0f0,#ffffff)",     color: "#444444" }
-
+  "Tünd Salat":      { bg: "linear-gradient(135deg,#2c3c18,#3c5020)",     color: "#c8dca0" },
+  "Sabitləyici":     { bg: "linear-gradient(135deg,#f0f0f0,#ffffff)",     color: "#444" }
 };
 
 const grid = document.getElementById("grid");
