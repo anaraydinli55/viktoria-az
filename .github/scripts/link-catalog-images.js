@@ -68,7 +68,7 @@ function buildProductMap(scanDir, urlPrefix, keyword) {
 // Köməkçi: catalog faylını xəritəyə əsasən yenilə
 // ─────────────────────────────────────────────────────────────────────────────
 function processCatalog(catalogFile, productMap, label) {
-  console.log(\n  [${label}] ${catalogFile} islenilir...);
+ console.log(`\n  [${label}] ${catalogFile} islenilir...`);
 
   if (!fs.existsSync(catalogFile)) {
     console.warn(`  [!] Fayl tapilmadi: ${catalogFile}`);
