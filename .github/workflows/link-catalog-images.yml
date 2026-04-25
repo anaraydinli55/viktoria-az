@@ -1,0 +1,28 @@
+name: Link Catalog Images
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  link-images:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Install cheerio
+        run: npm install cheerio
+
+      - name: Run link script
+        run: node .github/scripts/link-catalog-images.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add catalog/index.html ru/catalog/index.html
+          git diff --cached --quiet || git commit -m "feat: link catalog images to product pages"
+          git push
