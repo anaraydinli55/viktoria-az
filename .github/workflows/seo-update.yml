@@ -1,0 +1,28 @@
+name: SEO Auto-Optimizer
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  optimize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Script
+        run: node scripts/update-pages.js
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "SEO Bot"
+          git config --global user.email "seo-bot@viktoria-az.store"
+          git add .
+          git commit -m "SEO: Meta, Canonical and Intro updated for 120 pages" || exit 0
+          git push
