@@ -105,7 +105,7 @@ function processCatalog(catalogFile, productMap, label) {
       console.log(`      yeni : ${productUrl}`);
       updated++;
     } else {
-      $c(el).wrap(<a href="${productUrl}" style="display:contents;"></a>);
+$c(el).wrap(`<a href="${productUrl}" style="display:contents;"></a>`);
       console.log(`    Sarildi: ${filename}  -->  ${productUrl}`);
       wrapped++;
     }
