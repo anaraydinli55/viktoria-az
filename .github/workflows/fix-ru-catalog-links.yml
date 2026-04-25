@@ -1,0 +1,25 @@
+name: Fix RU Catalog Links
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  fix-ru-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Fix RU catalog image links
+        run: python3 .github/scripts/fix_ru_catalog_links.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ru/catalog/index.html
+          git diff --cached --quiet || git commit -m "fix: link RU catalog images to product pages"
+          git push
