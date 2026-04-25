@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 
-// --- 120 RƏNGİN TAM SİYAHISI ---
 const productsAz = [
     ["Qara", "viktoria-qara-paltar-boyasi"], ["Tünd Göy", "viktoria-tund-goy-paltar-boyasi"], ["Qırmızı", "viktoria-qirmizi-paltar-boyasi"], ["Yaşıl", "viktoria-yasil-paltar-boyasi"], ["Sarı", "viktoria-sari-paltar-boyasi"], ["Tünd Mavi", "viktoria-tund-mavi-paltar-boyasi"], ["Qəhvəyi", "viktoria-qehveyi-paltar-boyasi"], ["Tünd Qəhvəyi", "viktoria-tund-qehveyi-paltar-boyasi"], ["Çəhrayı", "viktoria-cehrayi-paltar-boyasi"], ["Açıq Mavi", "viktoria-aciq-mavi-paltar-boyasi"], ["Orta Qəhvəyi", "viktoria-orta-qehveyi-paltar-boyasi"], ["Açıq Göy", "viktoria-aciq-goy-paltar-boyasi"], ["Orta Mavi", "viktoria-orta-mavi-paltar-boyasi"], ["Gül Qurusu", "viktoria-gul-qurusu-paltar-boyasi"], ["Bej", "viktoria-bej-paltar-boyasi"], ["Tünd Boz", "viktoria-tund-boz-paltar-boyasi"], ["Xaki", "viktoria-xaki-paltar-boyasi"], ["Açıq Bənövşəyi", "viktoria-aciq-mor-paltar-boyasi"], ["Bordovu", "viktoria-bordoviy-paltar-boyasi"], ["Yanıq Qəhvəyi", "viktoria-yaniq-qehveyi-paltar-boyasi"], ["Narıncı", "viktoria-narinci-paltar-boyasi"], ["Güvəz", "viktoria-guvez-paltar-boyasi"], ["Yemiş Rəngi", "viktoria-yemis-rengi-paltar-boyasi"], ["Buz Mavisi", "viktoria-buz-mavisi-paltar-boyasi"], ["Şaftalı", "viktoria-yavruagzi-paltar-boyasi"], ["Tünd Çəhrayı", "viktoria-tund-cehrayi-paltar-boyasi"], ["Al Qırmızı", "viktoria-al-qirmizi-paltar-boyasi"], ["Atəşi Çəhrayı", "viktoria-atesi-cehrayi-paltar-boyasi"], ["Nar Çiçəyi", "viktoria-nar-ciceyi-paltar-boyasi"], ["Tünd Qırmızı", "viktoria-tund-qirmizi-paltar-boyasi"], ["Gilas Rəngi", "viktoria-visne-curuyu-paltar-boyasi"], ["Açıq Bej", "viktoria-aciq-bej-paltar-boyasi"], ["Tütün Rəngi", "viktoria-tutun-rengi-paltar-boyasi"], ["Tünd Bənövşəyi", "viktoria-tund-mor-paltar-boyasi"], ["Lavanda", "viktoria-eflatun-paltar-boyasi"], ["Açıq Boz", "viktoria-aciq-boz-paltar-boyasi"], ["Dəniz Dalğası", "viktoria-cam-gobeyi-paltar-boyasi"], ["Marsala", "viktoria-serabi-paltar-boyasi"], ["Açıq Salat", "viktoria-filizi-aciq-paltar-boyasi"], ["Nefti Rəngi", "viktoria-nefti-rengi-paltar-boyasi"], ["Kanarya", "viktoria-kanarya-paltar-boyasi"], ["Portağal", "viktoria-portagal-paltar-boyasi"], ["Zümrüd", "viktoria-zumrud-paltar-boyasi"], ["Petrol", "viktoria-petrol-paltar-boyasi"], ["Zeytuni", "viktoria-zeytuni-paltar-boyasi"], ["İndiqo", "viktoria-civit-mavi-paltar-boyasi"], ["Göy Bənövşəyi", "viktoria-mor-goy-paltar-boyasi"], ["Tünd Marsala", "viktoria-tund-serabi-paltar-boyasi"], ["Tünd Lavanda", "viktoria-tund-eflatun-paltar-boyasi"], ["Bənövşəyi", "viktoria-benovseyi-paltar-boyasi"], ["Qızılı Sarı", "viktoria-qizili-sari-paltar-boyasi"], ["Tünd Sarı", "viktoria-tund-sari-paltar-boyasi"], ["Cins Mavisi", "viktoria-cins-mavisi-paltar-boyasi"], ["Orta Göy", "viktoria-orta-goy-paltar-boyasi"], ["Firuzəyi", "viktoria-firuzeyi-paltar-boyasi"], ["Tünd Bej", "viktoria-tund-bej-paltar-boyasi"], ["Açıq Qəhvəyi", "viktoria-aciq-qehveyi-paltar-boyasi"], ["Tünd Yaşıl", "viktoria-tund-yasil-paltar-boyasi"], ["Tünd Salat", "viktoria-tund-filizi-paltar-boyasi"], ["Sabitləyici", "viktoria-sabitlesdirici-paltar-boyasi"]
 ];
@@ -12,11 +11,15 @@ const productsRu = [
 
 const templates = {
     az: {
-        titles: ["[color] Paltar Boyası – 5 AZN | Viktoria AZ", "Viktoria [color] Rəngli Paltar Boyası - Sifariş Et", "[color] Paltar Boyası Sifarişi – Bakı və Azərbaycan"],
+        h1: "Viktoria [color] Paltar Boyası",
+        strong: "Viktoria [color_low] paltar boyası",
+        titles: ["[color] Rəngli Paltar Boyası – 5 AZN | Viktoria AZ", "Viktoria [color] Rəngli Paltar Boyası - Sifariş Et", "[color] Paltar Boyası Sifarişi – Bakı və Azərbaycan"],
         descriptions: ["Solmuş geyimlərinizi Viktoria [color] paltar boyası ilə yenidən canlandırın. Qiymət: 5 AZN.", "Geyiminizə yeni həyat bəxş etmək üçün [color] tonu ideal seçimdir. WhatsApp ilə sifariş.", "[color] rənginin parlaqlığı ilə solmuş paltarlarınızı asanlıqla bərpa edin. Çatdırılma var."],
         intros: ["solmuş, rəngi açılmış və köhnəlmiş geyimləri yeniləmək üçün ideal seçimdir.", "geyimlərinizə modern və təravətli bir görünüş bəxş etmək üçün nəzərdə tutulub.", "tekstil məhsullarınızın rəngini peşəkar səviyyədə bərpa etməyə imkan verir."]
     },
     ru: {
+        h1: "Краска для одежды Viktoria — [color]",
+        strong: "Краска для одежды Viktoria цвета [color_low]",
         titles: ["Краска для одежды Viktoria — [color] за 5 AZN", "Купить краску Viktoria цвета [color] — Баку", "Профессиональный краситель Viktoria цвета [color]"],
         descriptions: ["Обновите выцветшую одежду с помощью краски Viktoria цвета [color]. Цена: 5 AZN.", "Краситель цвета [color] идеально подходит для хлопка и льна. Быстрая доставка.", "Верните яркость вашим вещам с помощью краски Viktoria оттенка [color]."],
         intros: ["идеальное решение для восстановления выцветших вещей или придания им нового оттенка.", "позволяет вернуть жизнь вашим любимым вещам всего за один цикл окрашивания.", "обеспечивает глубокое проникновение в волокна ткани и стойкий результат."]
@@ -32,6 +35,8 @@ function updateFile(filePath, lang, color, slug, index) {
     const title = t.titles[index % t.titles.length].replace("[color]", color);
     const desc = t.descriptions[index % t.descriptions.length].replace("[color]", color);
     const introText = t.intros[index % t.intros.length].replace("[color]", color);
+    const h1Title = t.h1.replace("[color]", color);
+    const strongTerm = t.strong.replace("[color_low]", color.toLowerCase());
 
     // 1. Meta Tags
     content = content.replace(/<title>.*?<\/title>/i, `<title>${title}</title>`);
@@ -44,27 +49,33 @@ function updateFile(filePath, lang, color, slug, index) {
     // 2. Canonical
     content = content.replace(/<link\s+rel="canonical"\s+href=".*?"/i, `<link rel="canonical" href="https://viktoria-az.store/${slug}"`);
 
-    // 3. H1 & Intro Paragraph
-    content = content.replace(/<h1>.*?<\/h1>/i, `<h1>Viktoria ${color} Paltar Boyası</h1>`);
+    // 3. H1 & Intro Paragraph (DİKKAT: Burada dili ayırdıq)
+    content = content.replace(/<h1>.*?<\/h1>/i, `<h1>${h1Title}</h1>`);
     
     const introRegex = /(<div class="product-info">[\s\S]*?<p>)([\s\S]*?)(<\/p>)/i;
-    const newIntroHtml = `$1\n            <strong>Viktoria ${color.toLowerCase()} paltar boyası</strong> ${introText}\n          $3`;
+    const newIntroHtml = `$1\n            <strong>${strongTerm}</strong> ${introText}\n          $3`;
     content = content.replace(introRegex, newIntroHtml);
 
     // 4. JSON-LD
-    content = content.replace(/"name":\s*"Viktoria.*?Boyası"/gi, `"name": "Viktoria ${color} Paltar Boyası"`);
+    if (lang === 'az') {
+        content = content.replace(/"name":\s*"Viktoria.*?Boyası"/gi, `"name": "Viktoria ${color} Paltar Boyası"`);
+    } else {
+        content = content.replace(/"name":\s*"Краска для одежды Viktoria.*?"/gi, `"name": "Краска для одежды Viktoria — ${color}"`);
+    }
+    content = content.replace(/"url":\s*"https:\/\/viktoria-az.store\/.*?\/index\.html"/gi, `"url": "https://viktoria-az.store/${slug}"`);
     content = content.replace(/"url":\s*"https:\/\/viktoria-az.store\/viktoria-.*?"/gi, `"url": "https://viktoria-az.store/${slug}"`);
 
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`✅ ${filePath} yeniləndi.`);
 }
 
-// Qovluq yolu skriptin olduğu yerdən iki addım yuxarıdadır: .github/scripts -> ana qovluq
+// AZ Səhifələri
 productsAz.forEach((p, i) => {
     const filePath = path.join(__dirname, '..', '..', p[1], 'index.html');
     updateFile(filePath, 'az', p[0], p[1], i);
 });
 
+// RU Səhifələri
 productsRu.forEach((p, i) => {
     const filePath = path.join(__dirname, '..', '..', p[1], 'index.html');
     updateFile(filePath, 'ru', p[0], p[1], i);
