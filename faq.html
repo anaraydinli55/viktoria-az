@@ -18,6 +18,7 @@
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet"></noscript>
 
+    <!-- FAQ SCHEMA -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -91,6 +92,7 @@
     }
     </script>
 
+    <!-- ORGANIZATION SCHEMA -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -103,6 +105,28 @@
             "telephone": "+994554828424",
             "contactType": "customer service"
         }
+    }
+    </script>
+
+    <!-- VIDEO SEO SCHEMA (GOOGLE XƏTASINI DÜZƏLTMƏK ÜÇÜN) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoObject",
+      "name": "Paltar Boyası Öncə və Sonra Nəticə",
+      "description": "Viktoria paltar boyası ilə solmuş geyimlərin yenidən rənglənməsi və xlor ləkələrinin bərpası videosu.",
+      "thumbnailUrl": [
+        "https://viktoria-az.store/images/og-image.jpg"
+       ],
+      "uploadDate": "2026-01-26T08:00:00+04:00",
+      "duration": "PT0M15S",
+      "contentUrl": "https://viktoria-az.store/once-sonra.mp4",
+      "embedUrl": "https://viktoria-az.store/faq.html",
+      "interactionStatistic": {
+        "@type": "InteractionCounter",
+        "interactionType": { "@type": "WatchAction" },
+        "userInteractionCount": 2230
+      }
     }
     </script>
 
@@ -186,22 +210,6 @@
             position: relative;
             overflow: hidden;
         }
-        .faq-hero::before {
-            content: "";
-            position: absolute;
-            top: -60px; right: -60px;
-            width: 220px; height: 220px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.06);
-        }
-        .faq-hero::after {
-            content: "";
-            position: absolute;
-            bottom: -40px; left: -40px;
-            width: 160px; height: 160px;
-            border-radius: 50%;
-            background: rgba(255,255,255,0.06);
-        }
         .faq-hero h1 {
             font-family: 'Lora', serif;
             font-size: clamp(26px, 4vw, 42px);
@@ -246,9 +254,7 @@
             overflow: hidden;
             transition: border-color 0.2s;
         }
-        details.faq-item[open] {
-            border-color: #4b0082;
-        }
+        details.faq-item[open] { border-color: #4b0082; }
         details.faq-item summary {
             list-style: none;
             display: flex;
@@ -259,37 +265,22 @@
             font-weight: 700;
             font-size: 16px;
             color: #4b0082;
-            user-select: none;
             gap: 12px;
         }
-        details.faq-item summary::-webkit-details-marker { display: none; }
         details.faq-item summary .icon {
             font-size: 22px;
-            font-weight: 700;
-            color: #4b0082;
-            flex-shrink: 0;
             transition: transform 0.3s;
-            line-height: 1;
         }
-        details.faq-item[open] summary .icon {
-            transform: rotate(45deg);
-        }
+        details.faq-item[open] summary .icon { transform: rotate(45deg); }
         details.faq-item .faq-answer {
             padding: 0 20px 18px;
             color: #333;
             line-height: 1.75;
             font-size: 15px;
             border-top: 1px solid #e0ccff;
-            margin-top: 0;
-        }
-        details.faq-item .faq-answer p {
-            margin: 12px 0 0;
-        }
-        details.faq-item .faq-answer strong {
-            color: #4b0082;
         }
 
-        /* ========== NUMBER BADGE ========== */
+        /* ========== BADGES & BUTTONS ========== */
         .faq-num {
             display: inline-flex;
             align-items: center;
@@ -301,23 +292,8 @@
             border-radius: 50%;
             font-size: 13px;
             font-weight: 700;
-            flex-shrink: 0;
         }
-
-        /* ========== CARD ========== */
-        .card {
-            background-color: #f2c200;
-            border-radius: 12px;
-            padding: 16px 20px;
-            color: #000;
-        }
-        .card.purple {
-            background-color: #f9f4ff;
-            border: 2px solid #d0a3ff;
-        }
-
-        /* ========== BUTTONS ========== */
-        .button-container { text-align: center; margin: 20px 0 4px; }
+        .card { background-color: #f2c200; border-radius: 12px; padding: 16px 20px; color: #000; }
         .mor-button {
             display: inline-block;
             padding: 14px 28px;
@@ -327,11 +303,8 @@
             font-weight: 700;
             border-radius: 12px;
             font-size: 16px;
-            transition: transform 0.2s ease, background-color 0.2s ease;
+            transition: transform 0.2s;
         }
-        .mor-button:hover { background-color: #360060; transform: translateY(-2px); }
-        @media (max-width: 768px) { .mor-button { width: 90%; padding: 14px 0; font-size: 16px; display: block; margin: 0 auto; text-align:center; } }
-
         .wa-btn {
             display: inline-flex;
             align-items: center;
@@ -345,11 +318,7 @@
             border-radius: 14px;
             text-decoration: none;
             box-shadow: 0 4px 18px rgba(37,211,102,0.35);
-            transition: transform 0.2s, box-shadow 0.2s;
         }
-        .wa-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,0.5); }
-        .wa-btn svg { width: 26px; height: 26px; fill: #000; }
-        @media (max-width: 768px) { .wa-btn { width: 90%; font-size: 15px; padding: 14px 0; } }
 
         /* ========== SEO TEXT BLOCK ========== */
         .seo-block {
@@ -364,16 +333,12 @@
             color: #333;
             font-size: 15px;
         }
-        .seo-block h2 { color: #4b0082; margin-top: 0; }
-        .seo-block p { margin: 0 0 12px; }
-        .seo-block a { color: #4b0082; }
 
         /* ========== RELATED BLOGS ========== */
         .related-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 12px;
-            margin-top: 14px;
         }
         .related-card {
             background: #f9f4ff;
@@ -384,83 +349,9 @@
             color: #4b0082;
             font-weight: 600;
             font-size: 14px;
-            line-height: 1.5;
-            transition: background 0.2s, transform 0.2s;
             display: block;
         }
-        .related-card:hover { background: #ede0ff; transform: translateY(-2px); }
 
-        /* ========== RATING STARS ========== */
-        .rating-box {
-            text-align: center;
-            padding: 24px 20px;
-        }
-        .stars { font-size: 32px; margin-bottom: 6px; line-height: 1; }
-        .rating-score { font-size: 24px; font-weight: 700; color: #4b0082; margin-bottom: 14px; }
-
-        /* ========== SOCIAL ========== */
-        .instagram-tiktok {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            margin: 20px 0;
-            flex-wrap: wrap;
-        }
-        .social a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 18px;
-        }
-        .social img { width: 60px; height: 60px; border-radius: 12px; }
-        .social:nth-child(1) span { color: #E1306C; }
-        .social:nth-child(2) span { color: #000; }
-        .social-telegram span { color: #29ABE2; }
-
-        /* ========== FLOATING WHATSAPP ========== */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 28px;
-            right: 28px;
-            z-index: 9999;
-            background: #25D366;
-            text-decoration: none;
-            padding: 14px;
-            border-radius: 50%;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.45);
-            transition: transform 0.2s ease;
-            animation: waPulse 2.5s ease-in-out infinite;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .whatsapp-float:hover { transform: scale(1.1); animation: none; }
-        .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; display: block; }
-        @keyframes waPulse {
-            0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
-            50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
-        }
-
-        /* ========== BLINK ========== */
-        .blink-text { animation: textBlink 1.5s infinite; }
-        @keyframes textBlink {
-            0%   { opacity: 1; }
-            50%  { opacity: 0.3; }
-            100% { opacity: 1; }
-        }
-
-        /* ========== FOOTER ========== */
-        footer {
-            background: #ececec;
-            padding: 26px;
-            margin-top: 10px;
-            text-align: center;
-            font-size: 14px;
-        }
         /* ========== VIDEO SECTION ========== */
         .video-section {
             max-width: 1100px;
@@ -472,7 +363,6 @@
             box-sizing: border-box;
             text-align: center;
         }
-        .video-section h2 { color: #4b0082; margin-top: 0; margin-bottom: 16px; }
         .video-section video {
             width: 100%;
             max-width: 800px;
@@ -480,38 +370,41 @@
             box-shadow: 0 4px 20px rgba(75,0,130,0.15);
         }
 
+        /* ========== FLOATING WHATSAPP ========== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9999;
+            background: #25D366;
+            padding: 14px;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+        }
+        .whatsapp-float svg { width: 32px; height: 32px; fill: #fff; display: block; }
+
         /* ========== NAV BUTTONS ========== */
         .nav-buttons {
             max-width: 1100px;
             margin: 10px auto 20px;
             display: flex;
             gap: 10px;
-            padding: 0 0 10px;
-            box-sizing: border-box;
         }
         .nav-btn {
             flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
             padding: 14px 8px;
             background: #4b0082;
             color: #fff;
             text-decoration: none;
             border-radius: 12px;
             font-weight: 700;
-            font-size: 15px;
-            box-shadow: 0 4px 16px rgba(75,0,130,0.20);
-            transition: background 0.2s, transform 0.15s;
+            text-align: center;
         }
-        .nav-btn:hover { background: #36005e; transform: translateY(-2px); }
-        @media (max-width: 480px) { .nav-btn { font-size: 13px; padding: 12px 6px; } }
 
         @media (max-width: 600px) {
             .faq-hero { padding: 30px 18px; }
-            .container { margin: 10px 12px; }
-            .seo-block { margin: 10px 12px; padding: 22px 18px; }
+            .container, .seo-block { margin: 10px 12px; }
+            .mor-button, .wa-btn { width: 90%; display: block; margin: 10px auto; }
         }
     </style>
 </head>
@@ -521,9 +414,7 @@
     <a class="whatsapp-float"
        href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
        target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ilə əlaqə">
-        <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-            <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
-        </svg>
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/></svg>
     </a>
 
     <!-- HEADER -->
@@ -532,344 +423,103 @@
             <a href="/">Ana səhifə</a>
             <a href="/catalog">Kataloq</a>
             <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
-            <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm" target="_blank" rel="noopener">WhatsApp</a>
+            <a href="https://wa.me/994554828424?text=Salam%20sifariş%20etmək%20istəyirəm" target="_blank" rel="noopener">WhatsApp</a>
         </nav>
     </header>
 
     <main>
-
         <!-- BREADCRUMB -->
         <div class="breadcrumb">
-            <a href="/">Ana səhifə</a>
-            <span>›</span>
-            <a href="/qabda-boyama-telimati">Bloq</a>
-            <span>›</span>
-            Tez-tez Verilən Suallar
+            <a href="/">Ana səhifə</a> <span>›</span> <a href="/qabda-boyama-telimati">Bloq</a> <span>›</span> Tez-tez Verilən Suallar
         </div>
 
-        <!-- HERO BANNER -->
+        <!-- HERO -->
         <div class="faq-hero">
             <div class="badge">FAQ — Paltar Boyası</div>
             <h1>Tez-tez Verilən Suallar</h1>
-            <p>Viktoria tərəfindən hazırlanmış bu FAQ səhifəsi evdə paltar boyamaq, tekstil boyası istifadəsi və paltar rəngləmə problemlərinin həlli üzrə praktik ekspert bələdçisidir. Burada paltar boyasının düzgün tətbiqi, hansı parçaların boyana bilməsi, rəngin qalıcı olması, xlor və pas ləkələrinin örtülməsi, saralmış geyimlərin yenilənməsi, polis formalarının, uniformaların düzgün boyanması və ev şəraitində təhlükəsiz boyama qaydaları haqqında ən çox verilən suallar cavablandırılır.
-</p>
-            <p>Paltar boyama haqqında ən çox soruşulan suallar və ətraflı cavablar.<br>
-            Xlor ləkəsi, saralmış və bozarmış paltar, evdə boyama, rəng qalıcılığı - hamısı burada.</p>
+            <p>Viktoria tərəfindən hazırlanmış bu FAQ səhifəsi evdə paltar boyamaq üzrə peşəkar bələdçidir.</p>
         </div>
 
-        <!-- INTRO -->
-        <section class="container">
-            <h2>🔷 Paltar Boyası Haqqında Bilmək İstədikləriniz</h2>
-            <div class="card">
-                <p>
-                    Azərbaycanda <strong>Viktoria paltar boyaları</strong> ilə evdə geyim boyamaq getdikcə populyarlaşır.
-                    Solmuş və bozarmış paltar, xlor ləkəsi, saralmış geyimlər - bunların hamısı evdə <strong>asan şəkildə həll edilə bilər</strong>.
-                    Aşağıda müştərilərimizin ən çox verdiyi sualları və peşəkar cavabları tapa bilərsiniz.
-                </p>
-            </div>
-        </section>
-
-        <!-- FAQ BÖLMƏSI -->
-        <section class="container" id="faq">
-            <h2>🔷 Sual-Cavab (FAQ)</h2>
-
-            <div class="faq-list">
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">1</span>
-                            Rəngi qarışmış paltar yenidən düzələ bilərmi?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            <strong>Bəli.</strong> Rəngi qarışmış paltarı <strong>tünd rəngə boyayaraq</strong> tamamilə yeniləmək mümkündür.
-                            Xüsusilə <strong>qara</strong> və <strong>tünd mavi</strong> rənglər ideal seçimdir, çünki bu rənglər
-                            altındakı qarışıqlığı tam örtür. 60 fərqli rəngdə toz paltar boyası ilə paltarınıza tamamilə yeni həyat verə bilərsiniz.
-                            Keyfiyyətli tekstil boyası parçanızı solmuşluqdan xilas edir.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">2</span>
-                            Xlor ləkəsini çıxarmaq mümkündürmü?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            Xlor ləkəsi əslində <strong>parçanı yandırmayıbsa</strong> — kimyəvi reaksiya nəticəsində parça liflərinin
-                            rəngi məhv olmayıbsa, bəli. Tam yanıbsa ləkəni çıxarmaq mümkün deyil. Ən effektiv üsul isə
-                            həmin hissəni və ya <strong>bütün paltarı boyamaqdır</strong>.
-                            Tünd rənglər (qara, tünd mavi, tünd yaşıl) xlor izini tamamilə gizlədir.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">3</span>
-                            Saralmış ağ paltar necə xilas edilə bilər?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            Saralmış ağ paltarı xilas etmək üçün iki üsul var:
-                        </p>
-                        <p>
-                            🔹 <strong>Tuünd tonlarda bir rənglə yenidən boyamaq</strong> - Viktoria boyalar ilə paltarı boyayaraq
-                            orijinal görünüşünü bərpa edə bilərsiniz.<br>
-                            🔹 <strong>Fərqli rəngə keçirmək</strong> — Sarımtıl ləkələri örtmək üçün tünd bir rəng
-                            (məsələn, tünd mavi, qara, şərabi) seçərək paltarı boyayıb tamamilə yeni görünüş vermək mümkündür.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">4</span>
-                            Pas və ruçka ləkəsi olan paltar boyana bilərmi?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            <strong>Bəli.</strong> Ləkə açıq rəngdədirsə, <strong>tünd rənglə boyayaraq</strong> tam örtmək mümkündür.
-                            Pas ləkəsi qəhvəyi-sarı, ruçka ləkəsi isə adətən mavi-qara çalarda olur.
-                            Hər iki ləkə növü tünd boya ilə rahatlıqla örtülür.
-                            Boyamadan əvvəl mümkün qədər ləkəni yaxalamağa çalışın — nəticə daha yaxşı olacaq.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">5</span>
-                            Evdə paltar boyamaq təhlükəlidirmi?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            <strong>Xeyr, təhlükəsizdir.</strong> Bu toz boyaları ev şəraitində təhlükəsiz istifadə üçün hazırlanmışdır.
-                            Aşağıdakı sadə qaydalara əməl etdikdə tamamilə rahat boyama edə bilərsiniz:
-                        </p>
-                        <p>
-                            ✅ Əlcək taxın<br>
-                            ✅ Paltarı qaynar suda boyayın<br>
-                            ✅ Boyama qabı ayrı olsun (qida qabı istifadə etməyin)<br>
-                            ✅ Boyama bitdikdən sonra ərazini yaxşı yuyun
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">6</span>
-                            Paltar boyası parçaya zərər verirmi?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            Keyfiyyətli tekstil boyası parçanı <strong>sərtləşdirmir</strong>, liflərinə zərər vermir.
-                            Viktoria boyaları parça strukturunu qoruyaraq yalnız rəngi dəyişdirir.
-                            Düzgün istifadə edildikdə paltar <strong>əvvəlki yumşaqlığını saxlayır</strong> və
-                            uzunömürlü nəticə verir.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">7</span>
-                            Hansı parçalar boyana bilər?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            Ən yaxşı nəticə <strong>təbii lifli parçalarda</strong> əldə olunur:
-                        </p>
-                        <p>
-                            ✅ <strong>Pambıq</strong> — ideal nəticə<br>
-                            ✅ <strong>Viskoza / İpək</strong> — çox yaxşı nəticə<br>
-                            ✅ <strong>Kətan</strong> — yaxşı nəticə<br>
-                            ✅ <strong>Yun</strong> — xüsusi boyama üsulu ilə<br>
-                            ⚠️ <strong>Sintetik (neylon)</strong> — az nəticə verir, boya tam tutmaya bilər
-                        </p>
-                        <p>
-                            Parçanın tərkibini bilmirsinizsə, əvvəlcə görünməyən bir hissəsini sınayın.
-                        </p>
-                    </div>
-                </details>
-
-                <details class="faq-item">
-                    <summary>
-                        <span style="display:flex;align-items:center;gap:10px;">
-                            <span class="faq-num">8</span>
-                            Paltar boyandıqdan sonra rəng çıxırmı?
-                        </span>
-                        <span class="icon">＋</span>
-                    </summary>
-                    <div class="faq-answer">
-                        <p>
-                            <strong>Düzgün sabitləmə edildikdə</strong> rəng uzun müddət qalıcı olur.
-                            Sabitləmə üçün Viktoria <strong>Fiske (sabitləşdirici)</strong> məhsulundan istifadə
-                            etmək tövsiyə olunur. Bundan başqa:
-                        </p>
-                        <p>
-                            🔹 İlk yuyuşda soyuq suda yuyun<br>
-                            🔹 Rəngli paltarlar üçün nəzərdə tutulmuş yuyucu vasitə istifadə edin<br>
-                            🔹 Günəş işığından uzaq saxlayın<br>
-                            🔹 Çox isti suda yumayın
-                        </p>
-                    </div>
-                </details>
-
-            </div>
-
-            <!-- CTA -->
-            <div style="text-align:center; margin-top:28px;">
-                <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
-                   class="wa-btn" target="_blank" rel="noopener">
-                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
-                    </svg>
-                     WhatsApp ilə Sifariş Et
-                </a>
-            </div>
-        </section>
-
-        <!-- SEO METİN BLOQU -->
-        <section class="seo-block">
-            <h2>🔷 Paltar Boyamaq Haqqında Əlavə Məlumat</h2>
-            <p>
-                <strong>Evdə paltar boyamaq</strong> həm qənaətcil, həm də ekoloji cəhətdən faydalı bir yanaşmadır.
-                Azərbaycanda <strong>Viktoria paltar boyaları</strong> 60 rəng çeşidi ilə ev istifadəsinə uyğun ən geniş
-                tekstil boya seçimini təqdim edir. Solmuş geyimlər, xlor ləkəli paltarlar, saralmış ağ köynəklər -
-                bunların hamısı evdə asanlıqla yenilənə bilər.
-            </p>
-            <p>
-                <strong>Paltar boyası Bakıda</strong> WhatsApp vasitəsilə sifariş edib bütün Azərbaycana Azərpoçt ilə
-                çatdırtmaq mümkündür. Minimum sifariş 2 ədəd olub, 5 ədəddən yuxarı sifarişlərdə <strong>çatdırılma pulsuzdur</strong>.
-            </p>
-            <p>
-                <strong>Tekstil boyası</strong> seçərkən parçanın tərkibinə diqqət edin: pambıq, viskoza, ipək, yun və kətan üçün
-                Viktoria standart toz boyaları, yarı sintetik parçalar üçün isə xüsusi boyalar tövsiyə edilir.
-                Rəngin daha qalıcı olması üçün <a href="/sabitlesdirici-nece-istifade-olunur">Fiske (sabitləşdirici)</a> istifadəsi
-                şiddətlə tövsiyə olunur.
-            </p>
-        </section>
-
-        <!-- ƏLAQƏDAR BLOQLAR -->
-        <section class="container">
-            <h2>🔷 Əlaqədar Məqalələr</h2>
-            <div class="related-grid">
-                <a href="qabda-boyama-telimati" class="related-card">📌 Evdə metal qabda boyama etmək olarmı?</a>
-                <a href="paltaryuyan-masinda-istifade-qaydalari" class="related-card">📌 Paltaryuyanda boyaya bilərəm?</a>
-                <a href="sabitlesdirici-nece-istifade-olunur" class="related-card">📌 Fiske (sabitləşdirici) məcburidirmi?</a>
-                <a href="qaliciliga-tesir-eden-amiller" class="related-card">📌 Viktoria boya nə qədər qalıcıdır?</a>
-                <a href="boyanin-istifade-qaydalari" class="related-card">📌 Hansı materialları qaynatmaq olar?</a>
-                <a href="paltar-boyasi-hardan-almaq-olar" class="related-card">📌 Qara paltar boyası — istifadə bələdçisi</a>
-            </div>
-        </section>
-
-        <!-- REYTİNQ -->
-        <section class="container">
-            <div class="rating-box">
-                <div class="stars">⭐⭐⭐⭐⭐</div>
-                <div class="rating-score">4.8 / 5 Reytinq</div>
-                <a href="/reyler.html" class="mor-button">👉 Rəylərə Bax</a>
-            </div>
-        </section>
-
-        <!-- SOSİAL MEDIA -->
-        <section class="instagram-tiktok">
-            <div class="social">
-                <a href="https://instagram.com/paltar_boyalari" target="_blank" rel="noopener">
-                    <img src="images/instagram.webp" alt="Viktoria Instagram" loading="lazy" width="60" height="60">
-                    <span>Instagram</span>
-                </a>
-            </div>
-            <div class="social">
-                <a href="https://tiktok.com/@paltar_boyalari" target="_blank" rel="noopener">
-                    <img src="images/tiktok.webp" alt="Viktoria TikTok" loading="lazy" width="60" height="60">
-                    <span>TikTok</span>
-                </a>
-            </div>
-            <div class="social social-telegram">
-                <a href="https://t.me/paltar_boyalari" target="_blank" rel="noopener">
-                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" style="border-radius:12px;">
-                        <rect width="60" height="60" rx="12" fill="#29ABE2"/>
-                        <path d="M44.5 16.5L38.2 45.1c-.4 1.8-1.6 2.3-3.2 1.4l-8.8-6.5-4.3 4.1c-.5.5-.9.9-1.8.9l.6-9 16.2-14.6c.7-.6-.2-.9-1.1-.3L14.4 32.6l-8.6-2.7c-1.9-.6-1.9-1.9.4-2.8l35.9-13.8c1.6-.6 3 .4 2.4 3.2z" fill="white"/>
-                    </svg>
-                    <span>Telegram</span>
-                </a>
-            </div>
-        </section>
-
-
-        <!-- VIDEO BÖLMƏSI -->
+        <!-- VIDEO BÖLMƏSİ (SEO üçün bir az daha yuxarı çəkildi) -->
         <section class="video-section">
-            <h2>🎬 Öncə və Sonra</h2>
-            <video autoplay muted loop playsinline preload="auto">
+            <h2>🎬 Öncə və Sonra Nəticələr</h2>
+            <video autoplay muted loop playsinline preload="auto" poster="images/og-image.jpg">
                 <source src="once-sonra.mp4" type="video/mp4">
                 Brauzeriniz video dəstəkləmir.
             </video>
         </section>
 
-        <!-- NAVİQASİYA BUTONLARI -->
-        <div class="nav-buttons">
-  <a href="/qabda-boyama-telimati" class="nav-btn">&#9664; Geri</a>
-  <a href="/" class="nav-btn">&#127968; Ana səhifə</a>
-  <a href="/catalog" class="nav-btn">Kataloq &#9654;</a>
-        </div>
+        <!-- FAQ BÖLMƏSİ -->
+        <section class="container" id="faq">
+            <h2>🔷 Sual-Cavab (FAQ)</h2>
+            <div class="faq-list">
+                <details class="faq-item">
+                    <summary><span><span class="faq-num">1</span> Rəngi qarışmış paltar düzəlirmi?</span><span class="icon">＋</span></summary>
+                    <div class="faq-answer"><p><strong>Bəli.</strong> Tünd rəngə boyayaraq tamamilə yeniləmək mümkündür.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span><span class="faq-num">2</span> Xlor ləkəsi çıxarmı?</span><span class="icon">＋</span></summary>
+                    <div class="faq-answer"><p>Ləkəni çıxarmaq çətindir, lakin <strong>bütün paltarı tünd rəngə boyamaq</strong> ən effektiv həlldir.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span><span class="faq-num">3</span> Saralmış ağ paltarı necə xilas etməli?</span><span class="icon">＋</span></summary>
+                    <div class="faq-answer"><p>Ya yenidən ağa, ya da tünd bir rəngə boyayaraq ləkələri tam örtmək olar.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span><span class="faq-num">4</span> Pas ləkəsi boyana bilərmi?</span><span class="icon">＋</span></summary>
+                    <div class="faq-answer"><p>Bəli, tünd rəngli Viktoria boyaları pas ləkələrini rahatlıqla örtür.</p></div>
+                </details>
+                <details class="faq-item">
+                    <summary><span><span class="faq-num">5</span> Evdə boyama təhlükəlidir?</span><span class="icon">＋</span></summary>
+                    <div class="faq-answer"><p>Xeyr, qaydalara əməl etdikdə tamamilə təhlükəsiz və asandır.</p></div>
+                </details>
+            </div>
 
+            <div style="text-align:center; margin-top:28px;">
+                <a href="https://wa.me/994554828424?text=Sifariş" class="wa-btn" target="_blank" rel="noopener">WhatsApp ilə Sifariş Et</a>
+            </div>
+        </section>
+
+        <!-- SEO TEXT -->
+        <section class="seo-block">
+            <h2>🔷 Paltar Boyamaq Haqqında</h2>
+            <p>Azərbaycanda <strong>Viktoria paltar boyaları</strong> 60 rəng seçimi ilə evdə geyim yeniləməyin ən asan yoludur.</p>
+        </section>
+
+        <!-- RELATED -->
+        <section class="container">
+            <h2>🔷 Əlaqədar Məqalələr</h2>
+            <div class="related-grid">
+                <a href="qabda-boyama-telimati" class="related-card">📌 Metal qabda boyama</a>
+                <a href="paltaryuyan-masinda-istifade-qaydalari" class="related-card">📌 Paltaryuyanda boyama</a>
+                <a href="sabitlesdirici-nece-istifade-olunur" class="related-card">📌 Fiske nədir?</a>
+            </div>
+        </section>
+
+        <!-- NAV -->
+        <div class="nav-buttons">
+            <a href="/" class="nav-btn">Ana səhifə</a>
+            <a href="/catalog" class="nav-btn">Kataloq</a>
+        </div>
     </main>
 
-    <!-- FOOTER -->
     <footer>
-        <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">
-            &copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.
-        </p>
+        <p>&copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
     </footer>
 
-    <!-- MUSİQİ -->
-    <audio id="bgMusic" loop preload="auto">
-        <source src="/music/background.mp3" type="audio/mpeg">
-    </audio>
-    <button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
-        style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;">
-        🔇
-    </button>
+    <!-- MUSIC -->
+    <audio id="bgMusic" loop preload="auto"><source src="/music/background.mp3" type="audio/mpeg"></audio>
+    <button id="muteBtn" onclick="toggleMute()" style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border-radius:50%;width:44px;height:44px;cursor:pointer;box-shadow:0 2px 12px rgba(0,0,0,0.1);">🔇</button>
+
     <script>
         (function() {
             const music = document.getElementById('bgMusic');
-            const btn   = document.getElementById('muteBtn');
+            const btn = document.getElementById('muteBtn');
             music.volume = 0.25;
-            function playMusic() {
-                music.play().then(function() { btn.textContent = '🔊'; }).catch(function() {});
-            }
-            window.addEventListener('scroll', function() {
-                if (music.paused) playMusic();
-            }, { once: true, passive: true });
             window.toggleMute = function() {
-                if (music.paused) { playMusic(); } else { music.pause(); btn.textContent = '🔇'; }
+                if (music.paused) { music.play(); btn.textContent = '🔊'; } else { music.pause(); btn.textContent = '🔇'; }
             };
         })();
     </script>
-
 </body>
 </html>
