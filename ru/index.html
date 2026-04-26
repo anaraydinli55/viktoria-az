@@ -48,9 +48,42 @@
         .hero-title svg { display: block; width: 100%; height: auto; }
         h1 { font-size: clamp(22px,4vw,34px); color: #4b0082; margin-bottom: 10px; }
         h2, h3 { color: #4b0082; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; padding: 12px 20px; background: #4b0082; color: #fff; border-radius: 14px; text-decoration: none; font-weight: 700; transition: transform .2s ease, background .2s ease; }
-        .btn:hover { background: #360060; transform: translateY(-2px); }
-        @media (max-width: 768px) { .btn { width: 100%; box-sizing: border-box; } }
+
+        /* ========== UNİVERSAL DÜYMƏ STİLİ ========== */
+        .btn-boyalar {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background-color: #a855f7;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 12px 8px 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 6px 0 #7c3aed, 0 8px 16px rgba(120, 40, 200, 0.35);
+            position: relative;
+            transition: all 0.15s ease;
+            margin-top: 14px;
+        }
+        .btn-boyalar:hover {
+            box-shadow: 0 3px 0 #7c3aed, 0 5px 10px rgba(120, 40, 200, 0.35);
+            transform: translateY(3px);
+        }
+        .btn-icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #9333ea;
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            margin-left: 14px;
+            font-size: 1.1rem;
+            box-shadow: inset 0 -3px 6px rgba(0,0,0,0.2);
+        }
+        /* ============================================ */
+
         .container { max-width: 1100px; margin: 20px auto; padding: 20px; background-color: #d3d3d3; border: 2px solid #d0a3ff; border-radius: 12px; box-sizing: border-box; overflow: hidden; }
         .container + .container { margin-top: 10px; }
         .container.hero { overflow: visible; }
@@ -60,13 +93,28 @@
         @media (max-width: 768px) { section.container.onekg { grid-template-columns: 1fr; padding: 25px 18px; } }
         .card { background-color: #f2c200; border-radius: 12px; padding: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); color: #000; }
         .container.goal-extra .card { background-color: #d3d3d3; border: 2px solid #d0a3ff; border-radius: 12px; padding: 20px; }
-        .button-container { text-align: center; margin: 20px 0; }
-        .mor-button { display: inline-block; padding: 14px 28px; background-color: #4b0082; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px; font-size: 16px; transition: transform 0.2s ease, background-color 0.2s ease; }
-        .mor-button:hover { background-color: #360060; transform: translateY(-2px); }
-        @media (max-width: 768px) { .mor-button { width: 90%; padding: 14px 0; font-size: 18px; } }
-        .trustpilot-button { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; background-color: #00b67a; color: #fff; text-decoration: none; font-weight: 700; border-radius: 12px; font-size: 16px; margin-top: 12px; transition: transform 0.2s ease, background-color 0.2s ease; }
-        .trustpilot-button:hover { background-color: #009e6a; transform: translateY(-2px); }
-        @media (max-width: 768px) { .trustpilot-button { width: 90%; padding: 14px 0; font-size: 16px; } }
+        .button-container { text-align: right; margin: 20px 0; }
+        .trustpilot-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 0;
+            background-color: #00b67a;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 12px 8px 12px 24px;
+            border-radius: 50px;
+            box-shadow: 0 6px 0 #008a5c, 0 8px 16px rgba(0, 180, 120, 0.35);
+            position: relative;
+            transition: all 0.15s ease;
+            margin-top: 14px;
+        }
+        .trustpilot-button:hover {
+            box-shadow: 0 3px 0 #008a5c, 0 5px 10px rgba(0, 180, 120, 0.35);
+            transform: translateY(3px);
+        }
+        .trustpilot-button .btn-icon { background-color: #009e6a; }
         .btn-neon-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 16px 6px; gap: 3px; }
         .btn-neon-sticky { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 640px; padding: 13px 20px; background: #32cd32; color: #000; font-weight: 700; font-size: clamp(12px, 2.5vw, 15px); text-decoration: none; border-radius: 10px; box-shadow: 0 0 8px #32cd32, 0 0 18px #32cd32; text-align: center; line-height: 1.4; white-space: normal; word-break: break-word; box-sizing: border-box; }
         .btn-neon-sticky:hover { background: #28b828; box-shadow: 0 0 12px #28b828, 0 0 24px #28b828; }
@@ -91,7 +139,8 @@
         @keyframes colorShift { 0% { color: #1e90ff; } 50% { color: #ff0000; } 100% { color: #00a000; } }
         .blink-text { animation: textBlink 1.5s infinite; }
         @keyframes textBlink { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
-        .features { color: #000; font-size: 18px; line-height: 1.7; }
+        .features { color: #000; font-size: 18px; line-height: 1.7; font-weight: 500; }
+        @media (max-width: 768px) { .features { font-size: 14px; line-height: 1.6; } }
         .marker { position: relative; display: inline-block; z-index: 2; font-weight: 600; color: #111; }
         .marker::before { content: ""; position: absolute; inset: 0; background: #2cff6d; border-radius: 12px 6px 14px 8px; transform: rotate(-2deg) skewX(-6deg); z-index: -1; }
         .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
@@ -112,33 +161,13 @@
         "name": "Viktoria Paltar Boyaları",
         "alternateName": "Viktoria Краска для одежды",
         "url": "https://viktoria-az.store",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "https://viktoria-az.store/images/og-image.jpg",
-            "width": 1200,
-            "height": 630
-        },
+        "logo": { "@type": "ImageObject", "url": "https://viktoria-az.store/images/og-image.jpg", "width": 1200, "height": 630 },
         "description": "Порошковая краска для одежды и ткани. 60 цветов. Заказ через WhatsApp, доставка через Azərpoçt по всему Азербайджану.",
         "foundingDate": "1901",
         "email": "info@viktoria-az.store",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+994-55-482-84-24",
-            "contactType": "customer service",
-            "availableLanguage": ["az", "ru"]
-        },
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "AZ",
-            "addressLocality": "Баку"
-        },
-        "sameAs": [
-            "https://www.instagram.com/paltar_boyalari",
-            "https://www.tiktok.com/@paltar_boyalari",
-            "https://t.me/paltar_boyalari",
-            "https://www.trustpilot.com/review/viktoria-az.store",
-            "https://www.linkedin.com/company/viktoria-boya-azerbaycan/"
-        ]
+        "contactPoint": { "@type": "ContactPoint", "telephone": "+994-55-482-84-24", "contactType": "customer service", "availableLanguage": ["az", "ru"] },
+        "address": { "@type": "PostalAddress", "addressCountry": "AZ", "addressLocality": "Баку" },
+        "sameAs": ["https://www.instagram.com/paltar_boyalari","https://www.tiktok.com/@paltar_boyalari","https://t.me/paltar_boyalari","https://www.trustpilot.com/review/viktoria-az.store","https://www.linkedin.com/company/viktoria-boya-azerbaycan/"]
     }
     </script>
 
@@ -153,57 +182,19 @@
         "brand": { "@type": "Brand", "name": "Viktoria" },
         "offers": {
             "@type": "Offer",
-            "priceCurrency": "AZN",
-            "price": "5",
-            "priceValidUntil": "2026-12-31",
+            "priceCurrency": "AZN", "price": "5", "priceValidUntil": "2026-12-31",
             "availability": "https://schema.org/InStock",
             "url": "https://viktoria-az.store/ru/",
-            "seller": {
-                "@type": "Organization",
-                "name": "Viktoria Paltar Boyaları",
-                "url": "https://viktoria-az.store"
-            },
+            "seller": { "@type": "Organization", "name": "Viktoria Paltar Boyaları", "url": "https://viktoria-az.store" },
             "shippingDetails": {
                 "@type": "OfferShippingDetails",
-                "shippingRate": {
-                    "@type": "MonetaryAmount",
-                    "value": "0",
-                    "currency": "AZN"
-                },
-                "shippingDestination": {
-                    "@type": "DefinedRegion",
-                    "addressCountry": "AZ"
-                },
-                "deliveryTime": {
-                    "@type": "ShippingDeliveryTime",
-                    "handlingTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 1,
-                        "maxValue": 2,
-                        "unitCode": "DAY"
-                    },
-                    "transitTime": {
-                        "@type": "QuantitativeValue",
-                        "minValue": 2,
-                        "maxValue": 4,
-                        "unitCode": "DAY"
-                    }
-                }
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "AZN" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "AZ" },
+                "deliveryTime": { "@type": "ShippingDeliveryTime", "handlingTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 2, "unitCode": "DAY" }, "transitTime": { "@type": "QuantitativeValue", "minValue": 2, "maxValue": 4, "unitCode": "DAY" } }
             },
-            "hasMerchantReturnPolicy": {
-                "@type": "MerchantReturnPolicy",
-                "applicableCountry": "AZ",
-                "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
-                "merchantReturnDays": 14,
-                "returnMethod": "https://schema.org/ReturnByMail",
-                "returnFees": "https://schema.org/FreeReturn"
-            }
+            "hasMerchantReturnPolicy": { "@type": "MerchantReturnPolicy", "applicableCountry": "AZ", "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow", "merchantReturnDays": 14, "returnMethod": "https://schema.org/ReturnByMail", "returnFees": "https://schema.org/FreeReturn" }
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "120"
-        }
+        "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "reviewCount": "120" }
     }
     </script>
 </head>
@@ -262,7 +253,12 @@
                     Восстановить <span class="marker">выцветшую</span> одежду •
                     Покраска <span class="marker">формы</span> и униформы
                 </p>
-                <a class="btn" href="/ru/catalog"><span class="blink-text">Смотреть цвета</span></a>
+                <div style="text-align: right;">
+                    <a class="btn-boyalar" href="/ru/catalog">
+                        <span class="blink-text">Смотреть цвета</span>
+                        <span class="btn-icon">»</span>
+                    </a>
+                </div>
             </div>
             <a href="/ru/reklam.html">
                 <img src="/images/30-siyah-small.webp"
@@ -300,6 +296,12 @@
                     <li>Спрей-краски для джинсов, обуви и сумок</li>
                     <li>Краски для кожи и замши</li>
                 </ul>
+                <div style="text-align: right;">
+                    <a class="btn-boyalar" href="/ru/catalog" style="display:inline-flex;">
+                        <span class="blink-text">Каталог красок</span>
+                        <span class="btn-icon">»</span>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -319,12 +321,17 @@
 
         <section class="container onekg">
             <div>
-                <h2>🔷 Viktoria - упаковка 1КГ</h2>
+                <h2>🔷 Viktoria — упаковка 1 КГ</h2>
                 <p><strong class="color-change">Выгодно и экономично</strong></p>
                 <p>Идеально для химчисток, отелей, покраски ковров и ковровых изделий.
                 Разработан для профессионального использования — даёт равномерный цвет и долгосрочный результат.
                 Стабильное качество даже при больших объёмах.</p>
-                <a class="btn" href="/ru/catalog-1kg"><span class="blink-text">Смотреть цвета</span></a>
+                <div style="text-align: right;">
+                    <a class="btn-boyalar" href="/ru/catalog-1kg">
+                        <span class="blink-text">Смотреть цвета</span>
+                        <span class="btn-icon">»</span>
+                    </a>
+                </div>
             </div>
             <a href="/ru/catalog-1kg">
                 <img src="/1kg-paketler-small.webp"
@@ -356,10 +363,16 @@
                      loading="lazy" decoding="async" width="400" height="400">
             </div>
             <div class="button-container">
-                <a href="/ru/sprey1.html" class="mor-button"><span class="blink-text">Смотреть цвета</span></a>
+                <a href="/ru/sprey1.html" class="btn-boyalar" style="display:inline-flex;">
+                    <span class="blink-text">Смотреть цвета</span>
+                    <span class="btn-icon">»</span>
+                </a>
             </div>
             <div class="button-container">
-                <a href="/ru/pitturafelice.html" class="mor-button">Краски для кожи и замши</a>
+                <a href="/ru/pitturafelice.html" class="btn-boyalar" style="display:inline-flex;">
+                    Краски для кожи и замши
+                    <span class="btn-icon">»</span>
+                </a>
             </div>
         </section>
 
@@ -393,14 +406,19 @@
         <section class="container" style="text-align:center; padding: 28px 20px; margin-top: 10px;">
             <p style="font-size: 32px; margin-bottom: 6px; line-height:1;">⭐⭐⭐⭐⭐</p>
             <p style="font-size: 24px; font-weight: 700; color: #4b0082; margin-bottom: 14px;">4.8 / 5 Рейтинг</p>
-            <a href="https://www.viktoria-az.store/ru/reyler.html" class="mor-button">👉 Читать отзывы</a>
-            <br>
-            <a href="https://www.trustpilot.com/review/viktoria-az.store"
-               class="trustpilot-button"
-               target="_blank"
-               rel="noopener">
-                ★ Читать отзывы на Trustpilot
-            </a>
+            <div style="display:flex; flex-direction:column; align-items:flex-end; gap:10px; margin-top:14px;">
+                <a href="https://viktoria-az.store/ru/reyler.html" class="btn-boyalar" style="display:inline-flex; justify-content:space-between; width:100%; max-width:300px; box-sizing:border-box;">
+                    👉 Читать отзывы
+                    <span class="btn-icon">»</span>
+                </a>
+                <a href="https://www.trustpilot.com/review/viktoria-az.store"
+                   class="trustpilot-button"
+                   style="display:inline-flex; justify-content:space-between; width:100%; max-width:300px; box-sizing:border-box;"
+                   target="_blank" rel="noopener">
+                    ★ Отзывы на Trustpilot
+                    <span class="btn-icon">»</span>
+                </a>
+            </div>
         </section>
 
         <section class="instagram-tiktok">
@@ -456,7 +474,7 @@
     </footer>
 
     <audio id="bgMusic" loop preload="auto">
-        <source src="/music/background.mp3" type="audio/mpeg">
+        <source src="/music/musiqi.mpeg" type="audio/mpeg">
     </audio>
     <button id="muteBtn" onclick="toggleMute()" title="Вкл/Выкл музыку" aria-label="Вкл/Выкл музыку"
         style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
@@ -481,3 +499,4 @@
 
 </body>
 </html>
+
