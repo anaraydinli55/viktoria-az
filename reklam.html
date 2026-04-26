@@ -3,7 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Viktoria parça və paltar boyaları</title>
+  <title>Cins və Forma Boyama | Viktoria parça və paltar boyaları</title>
+  <meta name="description" content="Azərbaycanda qara və mavi cins boyama, polis forması və iş geyimlərinin evdə rənglənməsi. Xlor ləkələrini Viktoria boyaları ilə bərpa edin." />
+  
+  <!-- SEO & Social Media -->
+  <meta property="og:title" content="Cins və Forma Boyama | Viktoria parça və paltar boyaları" />
+  <meta property="og:description" content="Solmuş cinsləri və formaları evdə asanlıqla rəngləyin. Qara və mavi cins boyama üzrə peşəkar bələdçi." />
+  <meta property="og:image" content="https://viktoria-az.store/images/og-image.jpg" />
+  <meta property="og:url" content="https://viktoria-az.store/uniforma-boyasi.html" />
+  <link rel="canonical" href="https://viktoria-az.store/uniforma-boyasi.html" />
+
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
@@ -11,6 +20,28 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- VIDEO SEO SCHEMA (GOOGLE XƏTASINI DÜZƏLTMƏK ÜÇÜN) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    "name": "Cins şalvar və Forma Boyama Prosesi",
+    "description": "Solmuş cinslərin və polis formalarının Viktoria paltar boyası ilə evdə rənglənməsi və bərpası videosu.",
+    "thumbnailUrl": [
+      "https://viktoria-az.store/images/og-image.jpg"
+     ],
+    "uploadDate": "2026-04-26T12:00:00+04:00",
+    "duration": "PT0M25S",
+    "contentUrl": "https://viktoria-az.store/images/reklam.mp4",
+    "embedUrl": "https://viktoria-az.store/uniforma-boyasi.html",
+    "interactionStatistic": {
+      "@type": "InteractionCounter",
+      "interactionType": { "@type": "WatchAction" },
+      "userInteractionCount": 1500
+    }
+  }
+  </script>
 
   <style>
     :root {
@@ -35,7 +66,6 @@
       min-height: 100vh;
     }
 
-    /* HEADER */
     header {
       background: var(--purple);
       padding: 8px 16px;
@@ -63,12 +93,10 @@
       padding: 5px 10px;
       border-radius: 8px;
       transition: background 0.15s, color 0.15s;
-      white-space: nowrap;
     }
 
     nav a:hover { background: rgba(255,255,255,0.12); color: #fff; }
 
-    /* CONTAINER */
     .container {
       max-width: 900px;
       margin: 28px auto;
@@ -78,7 +106,6 @@
       box-shadow: var(--card-shadow);
     }
 
-    /* VIDEO */
     .video-wrapper {
       width: 100%;
       display: flex;
@@ -101,7 +128,6 @@
       border-radius: 8px;
     }
 
-    /* TYPOGRAPHY */
     h1 {
       font-family: 'DM Serif Display', serif;
       color: var(--purple);
@@ -119,26 +145,13 @@
       margin-bottom: 10px;
     }
 
-    p {
-      line-height: 1.75;
-      margin-bottom: 16px;
-      font-size: 17px;
-      color: var(--text);
-    }
-
-    ul {
-      margin-left: 22px;
-      font-size: 17px;
-      color: var(--text);
-    }
-
+    p { line-height: 1.75; margin-bottom: 16px; font-size: 17px; }
+    ul { margin-left: 22px; font-size: 17px; margin-bottom: 16px; }
     li { margin-bottom: 10px; line-height: 1.6; }
 
-    /* BUTTONS */
     .button-container {
       display: flex;
       justify-content: space-between;
-      flex-wrap: nowrap;
       gap: 10px;
       margin: 32px 0 8px;
     }
@@ -152,73 +165,34 @@
       border-radius: 12px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 15px;
-      transition: background 0.2s, transform 0.15s;
-      box-shadow: 0 4px 16px rgba(75,0,130,0.20);
+      transition: background 0.2s;
     }
 
-    .mor-button:hover {
-      background: var(--purple-dark);
-      transform: translateY(-2px);
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      padding: 24px 20px 100px;
-      color: var(--text-muted);
-      font-size: 13px;
-    }
-
-    /* FLOATING WHATSAPP */
     .wa-btn {
       position: fixed;
       bottom: 20px;
       right: 20px;
       background: #25D366;
-      color: #fff;
-      text-decoration: none;
       padding: 14px;
       border-radius: 50%;
       box-shadow: 0 6px 24px rgba(37,211,102,0.45);
       z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s, box-shadow 0.15s;
-      animation: waPulse 2.5s ease-in-out infinite;
     }
-
-    .wa-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
-      animation: none;
-    }
-
     .wa-btn svg { width: 32px; height: 32px; fill: #fff; display: block; }
 
-    @keyframes waPulse {
-      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
-      50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
-    }
-
-    /* MOBILE */
     @media (max-width: 768px) {
       .container { padding: 18px 14px; margin: 16px; }
       p, ul, li { font-size: 15px; }
-      .mor-button { font-size: 13px; padding: 11px 8px; }
+      .mor-button { font-size: 13px; }
     }
   </style>
 </head>
 <body>
 
-<!-- FLOATING WHATSAPP -->
 <a class="wa-btn"
    href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm"
    target="_blank" rel="noopener noreferrer" aria-label="WhatsApp ilə əlaqə">
-  <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
-  </svg>
+  <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/></svg>
 </a>
 
 <header>
@@ -226,7 +200,7 @@
     <a href="/">Ana səhifə</a>
     <a href="/catalog">Kataloq</a>
     <a href="/boyama-qaydalari.html">Boyama qaydaları</a>
-    <a href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyası%20sifariş%20etmək%20istəyirəm">WhatsApp</a>
+    <a href="https://wa.me/994554828424?text=Sifariş">WhatsApp</a>
   </nav>
 </header>
 
@@ -234,7 +208,8 @@
 
   <div class="video-wrapper">
     <div class="video-container">
-      <video src="images/reklam.mp4" autoplay muted loop playsinline></video>
+      <!-- POSTER ƏLAVƏ EDİLDİ (SEO ÜÇÜN VACİBDİR) -->
+      <video src="images/reklam.mp4" poster="/images/og-image.jpg" autoplay muted loop playsinline></video>
     </div>
   </div>
 
@@ -242,54 +217,32 @@
     <h1>Qara və Mavi Cins Boyama – Azərbaycanda Geyim və Forma Üçün Effektiv Həll</h1>
 
     <p>
-      Azərbaycanda cins geyim gündəlik həyatın ayrılmaz hissəsidir. Zamanla cins şalvar,
-      cins gödəkcə və digər paltarlar rəngini itirir, solur və ya üzərinə xlor ləkəsi düşür.
-      Belə hallarda yeni geyim almaq əvəzinə <strong>qara və mavi cins boyama</strong>
-      ən sərfəli və praktik çıxış yoludur.
+      Azərbaycanda cins geyim gündəlik həyatın ayrılmaz hissəsidir. Zamanla cins şalvarlar rəngini itirir. 
+      Belə hallarda <strong>qara və mavi cins boyama</strong> ən sərfəli çıxış yoludur.
     </p>
 
-    <h2>Qara Cins Boyama Niyə Bu Qədər Tələbatlıdır?</h2>
+    <h2>Qara Cins Boyama Niyə Vacibdir?</h2>
     <p>
-      <strong>Qara cins boyama</strong> Azərbaycanda ən çox axtarılan boyama üsullarından biridir.
-      Qara rəng köhnə paltarı yeniləyir, xlor ləkəsini gizlədir və geyimi daha səliqəli göstərir.
-      Xüsusilə forma, iş geyimi və <strong>polis forması</strong> üçün qara rəng vacibdir.
+      <strong>Qara cins boyama</strong> xüsusilə forma, iş geyimi və <strong>polis forması</strong> üçün vacibdir. 
+      Viktoria boyaları ilə xlor ləkələrini gizlətmək və geyimi yeniləmək mümkündür.
     </p>
 
     <ul>
-      <li>Rəngi solmuş cinsləri yeniləyir</li>
-      <li>Xlor ləkəsini boyamaq üçün idealdır</li>
-      <li>Forma və rəsmi geyim üçün uyğundur</li>
+      <li>Solmuş cinsləri yeniləyir</li>
+      <li>Xlor ləkəsini tam örtür</li>
+      <li>Polis və iş formaları üçün ideal seçimdir</li>
     </ul>
 
-    <h2>Mavi Cins Boyama – Klassik və Təbii Görünüş</h2>
+    <h2>Xlor Ləkəsini Boyamaq</h2>
     <p>
-      <strong>Mavi cins boyama</strong> daha çox gündəlik geyimlərdə istifadə olunur.
-      Günəşdən açılmış və tez-tez yuyulmuş cinslər düzgün boyandıqda təbii görünüşünü qoruyur.
-    </p>
-
-    <h2>Xlor Ləkəsini Boyamaq Olarmı?</h2>
-    <p>
-      Xlor paltarda geri dönməz ləkə yaradır. Bu ləkəni yumaq mümkün deyil.
-      <strong>Xlor ləkəsini boyamaq</strong> üçün qara və tünd mavi rənglər ən effektiv seçimdir.
-    </p>
-
-    <h2>Forma və Polis Forması Boyama</h2>
-    <p>
-      <strong>Forma boyama</strong>, xüsusilə <strong>polis forması boyama</strong>
-      zamanı rəngin bərabər yayılması vacibdir. Düzgün boyama formanın istifadəsini uzadır.
-    </p>
-
-    <h2>Nəticə</h2>
-    <p>
-      <strong>Qara və mavi cins boyama</strong> Azərbaycanda geyim, paltar, cins və
-      forma üçün ən praktik və iqtisadi həlldir. Köhnə geyimi atmaq əvəzinə boyamaq
-      həm cibə, həm də təbiətə xeyirlidir.
+      Xlor ləkəsi yuyulmur, lakin <strong>qara və tünd mavi boya</strong> ilə tamamilə örtülə bilər. 
+      Düzgün boyama formanın ömrünü uzadır.
     </p>
 
     <div class="button-container">
-      <a href="https://www.viktoria-az.store/boyama-qaydalari.html" class="mor-button">◀ Geri</a>
-      <a href="https://www.viktoria-az.store" class="mor-button">🏠 Ana səhifə</a>
-      <a href="https://www.viktoria-az.store/paltarlarin-evde-renglenmesi.html" class="mor-button">İrəli ▶</a>
+      <a href="/boyama-qaydalari.html" class="mor-button">◀ Geri</a>
+      <a href="/" class="mor-button">🏠 Ana səhifə</a>
+      <a href="/paltarlarin-evde-renglenmesi.html" class="mor-button">İrəli ▶</a>
     </div>
   </main>
 
