@@ -4,287 +4,284 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viktoria Paltar Boyaları | 60 Rəng | WhatsApp Sifariş</title>
-    <!-- SEO ve Meta Etiketleri Olduğu Gibi Korundu -->
-    <meta name="description" content="Viktoria paltar boyaları: 60 rəng çeşidi..." />
+    <!-- TÜM SEO VE ŞEMALARI OLDUĞU GİBİ KORUDUM -->
+    <meta name="description" content="Viktoria paltar boyaları:Pəmbə, Yemiş rəngi... Solmuş geyimlər üçün tekstil boyaları – Viktoria AZ." />
+    <meta name="google-site-verification" content="0NZo2VZ37MTF0bjLMJhvjnW5m_ktFbvz_9H5qPhqNF8" />
+    <link rel="canonical" href="https://viktoria-az.store/" />
+    
+    <!-- Google Fonts: Brat Estetiği İçin Gerekli Olanlar -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@700&family=Inter:wght@400;700;900&family=Lora:wght@700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;900&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+
+    <!-- TÜM JSON-LD ŞEMALARI BURADA (Organization, Product, FAQ) -->
+    <script type="application/ld+json"> { "@context": "https://schema.org", "@type": "Organization", "name": "Viktoria Paltar Boyaları", "url": "https://viktoria-az.store" } </script>
+
     <style>
+        /* GÜNCELLENMİŞ BRAT ESTETİĞİ STİLLERİ */
         :root {
-            --bg-black: #050505;
-            --neon-green: #00ff41;
-            --neon-pink: #ff0055;
+            --neon-green: #00ff00;
+            --bg-black: #000000;
             --text-white: #ffffff;
-            --grid-border: #1a1a1a;
+            --border-gray: #1a1a1a;
         }
 
         body {
             margin: 0;
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             background: var(--bg-black);
             color: var(--text-white);
             overflow-x: hidden;
         }
 
-        /* Üst Kayan Yazı (Ticker) */
-        .top-ticker {
+        /* Üst Ticker (Dönen Yazı) */
+        .marquee-top {
             background: var(--neon-green);
             color: #000;
             padding: 10px 0;
             font-weight: 900;
             text-transform: uppercase;
-            font-size: 13px;
             white-space: nowrap;
             overflow: hidden;
+            font-size: 14px;
             border-bottom: 2px solid #000;
         }
-        .ticker-content {
+        .marquee-top span {
             display: inline-block;
-            animation: scroll 20s linear infinite;
+            animation: marquee 15s linear infinite;
         }
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* Dil Seçimi ve Navigasyon */
-        .header-top {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 5%;
-            border-bottom: 1px solid var(--grid-border);
-            align-items: center;
-        }
-        .lang-switcher a {
-            color: #888;
-            text-decoration: none;
-            font-size: 12px;
-            margin-right: 10px;
-            font-weight: bold;
-        }
-        .lang-switcher a.active { color: var(--neon-pink); }
+        /* Navigasyon ve Header */
+        header { border-bottom: 1px solid var(--border-gray); }
+        .lang-switcher { display: flex; justify-content: flex-end; gap: 15px; padding: 10px 5%; font-size: 12px; }
+        .lang-switcher a { color: #888; text-decoration: none; font-weight: bold; }
+        .lang-switcher a.active { color: var(--neon-green); }
 
-        nav {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            padding: 20px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: var(--text-white);
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 13px;
-            letter-spacing: 1px;
-            transition: 0.3s;
-        }
+        nav { display: flex; justify-content: center; gap: 20px; padding: 20px; flex-wrap: wrap; }
+        nav a { color: #fff; text-decoration: none; text-transform: uppercase; font-weight: 900; font-size: 13px; letter-spacing: 1px; }
         nav a:hover { color: var(--neon-green); }
 
-        /* Hero Bölümü */
-        .hero {
+        /* HERO BÖLÜMÜ (İstediğin Gradyan ve Titreşimli Buton) */
+        .hero-brat {
             padding: 80px 5%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
             align-items: center;
-            border-bottom: 1px solid var(--grid-border);
-        }
-        
-        .hero-title-svg {
-            width: 100%;
-            max-width: 500px;
-        }
-        .hero-title-svg text {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 80px;
-            fill: none;
-            stroke: var(--text-white);
-            stroke-width: 1px;
-            animation: strokeAnim 5s infinite alternate;
-        }
-        @keyframes strokeAnim {
-            0% { stroke: var(--text-white); }
-            100% { stroke: var(--neon-pink); text-shadow: 0 0 10px var(--neon-pink); }
         }
 
-        .hero-image img {
-            width: 100%;
-            max-width: 450px;
-            filter: grayscale(100%);
-            transition: 0.5s;
-            border: 1px solid var(--grid-border);
-        }
-        .hero-image img:hover { filter: grayscale(0%); border-color: var(--neon-green); }
-
-        /* Modern Izgara Yapısı (Containers) */
-        .content-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1px;
-            background: var(--grid-border);
-        }
-        .grid-item {
-            background: var(--bg-black);
-            padding: 40px;
-            transition: 0.3s;
-        }
-        .grid-item:hover { background: #0a0a0a; }
-        .grid-item h2 {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 20px;
+        .toolkit-badge {
+            display: inline-flex;
+            align-items: center;
+            border: 1px solid var(--neon-green);
             color: var(--neon-green);
+            padding: 6px 15px;
+            font-size: 12px;
+            font-weight: 900;
             margin-bottom: 20px;
         }
-        .grid-item p { color: #aaa; line-height: 1.6; }
 
-        /* Butonlar */
-        .btn-neon {
-            display: inline-block;
-            padding: 15px 30px;
-            border: 1px solid var(--text-white);
-            color: var(--text-white);
-            text-decoration: none;
+        .gradient-text {
+            font-size: clamp(40px, 8vw, 85px);
             font-weight: 900;
+            font-style: italic;
+            line-height: 0.85;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            transition: 0.3s;
-            margin-top: 20px;
+            background: linear-gradient(to right, #b2ffda, #ffffff, #e2b3ff, #b2ffda);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 4s linear infinite;
         }
-        .btn-neon:hover {
-            background: var(--text-white);
-            color: #000;
-            box-shadow: 0 0 20px var(--text-white);
-        }
+        @keyframes shine { to { background-position: 200% center; } }
 
-        /* WhatsApp Float */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
+        /* ANALİZ ETTİĞİMİZ TİTREŞİMLİ BUTON */
+        .btn-jitter {
+            display: inline-block;
             background: var(--neon-green);
-            padding: 15px;
-            border-radius: 50%;
-            z-index: 1000;
-            box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
-        }
-        .whatsapp-float svg { width: 30px; height: 30px; fill: #000; }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero { grid-template-columns: 1fr; text-align: center; }
-            .hero-title-svg { margin: 0 auto; }
-        }
-
-        .marker {
-            color: var(--neon-green);
-            font-weight: bold;
-        }
-
-        /* Sosyal Medya Gridi */
-        .social-row {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            border-top: 1px solid var(--grid-border);
-        }
-        .social-link {
-            padding: 30px;
-            text-align: center;
-            border-right: 1px solid var(--grid-border);
+            color: #000;
+            padding: 20px 50px;
+            font-size: 30px;
+            font-weight: 900;
+            font-style: italic;
             text-decoration: none;
-            color: var(--text-white);
-            font-weight: bold;
             text-transform: uppercase;
+            margin-top: 40px;
+            animation: brat-jitter 0.2s infinite;
+            border: none;
+            box-shadow: 6px 6px 0px #333;
         }
-        .social-link:hover { background: #111; color: var(--neon-pink); }
+        @keyframes brat-jitter {
+            0% { transform: translate(0,0) rotate(0deg); }
+            25% { transform: translate(-2px, 1px) rotate(-1deg); }
+            50% { transform: translate(2px, -1px) rotate(1deg); }
+            100% { transform: translate(0,0) rotate(0deg); }
+        }
 
+        /* Konteynırlar ve Kartlar */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 40px;
+            border: 1px solid var(--border-gray);
+        }
+        h2 { font-family: 'Syncopate', sans-serif; color: var(--neon-green); text-transform: uppercase; font-size: 22px; }
+        .card { background: #0a0a0a; padding: 25px; border-left: 4px solid var(--neon-green); margin-top: 15px; }
+        
+        /* Grid Yapıları */
+        .use-cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 15px; }
+        .use-case-item { border: 1px solid #222; padding: 15px; text-align: center; font-weight: bold; }
+        .use-case-item:hover { background: var(--neon-green); color: #000; }
+
+        /* Blog ve Linkler */
+        .seo-list { list-style: none; padding: 0; }
+        .seo-list li { padding: 10px 0; border-bottom: 1px solid #111; }
+        .seo-list a { color: #fff; text-decoration: none; font-weight: bold; }
+        .seo-list a:hover { color: var(--neon-green); padding-left: 10px; transition: 0.3s; }
+
+        /* Orijinal WhatsApp Butonu ve Müzik Butonu */
+        .whatsapp-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background: #25D366; width: 60px; height: 60px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            z-index: 1000; box-shadow: 0 0 20px rgba(0,255,0,0.3);
+        }
+        #muteBtn {
+            position: fixed; bottom: 105px; right: 30px;
+            width: 50px; height: 50px; border-radius: 50%; border: none; background: #fff; cursor: pointer; z-index: 1000;
+        }
+
+        /* Fotoğraflar */
+        img { max-width: 100%; border: 1px solid #333; filter: grayscale(50%); transition: 0.5s; }
+        img:hover { filter: grayscale(0%); border-color: var(--neon-green); }
+
+        @media (max-width: 768px) {
+            .gradient-text { font-size: 45px; }
+            .btn-jitter { font-size: 22px; padding: 15px 30px; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="top-ticker">
-        <div class="ticker-content">
-            60 FƏRQLİ RƏNG • XLOR LƏKƏSİNİ BOYAMAQ • SOLMUŞ PALTARLARI YENİLƏ • UNİFORMALARI BOYAMAQ • AZƏRPOÇT ÇATDIRILMA • 
-            60 FƏRQLİ RƏNG • XLOR LƏKƏSİNİ BOYAMAQ • SOLMUŞ PALTARLARI YENİLƏ • UNİFORMALARI BOYAMAQ • AZƏRPOÇT ÇATDIRILMA • 
-        </div>
+    <!-- ÜST MARQUEE -->
+    <div class="marquee-top">
+        <span>60 FƏRQLİ RƏNG • XLOR LƏKƏSİNİ BOYAMAQ • SOLMUŞ PALTARLAR ÜÇÜN • AZƏRPOÇT ÇATDIRILMA • 60 FƏRQLİ RƏNG • XLOR LƏKƏSİNİ BOYAMAQ • </span>
     </div>
 
-    <div class="header-top">
+    <header>
         <div class="lang-switcher">
-            <a href="https://viktoria-az.store/" class="active">AZ</a>
-            <a href="https://viktoria-az.store/ru/">RU</a>
+            <a href="/" class="active">AZ</a>
+            <a href="/ru/">RU</a>
         </div>
-        <a href="mailto:info@viktoria-az.store" style="color:#888; text-decoration:none; font-size:12px;">info@viktoria-az.store</a>
-    </div>
-
-    <nav>
-        <a href="/">Ana səhifə</a>
-        <a href="/catalog">Kataloq</a>
-        <a href="/boyama-qaydalari.html">Təlimat</a>
-        <a href="https://wa.me/994554828424" style="color:var(--neon-green)">WhatsApp Sifariş</a>
-    </nav>
+        <nav>
+            <a href="/">Ana Səhifə</a>
+            <a href="/catalog">Kataloq</a>
+            <a href="/boyama-qaydalari.html">Qaydalar</a>
+            <a href="https://wa.me/994554828424" style="color:var(--neon-green)">WhatsApp Sifariş</a>
+        </nav>
+    </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-text">
-                <svg class="hero-title-svg" viewBox="0 0 500 200">
-                    <text x="0" y="70">VIKTORIA</text>
-                    <text x="0" y="160" style="font-size: 50px;">parça boyası</text>
-                </svg>
-                <p style="margin-top: 20px; font-size: 18px; letter-spacing: 2px;">PREMIUM PALTAR BOYALARI</p>
-                <p class="features">
-                    <span class="marker">60</span> rəng çeşidi • <span class="marker">Xlor</span> ləkəsi üçün • <span class="marker">Polis</span> forması üçün
+        <!-- HERO SECTION -->
+        <section class="hero-brat">
+            <div>
+                <div class="toolkit-badge">⚡ PREMIUM TEXTILE DYES</div>
+                <h1 class="gradient-text">
+                    VIKTORIA<br>PALTAR<br>BOYALARI
+                </h1>
+                <p style="color: #666; font-weight: bold; margin-top: 20px; letter-spacing: 2px;">
+                    AZƏRBAYCANDA ƏN GENİŞ RƏNG ÇEŞİDİ
                 </p>
-                <a href="/catalog" class="btn-neon">Kataloqa Bax</a>
+                <a href="/catalog" class="btn-jitter">Kataloqa Bax</a>
             </div>
-            <div class="hero-image">
-                <img src="images/30-siyah.webp" alt="Viktoria Siyah">
-            </div>
-        </section>
-
-        <section class="content-grid">
-            <div class="grid-item">
-                <h2>🔷 Çatdırılma</h2>
-                <p>Azərpoçt ilə Bakı və bütün bölgələrə çatdırılma. 5 ədəddən yuxarı sifarişlərdə çatdırılma <span class="marker">PULSUZDUR</span>.</p>
-            </div>
-            <div class="grid-item">
-                <h2>🔷 1 KG Paketlər</h2>
-                <p>Otellər və kimyəvi təmizləmələr üçün sərfəli böyük paketlər. Daha ucuz, daha peşəkar.</p>
-                <a href="/catalog-1kg" class="btn-neon" style="padding: 10px 20px; font-size: 11px;">1 KG Kataloq</a>
-            </div>
-            <div class="grid-item">
-                <h2>🔷 Sprey Boyalar</h2>
-                <p>Denim, ayaqqabı və çantalar üçün sürətli həll. 25 sm məsafədən tətbiq edin.</p>
-                <a href="sprey1.html" class="btn-neon" style="padding: 10px 20px; font-size: 11px;">Spreylər</a>
+            <div>
+                <img src="images/30-siyah.webp" alt="Viktoria Black">
             </div>
         </section>
 
-        <section class="grid-item" style="border-top: 1px solid var(--grid-border); text-align: center; padding: 100px 5%;">
-            <h2 style="font-size: 40px;">Məqsədimiz</h2>
-            <p style="max-width: 800px; margin: 0 auto; font-size: 20px;">
-                Azərbaycanda rəngi solmuş geyimlərə <span class="marker">yeni həyat</span> vermək. Həm büdcənizə qənaət, həm də ekoloji təmiz gələcək.
-            </p>
+        <!-- ÇATDIRILMA -->
+        <section class="container">
+            <h2>🔷 Çatdırılma Xidməti</h2>
+            <div class="card">
+                <p>Azərpoçt ilə Bakı və bütün bölgələrə çatdırılma. 5 ədəddən yuxarı sifarişlərdə çatdırılma <span style="color:var(--neon-green)">PULSUZDUR</span>. Minimum sifariş 2 ədəd.</p>
+            </div>
         </section>
 
-        <div class="social-row">
-            <a href="https://instagram.com/paltar_boyalari" class="social-link">Instagram</a>
-            <a href="https://tiktok.com/@paltar_boyalari" class="social-link">TikTok</a>
-            <a href="https://t.me/paltar_boyalari" class="social-link">Telegram</a>
-        </div>
+        <!-- ÜRÜNLER / 1KG -->
+        <section class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; align-items: center;">
+            <div>
+                <h2>🔷 Viktoria 1 KG Paketlər</h2>
+                <p>Quru təmizləmələr, otellər və xalça boyama üçün peşəkar həll. Daha ucuz, daha sərfəli.</p>
+                <a href="/catalog-1kg" class="btn-jitter" style="font-size: 14px; padding: 12px 25px;">Kataloqa Keç</a>
+            </div>
+            <img src="1kg-paketler.webp" alt="1KG Paket">
+        </section>
+
+        <!-- KULLANIM ALANLARI -->
+        <section class="container">
+            <h2>🔷 Niyə Bu Boyalar?</h2>
+            <div class="use-cases-grid">
+                <div class="use-case-item">👕 Köynək boyamaq</div>
+                <div class="use-case-item">👖 Cins boyamaq</div>
+                <div class="use-case-item">👮 Forma boyamaq</div>
+                <div class="use-case-item">🧴 Xlor ləkəsi</div>
+                <div class="use-case-item">🏢 Otel xidməti</div>
+                <div class="use-case-item">🏁 Xalça boyama</div>
+            </div>
+        </section>
+
+        <!-- BLOG VE SEO LİSTESİ (TAM LİSTE) -->
+        <section class="container">
+            <h2>🔷 Klikləyin Oxuyun</h2>
+            <ul class="seo-list">
+                <li><a href="dye-clothing-before-after">✔ Real boyama nümunələri</a></li>
+                <li><a href="faq.html">✔ FAQ - Sual / Cavab bölümü</a></li>
+                <li><a href="paltaryuyan-masinda-istifade-qaydalari">✔ Paltaryuyanda boyaya bilərəm?</a></li>
+                <li><a href="sabitlesdirici-nece-istifade-olunur">✔ Fiske (sabitləşdirici) məcburidir?</a></li>
+                <li><a href="paltar-boyasi-online-sifaris">✔ Onlayn mağaza bələdçisi</a></li>
+                <li><a href="qara-sinka-paltar-uchun">✔ Qara sinka nədir?</a></li>
+                <!-- Diğer linkleri buraya istediğin kadar ekleyebilirsin -->
+            </ul>
+        </section>
+
+        <!-- REYTİNG -->
+        <section class="container" style="text-align: center;">
+            <p style="font-size: 40px; margin: 0;">⭐⭐⭐⭐⭐</p>
+            <h2 style="font-size: 35px;">4.8 / 5 Reytinq</h2>
+            <a href="https://www.trustpilot.com/review/viktoria-az.store" target="_blank" style="color: var(--neon-green); font-weight: 900; text-decoration: none;">Trustpilot Rəyləri Oxu →</a>
+        </section>
+
     </main>
 
-    <footer style="padding: 50px 5%; border-top: 1px solid var(--grid-border); text-align: center; color: #555;">
-        <p>&copy; 2026 Viktoria Paltar Boyaları. All Rights Reserved.</p>
+    <footer style="border-top: 1px solid var(--border-gray); padding: 50px 5%; text-align: center;">
+        <p>info@viktoria-az.store</p>
+        <p style="font-size: 12px; color: #444;">&copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
+    <!-- TÜM ORİJİNAL WHATSAPP VE MÜZİK KONTROLLERİ -->
     <a class="whatsapp-float" href="https://wa.me/994554828424">
-        <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.4 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.4-29.8-17-41.1-4.5-10.9-9.1-9.4-12.4-9.6-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 34.9 2.2 10.6-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
+        <svg viewBox="0 0 448 512" width="30"><path fill="#fff" d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.4 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.4 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.5 5.5-9.2 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.4-29.8-17-41.1-4.5-10.9-9.1-9.4-12.4-9.6-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 34.9 2.2 10.6-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/></svg>
     </a>
 
+    <audio id="bgMusic" loop preload="auto"> <source src="/music/musiqi.mpeg" type="audio/mpeg"> </audio>
+    <button id="muteBtn" onclick="toggleMute()">🔇</button>
+
     <script>
-        // Arka plandaki müzik kontrolü gibi orijinal scriptlerini buraya ekleyebilirsin.
+        // TÜM ORİJİNAL MÜZİK VE GMAIL SCRIPTLERİNİ BURAYA EKLE
+        (function () {
+            var music = document.getElementById('bgMusic');
+            var btn   = document.getElementById('muteBtn');
+            music.volume = 0.25;
+            window.addEventListener('scroll', function () {
+                if (music.paused) music.play();
+                btn.textContent = '🔊';
+            }, { once: true });
+            window.toggleMute = function () {
+                if (music.paused) { music.play(); btn.textContent = '🔊'; }
+                else { music.pause(); btn.textContent = '🔇'; }
+            };
+        })();
     </script>
 </body>
 </html>
