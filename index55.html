@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="az">
 <head>
@@ -6,54 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Viktoria | Next-Gen Textile Studio</title>
     
-    <!-- SEO & Metadata (Orijinal Məlumatların) -->
-    <meta name="description" content="Azərbaycanda 60 rəng seçimi ilə geyim boyama studiyası." />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
 
     <style>
-        /* AEON.XYZ RƏNG VƏ DİZAYN SİSTEMİ */
         :root {
             --bg: #000000;
-            --bg-offset: #080808;
-            --accent: #00f2ff; /* Aeon Firuzəyi Glow */
-            --accent-soft: rgba(0, 242, 255, 0.15);
-            --border: rgba(255, 255, 255, 0.08);
+            --accent: #00f2ff; 
+            --border: rgba(255, 255, 255, 0.1);
             --text-main: #ffffff;
             --text-dim: #a1a1a1;
         }
 
-        * { box-sizing: border-box; margin: 0; padding: 0; cursor: crosshair; }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             background-color: var(--bg);
             color: var(--text-main);
             font-family: 'Inter', sans-serif;
             overflow-x: hidden;
-            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
         }
 
-        /* 1. ANIMATED MESH BACKGROUND (AEON STYLE) */
+        /* 1. ANIMATED MESH BACKGROUND */
         .mesh-container {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            z-index: -2; overflow: hidden; background: var(--bg);
+            z-index: -2; background: #000;
         }
         .mesh-gradient {
-            position: absolute; width: 140%; height: 140%;
-            top: -20%; left: -20%;
-            background-image: 
-                radial-gradient(circle at 20% 30%, #001a1a 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, #0a001a 0%, transparent 40%);
-            animation: meshMove 20s ease-in-out infinite alternate;
-            filter: blur(80px);
-        }
-        @keyframes meshMove {
-            from { transform: rotate(0deg) scale(1); }
-            to { transform: rotate(5deg) scale(1.1); }
+            position: absolute; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #001a1a 0%, #000 70%);
+            filter: blur(60px);
         }
 
-        /* 2. GRID OVERLAY (AEON PIXEL SYSTEM) */
+        /* 2. GRID SYSTEM (Aeon Pixel) */
         .grid-overlay {
             position: fixed; top: 0; left: 0; width: 100%; height: 100%;
             background-image: linear-gradient(var(--border) 1px, transparent 1px),
@@ -63,33 +49,171 @@
             pointer-events: none;
         }
 
-        /* NAVIGATION */
+        /* HEADER */
         header {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 30px 50px; position: fixed; width: 100%; top: 0;
-            z-index: 1000; border-bottom: 1px solid var(--border);
-            backdrop-filter: blur(20px); background: rgba(0,0,0,0.5);
+            padding: 20px 50px; border-bottom: 1px solid var(--border);
+            background: rgba(0,0,0,0.8); backdrop-filter: blur(10px);
+            position: sticky; top: 0; z-index: 1000;
         }
         .logo { font-weight: 900; font-size: 20px; letter-spacing: -1px; }
-        .nav-links { display: flex; gap: 40px; }
-        .nav-links a { 
-            text-decoration: none; color: var(--text-dim); font-size: 12px; 
-            font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-            transition: 0.3s;
-        }
-        .nav-links a:hover { color: var(--accent); text-shadow: 0 0 10px var(--accent); }
+        nav a { color: var(--text-dim); text-decoration: none; font-size: 12px; font-weight: 700; margin-left: 30px; text-transform: uppercase; }
 
-        /* FULLSCREEN HERO */
+        /* HERO SECTION */
         .hero {
-            height: 100vh; display: flex; flex-direction: column;
+            height: 90vh; display: flex; flex-direction: column;
             justify-content: center; align-items: center; text-align: center;
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid var(--border); padding: 20px;
         }
         .hero-tag {
-            font-family: 'Space Grotesk', monospace;
-            color: var(--accent); font-size: 11px; letter-spacing: 6px;
-            text-transform: uppercase; margin-bottom: 30px;
-            padding: 8px 20px; border: 1px solid var(--accent);
-            border-radius: 100px; background: var(--accent-soft);
+            color: var(--accent); font-size: 11px; letter-spacing: 5px;
+            text-transform: uppercase; margin-bottom: 20px;
+            border: 1px solid var(--accent); padding: 5px 15px; border-radius: 50px;
         }
-        .hero
+        .hero h1 {
+            font-size: clamp(50px, 15vw, 180px);
+            font-weight: 900; line-height: 0.8; letter-spacing: -8px;
+            text-transform: uppercase; margin-bottom: 30px;
+        }
+
+        /* AEON STYLE BUTTONS */
+        .btn-group { display: flex; gap: 20px; }
+        .btn-aeon {
+            padding: 18px 40px; font-weight: 900; text-transform: uppercase;
+            text-decoration: none; font-size: 13px; letter-spacing: 2px;
+            transition: 0.3s;
+        }
+        .primary { background: var(--text-main); color: #000; }
+        .secondary { border: 1px solid var(--border); color: #fff; }
+        
+        /* JITTER ANIMATION (Slowed) */
+        .jitter { animation: jitter-slow 0.6s infinite ease-in-out; }
+        @keyframes jitter-slow {
+            0%, 100% { transform: translate(0,0); }
+            50% { transform: translate(-2px, 1px) rotate(0.5deg); }
+        }
+
+        /* STATS (COUNTER) */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            border-bottom: 1px solid var(--border);
+        }
+        .stat-item {
+            padding: 60px; text-align: center; border-right: 1px solid var(--border);
+        }
+        .stat-num { font-size: 60px; font-weight: 900; color: var(--accent); display: block; }
+        .stat-label { font-size: 11px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; }
+
+        /* CONTENT SECTION */
+        .features {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+        .feature-box {
+            padding: 80px 50px; border-right: 1px solid var(--border); border-bottom: 1px solid var(--border);
+        }
+        .feature-box h3 { font-size: 30px; font-weight: 900; margin-bottom: 20px; text-transform: uppercase; }
+        .feature-box p { color: var(--text-dim); font-size: 16px; line-height: 1.5; }
+
+        /* FOOTER MARQUEE */
+        .marquee {
+            padding: 40px 0; overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--border);
+        }
+        .marquee-inner { display: inline-block; animation: scroll 20s linear infinite; font-size: 60px; font-weight: 900; color: #111; }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* WHATSAPP FLOAT */
+        .wa-float {
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--accent); width: 60px; height: 60px;
+            display: flex; align-items: center; justify-content: center; z-index: 2000;
+        }
+
+        /* SHOW ANIMATION FIX */
+        .reveal { opacity: 0; transform: translateY(30px); transition: 1s ease-out; }
+        .visible { opacity: 1; transform: translateY(0); }
+
+    </style>
+</head>
+<body>
+
+    <div class="mesh-container"><div class="mesh-gradient"></div></div>
+    <div class="grid-overlay"></div>
+
+    <header>
+        <div class="logo">VIKTORIA STUDIO<span>_</span></div>
+        <nav>
+            <a href="/catalog">Catalog</a>
+            <a href="https://wa.me/994554828424">Order</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-tag">Viktoria Textile Tech</div>
+            <h1>TRANSFORM<br>CLOTHES</h1>
+            <div class="btn-group">
+                <a href="/catalog" class="btn-aeon primary jitter">Kataloqa Bax</a>
+                <a href="https://wa.me/994554828424" class="btn-aeon secondary">WhatsApp</a>
+            </div>
+        </section>
+
+        <section class="stats-grid">
+            <div class="stat-item reveal">
+                <span class="stat-num">60</span>
+                <span class="stat-label">Colors</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-num">124+</span>
+                <span class="stat-label">Years Heritage</span>
+            </div>
+            <div class="stat-item reveal">
+                <span class="stat-num">100%</span>
+                <span class="stat-label">Xlor Remedy</span>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature-box reveal">
+                <h3>01. Xlor Remedy</h3>
+                <p>Xlor ləkələrini və solmuş geyimləri zavod keyfiyyətində bərpa edin.</p>
+            </div>
+            <div class="feature-box reveal">
+                <h3>02. Industrial</h3>
+                <p>Otellər və peşəkar kimyəvi təmizləmə mərkəzləri üçün 1 kq-lıq paketlər.</p>
+            </div>
+        </section>
+
+        <div class="marquee">
+            <div class="marquee-inner">
+                VIKTORIA PALTAR BOYALARI • 60 COLORS • PREMIUM QUALITY • AZERBAIJAN DELIVERY • VIKTORIA PALTAR BOYALARI • 
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/994554828424" class="wa-float">
+        <svg width="30" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6z"/></svg>
+    </a>
+
+    <script>
+        // Reveal Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        // Səhifə yüklənəndə hero-nun dərhal görünməsi üçün
+        window.addEventListener('load', () => {
+            document.querySelectorAll('.reveal').forEach(el => {
+                if(el.getBoundingClientRect().top < window.innerHeight) {
+                    el.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
