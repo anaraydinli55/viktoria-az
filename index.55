@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viktoria | Textile Revolution</title>
+    
+    <!-- SEO & META -->
+    <meta name="description" content="Viktoria paltar boyaları: 60 rəng, Azərpoçt çatdırılması, WhatsApp sifariş." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&family=Inter:wght@400;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* AEON.XYZ RƏNG VƏ DİZAYN SİSTEMİ */
+        :root {
+            --bg: #000000;
+            --accent: #00f2ff; /* Aeon Firuzəyi */
+            --text-main: #ffffff;
+            --text-dim: #888888;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+            line-height: 1.5;
+        }
+
+        /* GRADIENT MESH BACKGROUND */
+        .mesh-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% 50%, #001a1a 0%, #000 100%);
+            z-index: -2;
+        }
+
+        /* CANVAS PARTICLE (ULDUZLAR) */
+        #particle-canvas {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1; pointer-events: none;
+        }
+
+        /* FULLSCREEN HERO */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-label {
+            font-family: 'Space Grotesk', monospace;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 12px;
+            margin-bottom: 20px;
+            opacity: 0; transform: translateY(20px);
+        }
+
+        .hero h1 {
+            font-size: clamp(50px, 15vw, 180px);
+            font-weight: 900;
+            line-height: 0.8;
+            letter-spacing: -8px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            background: linear-gradient(to bottom, #fff 40%, #555 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cta-group { display: flex; gap: 20px; }
+        
+        .btn-aeon {
+            padding: 18px 40px;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-primary { background: var(--accent); color: #000; box-shadow: 0 0 30px rgba(0, 242, 255, 0.3); }
+        .btn-secondary { border: 1px solid var(--glass-border); color: #fff; background: var(--glass); }
+        .btn-aeon:hover { transform: scale(1.05); filter: brightness(1.2); }
+
+        /* STATS BAR */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 60px 0;
+            border-top: 1px solid var(--glass-border);
+            border-bottom: 1px solid var(--glass-border);
+            background: rgba(0,0,0,0.5);
+        }
+        .stat-item { text-align: center; }
+        .stat-num { font-size: 40px; font-weight: 900; color: var(--accent); display: block; }
+        .stat-label { font-size: 12px; color: var(--text-dim); text-transform: uppercase; letter-spacing: 2px; }
+
+        /* GRID KARTLAR (FEATURES) */
+        .features { padding: 100px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        .glass-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            transition: 0.4s;
+            opacity: 0; transform: translateY(40px);
+        }
+        .glass-card:hover {
+            border-color: var(--accent);
+            background: rgba(0, 242, 255, 0.05);
+            box-shadow: 0 0 40px rgba(0, 242, 255, 0.1);
+        }
+        .glass-card h3 { font-size: 24px; margin-bottom: 15px; text-transform: uppercase; }
+        .glass-card p { color: var(--text-dim); font-size: 15px; }
+
+        /* LOGO MARQUEE */
+        .marquee {
+            padding: 40px 0;
+            background: #050505;
+            overflow: hidden;
+            white-space: nowrap;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        .marquee-content {
+            display: inline-block;
+            animation: scroll 20s linear infinite;
+            font-weight: 900; font-size: 50px; color: #111; text-transform: uppercase;
+        }
+        @keyframes scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+        /* WHATSAPP FLOAT */
+        .wa-link {
+            position: fixed; bottom: 30px; right: 30px;
+            background: var(--accent); width: 60px; height: 60px;
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 2px; z-index: 1000;
+        }
+
+        /* ANIMATIONS ON SCROLL */
+        .reveal { opacity: 1 !important; transform: translateY(0) !important; transition: 0.8s ease-out; }
+
+    </style>
+</head>
+<body>
+
+    <div class="mesh-bg"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <span class="hero-label" id="hero-label">Available in Azerbaijan</span>
+            <h1 id="hero-title">VIKTORIA</h1>
+            <div class="cta-group">
+                <a href="/catalog" class="btn-aeon btn-primary">Catalog</a>
+                <a href="https://wa.me/994554828424" class="btn-aeon btn-secondary">Order Now</a>
+            </div>
+        </section>
+
+        <!-- STATS BAR -->
+        <section class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num" data-val="60">0</span>
+                <span class="stat-label">Colors Available</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num" data-val="124">0</span>
+                <span class="stat-label">Years Heritage</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num" data-val="10000">0</span>
+                <span class="stat-label">Happy Clients</span>
+            </div>
+        </section>
+
+        <!-- FEATURES GRID -->
+        <section class="features">
+            <div class="glass-card">
+                <h3>Fabric Tech</h3>
+                <p>Yüksək piqmentli Alman texnologiyası ilə geyimlərinizin toxumasına zərər vermədən rəngləyir.</p>
+            </div>
+            <div class="glass-card">
+                <h3>Xlor Remedy</h3>
+                <p>Xlor ləkələrini və rəngi qaçmış hissələri 100% örtmə qabiliyyətinə malikdir.</p>
+            </div>
+            <div class="glass-card">
+                <h3>1KG Industrial</h3>
+                <p>Otellər və kimyəvi təmizləmələr üçün peşəkar böyük paketlər mövcuddur.</p>
+            </div>
+        </section>
+
+        <!-- LOGO BANDI -->
+        <div class="marquee">
+            <div class="marquee-content">
+                VIKTORIA PALTAR BOYALARI • PREMIUM QUALITY • FAST DELIVERY • BEYOND TEXTILES • VIKTORIA PALTAR BOYALARI • PREMIUM QUALITY • 
+            </div>
+        </div>
+    </main>
+
+    <a href="https://wa.me/994554828424" class="wa-link">
+        <svg width="30" viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6z"/></svg>
+    </a>
+
+    <script>
+        // 1. PARTICLE CANVAS ANIMATION
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = 'rgba(0, 242, 255, 0.5)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function createParticles() {
+            for (let i = 0; i < 100; i++) particles.push(new Particle());
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.update(); p.draw(); });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', initCanvas);
+        initCanvas(); createParticles(); animate();
+
+        // 2. COUNTER ANIMATION
+        const counters = document.querySelectorAll('.stat-num');
+        const observerOptions = { threshold: 0.5 };
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    const target = +entry.target.getAttribute('data-val');
+                    let count = 0;
+                    const update = () => {
+                        const inc = target / 50;
+                        if(count < target) {
+                            count = Math.ceil(count + inc);
+                            entry.target.innerText = count + (target === 60 ? "" : "+");
+                            setTimeout(update, 30);
+                        } else {
+                            entry.target.innerText = target + (target === 60 ? "" : "+");
+                        }
+                    };
+                    update();
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        counters.forEach(c => counterObserver.observe(c));
+
+        // 3. SCROLL REVEAL
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) entry.target.classList.add('reveal');
+            });
+        });
+
+        document.querySelectorAll('.glass-card, .hero-label, .hero h1').forEach(el => revealObserver.observe(el));
+
+    </script>
+</body>
+</html>
