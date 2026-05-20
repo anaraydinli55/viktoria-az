@@ -115,13 +115,15 @@
   font-family: 'Syne', sans-serif;
   font-size: clamp(32px, 8vw, 48px);
   font-weight: 800;
-  line-height: 1.4; /* 1.1 idi, quyruq yerləşsin deyə 1.25 etdik */
+  line-height: 1.4 !important; /* Sətir arasındakı g-nin quyruğunun aşağıdakı mətnə dəyməməsi üçün */
   letter-spacing: -2px;
   margin-bottom: 12px;
-  padding-bottom: 10px; /* Quyruğun kəsilməməsi üçün əlavə sahə */
-  display: block; /* Sahənin tam tətbiq olunması üçün */
-      /* ... digər kodlar ... */
-  overflow: visible; 
+  
+  /* ƏSAS HƏLL BURADADIR: */
+  display: inline-block; /* Brauzeri hər bir hərfin sahəsini yenidən hesablamağa məcbur edir */
+  padding-bottom: 0.2em !important; /* Quyruğun yerləşməsi üçün vizual sahə yaradır */
+  vertical-align: middle;
+  overflow: visible !important; /* Hər hansı bir gizli konteynerin onu kəsməsinin qarşısını alır */ 
   }
 
   .price-tag {
