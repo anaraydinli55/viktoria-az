@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viktoria Paltar Boyaları – 60 Rəng, Peşəkar Nəticə</title>
+<meta name="description" content="Viktoria paltar boyaları ilə paltarlarınıza yeni həyat verin. 60 rəng seçimi, peşəkar nəticə.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #3dffa0;
+    --green-mid: #a8ffda;
+    --green-light: #e8fff5;
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --gray: #888888;
+    --gray-light: #f4f4f4;
+    --radius: 24px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+    background: rgba(61,255,160,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .nav-logo svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nav-hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .nav-hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--black);
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+
+  /* ── MOBILE MENU ── */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 99;
+    background: var(--green);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+  }
+
+  .mobile-menu.open { display: flex; }
+
+  .mobile-menu a {
+    font-family: 'Syne', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--black);
+    text-decoration: none;
+    letter-spacing: -1px;
+  }
+
+  .mobile-menu .close-btn {
+    position: absolute;
+    top: 22px; right: 24px;
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--black);
+    font-family: 'Syne', sans-serif;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--green) 0%, var(--green-light) 100%);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-top: 70px;
+  }
+
+  .hero-marquee-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 0;
+    gap: 0;
+  }
+
+  .marquee-row {
+    overflow: hidden;
+    line-height: 1.3;
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .marquee-track {
+    display: flex;
+    white-space: nowrap;
+    will-change: transform;
+    width: max-content;
+  }
+
+  .marquee-row:nth-child(1) .marquee-track { animation: mq-left  36s linear infinite; }
+  .marquee-row:nth-child(2) .marquee-track { animation: mq-right 42s linear infinite; }
+  .marquee-row:nth-child(3) .marquee-track { animation: mq-left  30s linear infinite; }
+  .marquee-row:nth-child(4) .marquee-track { animation: mq-right 39s linear infinite; }
+
+  @keyframes mq-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes mq-right {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .marquee-text {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: clamp(72px, 22vw, 130px);
+    letter-spacing: -2px;
+    padding: 0px 40px;
+    display: inline-block;
+    user-select: none;
+    flex-shrink: 0;
+  }
+
+  .marquee-row.outline .marquee-text {
+    color: transparent;
+    -webkit-text-stroke: 2px rgba(255,255,255,0.85);
+  }
+  .marquee-row.white .marquee-text {
+    color: var(--white);
+  }
+  .marquee-row.faint .marquee-text {
+    color: rgba(255,255,255,0.35);
+  }
+  .marquee-row.black .marquee-text {
+    color: var(--black);
+  }
+
+  .hero-bottom {
+    padding: 32px 24px 40px;
+    text-align: center;
+  }
+
+  .hero-tagline {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black);
+    opacity: 0.7;
+    margin-bottom: 20px;
+  }
+
+  .hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 14px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .hero-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 60px 20px; }
+
+  .section-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 7vw, 42px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  .section-sub {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--gray);
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto 40px;
+  }
+
+  .section-sub em {
+    font-style: italic;
+    color: var(--black);
+  }
+
+  /* ── FEATURE CARDS ── */
+  .cards-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .feature-card {
+    background: var(--green);
+    border-radius: var(--radius);
+    padding: 24px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-tags {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+
+  .card-tag {
+    display: inline-block;
+    border: 1.5px solid var(--black);
+    border-radius: 100px;
+    padding: 5px 12px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+  }
+
+  .card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 12vw, 58px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 1;
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+
+  .card-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-bottom: 20px;
+  }
+
+  .card-body {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .card-visual {
+    flex: 0 0 130px;
+    height: 160px;
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-visual-1 {
+    background: linear-gradient(135deg, #fff 40%, var(--green-mid) 100%);
+  }
+
+  .card-visual-2 {
+    background: linear-gradient(135deg, #c8b4f8 0%, #e8d5ff 50%, #b8e8ff 100%);
+  }
+
+  .card-visual-3 {
+    background: var(--black);
+  }
+
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    padding: 12px;
+    height: 100%;
+    align-content: center;
+  }
+
+  .swatch {
+    aspect-ratio: 1;
+    border-radius: 4px;
+  }
+
+  .wave-lines {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+
+  .wave-lines svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .blob-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 12px;
+  }
+
+  .blob-wrap svg {
+    width: 90%;
+    height: 90%;
+  }
+
+  .card-text-block {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-desc {
+    font-size: 12.5px;
+    line-height: 1.65;
+    color: var(--black);
+    margin-bottom: 16px;
+  }
+
+  .card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--black);
+    padding-bottom: 2px;
+  }
+
+  .card-link:hover { opacity: 0.6; }
+
+  /* ── COLORS GRID (3 ITEMS PER ROW) ── */
+  .colors-section {
+    background: var(--black);
+    border-radius: 32px;
+    margin: 0 12px;
+    padding: 40px 20px;
+  }
+
+  .colors-section .section-heading { color: var(--white); }
+  .colors-section .section-sub { color: rgba(255,255,255,0.5); }
+
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 ədəd yan-yana */
+    gap: 12px;
+    margin-top: 32px;
+  }
+
+  .color-item {
+    aspect-ratio: 1;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.2;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .color-item:hover {
+    transform: scale(1.06);
+    z-index: 2;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+
+  @media (max-width: 400px) {
+    .color-item { font-size: 10px; border-radius: 14px; }
+  }
+
+  /* ── PARTNERS ── */
+  .partners-card {
+    background: var(--green);
+    border-radius: var(--radius);
+    padding: 28px 20px;
+    text-align: center;
+  }
+
+  .partners-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--black);
+    margin-bottom: 28px;
+  }
+
+  .badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--white);
+    border-radius: 100px;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--black);
+    font-family: 'Inter', sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transform: rotate(var(--r, 0deg));
+  }
+
+  /* ── NEWS / BLOG ── */
+  .news-heading {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 28px;
+    letter-spacing: -1px;
+  }
+
+  .news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .news-card {
+    background: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1.5px solid #e8e8e8;
+    cursor: pointer;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .news-card:hover {
+    border-color: var(--green);
+    transform: translateY(-2px);
+  }
+
+  .news-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+
+  .news-card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+
+  .news-arrow {
+    flex: 0 0 36px;
+    height: 36px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    font-size: 16px;
+    transition: background 0.2s, border-color 0.2s;
+  }
+
+  .news-card:hover .news-arrow {
+    background: var(--green);
+    border-color: var(--green);
+  }
+
+  .news-thumb {
+    width: 100%;
+    height: 140px;
+    border-radius: 12px;
+    object-fit: cover;
+    background: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .news-thumb-inner {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--gray);
+  }
+
+  /* ── VIEW MORE ── */
+  .view-more-wrap {
+    text-align: center;
+    padding: 32px 0 16px;
+  }
+
+  .view-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: 1.5px solid var(--black);
+    padding-bottom: 2px;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    background: linear-gradient(180deg, var(--green-light) 0%, var(--green) 100%);
+    border-radius: 32px 32px 0 0;
+    margin-top: 40px;
+    padding: 56px 24px 64px;
+    text-align: left;
+  }
+
+  .cta-section h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(28px, 8vw, 44px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    color: var(--black);
+  }
+
+  .cta-section p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--black);
+    opacity: 0.75;
+    margin-bottom: 32px;
+    max-width: 340px;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 16px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .cta-btn:hover { transform: translateY(-2px); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 48px 24px 40px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 24px;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+  }
+
+  .footer-links a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .footer-links a:hover { color: var(--green); }
+
+  .footer-links .sep { color: rgba(255,255,255,0.2); font-size: 13px; }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-social a {
+    color: rgba(255,255,255,0.5);
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.2s;
+  }
+
+  .footer-social a:hover { color: var(--green); }
+
+  .footer-copy {
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 24px;
+  }
+
+  /* ── WHATSAPP FLOAT ── */
+  .wa-float {
+    position: fixed;
+    bottom: 24px;
+    right: 20px;
+    z-index: 50;
+    width: 54px;
+    height: 54px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 20px rgba(37,211,102,0.45);
+    text-decoration: none;
+    transition: transform 0.2s;
+  }
+
+  .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg { width: 28px; height: 28px; fill: white; }
+
+  /* ── ANIM UTILITIES ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="16" cy="16" r="14" stroke="#0a0a0a" stroke-width="2.5"/>
+      <path d="M8 16 C8 10 12 7 16 7 C20 7 24 10 24 16 C24 22 20 25 16 25 C12 25 8 22 8 16Z" stroke="#0a0a0a" stroke-width="2" fill="none"/>
+      <line x1="16" y1="4" x2="16" y2="28" stroke="#0a0a0a" stroke-width="2"/>
+      <line x1="4" y1="16" x2="28" y2="16" stroke="#0a0a0a" stroke-width="2"/>
+    </svg>
+    VIKTORIA
+  </a>
+  <div class="nav-hamburger" onclick="openMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-btn" onclick="closeMenu()">✕</span>
+  <a href="#features" onclick="closeMenu()">Boyalar</a>
+  <a href="#colors" onclick="closeMenu()">60 Rəng</a>
+  <a href="#partners" onclick="closeMenu()">Haqqımızda</a>
+  <a href="#news" onclick="closeMenu()">Blog</a>
+  <a href="#contact" onclick="closeMenu()">Əlaqə</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-marquee-wrap">
+    <div class="marquee-row outline">
+      <div class="marquee-track">
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
+      </div>
+    </div>
+    <div class="marquee-row white">
+      <div class="marquee-track">
+        <span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span>
+      </div>
+    </div>
+    <div class="marquee-row faint">
+      <div class="marquee-track">
+        <span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span>
+      </div>
+    </div>
+    <div class="marquee-row black">
+      <div class="marquee-track">
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-tagline">Azərbaycanda №1 Paltar Boyası</p>
+    <a href="#colors" class="hero-cta">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.5"/><path d="M5 8h6M9.5 6l2 2-2 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+      Rəngləri Kəşfet
+    </a>
+  </div>
+</section>
+
+<!-- INTRO TEXT -->
+<section style="padding: 60px 24px 40px;">
+  <h2 class="section-heading fade-up">Paltarlarınıza<br>Yeni Həyat Verin</h2>
+  <p class="section-sub fade-up">İnternet evdən <em>peşəkar nəticəyə</em> keçir.<br>Viktoria boyaları ilə köhnə paltarlarınızı<br>tamamilə yeniliyə çevirin.</p>
+</section>
+
+<!-- FEATURE CARDS -->
+<section id="features" style="padding: 0 16px 60px;">
+  <div class="cards-stack">
+    <div class="feature-card fade-up">
+      <div class="card-tags"><span class="card-tag">60 RƏNG</span><span class="card-tag">GENİŞ SEÇİM</span></div>
+      <div class="card-title">RƏNG<br>DÜNYASI</div>
+      <div class="card-subtitle">HƏR PARÇA ÜÇÜN MÜKƏMMƏL RƏNG</div>
+      <div class="card-body">
+        <div class="card-visual card-visual-1">
+          <div class="swatches">
+            <div class="swatch" style="background:#e63946"></div><div class="swatch" style="background:#f4a261"></div><div class="swatch" style="background:#e9c46a"></div><div class="swatch" style="background:#2a9d8f"></div>
+            <div class="swatch" style="background:#264653"></div><div class="swatch" style="background:#6d4c9f"></div><div class="swatch" style="background:#e76f51"></div><div class="swatch" style="background:#457b9d"></div>
+            <div class="swatch" style="background:#1d3557"></div><div class="swatch" style="background:#a8dadc"></div><div class="swatch" style="background:#f1faee"></div><div class="swatch" style="background:#3dffa0"></div>
+          </div>
+        </div>
+        <div class="card-text-block">
+          <p class="card-desc">60 fərqli rəng seçimi ilə pambıq, ipək, yun və qarışıq parçaları asanlıqla boyayın.</p>
+          <a href="#colors" class="card-link">Rəngləri Gör &nbsp;→</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-card fade-up">
+      <div class="card-tags"><span class="card-tag">KEYFİYYƏT</span><span class="card-tag">DAVAMLILIQ</span></div>
+      <div class="card-title">SOLMAZ<br>RƏNGLƏR</div>
+      <div class="card-subtitle">YUMAQDAN SONRA DA PARLAQ QALIR</div>
+      <div class="card-body">
+        <div class="card-text-block">
+          <p class="card-desc">30+ yuma davamlı formul. Parçanıza işıq kimi yapışır, solmaz.</p>
+          <a href="#contact" class="card-link">Ətraflı Öyrən &nbsp;→</a>
+        </div>
+        <div class="card-visual card-visual-2">
+          <div class="blob-wrap">
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><ellipse cx="42" cy="48" rx="30" ry="35" fill="#c084fc" opacity="0.7"/><ellipse cx="60" cy="55" rx="25" ry="28" fill="#3b82f6" opacity="0.6"/></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 60 COLORS GRID -->
+<section id="colors" style="padding: 0 12px 60px;">
+  <div class="colors-section fade-up">
+    <h2 class="section-heading">60 Rəng</h2>
+    <p class="section-sub">Hər parça növü üçün mükəmməl rəng. Məhsula baxmaq üçün üzərinə klikləyin.</p>
+    <div class="color-grid" id="colorGrid"></div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners" style="padding: 0 16px 60px;">
+  <h2 class="section-heading fade-up" style="margin-bottom: 24px;">Niyə Viktoria?</h2>
+  <div class="partners-card fade-up">
+    <p>Hər parça növünə uyğun boyalar. Viktoria ilə bütün parça növlərini boyayın.</p>
+    <div class="badges">
+      <span class="badge" style="--r:-3deg">🧵 Pambıq</span><span class="badge" style="--r:2deg">🧶 Yun</span><span class="badge" style="--r:-1deg">✨ İpək</span><span class="badge" style="--r:3deg">🩹 Sintetik</span>
+      <span class="badge" style="--r:-2deg">👕 Qarışıq</span><span class="badge" style="--r:1deg">🎽 Demin</span><span class="badge" style="--r:-4deg">🧣 Kətan</span><span class="badge" style="--r:2deg">🌿 Viskon</span>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS / BLOG -->
+<section id="news" style="padding: 0 16px 40px;">
+  <h2 class="news-heading fade-up">Son Yazılar</h2>
+  <div class="news-list">
+    <div class="news-card fade-up">
+      <div class="news-card-top">
+        <div class="news-card-title">Paltarı Evdə Necə Doğru Boyamaq Olar? Addım-Addım Bələdçi</div>
+        <div class="news-arrow">↗</div>
+      </div>
+      <div class="news-thumb"><div class="news-thumb-inner" style="background: linear-gradient(135deg, #3dffa0, #00c8ff); color: white;">BOYAMA REHBERİ</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div id="contact">
+  <div class="cta-section">
+    <h2>Viktoria ilə<br>Paltarını<br>Yenilə</h2>
+    <p>Sualın var? WhatsApp vasitəsilə bizimlə əlaqə saxla.</p>
+    <a href="https://wa.me/994XXXXXXXXX" class="cta-btn">WhatsApp ilə Sifariş Ver</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">VIKTORIA</div>
+  <div class="footer-links">
+    <a href="#">Ana Səhifə</a><span class="sep">·</span><a href="#colors">60 Rəng</a><span class="sep">·</span><a href="#news">Blog</a><span class="sep">·</span><a href="#contact">Əlaqə</a>
+  </div>
+  <p class="footer-copy">© 2025 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/994XXXXXXXXX" class="wa-float" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.131.559 4.13 1.535 5.862L.057 23.543a.5.5 0 00.6.6l5.681-1.478A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.74-.52-5.289-1.424l-.379-.225-3.932 1.022 1.022-3.932-.225-.379A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+function openMenu() { document.getElementById('mobileMenu').classList.add('open'); }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+// ── 60 COLORS GRID DATA & LOGIC ──
+const products = [
+  ["Qara", "viktoria-qara-paltar-boyasi"], ["Tünd Göy", "viktoria-tund-goy-paltar-boyasi"], ["Qırmızı", "viktoria-qirmizi-paltar-boyasi"],
+  ["Yaşıl", "viktoria-yasil-paltar-boyasi"], ["Sarı", "viktoria-sari-paltar-boyasi"], ["Tünd Mavi", "viktoria-tund-mavi-paltar-boyasi"],
+  ["Qəhvəyi", "viktoria-qehveyi-paltar-boyasi"], ["Tünd Qəhvəyi", "viktoria-tund-qehveyi-paltar-boyasi"], ["Çəhrayı", "viktoria-cehrayi-paltar-boyasi"],
+  ["Açıq Mavi", "viktoria-aciq-mavi-paltar-boyasi"], ["Orta Qəhvəyi", "viktoria-orta-qehveyi-paltar-boyasi"], ["Açıq Göy", "viktoria-aciq-goy-paltar-boyasi"],
+  ["Orta Mavi", "viktoria-orta-mavi-paltar-boyasi"], ["Gül Qurusu", "viktoria-gul-qurusu-paltar-boyasi"], ["Bej", "viktoria-bej-paltar-boyasi"],
+  ["Tünd Boz", "viktoria-tund-boz-paltar-boyasi"], ["Xaki", "viktoria-xaki-paltar-boyasi"], ["Açıq Bənövşəyi", "viktoria-aciq-mor-paltar-boyasi"],
+  ["Bordovu", "viktoria-bordoviy-paltar-boyasi"], ["Yanıq Qəhvəyi", "viktoria-yaniq-qehveyi-paltar-boyasi"], ["Narıncı", "viktoria-narinci-paltar-boyasi"],
+  ["Güvəz", "viktoria-guvez-paltar-boyasi"], ["Yemiş Rəngi", "viktoria-yemis-rengi-paltar-boyasi"], ["Buz Mavisi", "viktoria-buz-mavisi-paltar-boyasi"],
+  ["Şaftalı", "viktoria-yavruagzi-paltar-boyasi"], ["Tünd Çəhrayı", "viktoria-tund-cehrayi-paltar-boyasi"], ["Al Qırmızı", "viktoria-al-qirmizi-paltar-boyasi"],
+  ["Atəşi Çəhrayı", "viktoria-atesi-cehrayi-paltar-boyasi"], ["Nar Çiçəyi", "viktoria-nar-ciceyi-paltar-boyasi"], ["Tünd Qırmızı", "viktoria-tund-qirmizi-paltar-boyasi"],
+  ["Gilas Rəngi", "viktoria-visne-curuyu-paltar-boyasi"], ["Açıq Bej", "viktoria-aciq-bej-paltar-boyasi"], ["Tütün Rəngi", "viktoria-tutun-rengi-paltar-boyasi"],
+  ["Tünd Bənövşəyi", "viktoria-tund-mor-paltar-boyasi"], ["Lavanda", "viktoria-eflatun-paltar-boyasi"], ["Açıq Boz", "viktoria-aciq-boz-paltar-boyasi"],
+  ["Dəniz Dalğası", "viktoria-cam-gobeyi-paltar-boyasi"], ["Marsala", "viktoria-serabi-paltar-boyasi"], ["Açıq Salat", "viktoria-filizi-aciq-paltar-boyasi"],
+  ["Nefti Rəngi", "viktoria-nefti-rengi-paltar-boyasi"], ["Kanarya", "viktoria-kanarya-paltar-boyasi"], ["Portağal", "viktoria-portagal-paltar-boyasi"],
+  ["Zümrüd", "viktoria-zumrud-paltar-boyasi"], ["Petrol", "viktoria-petrol-paltar-boyasi"], ["Zeytuni", "viktoria-zeytuni-paltar-boyasi"],
+  ["İndiqo", "viktoria-civit-mavi-paltar-boyasi"], ["Göy Bənövşəyi", "viktoria-mor-goy-paltar-boyasi"], ["Tünd Marsala", "viktoria-tund-serabi-paltar-boyasi"],
+  ["Tünd Lavanda", "viktoria-tund-eflatun-paltar-boyasi"], ["Bənövşəyi", "viktoria-benovseyi-paltar-boyasi"], ["Qızılı Sarı", "viktoria-qizili-sari-paltar-boyasi"],
+  ["Tünd Sarı", "viktoria-tund-sari-paltar-boyasi"], ["Cins Mavisi", "viktoria-cins-mavisi-paltar-boyasi"], ["Orta Göy", "viktoria-orta-goy-paltar-boyasi"],
+  ["Firuzəyi", "viktoria-firuzeyi-paltar-boyasi"], ["Tünd Bej", "viktoria-tund-bej-paltar-boyasi"], ["Açıq Qəhvəyi", "viktoria-aciq-qehveyi-paltar-boyasi"],
+  ["Tünd Yaşıl", "viktoria-tund-yasil-paltar-boyasi"], ["Tünd Salat", "viktoria-tund-filizi-paltar-boyasi"], ["Sabitləyici", "viktoria-sabitlesdirici-paltar-boyasi"]
+];
+
+const colorMap = {
+  "Qara": { bg: "linear-gradient(135deg,#1c1c1c,#3a3a3a)", color: "#e0e0e0" },
+  "Tünd Göy": { bg: "linear-gradient(135deg,#002a5c,#004488)", color: "#fff" },
+  "Qırmızı": { bg: "linear-gradient(135deg,#cc0000,#ee2200)", color: "#fff" },
+  "Yaşıl": { bg: "linear-gradient(135deg,#1a6e00,#28a800)", color: "#fff" },
+  "Sarı": { bg: "linear-gradient(135deg,#c8a800,#f0d000)", color: "#222" },
+  "Tünd Mavi": { bg: "linear-gradient(135deg,#00008b,#0000cc)", color: "#cce0ff" },
+  "Qəhvəyi": { bg: "linear-gradient(135deg,#5c3317,#8b4513)", color: "#f5dcc8" },
+  "Tünd Qəhvəyi": { bg: "linear-gradient(135deg,#2e1007,#4a2210)", color: "#d4aa88" },
+  "Çəhrayı": { bg: "linear-gradient(135deg,#e05580,#ff7faa)", color: "#fff" },
+  "Açıq Mavi": { bg: "linear-gradient(135deg,#3a90d0,#70bce8)", color: "#fff" },
+  "Orta Qəhvəyi": { bg: "linear-gradient(135deg,#7b4a28,#a0622d)", color: "#f5dcc8" },
+  "Açıq Göy": { bg: "linear-gradient(135deg,#4a82b8,#7ab0da)", color: "#fff" },
+  "Orta Mavi": { bg: "linear-gradient(135deg,#1055a0,#2272cc)", color: "#fff" },
+  "Gül Qurusu": { bg: "linear-gradient(135deg,#c28880,#d8a898)", color: "#3a1000" },
+  "Bej": { bg: "linear-gradient(135deg,#c4a070,#d8b888)", color: "#3a2800" },
+  "Tünd Boz": { bg: "linear-gradient(135deg,#3a3a3a,#5a5a5a)", color: "#e0e0e0" },
+  "Xaki": { bg: "linear-gradient(135deg,#4b5320,#6b7e3d)", color: "#fff" },
+  "Açıq Bənövşəyi": { bg: "linear-gradient(135deg,#8855bb,#aa77dd)", color: "#fff" },
+  "Bordovu": { bg: "linear-gradient(135deg,#880044,#aa0066)", color: "#ffd0e8" },
+  "Yanıq Qəhvəyi": { bg: "linear-gradient(135deg,#3d1a1a,#5c2626)", color: "#fff" },
+  "Narıncı": { bg: "linear-gradient(135deg,#c84400,#f06820)", color: "#fff" },
+  "Güvəz": { bg: "linear-gradient(135deg,#7a1010,#aa2020)", color: "#ffd0c0" },
+  "Yemiş Rəngi": { bg: "linear-gradient(135deg,#b06030,#d08040)", color: "#fff" },
+  "Buz Mavisi": { bg: "linear-gradient(135deg,#88c8e8,#b8dff0)", color: "#002244" },
+  "Şaftalı": { bg: "linear-gradient(135deg,#f0907a,#f8b8a8)", color: "#3a1000" },
+  "Tünd Çəhrayı": { bg: "linear-gradient(135deg,#b0006a,#d80088)", color: "#fff" },
+  "Al Qırmızı": { bg: "linear-gradient(135deg,#cc0000,#ff2222)", color: "#fff" },
+  "Atəşi Çəhrayı": { bg: "linear-gradient(135deg,#ee0077,#ff44bb)", color: "#fff" },
+  "Nar Çiçəyi": { bg: "linear-gradient(135deg,#cc2200,#ee4410)", color: "#fff" },
+  "Tünd Qırmızı": { bg: "linear-gradient(135deg,#6a0000,#990000)", color: "#ffc0c0" },
+  "Gilas Rəngi": { bg: "linear-gradient(135deg,#35001a,#580030)", color: "#e8a0c0" },
+  "Açıq Bej": { bg: "linear-gradient(135deg,#dbc8a8,#ecdcc0)", color: "#3a2800" },
+  "Tütün Rəngi": { bg: "linear-gradient(135deg,#6e5030,#907048)", color: "#ffe8c0" },
+  "Tünd Bənövşəyi": { bg: "linear-gradient(135deg,#4b0082,#6800b8)", color: "#e8c8ff" },
+  "Lavanda": { bg: "linear-gradient(135deg,#9b59b6,#c080d8)", color: "#fff" },
+  "Açıq Boz": { bg: "linear-gradient(135deg,#999999,#bbbbbb)", color: "#1a1a1a" },
+  "Dəniz Dalğası": { bg: "linear-gradient(135deg,#008B8B,#00CED1)", color: "#fff" },
+  "Marsala": { bg: "linear-gradient(135deg,#6e0e2e,#96183e)", color: "#ffd0d8" },
+  "Açıq Salat": { bg: "linear-gradient(135deg,#50a040,#70c058)", color: "#fff" },
+  "Nefti Rəngi": { bg: "linear-gradient(135deg,#004e5e,#007080)", color: "#b0f0f8" },
+  "Kanarya": { bg: "linear-gradient(135deg,#c8c000,#f0e800)", color: "#222" },
+  "Portağal": { bg: "linear-gradient(135deg,#d05000,#f07820)", color: "#fff" },
+  "Zümrüd": { bg: "linear-gradient(135deg,#006644,#009960)", color: "#c0ffe8" },
+  "Petrol": { bg: "linear-gradient(135deg,#003e58,#005878)", color: "#a0d8f0" },
+  "Zeytuni": { bg: "linear-gradient(135deg,#4a4a1e,#686830)", color: "#e8e8a0" },
+  "İndiqo": { bg: "linear-gradient(135deg,#1e1870,#2e2898)", color: "#c0c8ff" },
+  "Göy Bənövşəyi": { bg: "linear-gradient(135deg,#3c2272,#5830a0)", color: "#e0d0ff" },
+  "Tünd Marsala": { bg: "linear-gradient(135deg,#3a0018,#580028)", color: "#f0a0c0" },
+  "Tünd Lavanda": { bg: "linear-gradient(135deg,#5800a0,#7800d0)", color: "#f0d0ff" },
+  "Bənövşəyi": { bg: "linear-gradient(135deg,#6600cc,#8822ee)", color: "#f0d8ff" },
+  "Qızılı Sarı": { bg: "linear-gradient(135deg,#d4a000,#f0c000)", color: "#222" },
+  "Tünd Sarı": { bg: "linear-gradient(135deg,#c4a000,#e0bc00)", color: "#222" },
+  "Cins Mavisi": { bg: "linear-gradient(135deg,#14325a,#204878)", color: "#c0d8f8" },
+  "Orta Göy": { bg: "linear-gradient(135deg,#1868a0,#2888c0)", color: "#fff" },
+  "Firuzəyi": { bg: "linear-gradient(135deg,#00a8a8,#00d4d4)", color: "#003838" },
+  "Tünd Bej": { bg: "linear-gradient(135deg,#887050,#a89070)", color: "#fff8e8" },
+  "Açıq Qəhvəyi": { bg: "linear-gradient(135deg,#b87840,#d0985a)", color: "#fff" },
+  "Tünd Yaşıl": { bg: "linear-gradient(135deg,#003300,#005500)", color: "#a0f0a0" },
+  "Tünd Salat": { bg: "linear-gradient(135deg,#2c3c18,#3c5020)", color: "#c8dca0" },
+  "Sabitləyici": { bg: "linear-gradient(135deg,#f0f0f0,#ffffff)", color: "#444" }
+};
+
+const grid = document.getElementById('colorGrid');
+products.forEach(p => {
+  const [name, slug] = p;
+  const style = colorMap[name] || { bg: "#888", color: "#fff" };
+  const item = document.createElement('a');
+  item.className = 'color-item';
+  item.href = `https://viktoriapaltarboyasi.com/mehsul/${slug}`;
+  item.target = "_blank";
+  item.style.background = style.bg;
+  item.style.color = style.color;
+  item.textContent = name;
+  grid.appendChild(item);
+});
+
+// SCROLL FADE-IN
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
