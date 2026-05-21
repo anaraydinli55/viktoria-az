@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viktoria Paltar Boyaları – 60 Rəng, Peşəkar Nəticə</title>
+<meta name="description" content="Viktoria paltar boyaları ilə paltarlarınıza yeni həyat verin. 60 rəng seçimi, peşəkar nəticə.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green: #3dffa0;
+    --green-mid: #a8ffda;
+    --green-light: #e8fff5;
+    --black: #0a0a0a;
+    --white: #ffffff;
+    --gray: #888888;
+    --gray-light: #f4f4f4;
+    --radius: 24px;
+  }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px;
+    background: rgba(61,255,160,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'Syne', sans-serif; font-weight: 800; font-size: 20px;
+    letter-spacing: -0.5px; color: var(--black); text-decoration: none;
+  }
+  .nav-logo svg { width: 32px; height: 32px; }
+  .nav-hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--black); border-radius: 2px; transition: 0.3s; }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    display: none; position: fixed; inset: 0; z-index: 99;
+    background: var(--green); flex-direction: column;
+    align-items: center; justify-content: center; gap: 36px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: 'Syne', sans-serif; font-size: 32px; font-weight: 800; color: var(--black); text-decoration: none; letter-spacing: -1px; }
+  .mobile-menu .close-btn { position: absolute; top: 22px; right: 24px; font-size: 32px; cursor: pointer; color: var(--black); font-family: 'Syne', sans-serif; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    background: linear-gradient(180deg, var(--green) 0%, var(--green-light) 100%);
+    display: flex; flex-direction: column; overflow: hidden; padding-top: 70px;
+  }
+  .hero-marquee-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px 0 0; gap: 0; }
+  .marquee-row { overflow: hidden; line-height: 1; width: 100%; }
+  .marquee-track { display: flex; white-space: nowrap; will-change: transform; width: max-content; }
+  .marquee-row:nth-child(1) .marquee-track { animation: mq-left  36s linear infinite; }
+  .marquee-row:nth-child(2) .marquee-track { animation: mq-right 42s linear infinite; }
+  .marquee-row:nth-child(3) .marquee-track { animation: mq-left  30s linear infinite; }
+  .marquee-row:nth-child(4) .marquee-track { animation: mq-right 39s linear infinite; }
+  @keyframes mq-left  { 0% { transform: translateX(0); }    100% { transform: translateX(-50%); } }
+  @keyframes mq-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
+  .marquee-text {
+    font-family: 'Syne', sans-serif; font-weight: 800;
+    font-size: clamp(72px, 22vw, 130px); letter-spacing: -2px;
+    padding: 0 40px; display: inline-block; user-select: none; flex-shrink: 0;
+  }
+  .marquee-row.outline .marquee-text { color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,0.85); }
+  .marquee-row.white   .marquee-text { color: var(--white); }
+  .marquee-row.faint   .marquee-text { color: rgba(255,255,255,0.35); }
+  .marquee-row.black   .marquee-text { color: var(--black); }
+  .hero-bottom { padding: 32px 24px 40px; text-align: center; }
+  .hero-tagline { font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--black); opacity: 0.7; margin-bottom: 20px; }
+  .hero-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--black); color: var(--white);
+    font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px;
+    padding: 14px 28px; border-radius: 100px; text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
+
+  /* ══ STACK CAROUSEL ══ */
+  .carousel-section { padding: 56px 24px 48px; background: #f9f9f9; border-bottom: 1px solid #eee; }
+  .carousel-inner { display: flex; align-items: center; justify-content: center; gap: 56px; }
+
+  .stack-area { position: relative; width: 230px; height: 290px; cursor: pointer; flex-shrink: 0; user-select: none; }
+
+  .scard {
+    position: absolute; inset: 0; border-radius: 20px; overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+    box-shadow: 0 10px 36px rgba(0,0,0,0.13);
+    transition: transform .52s cubic-bezier(.4,0,.2,1), opacity .52s;
+    background: #fff; /* Şəkil olmayan hissələr ağ olsun */
+    will-change: transform;
+  }
+
+  /* GÖRSEL AYARLARI: Tam görünməsi üçün background-size: contain edildi */
+  .scard .fill { 
+    width: 100%; 
+    height: 75%; 
+    display: block; 
+    background-size: contain; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-color: #fff;
+  }
+
+  .scard .meta { height: 25%; background: #fff; display: flex; flex-direction: column; justify-content: center; padding: 0 14px; gap: 2px; border-top: 1px solid #f0f0f0; }
+  .scard .meta .nm { font-size: 13px; font-weight: 700; color: #111; font-family: 'Syne', sans-serif; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .scard .meta .no { font-size: 11px; color: #aaa; font-family: 'Inter', sans-serif; }
+
+  .scard[data-pos="0"] { transform: translate(  0px,  0px) rotate( 0deg); z-index:5; opacity:1.00; }
+  .scard[data-pos="1"] { transform: translate( 10px, -8px) rotate( 4deg); z-index:4; opacity:0.88; }
+  .scard[data-pos="2"] { transform: translate( 20px,-16px) rotate( 8deg); z-index:3; opacity:0.76; }
+  .scard[data-pos="3"] { transform: translate( 30px,-24px) rotate(12deg); z-index:2; opacity:0.60; }
+  .scard[data-pos="4"] { transform: translate( 40px,-32px) rotate(16deg); z-index:1; opacity:0.44; }
+
+  .scard.fly-back {
+    transform: translate(-190px, 60px) rotate(-36deg) scale(.74) !important;
+    opacity: 0 !important; z-index: 10 !important;
+    transition: transform .44s cubic-bezier(.4,0,.2,1), opacity .32s;
+  }
+
+  .carousel-info { display: flex; flex-direction: column; gap: 6px; min-width: 160px; }
+  .ci-count { font-size: 13px; color: #aaa; font-family: 'Inter', sans-serif; }
+  .ci-name  { font-family: 'Syne', sans-serif; font-size: 30px; font-weight: 800; color: var(--black); line-height: 1.1; letter-spacing: -1px; }
+  .ci-num   { font-size: 12px; color: #aaa; font-family: 'Inter', sans-serif; font-style: italic; }
+  .ci-btns  { display: flex; gap: 10px; margin-top: 16px; }
+  .ci-btn {
+    width: 44px; height: 44px; border-radius: 50%; border: 1.5px solid #ddd;
+    background: #fff; color: var(--black); font-size: 18px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: background .2s, border-color .2s; line-height: 1;
+  }
+  .ci-btn:hover { background: var(--green); border-color: var(--green); }
+
+  .carousel-mobile-info { display: none; flex-direction: column; align-items: center; gap: 6px; margin-top: 28px; text-align: center; }
+  .carousel-mobile-btns { display: none; justify-content: center; gap: 12px; margin-top: 16px; }
+
+  @media (max-width: 600px) {
+    .carousel-inner { flex-direction: column; gap: 0; }
+    .carousel-info  { display: none; }
+    .carousel-mobile-info { display: flex; }
+    .carousel-mobile-btns { display: flex; }
+    /* Mobildə kart sahəsini bir az daha genişləndirdik */
+    .stack-area { width: 210px; height: 270px; margin: 0 auto; }
+  }
+
+  /* SECTIONS */
+  section { padding: 60px 20px; }
+  .section-heading { font-family: 'Syne', sans-serif; font-size: clamp(28px, 7vw, 42px); font-weight: 800; line-height: 1.15; letter-spacing: -1.5px; text-align: center; margin-bottom: 16px; }
+  .section-sub { font-size: 14px; line-height: 1.7; color: var(--gray); text-align: center; max-width: 520px; margin: 0 auto 40px; }
+
+  /* FEATURE CARDS */
+  .cards-stack { display: flex; flex-direction: column; gap: 16px; }
+  .feature-card { background: var(--green); border-radius: var(--radius); padding: 24px 20px; position: relative; overflow: hidden; }
+  .card-tags { display: flex; justify-content: space-between; margin-bottom: 16px; }
+  .card-tag { display: inline-block; border: 1.5px solid var(--black); border-radius: 100px; padding: 5px 12px; font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--black); }
+  .card-title { font-family: 'Syne', sans-serif; font-size: clamp(36px, 12vw, 58px); font-weight: 800; letter-spacing: -2px; line-height: 1; margin-bottom: 20px; }
+  .card-body { display: flex; gap: 12px; align-items: flex-start; }
+  .card-visual { flex: 0 0 130px; height: 160px; border-radius: 16px; overflow: hidden; position: relative; background-size: contain; background-repeat: no-repeat; background-position: center; }
+  .card-visual-1 { background-color: #fff; }
+  
+  .card-desc { font-size: 12.5px; line-height: 1.65; color: var(--black); margin-bottom: 16px; }
+  .card-link { display: inline-flex; align-items: center; gap: 8px; font-weight: 500; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); padding-bottom: 2px; }
+
+  /* COLORS GRID */
+  .colors-section { background: var(--black); border-radius: 32px; margin: 0 12px; padding: 40px 24px; }
+  .colors-section .section-heading { color: var(--white); }
+  .colors-section .section-sub { color: rgba(255,255,255,0.5); }
+  .color-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 32px; }
+  .color-cell { aspect-ratio: 1; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+  .color-cell:hover { transform: scale(1.1); z-index: 2; }
+
+  /* PARTNERS & BADGES */
+  .partners-card { background: var(--green); border-radius: var(--radius); padding: 28px 20px; text-align: center; }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+  .badge { display: inline-flex; align-items: center; gap: 6px; background: var(--white); border-radius: 100px; padding: 8px 16px; font-size: 12px; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+
+  /* NEWS */
+  .news-list { display: flex; flex-direction: column; gap: 16px; }
+  .news-card { background: var(--white); border-radius: 20px; padding: 20px; border: 1.5px solid #e8e8e8; cursor: pointer; transition: 0.2s; }
+  .news-card:hover { border-color: var(--green); transform: translateY(-2px); }
+  .news-thumb { width:100%; height:140px; border-radius:12px; overflow:hidden; }
+
+  /* CTA */
+  .cta-section { background: linear-gradient(180deg, var(--green-light) 0%, var(--green) 100%); border-radius: 32px 32px 0 0; padding: 56px 24px 64px; }
+  .cta-btn { display:inline-flex; align-items:center; gap:8px; background:var(--black); color:var(--white); font-weight:700; padding:16px 28px; border-radius:100px; text-decoration:none; }
+
+  /* FOOTER */
+  footer { background:var(--black); color:var(--white); padding:48px 24px 40px; text-align:center; }
+  .footer-links { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-bottom:32px; }
+  .footer-links a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:13px; }
+  .footer-social { display:flex; justify-content:center; gap:20px; margin-bottom: 20px; }
+  .footer-social a { color:rgba(255,255,255,0.5); }
+
+  /* WHATSAPP FLOAT */
+  .wa-float { position:fixed; bottom:24px; right:20px; z-index:50; width:54px; height:54px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 6px 20px rgba(37,211,102,0.45); }
+  .wa-float svg { width:28px; height:28px; fill:white; }
+
+  .fade-up { opacity:0; transform:translateY(30px); transition: 0.6s ease; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo">
+    <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14" stroke="#0a0a0a" stroke-width="2.5"/><path d="M8 16 C8 10 12 7 16 7 C20 7 24 10 24 16 C24 22 20 25 16 25 C12 25 8 22 8 16Z" stroke="#0a0a0a" stroke-width="2" fill="none"/><line x1="16" y1="4" x2="16" y2="28" stroke="#0a0a0a" stroke-width="2"/><line x1="4" y1="16" x2="28" y2="16" stroke="#0a0a0a" stroke-width="2"/></svg>
+    VIKTORIA
+  </a>
+  <div class="nav-hamburger" onclick="openMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <span class="close-btn" onclick="closeMenu()">✕</span>
+  <a href="#colors" onclick="closeMenu()">62 Rəng</a>
+  <a href="#features" onclick="closeMenu()">Xüsusiyyətlər</a>
+  <a href="#news" onclick="closeMenu()">Blog</a>
+  <a href="#contact" onclick="closeMenu()">Əlaqə</a>
+</div>
+
+<section class="hero">
+  <div class="hero-marquee-wrap">
+    <div class="marquee-row outline"><div class="marquee-track"><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span></div></div>
+    <div class="marquee-row white"><div class="marquee-track"><span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span></div></div>
+    <div class="marquee-row faint"><div class="marquee-track"><span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span></div></div>
+    <div class="marquee-row black"><div class="marquee-track"><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span></div></div>
+  </div>
+  <div class="hero-bottom">
+    <p class="hero-tagline">Azərbaycanda №1 Paltar Boyası</p>
+    <a href="#colors" class="hero-cta">Rəngləri Kəşfet</a>
+  </div>
+</section>
+
+<!-- STACK CAROUSEL -->
+<section class="carousel-section fade-up">
+  <div class="carousel-inner">
+    <div class="stack-area" id="stackArea"></div>
+    <div class="carousel-info">
+      <div class="ci-count" id="desktopCount">1 / 60</div>
+      <div class="ci-name"  id="desktopName">—</div>
+      <div class="ci-num"   id="desktopNum">№01 — Viktoria</div>
+      <div class="ci-btns">
+        <button class="ci-btn" id="btnPrevD">&#8249;</button>
+        <button class="ci-btn" id="btnNextD">&#8250;</button>
+      </div>
+    </div>
+  </div>
+  <div class="carousel-mobile-info">
+    <div class="ci-count" id="mobileCount">1 / 60</div>
+    <div class="ci-name"  id="mobileName">—</div>
+    <div class="ci-num"   id="mobileNum">№01 — Viktoria</div>
+  </div>
+  <div class="carousel-mobile-btns">
+    <button class="ci-btn" id="btnPrevM">&#8249;</button>
+    <button class="ci-btn" id="btnNextM">&#8250;</button>
+  </div>
+</section>
+
+<!-- COLORS GRID -->
+<section id="colors">
+  <div class="colors-section fade-up">
+    <h2 class="section-heading">60+ Peşəkar Rəng</h2>
+    <p class="section-sub">Klikləyərək rəng kodunu görə bilərsiniz.</p>
+    <div class="color-grid" id="colorGrid"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="cards-stack">
+    <div class="feature-card fade-up">
+      <div class="card-tags"><span class="card-tag">KEYFİYYƏT</span></div>
+      <div class="card-title">SOLMAYAN<br>RƏNGLƏR</div>
+      <div class="card-body">
+        <div class="card-text-block">
+          <p class="card-desc">Viktoria boyaları ilə boyanmış paltarlar 30+ yuma boyu öz parlaqlığını saxlayır.</p>
+          <a href="#contact" class="card-link">Sifariş Et &nbsp;→</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="contact">
+  <div class="cta-section">
+    <h2 class="section-heading" style="text-align:left">Paltarınızı<br>Yeniləməyə<br>Hazırsınız?</h2>
+    <a href="https://wa.me/994XXXXXXXXX" class="cta-btn">WhatsApp ilə Sifariş Ver</a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="#">Ana Səhifə</a>
+    <a href="#colors">Rəng Kataloqu</a>
+    <a href="#contact">Əlaqə</a>
+  </div>
+  <p>© 2025 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
+</footer>
+
+<a href="https://wa.me/994XXXXXXXXX" class="wa-float" target="_blank">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.131.559 4.13 1.535 5.862L.057 23.543a.5.5 0 00.6.6l5.681-1.478A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.93 0-3.74-.52-5.289-1.424l-.379-.225-3.932 1.022 1.022-3.932-.225-.379A9.956 9.956 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+</a>
+
+<script>
+function openMenu()  { document.getElementById('mobileMenu').classList.add('open'); }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+// RƏNG MƏLUMATLARI
+const COLORS = [
+  { n:"Qara", bg:"#1c1c1c", img:"30-siyah.webp" },
+  { n:"Tünd Göy", bg:"#002a5c", img:"51-lacivert-koyu.webp" },
+  { n:"Qırmızı", bg:"#cc0000", img:"8-kirmizi.webp" },
+  { n:"Yaşıl", bg:"#1a6e00", img:"38-yesil.webp" },
+  { n:"Sarı", bg:"#f0d000", img:"11-sari.webp" },
+  { n:"Tünd Mavi", bg:"#00008b", img:"" },
+  { n:"Qəhvəyi", bg:"#5c3317", img:"" },
+  { n:"Bənövşəyi", bg:"#6600cc", img:"" }
+  // Digər rəngləri bura eyni formatda əlavə edə bilərsən
+];
+
+const SHOW = 5;
+const area = document.getElementById('stackArea');
+let queue = COLORS.map((_, i) => i);
+let busy = false;
+
+function buildStack() {
+  area.innerHTML = '';
+  const visible = Math.min(SHOW, queue.length);
+  for (let i = visible - 1; i >= 0; i--) {
+    const col = COLORS[queue[i]];
+    const card = document.createElement('div');
+    card.className = 'scard';
+    card.dataset.pos = i;
+
+    // ŞƏKİL MƏNTİQİ: contain istifadə olunur
+    const fillStyle = col.img 
+      ? `background-image:url('${col.img}');` 
+      : `background:${col.bg};`;
+
+    card.innerHTML = `
+      <div class="fill" style="${fillStyle}"></div>
+      <div class="meta">
+        <div class="nm">${col.n}</div>
+        <div class="no">№${String(queue[i]+1).padStart(2,'0')} — Viktoria</div>
+      </div>`;
+    area.appendChild(card);
+  }
+  updateTexts();
+}
+
+function updateTexts() {
+  const col = COLORS[queue[0]];
+  const info = {
+    cnt: (COLORS.length - queue.length + 1) + ' / ' + COLORS.length,
+    name: col.n,
+    num: '№' + String(queue[0]+1).padStart(2,'0') + ' — Viktoria'
+  };
+  document.getElementById('desktopCount').textContent = info.cnt;
+  document.getElementById('desktopName').textContent = info.name;
+  document.getElementById('desktopNum').textContent = info.num;
+  document.getElementById('mobileCount').textContent = info.cnt;
+  document.getElementById('mobileName').textContent = info.name;
+  document.getElementById('mobileNum').textContent = info.num;
+}
+
+function goNext() {
+  if (busy) return;
+  busy = true;
+  const top = area.querySelector('.scard[data-pos="0"]');
+  if (top) top.classList.add('fly-back');
+  setTimeout(() => {
+    queue.push(queue.shift());
+    buildStack();
+    busy = false;
+  }, 400);
+}
+
+function goPrev() {
+  if (busy) return;
+  queue.unshift(queue.pop());
+  buildStack();
+}
+
+document.getElementById('btnNextD').onclick = goNext;
+document.getElementById('btnPrevD').onclick = goPrev;
+document.getElementById('btnNextM').onclick = goNext;
+document.getElementById('btnPrevM').onclick = goPrev;
+area.onclick = goNext;
+
+// GRID YARATMAQ
+const grid = document.getElementById('colorGrid');
+COLORS.forEach((c, i) => {
+  const cell = document.createElement('div');
+  cell.className = 'color-cell';
+  cell.style.backgroundColor = c.bg;
+  cell.onclick = () => alert('Rəng: ' + c.n + ' (№' + (i+1) + ')');
+  grid.appendChild(cell);
+});
+
+buildStack();
+
+// SCROLL ANIMATION
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
