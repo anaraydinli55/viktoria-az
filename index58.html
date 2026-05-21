@@ -21,9 +21,7 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
   html { scroll-behavior: smooth; }
-
   body {
     font-family: 'Inter', sans-serif;
     background: var(--white);
@@ -44,7 +42,6 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
   }
-
   .nav-logo {
     display: flex;
     align-items: center;
@@ -56,12 +53,7 @@
     color: var(--black);
     text-decoration: none;
   }
-
-  .nav-logo svg {
-    width: 32px;
-    height: 32px;
-  }
-
+  .nav-logo svg { width: 32px; height: 32px; }
   .nav-hamburger {
     display: flex;
     flex-direction: column;
@@ -69,7 +61,6 @@
     cursor: pointer;
     padding: 4px;
   }
-
   .nav-hamburger span {
     display: block;
     width: 26px;
@@ -91,9 +82,7 @@
     justify-content: center;
     gap: 36px;
   }
-
   .mobile-menu.open { display: flex; }
-
   .mobile-menu a {
     font-family: 'Syne', sans-serif;
     font-size: 32px;
@@ -102,7 +91,6 @@
     text-decoration: none;
     letter-spacing: -1px;
   }
-
   .mobile-menu .close-btn {
     position: absolute;
     top: 22px; right: 24px;
@@ -121,7 +109,6 @@
     overflow: hidden;
     padding-top: 70px;
   }
-
   .hero-marquee-wrap {
     flex: 1;
     display: flex;
@@ -130,37 +117,23 @@
     padding: 40px 0 0;
     gap: 0;
   }
-
-  /* Each row is a viewport-clipped window */
   .marquee-row {
     overflow: hidden;
     line-height: 1;
     width: 100%;
   }
-
-  /* ── FIX: width:max-content ensures -50% = exactly half the track ── */
   .marquee-track {
     display: flex;
     white-space: nowrap;
     will-change: transform;
     width: max-content;
   }
-
   .marquee-row:nth-child(1) .marquee-track { animation: mq-left  36s linear infinite; }
   .marquee-row:nth-child(2) .marquee-track { animation: mq-right 42s linear infinite; }
   .marquee-row:nth-child(3) .marquee-track { animation: mq-left  30s linear infinite; }
   .marquee-row:nth-child(4) .marquee-track { animation: mq-right 39s linear infinite; }
-
-  /* ── FIX: -50% = shifts exactly 3 copies (half of 6) → seamless loop ── */
-  @keyframes mq-left {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-  }
-  @keyframes mq-right {
-    0%   { transform: translateX(-50%); }
-    100% { transform: translateX(0); }
-  }
-
+  @keyframes mq-left  { 0% { transform: translateX(0); }    100% { transform: translateX(-50%); } }
+  @keyframes mq-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
   .marquee-text {
     font-family: 'Syne', sans-serif;
     font-weight: 800;
@@ -171,26 +144,14 @@
     user-select: none;
     flex-shrink: 0;
   }
-
-  .marquee-row.outline .marquee-text {
-    color: transparent;
-    -webkit-text-stroke: 2px rgba(255,255,255,0.85);
-  }
-  .marquee-row.white .marquee-text {
-    color: var(--white);
-  }
-  .marquee-row.faint .marquee-text {
-    color: rgba(255,255,255,0.35);
-  }
-  .marquee-row.black .marquee-text {
-    color: var(--black);
-  }
-
+  .marquee-row.outline .marquee-text { color: transparent; -webkit-text-stroke: 2px rgba(255,255,255,0.85); }
+  .marquee-row.white   .marquee-text { color: var(--white); }
+  .marquee-row.faint   .marquee-text { color: rgba(255,255,255,0.35); }
+  .marquee-row.black   .marquee-text { color: var(--black); }
   .hero-bottom {
     padding: 32px 24px 40px;
     text-align: center;
   }
-
   .hero-tagline {
     font-family: 'Syne', sans-serif;
     font-size: 15px;
@@ -201,7 +162,6 @@
     opacity: 0.7;
     margin-bottom: 20px;
   }
-
   .hero-cta {
     display: inline-flex;
     align-items: center;
@@ -216,15 +176,10 @@
     text-decoration: none;
     transition: transform 0.2s, box-shadow 0.2s;
   }
-
-  .hero-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 32px rgba(0,0,0,0.25);
-  }
+  .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
 
   /* ── SECTIONS ── */
   section { padding: 60px 20px; }
-
   .section-heading {
     font-family: 'Syne', sans-serif;
     font-size: clamp(28px, 7vw, 42px);
@@ -234,7 +189,6 @@
     text-align: center;
     margin-bottom: 16px;
   }
-
   .section-sub {
     font-size: 14px;
     line-height: 1.7;
@@ -243,19 +197,165 @@
     max-width: 520px;
     margin: 0 auto 40px;
   }
+  .section-sub em { font-style: italic; color: var(--black); }
 
-  .section-sub em {
-    font-style: italic;
-    color: var(--black);
+  /* ══════════════════════════════════
+     STACK CAROUSEL
+  ══════════════════════════════════ */
+  .carousel-section {
+    padding: 56px 24px 48px;
+    background: #f9f9f9;
+    border-bottom: 1px solid #eee;
   }
 
-  /* ── FEATURE CARDS ── */
-  .cards-stack {
+  /* desktop: stack kart + sağda bilgi */
+  .carousel-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  /* kart yığını */
+  .stack-area {
+    position: relative;
+    width: 200px;
+    height: 256px;
+    cursor: pointer;
+    flex-shrink: 0;
+    user-select: none;
+  }
+
+  .scard {
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid rgba(0,0,0,0.08);
+    box-shadow: 0 10px 36px rgba(0,0,0,0.13);
+    transition: transform .52s cubic-bezier(.4,0,.2,1), opacity .52s;
+    will-change: transform;
+  }
+  .scard .fill { width: 100%; height: 72%; display: block; }
+  .scard .meta {
+    height: 28%;
+    background: #fff;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    justify-content: center;
+    padding: 0 14px;
+    gap: 2px;
+  }
+  .scard .meta .nm {
+    font-size: 13px;
+    font-weight: 700;
+    color: #111;
+    font-family: 'Syne', sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .scard .meta .no {
+    font-size: 11px;
+    color: #aaa;
+    font-family: 'Inter', sans-serif;
   }
 
+  /* stack pozisiyaları */
+  .scard[data-pos="0"] { transform: translate(  0px,  0px) rotate(  0deg); z-index:5; opacity:1.00; }
+  .scard[data-pos="1"] { transform: translate( 10px, -8px) rotate(  4deg); z-index:4; opacity:0.88; }
+  .scard[data-pos="2"] { transform: translate( 20px,-16px) rotate(  8deg); z-index:3; opacity:0.76; }
+  .scard[data-pos="3"] { transform: translate( 30px,-24px) rotate( 12deg); z-index:2; opacity:0.60; }
+  .scard[data-pos="4"] { transform: translate( 40px,-32px) rotate( 16deg); z-index:1; opacity:0.44; }
+
+  /* uçuş animasiyası */
+  .scard.fly-back {
+    transform: translate(-190px, 60px) rotate(-36deg) scale(.74) !important;
+    opacity: 0 !important;
+    z-index: 10 !important;
+    transition: transform .44s cubic-bezier(.4,0,.2,1), opacity .32s;
+  }
+
+  /* sağ info panel (desktop) */
+  .carousel-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 160px;
+  }
+  .ci-count {
+    font-size: 13px;
+    color: #aaa;
+    font-family: 'Inter', sans-serif;
+  }
+  .ci-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 30px;
+    font-weight: 800;
+    color: var(--black);
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+  .ci-num {
+    font-size: 12px;
+    color: #aaa;
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+  }
+  .ci-btns {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+  }
+  .ci-btn {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    color: var(--black);
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .2s, border-color .2s;
+    font-family: 'Inter', sans-serif;
+    line-height: 1;
+  }
+  .ci-btn:hover { background: var(--green); border-color: var(--green); }
+
+  /* ── MOBİL LAYOUT ── */
+  /* altda info + düymeler */
+  .carousel-mobile-info {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin-top: 28px;
+    text-align: center;
+  }
+  .carousel-mobile-info .ci-count { font-size: 13px; color: #aaa; font-family:'Inter',sans-serif; }
+  .carousel-mobile-info .ci-name  { font-family:'Syne',sans-serif; font-size:26px; font-weight:800; color:var(--black); letter-spacing:-1px; }
+  .carousel-mobile-info .ci-num   { font-size:12px; color:#aaa; font-family:'Inter',sans-serif; font-style:italic; }
+  .carousel-mobile-btns {
+    display: none;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-inner { flex-direction: column; gap: 0; }
+    .carousel-info  { display: none; }          /* desktop info gizlə */
+    .carousel-mobile-info { display: flex; }    /* mobil info göstər */
+    .carousel-mobile-btns { display: flex; }    /* mobil düymeler göstər */
+    .stack-area { margin: 0 auto; }
+  }
+  /* ══════════════════════════════════ */
+
+  /* ── FEATURE CARDS ── */
+  .cards-stack { display: flex; flex-direction: column; gap: 16px; }
   .feature-card {
     background: var(--green);
     border-radius: var(--radius);
@@ -263,13 +363,7 @@
     position: relative;
     overflow: hidden;
   }
-
-  .card-tags {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
+  .card-tags { display: flex; justify-content: space-between; margin-bottom: 16px; }
   .card-tag {
     display: inline-block;
     border: 1.5px solid var(--black);
@@ -282,7 +376,6 @@
     color: var(--black);
     font-family: 'Inter', sans-serif;
   }
-
   .card-title {
     font-family: 'Syne', sans-serif;
     font-size: clamp(36px, 12vw, 58px);
@@ -292,7 +385,6 @@
     color: var(--black);
     margin-bottom: 6px;
   }
-
   .card-subtitle {
     font-family: 'Inter', sans-serif;
     font-size: 12px;
@@ -302,13 +394,7 @@
     color: var(--black);
     margin-bottom: 20px;
   }
-
-  .card-body {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-
+  .card-body { display: flex; gap: 12px; align-items: flex-start; }
   .card-visual {
     flex: 0 0 130px;
     height: 160px;
@@ -316,20 +402,9 @@
     overflow: hidden;
     position: relative;
   }
-
-  .card-visual-1 {
-    background: linear-gradient(135deg, #fff 40%, var(--green-mid) 100%);
-  }
-
-  .card-visual-2 {
-    background: linear-gradient(135deg, #c8b4f8 0%, #e8d5ff 50%, #b8e8ff 100%);
-  }
-
-  .card-visual-3 {
-    background: var(--black);
-  }
-
-  /* Color swatches inside card 1 */
+  .card-visual-1 { background: linear-gradient(135deg, #fff 40%, var(--green-mid) 100%); }
+  .card-visual-2 { background: linear-gradient(135deg, #c8b4f8 0%, #e8d5ff 50%, #b8e8ff 100%); }
+  .card-visual-3 { background: var(--black); }
   .swatches {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -338,50 +413,13 @@
     height: 100%;
     align-content: center;
   }
-
-  .swatch {
-    aspect-ratio: 1;
-    border-radius: 4px;
-  }
-
-  /* Wave lines inside card 3 */
-  .wave-lines {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
-  }
-
-  .wave-lines svg {
-    width: 100%;
-    height: 100%;
-  }
-
-  /* Blob in card 2 */
-  .blob-wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 12px;
-  }
-
-  .blob-wrap svg {
-    width: 90%;
-    height: 90%;
-  }
-
-  .card-text-block {
-    flex: 1;
-    min-width: 0;
-  }
-
-  .card-desc {
-    font-size: 12.5px;
-    line-height: 1.65;
-    color: var(--black);
-    margin-bottom: 16px;
-  }
-
+  .swatch { aspect-ratio: 1; border-radius: 4px; }
+  .wave-lines { position: absolute; inset: 0; overflow: hidden; }
+  .wave-lines svg { width: 100%; height: 100%; }
+  .blob-wrap { display: flex; align-items: center; justify-content: center; height: 100%; padding: 12px; }
+  .blob-wrap svg { width: 90%; height: 90%; }
+  .card-text-block { flex: 1; min-width: 0; }
+  .card-desc { font-size: 12.5px; line-height: 1.65; color: var(--black); margin-bottom: 16px; }
   .card-link {
     display: inline-flex;
     align-items: center;
@@ -394,7 +432,6 @@
     border-bottom: 1.5px solid var(--black);
     padding-bottom: 2px;
   }
-
   .card-link:hover { opacity: 0.6; }
 
   /* ── COLORS GRID ── */
@@ -404,22 +441,14 @@
     margin: 0 12px;
     padding: 40px 24px;
   }
-
-  .colors-section .section-heading {
-    color: var(--white);
-  }
-
-  .colors-section .section-sub {
-    color: rgba(255,255,255,0.5);
-  }
-
+  .colors-section .section-heading { color: var(--white); }
+  .colors-section .section-sub { color: rgba(255,255,255,0.5); }
   .color-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 8px;
     margin-top: 32px;
   }
-
   .color-cell {
     aspect-ratio: 1;
     border-radius: 8px;
@@ -427,35 +456,12 @@
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative;
   }
-
-  .color-cell:hover {
-    transform: scale(1.12);
-    z-index: 2;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-  }
+  .color-cell:hover { transform: scale(1.12); z-index: 2; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 
   /* ── PARTNERS ── */
-  .partners-card {
-    background: var(--green);
-    border-radius: var(--radius);
-    padding: 28px 20px;
-    text-align: center;
-  }
-
-  .partners-card p {
-    font-size: 13px;
-    line-height: 1.7;
-    color: var(--black);
-    margin-bottom: 28px;
-  }
-
-  .badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-  }
-
+  .partners-card { background: var(--green); border-radius: var(--radius); padding: 28px 20px; text-align: center; }
+  .partners-card p { font-size: 13px; line-height: 1.7; color: var(--black); margin-bottom: 28px; }
+  .badges { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
   .badge {
     display: inline-flex;
     align-items: center;
@@ -471,22 +477,9 @@
     transform: rotate(var(--r, 0deg));
   }
 
-  /* ── NEWS / BLOG ── */
-  .news-heading {
-    font-family: 'Syne', sans-serif;
-    font-size: 28px;
-    font-weight: 800;
-    text-align: center;
-    margin-bottom: 28px;
-    letter-spacing: -1px;
-  }
-
-  .news-list {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-
+  /* ── NEWS ── */
+  .news-heading { font-family:'Syne',sans-serif; font-size:28px; font-weight:800; text-align:center; margin-bottom:28px; letter-spacing:-1px; }
+  .news-list { display: flex; flex-direction: column; gap: 16px; }
   .news-card {
     background: var(--white);
     border-radius: 20px;
@@ -495,91 +488,23 @@
     cursor: pointer;
     transition: border-color 0.2s, transform 0.2s;
   }
-
-  .news-card:hover {
-    border-color: var(--green);
-    transform: translateY(-2px);
-  }
-
-  .news-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  .news-card-title {
-    font-family: 'Syne', sans-serif;
-    font-size: 15px;
-    font-weight: 700;
-    line-height: 1.4;
-    color: var(--black);
-  }
-
+  .news-card:hover { border-color: var(--green); transform: translateY(-2px); }
+  .news-card-top { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; margin-bottom:14px; }
+  .news-card-title { font-family:'Syne',sans-serif; font-size:15px; font-weight:700; line-height:1.4; color:var(--black); }
   .news-arrow {
-    flex: 0 0 36px;
-    height: 36px;
-    border: 1.5px solid #e0e0e0;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--black);
-    font-size: 16px;
-    transition: background 0.2s, border-color 0.2s;
+    flex: 0 0 36px; height: 36px;
+    border: 1.5px solid #e0e0e0; border-radius: 50%;
+    display:flex; align-items:center; justify-content:center;
+    color:var(--black); font-size:16px;
+    transition: background .2s, border-color .2s;
   }
+  .news-card:hover .news-arrow { background: var(--green); border-color: var(--green); }
+  .news-thumb { width:100%; height:140px; border-radius:12px; background:var(--gray-light); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .news-thumb-inner { width:100%; height:100%; border-radius:12px; display:flex; align-items:center; justify-content:center; font-family:'Syne',sans-serif; font-size:13px; font-weight:700; color:var(--gray); }
+  .view-more-wrap { text-align:center; padding:32px 0 16px; }
+  .view-more { display:inline-flex; align-items:center; gap:8px; font-family:'Inter',sans-serif; font-size:15px; font-weight:500; color:var(--black); text-decoration:none; border-bottom:1.5px solid var(--black); padding-bottom:2px; }
 
-  .news-card:hover .news-arrow {
-    background: var(--green);
-    border-color: var(--green);
-  }
-
-  .news-thumb {
-    width: 100%;
-    height: 140px;
-    border-radius: 12px;
-    object-fit: cover;
-    background: var(--gray-light);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-
-  .news-thumb-inner {
-    width: 100%;
-    height: 100%;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--gray);
-  }
-
-  /* ── VIEW MORE ── */
-  .view-more-wrap {
-    text-align: center;
-    padding: 32px 0 16px;
-  }
-
-  .view-more {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: 'Inter', sans-serif;
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--black);
-    text-decoration: none;
-    border-bottom: 1.5px solid var(--black);
-    padding-bottom: 2px;
-  }
-
-  /* ── CTA SECTION ── */
+  /* ── CTA ── */
   .cta-section {
     background: linear-gradient(180deg, var(--green-light) 0%, var(--green) 100%);
     border-radius: 32px 32px 0 0;
@@ -587,135 +512,43 @@
     padding: 56px 24px 64px;
     text-align: left;
   }
-
-  .cta-section h2 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(28px, 8vw, 44px);
-    font-weight: 800;
-    letter-spacing: -1.5px;
-    line-height: 1.1;
-    margin-bottom: 16px;
-    color: var(--black);
-  }
-
-  .cta-section p {
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--black);
-    opacity: 0.75;
-    margin-bottom: 32px;
-    max-width: 340px;
-  }
-
+  .cta-section h2 { font-family:'Syne',sans-serif; font-size:clamp(28px,8vw,44px); font-weight:800; letter-spacing:-1.5px; line-height:1.1; margin-bottom:16px; color:var(--black); }
+  .cta-section p { font-size:14px; line-height:1.7; color:var(--black); opacity:0.75; margin-bottom:32px; max-width:340px; }
   .cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--black);
-    color: var(--white);
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    padding: 16px 28px;
-    border-radius: 100px;
-    text-decoration: none;
-    transition: transform 0.2s;
+    display:inline-flex; align-items:center; gap:8px;
+    background:var(--black); color:var(--white);
+    font-family:'Syne',sans-serif; font-weight:700; font-size:15px;
+    padding:16px 28px; border-radius:100px; text-decoration:none;
+    transition:transform .2s;
   }
-
   .cta-btn:hover { transform: translateY(-2px); }
 
   /* ── FOOTER ── */
-  footer {
-    background: var(--black);
-    color: var(--white);
-    padding: 48px 24px 40px;
-    text-align: center;
-  }
+  footer { background:var(--black); color:var(--white); padding:48px 24px 40px; text-align:center; }
+  .footer-logo { display:flex; align-items:center; justify-content:center; gap:10px; font-family:'Syne',sans-serif; font-weight:800; font-size:22px; color:var(--white); margin-bottom:24px; }
+  .footer-links { display:flex; justify-content:center; gap:6px; flex-wrap:wrap; margin-bottom:32px; }
+  .footer-links a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:13px; }
+  .footer-links a:hover { color:var(--green); }
+  .footer-links .sep { color:rgba(255,255,255,0.2); font-size:13px; }
+  .footer-social { display:flex; justify-content:center; gap:20px; }
+  .footer-social a { color:rgba(255,255,255,0.5); text-decoration:none; font-size:20px; transition:color .2s; }
+  .footer-social a:hover { color:var(--green); }
+  .footer-copy { font-size:12px; color:rgba(255,255,255,0.3); margin-top:24px; }
 
-  .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    color: var(--white);
-    margin-bottom: 24px;
-  }
-
-  .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 6px;
-    flex-wrap: wrap;
-    margin-bottom: 32px;
-  }
-
-  .footer-links a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    font-size: 13px;
-  }
-
-  .footer-links a:hover { color: var(--green); }
-
-  .footer-links .sep { color: rgba(255,255,255,0.2); font-size: 13px; }
-
-  .footer-social {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .footer-social a {
-    color: rgba(255,255,255,0.5);
-    text-decoration: none;
-    font-size: 20px;
-    transition: color 0.2s;
-  }
-
-  .footer-social a:hover { color: var(--green); }
-
-  .footer-copy {
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-    margin-top: 24px;
-  }
-
-  /* ── WHATSAPP FLOAT ── */
+  /* ── WHATSAPP ── */
   .wa-float {
-    position: fixed;
-    bottom: 24px;
-    right: 20px;
-    z-index: 50;
-    width: 54px;
-    height: 54px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 6px 20px rgba(37,211,102,0.45);
-    text-decoration: none;
-    transition: transform 0.2s;
+    position:fixed; bottom:24px; right:20px; z-index:50;
+    width:54px; height:54px; background:#25D366; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 6px 20px rgba(37,211,102,0.45); text-decoration:none;
+    transition:transform .2s;
   }
-
   .wa-float:hover { transform: scale(1.1); }
+  .wa-float svg { width:28px; height:28px; fill:white; }
 
-  .wa-float svg { width: 28px; height: 28px; fill: white; }
-
-  /* ── ANIM UTILITIES ── */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-  }
-
-  .fade-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* ── FADE UP ── */
+  .fade-up { opacity:0; transform:translateY(30px); transition:opacity .6s ease, transform .6s ease; }
+  .fade-up.visible { opacity:1; transform:translateY(0); }
 </style>
 </head>
 <body>
@@ -740,68 +573,98 @@
 <div class="mobile-menu" id="mobileMenu">
   <span class="close-btn" onclick="closeMenu()">✕</span>
   <a href="#features" onclick="closeMenu()">Boyalar</a>
-  <a href="#colors" onclick="closeMenu()">62 Rəng</a>
+  <a href="#colors"   onclick="closeMenu()">62 Rəng</a>
   <a href="#partners" onclick="closeMenu()">Haqqımızda</a>
-  <a href="#news" onclick="closeMenu()">Blog</a>
-  <a href="#contact" onclick="closeMenu()">Əlaqə</a>
+  <a href="#news"     onclick="closeMenu()">Blog</a>
+  <a href="#contact"  onclick="closeMenu()">Əlaqə</a>
 </div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-marquee-wrap">
-    <!-- Row 1: VİKTORİA — outline, sol → sağ -->
     <div class="marquee-row outline">
       <div class="marquee-track">
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
       </div>
     </div>
-    <!-- Row 2: PALTAR — white, sağ → sol -->
     <div class="marquee-row white">
       <div class="marquee-track">
-        <span class="marquee-text">PALTAR</span>
-        <span class="marquee-text">PALTAR</span>
-        <span class="marquee-text">PALTAR</span>
-        <span class="marquee-text">PALTAR</span>
-        <span class="marquee-text">PALTAR</span>
-        <span class="marquee-text">PALTAR</span>
+        <span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span>
+        <span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span>
+        <span class="marquee-text">PALTAR</span><span class="marquee-text">PALTAR</span>
       </div>
     </div>
-    <!-- Row 3: BOYALARI — faint, sol → sağ -->
     <div class="marquee-row faint">
       <div class="marquee-track">
-        <span class="marquee-text">BOYALARI</span>
-        <span class="marquee-text">BOYALARI</span>
-        <span class="marquee-text">BOYALARI</span>
-        <span class="marquee-text">BOYALARI</span>
-        <span class="marquee-text">BOYALARI</span>
-        <span class="marquee-text">BOYALARI</span>
+        <span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span>
+        <span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span>
+        <span class="marquee-text">BOYALARI</span><span class="marquee-text">BOYALARI</span>
       </div>
     </div>
-    <!-- Row 4: VİKTORİA — black, sağ → sol -->
     <div class="marquee-row black">
       <div class="marquee-track">
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
-        <span class="marquee-text">VİKTORİA</span>
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
+        <span class="marquee-text">VİKTORİA</span><span class="marquee-text">VİKTORİA</span>
       </div>
     </div>
   </div>
   <div class="hero-bottom">
     <p class="hero-tagline">Azərbaycanda №1 Paltar Boyası</p>
     <a href="#colors" class="hero-cta">
-      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.5"/><path d="M5 8h6M9.5 6l2 2-2 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.5"/>
+        <path d="M5 8h6M9.5 6l2 2-2 2" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
       Rəngləri Kəşfet
     </a>
   </div>
 </section>
+
+<!-- ══════════════════════════════════
+     STACK CAROUSEL
+     "Paltarlarınıza Yeni Həyat Verin" bölümünün üstündə
+════════════════════════════════════ -->
+<section class="carousel-section fade-up">
+
+  <div class="carousel-inner">
+
+    <!-- KART YIĞINI -->
+    <div class="stack-area" id="stackArea" role="button" aria-label="Növbəti rəng">
+      <!-- JS tərəfindən doldurulur -->
+    </div>
+
+    <!-- DESKTOP: sağda info + düymeler -->
+    <div class="carousel-info">
+      <div class="ci-count" id="desktopCount">1 / 62</div>
+      <div class="ci-name"  id="desktopName">—</div>
+      <div class="ci-num"   id="desktopNum">№01 — Viktoria</div>
+      <div class="ci-btns">
+        <button class="ci-btn" id="btnPrevD" aria-label="Əvvəlki">&#8249;</button>
+        <button class="ci-btn" id="btnNextD" aria-label="Növbəti">&#8250;</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MOBİL: altda info -->
+  <div class="carousel-mobile-info">
+    <div class="ci-count" id="mobileCount">1 / 62</div>
+    <div class="ci-name"  id="mobileName">—</div>
+    <div class="ci-num"   id="mobileNum">№01 — Viktoria</div>
+  </div>
+
+  <!-- MOBİL: altda düymeler -->
+  <div class="carousel-mobile-btns">
+    <button class="ci-btn" id="btnPrevM" aria-label="Əvvəlki">&#8249;</button>
+    <button class="ci-btn" id="btnNextM" aria-label="Növbəti">&#8250;</button>
+  </div>
+
+</section>
+<!-- ══════════════════════════════════ -->
+
 
 <!-- INTRO TEXT -->
 <section style="padding: 60px 24px 40px;">
@@ -819,7 +682,6 @@
 <section id="features" style="padding: 0 16px 60px;">
   <div class="cards-stack">
 
-    <!-- CARD 1 -->
     <div class="feature-card fade-up">
       <div class="card-tags">
         <span class="card-tag">62 RƏNG</span>
@@ -855,7 +717,6 @@
       </div>
     </div>
 
-    <!-- CARD 2 -->
     <div class="feature-card fade-up">
       <div class="card-tags">
         <span class="card-tag">KEYFİYYƏT</span>
@@ -889,7 +750,6 @@
       </div>
     </div>
 
-    <!-- CARD 3 -->
     <div class="feature-card fade-up">
       <div class="card-tags">
         <span class="card-tag">ASANDIR</span>
@@ -901,10 +761,10 @@
         <div class="card-visual card-visual-3">
           <div class="wave-lines">
             <svg viewBox="0 0 130 160" xmlns="http://www.w3.org/2000/svg">
-              <path d="M-10 30 Q30 20 70 40 Q110 60 150 30" stroke="#3dffa0" stroke-width="1.5" fill="none" opacity="0.8"/>
-              <path d="M-10 50 Q30 40 70 60 Q110 80 150 50" stroke="#3dffa0" stroke-width="1.5" fill="none" opacity="0.6"/>
-              <path d="M-10 70 Q30 60 70 80 Q110 100 150 70" stroke="white" stroke-width="1" fill="none" opacity="0.4"/>
-              <path d="M-10 90 Q30 80 70 100 Q110 120 150 90" stroke="white" stroke-width="1" fill="none" opacity="0.3"/>
+              <path d="M-10 30 Q30 20 70 40 Q110 60 150 30"  stroke="#3dffa0" stroke-width="1.5" fill="none" opacity="0.8"/>
+              <path d="M-10 50 Q30 40 70 60 Q110 80 150 50"  stroke="#3dffa0" stroke-width="1.5" fill="none" opacity="0.6"/>
+              <path d="M-10 70 Q30 60 70 80 Q110 100 150 70" stroke="white"   stroke-width="1"   fill="none" opacity="0.4"/>
+              <path d="M-10 90 Q30 80 70 100 Q110 120 150 90" stroke="white"  stroke-width="1"   fill="none" opacity="0.3"/>
               <path d="M-10 110 Q30 100 70 120 Q110 140 150 110" stroke="#3dffa0" stroke-width="1.5" fill="none" opacity="0.5"/>
               <path d="M-10 130 Q30 120 70 140 Q110 160 150 130" stroke="white" stroke-width="1" fill="none" opacity="0.2"/>
             </svg>
@@ -931,9 +791,9 @@
 
 <!-- PARTNERS -->
 <section id="partners" style="padding: 0 16px 60px;">
-  <h2 class="section-heading fade-up" style="margin-bottom: 24px;">Niyə Viktoria?</h2>
+  <h2 class="section-heading fade-up" style="margin-bottom:24px;">Niyə Viktoria?</h2>
   <div class="partners-card fade-up">
-    <p>Pambıq, yun, ipək, sintетik — hər parça növünə uyğun<br>boyalar. Viktoria ilə bütün parça növlərini boyayın.</p>
+    <p>Pambıq, yun, ipək, sintetik — hər parça növünə uyğun boyalar.</p>
     <div class="badges">
       <span class="badge" style="--r:-3deg">🧵 Pambıq</span>
       <span class="badge" style="--r:2deg">🧶 Yun</span>
@@ -947,51 +807,46 @@
   </div>
 </section>
 
-<!-- NEWS / BLOG -->
+<!-- NEWS -->
 <section id="news" style="padding: 0 16px 40px;">
   <h2 class="news-heading fade-up">Son Yazılar</h2>
   <div class="news-list">
-
     <div class="news-card fade-up">
       <div class="news-card-top">
         <div class="news-card-title">Paltarı Evdə Necə Doğru Boyamaq Olar? Addım-Addım Bələdçi</div>
         <div class="news-arrow">↗</div>
       </div>
       <div class="news-thumb">
-        <div class="news-thumb-inner" style="background: linear-gradient(135deg, #3dffa0 0%, #00c8ff 100%); color: white; font-size: 18px; font-family: 'Syne', sans-serif; font-weight: 800;">BOYAMA REHBERİ</div>
+        <div class="news-thumb-inner" style="background:linear-gradient(135deg,#3dffa0,#00c8ff);color:white;font-size:18px;font-family:'Syne',sans-serif;font-weight:800;">BOYAMA REHBERİ</div>
       </div>
     </div>
-
     <div class="news-card fade-up">
       <div class="news-card-top">
         <div class="news-card-title">Hansı Parça Hansı Boya ilə Boyamalı? Tam Cədvəl</div>
         <div class="news-arrow">↗</div>
       </div>
       <div class="news-thumb">
-        <div class="news-thumb-inner" style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%); color: white; font-size: 18px; font-family: 'Syne', sans-serif; font-weight: 800;">PARÇA CƏDVƏLİ</div>
+        <div class="news-thumb-inner" style="background:linear-gradient(135deg,#6366f1,#a855f7);color:white;font-size:18px;font-family:'Syne',sans-serif;font-weight:800;">PARÇA CƏDVƏLİ</div>
       </div>
     </div>
-
     <div class="news-card fade-up">
       <div class="news-card-top">
         <div class="news-card-title">Boya Solmasının qarşısını necə almaq olar? 5 Məsləhət</div>
         <div class="news-arrow">↗</div>
       </div>
       <div class="news-thumb">
-        <div class="news-thumb-inner" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%); color: white; font-size: 18px; font-family: 'Syne', sans-serif; font-weight: 800;">MƏSLƏHƏTLƏR</div>
+        <div class="news-thumb-inner" style="background:linear-gradient(135deg,#f59e0b,#ef4444);color:white;font-size:18px;font-family:'Syne',sans-serif;font-weight:800;">MƏSLƏHƏTLƏR</div>
       </div>
     </div>
-
     <div class="news-card fade-up">
       <div class="news-card-top">
         <div class="news-card-title">Köhnə Paltarı Yeni Rəngə Boyamaq – Müştəri Hekayəsi</div>
         <div class="news-arrow">↗</div>
       </div>
       <div class="news-thumb">
-        <div class="news-thumb-inner" style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); color: white; font-size: 18px; font-family: 'Syne', sans-serif; font-weight: 800;">MÜŞTƏRİ HEKAYƏSİ</div>
+        <div class="news-thumb-inner" style="background:linear-gradient(135deg,#0ea5e9,#6366f1);color:white;font-size:18px;font-family:'Syne',sans-serif;font-weight:800;">MÜŞTƏRİ HEKAYƏSİ</div>
       </div>
     </div>
-
   </div>
   <div class="view-more-wrap fade-up">
     <a href="#" class="view-more">Daha Çox Gör &nbsp;→</a>
@@ -1022,14 +877,10 @@
     VIKTORIA
   </div>
   <div class="footer-links">
-    <a href="#">Ana Səhifə</a>
-    <span class="sep">·</span>
-    <a href="#colors">62 Rəng</a>
-    <span class="sep">·</span>
-    <a href="#news">Blog</a>
-    <span class="sep">·</span>
-    <a href="#contact">Əlaqə</a>
-    <span class="sep">·</span>
+    <a href="#">Ana Səhifə</a><span class="sep">·</span>
+    <a href="#colors">62 Rəng</a><span class="sep">·</span>
+    <a href="#news">Blog</a><span class="sep">·</span>
+    <a href="#contact">Əlaqə</a><span class="sep">·</span>
     <a href="#">Məxfilik Siyasəti</a>
   </div>
   <div class="footer-social">
@@ -1053,11 +904,131 @@
 
 <script>
 // ── MOBILE MENU ──
-function openMenu() { document.getElementById('mobileMenu').classList.add('open'); }
+function openMenu()  { document.getElementById('mobileMenu').classList.add('open'); }
 function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
 
+// ══════════════════════════════════
+// STACK CAROUSEL — 62 rəng
+// ══════════════════════════════════
+const COLORS = [
+  {n:"Qırmızı",      c:"#e63946", id:"01"}, {n:"Tünd Qırmızı", c:"#9b2226", id:"02"},
+  {n:"Narıncı",      c:"#f4a261", id:"03"}, {n:"Tünd Narıncı",  c:"#ca6702", id:"04"},
+  {n:"Sarı",         c:"#e9c46a", id:"05"}, {n:"Açıq Sarı",     c:"#ffd166", id:"06"},
+  {n:"Limon",        c:"#f7ec59", id:"07"}, {n:"Zeytun",        c:"#606c38", id:"08"},
+  {n:"Açıq Yaşıl",  c:"#95d5b2", id:"09"}, {n:"Yaşıl",         c:"#52b788", id:"10"},
+  {n:"Tünd Yaşıl",  c:"#1b4332", id:"11"}, {n:"Çəmən",         c:"#80b918", id:"12"},
+  {n:"Göy-Yaşıl",   c:"#2a9d8f", id:"13"}, {n:"Firuzəyi",      c:"#48cae4", id:"14"},
+  {n:"Açıq Mavi",   c:"#90e0ef", id:"15"}, {n:"Göy",           c:"#457b9d", id:"16"},
+  {n:"Tünd Göy",    c:"#1d3557", id:"17"}, {n:"Lacivert",      c:"#023e8a", id:"18"},
+  {n:"İndiqo",      c:"#3a0ca3", id:"19"}, {n:"Bənövşəyi",     c:"#7209b7", id:"20"},
+  {n:"Açıq Bənövşəyi",c:"#c77dff",id:"21"},{n:"Lilas",         c:"#e0aaff", id:"22"},
+  {n:"Çəhrayı",     c:"#ff6b9d", id:"23"}, {n:"Tünd Çəhrayı", c:"#c9184a", id:"24"},
+  {n:"Məxməri",     c:"#800f2f", id:"25"}, {n:"Şabalıdı",      c:"#6d0021", id:"26"},
+  {n:"Qonur",       c:"#8b5e3c", id:"27"}, {n:"Tünd Qonur",   c:"#4a1c00", id:"28"},
+  {n:"Bej",         c:"#e8d5b7", id:"29"}, {n:"Krem",          c:"#fff1d0", id:"30"},
+  {n:"Ağ",          c:"#f0f0f0", id:"31"}, {n:"Açıq Gümüş",   c:"#dee2e6", id:"32"},
+  {n:"Gümüş",       c:"#adb5bd", id:"33"}, {n:"Boz",           c:"#6c757d", id:"34"},
+  {n:"Tünd Boz",    c:"#343a40", id:"35"}, {n:"Qara",          c:"#212529", id:"36"},
+  {n:"Qum",         c:"#c9b99a", id:"37"}, {n:"Xurma",         c:"#d4a017", id:"38"},
+  {n:"Göy-Boz",     c:"#5f7a8a", id:"39"}, {n:"Pastel Mavi",  c:"#b8d8e8", id:"40"},
+  {n:"Pastel Yaşıl",c:"#b8e8c5", id:"41"}, {n:"Pastel Sarı",  c:"#fef3b4", id:"42"},
+  {n:"Pastel Çəhrayı",c:"#ffd6e0",id:"43"},{n:"Pastel Lilas", c:"#e8d5f5", id:"44"},
+  {n:"Turquoise",   c:"#06d6a0", id:"45"}, {n:"Coral",         c:"#ff6b6b", id:"46"},
+  {n:"Salmon",      c:"#ff9a76", id:"47"}, {n:"Teal",          c:"#008080", id:"48"},
+  {n:"Navy",        c:"#001f5b", id:"49"}, {n:"Burgundi",      c:"#722f37", id:"50"},
+  {n:"Bronz",       c:"#cd7f32", id:"51"}, {n:"Qızılı",        c:"#ffd700", id:"52"},
+  {n:"Mis",         c:"#b87333", id:"53"}, {n:"Platin",        c:"#e5e4e2", id:"54"},
+  {n:"Antrasit",    c:"#2d3436", id:"55"}, {n:"Şifer",         c:"#636e72", id:"56"},
+  {n:"Ördək Göyü",  c:"#2c7873", id:"57"}, {n:"Hənna",         c:"#c1440e", id:"58"},
+  {n:"Meşə",        c:"#228b22", id:"59"}, {n:"Yarpaq",        c:"#8db600", id:"60"},
+  {n:"Gecə Mavisi", c:"#00005c", id:"61"}, {n:"Şabalıdı 2",   c:"#5c1a1a", id:"62"}
+];
+
+const SHOW   = 5;
+const FLY_MS = 430;
+const area   = document.getElementById('stackArea');
+let queue    = COLORS.map((_, i) => i);
+let busy     = false;
+
+function updateInfo() {
+  const col   = COLORS[queue[0]];
+  const shown = COLORS.length - queue.length + 1;
+  const cnt   = shown + ' / ' + COLORS.length;
+  const nm    = col.n;
+  const nu    = '№' + col.id + ' — Viktoria';
+
+  document.getElementById('desktopCount').textContent = cnt;
+  document.getElementById('desktopName').textContent  = nm;
+  document.getElementById('desktopNum').textContent   = nu;
+  document.getElementById('mobileCount').textContent  = cnt;
+  document.getElementById('mobileName').textContent   = nm;
+  document.getElementById('mobileNum').textContent    = nu;
+}
+
+function buildStack() {
+  area.innerHTML = '';
+  const visible = Math.min(SHOW, queue.length);
+  for (let i = visible - 1; i >= 0; i--) {
+    const col  = COLORS[queue[i]];
+    const card = document.createElement('div');
+    card.className   = 'scard';
+    card.dataset.pos = i;
+    card.innerHTML   =
+      `<div class="fill" style="background:${col.c}"></div>` +
+      `<div class="meta"><div class="nm">${col.n}</div><div class="no">№${col.id}</div></div>`;
+    area.appendChild(card);
+  }
+  updateInfo();
+}
+
+function goNext() {
+  if (busy || queue.length < 2) return;
+  busy = true;
+  const topCard = area.querySelector('.scard[data-pos="0"]');
+  if (!topCard) { busy = false; return; }
+  topCard.classList.add('fly-back');
+  setTimeout(() => {
+    queue.push(queue.shift());
+    buildStack();
+    busy = false;
+  }, FLY_MS);
+}
+
+function goPrev() {
+  if (busy) return;
+  queue.unshift(queue.pop());
+  buildStack();
+}
+
+// düymeler — desktop
+document.getElementById('btnNextD').addEventListener('click', goNext);
+document.getElementById('btnPrevD').addEventListener('click', goPrev);
+// düymeler — mobil
+document.getElementById('btnNextM').addEventListener('click', goNext);
+document.getElementById('btnPrevM').addEventListener('click', goPrev);
+
+// klik kart üzərinə
+area.addEventListener('click', goNext);
+
+// klaviatura
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); goNext(); }
+  if (e.key === 'ArrowLeft')                     { e.preventDefault(); goPrev(); }
+});
+
+// swipe (mobil)
+let tx = 0;
+area.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+area.addEventListener('touchend',   e => {
+  const dx = e.changedTouches[0].clientX - tx;
+  if (dx < -30) goNext();
+  if (dx >  30) goPrev();
+});
+
+buildStack();
+
 // ── 62 COLORS GRID ──
-const colors = [
+const colorData = [
   {name:"Qırmızı",hex:"#e63946"},{name:"Tünd Qırmızı",hex:"#9b2226"},
   {name:"Narıncı",hex:"#f4a261"},{name:"Tünd Narıncı",hex:"#ca6702"},
   {name:"Sarı",hex:"#e9c46a"},{name:"Açıq Sarı",hex:"#ffd166"},
@@ -1073,7 +1044,7 @@ const colors = [
   {name:"Məxməri",hex:"#800f2f"},{name:"Şabalıdı",hex:"#6d0021"},
   {name:"Qonur",hex:"#8b5e3c"},{name:"Tünd Qonur",hex:"#4a1c00"},
   {name:"Bej",hex:"#e8d5b7"},{name:"Krem",hex:"#fff1d0"},
-  {name:"Ağ",hex:"#f8f9fa"},{name:"Açıq Gümüş",hex:"#dee2e6"},
+  {name:"Ağ",hex:"#f0f0f0"},{name:"Açıq Gümüş",hex:"#dee2e6"},
   {name:"Gümüş",hex:"#adb5bd"},{name:"Boz",hex:"#6c757d"},
   {name:"Tünd Boz",hex:"#343a40"},{name:"Qara",hex:"#212529"},
   {name:"Qum",hex:"#c9b99a"},{name:"Xurma",hex:"#d4a017"},
@@ -1088,18 +1059,28 @@ const colors = [
   {name:"Antrasit",hex:"#2d3436"},{name:"Şifer",hex:"#636e72"},
   {name:"Ördək Göyü",hex:"#2c7873"},{name:"Hənna",hex:"#c1440e"},
   {name:"Meşə",hex:"#228b22"},{name:"Yarpaq",hex:"#8db600"},
-  {name:"Gecə Mavisi",hex:"#00005c"}
+  {name:"Gecə Mavisi",hex:"#00005c"},{name:"Şabalıdı 2",hex:"#5c1a1a"}
 ];
 
+function getLuma(hex) {
+  return 0.299*parseInt(hex.slice(1,3),16)
+       + 0.587*parseInt(hex.slice(3,5),16)
+       + 0.114*parseInt(hex.slice(5,7),16);
+}
+
 const grid = document.getElementById('colorGrid');
-colors.forEach(c => {
+colorData.forEach(c => {
   const cell = document.createElement('div');
-  cell.className = 'color-cell';
+  cell.className   = 'color-cell';
   cell.style.background = c.hex;
   cell.title = c.name + ' – ' + c.hex;
   cell.addEventListener('click', () => {
     const el = document.createElement('div');
-    el.style.cssText = `position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:${c.hex};color:${getLuma(c.hex)>128?'#000':'#fff'};padding:10px 22px;border-radius:100px;font-family:'Syne',sans-serif;font-weight:700;font-size:14px;z-index:200;box-shadow:0 4px 16px rgba(0,0,0,0.2);`;
+    el.style.cssText =
+      `position:fixed;bottom:80px;left:50%;transform:translateX(-50%);` +
+      `background:${c.hex};color:${getLuma(c.hex)>128?'#000':'#fff'};` +
+      `padding:10px 22px;border-radius:100px;font-family:'Syne',sans-serif;` +
+      `font-weight:700;font-size:14px;z-index:200;box-shadow:0 4px 16px rgba(0,0,0,0.2);`;
     el.textContent = c.name + ' · ' + c.hex;
     document.body.appendChild(el);
     setTimeout(() => el.remove(), 2000);
@@ -1107,19 +1088,12 @@ colors.forEach(c => {
   grid.appendChild(cell);
 });
 
-function getLuma(hex) {
-  const r = parseInt(hex.slice(1,3),16);
-  const g = parseInt(hex.slice(3,5),16);
-  const b = parseInt(hex.slice(5,7),16);
-  return 0.299*r + 0.587*g + 0.114*b;
-}
-
 // ── SCROLL FADE-IN ──
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
 }, { threshold: 0.12 });
-
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 </script>
 </body>
 </html>
+
