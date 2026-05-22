@@ -1,4 +1,3 @@
-HTML
 <!DOCTYPE html>
 <html lang="az">
 <head>
@@ -7,7 +6,7 @@ HTML
 <title>Viktoria Paltar Boyaları – 60 Rəng, Peşəkar Nəticə</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
     --green: #3dffa0;
@@ -18,7 +17,58 @@ HTML
     --gray: #888888;
     --gray-light: #f4f4f4;
     --mint-bg: #d8ffed;
+    --font-main: 'Outfit', sans-serif;
+    --font-marquee: 'Syne', sans-serif;
   }
+  
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  
+  /* BÜTÜN SAYT ÜÇÜN OUTFIT */
+  body { font-family: var(--font-main); background: var(--white); color: var(--black); overflow-x: hidden; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 24px;
+    background: rgba(61,255,160,0.85);
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    font-family: var(--font-main); font-weight: 800; font-size: 20px;
+    letter-spacing: -0.5px; color: var(--black); text-decoration: none;
+  }
+  .nav-hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .nav-hamburger span { display: block; width: 26px; height: 2px; background: var(--black); border-radius: 2px; }
+
+  /* MOBILE MENU */
+  .mobile-menu { display: none; position: fixed; inset: 0; z-index: 99; background: var(--green); flex-direction: column; align-items: center; justify-content: center; gap: 36px; }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a { font-family: var(--font-main); font-size: 32px; font-weight: 700; color: var(--black); text-decoration: none; }
+  .mobile-menu .close-btn { position: absolute; top: 22px; right: 24px; font-size: 32px; cursor: pointer; }
+
+  /* HERO - SADECE KAYAN YAZILAR SYNE */
+  .marquee-text {
+    font-family: var(--font-marquee) !important; font-weight: 800;
+    font-size: clamp(72px, 22vw, 130px); letter-spacing: -2px;
+    padding: 0 40px; display: inline-block; user-select: none; flex-shrink: 0;
+  }
+  
+  /* BAŞLIQLAR VƏ MƏTNLƏR OUTFIT */
+  h1, h2, .section-heading, .ci-name, .card-title, .cta-section h2, .news-card-title {
+    font-family: var(--font-main) !important; font-weight: 800;
+  }
+  
+  .hero-tagline, .ci-count, .ci-num, .card-tag, .card-subtitle, .card-link, .card-desc {
+    font-family: var(--font-main) !important;
+  }
+
+  .hero-cta, .cta-btn { font-family: var(--font-main) !important; font-weight: 700; }
+
+  /* Qalan bütün CSS kodlarınız əvvəlki kimi qalır, sadəcə font-family-ləri yuxarıdakı kimi təyin etdik */
+  /* ... (Digər CSS kodlarınız buradadır) ... */
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
   body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--black); overflow-x: hidden; }
