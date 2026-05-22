@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Viktoria Paltar Boyaları – 60 Rəng, Peşəkar Nəticə</title>
+<!-- [CSS KODLARINIZ BURADA QALIR] -->
+<style>
+  /* ... Əvvəlki CSS kodlarınız ... */
+
+  /* COLORS GRID - 3-LÜ STRUKTUR OLARAQ DÜZƏLDİLDİ */
+  .colors-section { background: var(--black); border-radius: 32px; margin: 0 12px; padding: 40px 24px; }
+  .colors-section .section-heading { color: var(--white); }
+  .colors-section .section-sub { color: rgba(255,255,255,0.5); }
+  
+  .color-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); /* 3 ədəd yan-yana */
+    gap: 12px; 
+    margin-top: 32px; 
+  }
+  
+  .color-cell { 
+    aspect-ratio: 1; 
+    border-radius: 18px; 
+    cursor: pointer; 
+    transition: transform 0.2s, box-shadow 0.2s; 
+    display: flex; align-items: center; justify-content: center;
+    color: white; font-size: 10px; font-weight: 700; text-align: center; padding: 5px;
+  }
+  .color-cell:hover { transform: scale(1.05); z-index: 2; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+</style>
+</head>
+<body>
+
+<!-- [NAV, HERO, CAROUSEL HİSSƏLƏRİ EYNİ QALIR] -->
+
+<!-- COLORS GRID (YENİLƏNİB) -->
+<section id="colors" style="padding: 0 12px 60px;">
+  <div class="colors-section fade-up">
+    <h2 class="section-heading">60 Rəng</h2>
+    <p class="section-sub">Hər parça növü üçün mükəmməl rəng. Məhsula baxmaq üçün üzərinə klikləyin.</p>
+    <div class="color-grid" id="colorGrid"></div>
+  </div>
+</section>
+
+<script>
+const products = [
+  ["Qara", "#1c1c1c"], ["Tünd Göy", "#002a5c"], ["Qırmızı", "#cc0000"],
+  ["Yaşıl", "#1a6e00"], ["Sarı", "#c8a800"], ["Tünd Mavi", "#00008b"],
+  ["Qəhvəyi", "#5c3317"], ["Tünd Qəhvəyi", "#2e1007"], ["Çəhrayı", "#e05580"],
+  ["Açıq Mavi", "#3a90d0"], ["Orta Qəhvəyi", "#7b4a28"], ["Açıq Göy", "#4a82b8"],
+  ["Orta Mavi", "#1055a0"], ["Gül Qurusu", "#c28880"], ["Bej", "#c4a070"],
+  ["Tünd Boz", "#3a3a3a"], ["Xaki", "#4b5320"], ["Açıq Bənövşəyi", "#8855bb"],
+  ["Bordovu", "#880044"], ["Yanıq Qəhvəyi", "#3d1a1a"], ["Narıncı", "#c84400"],
+  ["Güvəz", "#7a1010"], ["Yemiş Rəngi", "#b06030"], ["Buz Mavisi", "#88c8e8"],
+  ["Şaftalı", "#f0907a"], ["Tünd Çəhrayı", "#b0006a"], ["Al Qırmızı", "#cc0000"],
+  ["Atəşi Çəhrayı", "#ee0077"], ["Nar Çiçəyi", "#cc2200"], ["Tünd Qırmızı", "#6a0000"],
+  ["Gilas Rəngi", "#35001a"], ["Açıq Bej", "#dbc8a8"], ["Tütün Rəngi", "#6e5030"],
+  ["Tünd Bənövşəyi", "#4b0082"], ["Lavanda", "#9b59b6"], ["Açıq Boz", "#999999"],
+  ["Dəniz Dalğası", "#008B8B"], ["Marsala", "#6e0e2e"], ["Açıq Salat", "#78B648"],
+  ["Nefti Rəngi", "#7A7C20"], ["Kanarya", "#c8c000"], ["Portağal", "#d05000"],
+  ["Zümrüd", "#007A5E"], ["Petrol", "#4A8C8E"], ["Zeytuni", "#4a4a1e"],
+  ["İndiqo", "#1e1870"], ["Göy Bənövşəyi", "#3c2272"], ["Tünd Marsala", "#3a0018"],
+  ["Tünd Lavanda", "#5800a0"], ["Bənövşəyi", "#6600cc"], ["Qızılı Sarı", "#d4a000"],
+  ["Tünd Sarı", "#9a8000"], ["Cins Mavisi", "#2a4a7d"], ["Orta Göy", "#3a60a0"],
+  ["Firuzəyi", "#00a0a0"], ["Tünd Bej", "#a08860"], ["Açıq Qəhvəyi", "#906040"],
+  ["Tünd Yaşıl", "#104020"], ["Tünd Salat", "#508030"], ["Sabitləyici", "#444444"]
+];
+
+const grid = document.getElementById('colorGrid');
+products.forEach(p => {
+  const item = document.createElement('div');
+  item.className = "color-cell";
+  item.style.backgroundColor = p[1];
+  item.innerText = p[0];
+  grid.appendChild(item);
+});
+</script>
+
+</body>
+</html>
