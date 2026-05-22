@@ -226,13 +226,17 @@
   .card-link { display: inline-flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 500; color: var(--black); text-decoration: none; border-bottom: 1.5px solid var(--black); padding-bottom: 2px; }
   .card-link:hover { opacity: 0.6; }
 
-  /* COLORS GRID */
+/* COLORS GRID */
   .colors-section { background: var(--black); border-radius: 32px; margin: 0 12px; padding: 40px 24px; }
   .colors-section .section-heading { color: var(--white); }
   .colors-section .section-sub { color: rgba(255,255,255,0.5); }
-  .color-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 32px; }
-  .color-cell { aspect-ratio: 1; border-radius: 8px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
-  .color-cell:hover { transform: scale(1.12); z-index: 2; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  
+  /* ESKİSİ: grid-template-columns: repeat(6, 1fr); */
+  /* YENİSİ: */
+  .color-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
+  
+  .color-cell { aspect-ratio: 1; border-radius: 12px; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; justify-content: center; color: white; font-size: 10px; font-weight: 700; text-align: center; padding: 5px; }
+  .color-cell:hover { transform: scale(1.05); z-index: 2; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
 
   /* PARTNERS */
   .partners-card { background: var(--green); border-radius: var(--radius); padding: 28px 20px; text-align: center; }
