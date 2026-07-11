@@ -2,38 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- MAIN & CATALOG (AZ) -->
-  <url><loc>https://viktoria-az.store/</loc><lastmod>2026-07-03</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://viktoria-az.store/catalog</loc><lastmod>2026-07-03</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://viktoria-az.store/products</loc><lastmod>2026-07-03</lastmod><priority>0.9</priority></url>
+  <url><loc>https://viktoria-az.store/</loc><lastmod>2026-07-11</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://viktoria-az.store/catalog</loc><lastmod>2026-07-11</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://viktoria-az.store/products</loc><lastmod>2026-07-11</lastmod><priority>0.9</priority></url>
 
   <!-- AZ BLOGS & GUIDES -->
-  <url><loc>https://viktoria-az.store/dye-clothing-before-after</loc><lastmod>2026-06-03</lastmod><priority>0.8</priority></url>
-  <url><loc>https://viktoria-az.store/haqqimizda.html</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/faq.html</loc><lastmod>2026-07-03</lastmod><priority>0.8</priority></url>
-  <url><loc>https://viktoria-az.store/qabda-boyama-telimati</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/boyanin-istifade-qaydalari</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltar-boyasi-online-sifaris</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltar-boyasi-hardan-almaq-olar</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/geyim-ve-tekstil-boyasi</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/qara-sinka-paltar-uchun</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/paltarlarin-evde-renglenmesi</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/parca-ucun-boyalar</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/bloq1-en.html</loc><lastmod>2026-07-03</lastmod><priority>0.6</priority></url>
+  <url><loc>https://viktoria-az.store/dye-clothing-before-after</loc><lastmod>2026-06-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/haqqimizda.html</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/faq.html</loc><lastmod>2026-07-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/qabda-boyama-telimati</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/boyanin-istifade-qaydalari</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltar-boyasi-online-sifaris</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltar-boyasi-hardan-almaq-olar</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/geyim-ve-tekstil-boyasi</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/qara-sinka-paltar-uchun</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/paltarlarin-evde-renglenmesi</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/parca-ucun-boyalar</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/bloq1-en.html</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://viktoria-az.store/perde-ortu-xalca</loc><lastmod>2026-07-11</lastmod><priority>0.6</priority></url>
 
   <!-- RU VERSION & BLOGS -->
-  <url><loc>https://viktoria-az.store/ru/</loc><lastmod>2026-07-03</lastmod><priority>0.9</priority></url>
-  <url><loc>https://viktoria-az.store/ru/catalog</loc><lastmod>2026-07-03</lastmod><priority>0.8</priority></url>
-  <url><loc>https://viktoria-az.store/ru/faq.html</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/qabda-boyama-telimati</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/boyanin-istifade-qaydalari</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/geyim-ve-tekstil-boyasi</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
-  <url><loc>https://viktoria-az.store/ru/parca-ucun-boyalar.html</loc><lastmod>2026-07-03</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/</loc><lastmod>2026-07-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://viktoria-az.store/ru/catalog</loc><lastmod>2026-07-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://viktoria-az.store/ru/faq.html</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/qabda-boyama-telimati</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/paltaryuyan-masinda-istifade-qaydalari</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/sabitlesdirici-nece-istifade-olunur</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/qaliciliga-tesir-eden-amiller</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/boyanin-istifade-qaydalari</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/geyim-ve-tekstil-boyasi</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://viktoria-az.store/ru/parca-ucun-boyalar.html</loc><lastmod>2026-07-11</lastmod><priority>0.7</priority></url>
 
   <!-- PRODUCT COLORS (AZ URLS) -->
   <url><loc>https://viktoria-az.store/viktoria-qara-paltar-boyasi</loc><priority>0.8</priority></url>
