@@ -29,14 +29,14 @@ Viktoria Boya 1901-ci ildən fəaliyyət göstərir. Yüksək keyfiyyətli toz b
 - **Qiymət:** 5 AZN
 - **Kataloq:** https://viktoria-az.store/catalog
 - **Uyğun parçalar:** Pambıq, kətan, viskoza, ipək, yun, yarı sintetik
-- **Rəng sayı:** 62 rəng
+- **Rəng sayı:** 60 rəng
 - **İstifadə:** Ev şəraitində, paltaryuyanda və ya qabda qaynada-qaynada boyama
 
 **Mövcud rənglər:**
 Çəhrayı, Yemiş Rəngi, Yavruağzı, Tünd Çəhrayı, Al Qırmızı, Atəşi Çəhrayı, Nar Çiçəyi, Qırmızı, Tünd Qırmızı, Vişnə Çürüyü, Sarı, Narıncı, Gül Kurusu, Açıq Bej, Tünd Bej, Tütün Rəngi, Açıq Qəhvəyi, Orta Qəhvəyi, Qəhvəyi, Tünd Qəhvəyi, Fəs Rəngi, Güvəz, Açıq Mavi, Orta Mavi, Tünd Mavi, Açıq Mor, Tünd Mor, Açıq Göy, Orta Göy, Qara, Əflatun, Bej, Açıq Boz, Tünd Boz, Şam Göbəyi, Açıq Filizi, Tünd Filizi, Yaşıl, Tünd Yaşıl, Nefti, Xaki, Kanarya, Şərabi, Portağal, Zümrüd, Petrol, Zeytuni, Saksonya, Çivit Mavi, Mor Göy, Tünd Göy, Yanıq Qəhvəyi, Tünd Şərabi, Tünd Əflatun, Bənövşə, Qızılı Sarı, Tünd Sarı, Boncuq Mavi, Cins Mavisi, Sabitləşdirici
 
 ### 2. Viktoria 1 KQ Paketlər
-- **Qiymət:** Toplu/peşəkar istifadə üçün
+- **Qiymət:** 220m Toplu/peşəkar istifadə üçün
 - **Kataloq:** https://viktoria-az.store/catalog-1kg
 - **Hədəf:** Quru təmizləmələr, otellər, xalça və xalı boyama xidmətləri
 - **Üstünlük:** Daha ucuz, daha sərfəli; rəngi bərabər tutur, uzunmüddətli nəticə
@@ -54,12 +54,14 @@ Viktoria Boya 1901-ci ildən fəaliyyət göstərir. Yüksək keyfiyyətli toz b
 
 ## İstifadə sahələri
 
-- Köynək, cins, gödəkçə boyamaq
-- Forma və polis geyimləri boyamaq
+- Köynək, cins, gödəkçə, futbolka boyamaq
+- uniforma və polis geyimləri boyamaq
 - Otel və kimyəvi təmizləmələr üçün toplu boyama
-- Xalça, kilim, parça və toxumalar
+- Xalça, kilim, divan, parça və toxumalar
 - Xlor ləkəsini örtmək
 - Solmuş geyimləri canlandırmaq
+- domestos ləkəsini örtmək 
+- günəş qızarmasını örtmək 
 
 ---
 
@@ -105,7 +107,7 @@ Viktoria Boya 1901-ci ildən fəaliyyət göstərir. Yüksək keyfiyyətli toz b
 Ən effektiv üsul parça boyasından istifadə etməkdir. Viktoria cins mavisi və ya qara paltar boyası ilə şalvarı həm əl ilə qazanda qaynadaraq, həm də paltaryuyan maşında boyayaraq tam yeni görünüşə qovuşdura bilərsiniz.
 
 **Pambıq olmayan (sintetik) parçaları boyamaq mümkündürmü?**
-Paltar boyaları əsasən pambıq, kətan və viskoza kimi təbii liflərə daha yaxşı nüfuz edir. 100% sintetik (polyester) parçalar boyanı tam qəbul etməyə bilər, lakin qarışıq tərkibli parçalarda (məsələn, 70% pambıq, 30% polyester) qənaətbəxş nəticə əldə etmək mümkündür.
+Paltar boyaları əsasən pambıq, kətan və viskoza kimi təbii liflərə daha yaxşı nüfuz edir. 100% sintetik (polyester) parçalar boyanı tam qəbul etməyə bilər, lakin qarışıq tərkibli parçalarda (məsələn, 80% pambıq, 20% polyester) qənaətbəxş nəticə əldə etmək mümkündür.
 
 **Viktoria paltar boyasını Bakıda mağazadan və ya çatdırılma ilə almaq olar?**
 Bəli, biz Azərbaycanın bütün bölgələrinə çatdırılma xidməti göstəririk. Bakı daxilində sürətli kuryer (əlavə ödənişlə), bölgələrə (Gəncə, Sumqayıt, Lənkəran və s.) isə poçt vasitəsilə sifarişinizi ünvanınıza çatdırırıq.
