@@ -189,7 +189,7 @@
             background-color: #009e6a;
         }
         
-        /* ========== DÜZENLENEN ALAN: ÇİFT BUTONLU REKLAM ALANI ========== */
+        /* ========== DÜZENLENEN ALAN: KAYMA ANİMASYONLU REKLAM ALANI ========== */
         .btn-neon-wrap {
             display: flex;
             flex-direction: column;
@@ -202,15 +202,16 @@
             position: relative;
             width: 100%;
             max-width: 640px;
-            height: 44px; /* Buton yüksekliği sabitlenerek sayfa kayması önlendi */
+            height: 44px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-sizing: border-box;
+            overflow: hidden; /* Sola kayan ve sağdan gelen butonların taşmasını önler */
         }
         @media (max-width: 480px) {
             .btn-neon-container {
-                height: 52px; /* Mobilde çift satırlı metnin sığması için dikey alan genişletildi */
+                height: 52px;
             }
         }
         .btn-neon-sticky {
@@ -222,7 +223,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #32cd32;
+            background: #32cd32; /* Varsayılan Yeşil (Şifalı Bitkiler) */
             color: #000;
             font-weight: 700;
             font-size: clamp(11px, 2.4vw, 15px);
@@ -235,17 +236,37 @@
             word-break: break-word;
             box-sizing: border-box;
             
-            /* Geçiş Animasyonları */
+            /* Kayma Animasyonu İçin Başlangıç Durumu (Sağda Bekler) */
             opacity: 0;
             visibility: hidden;
-            transform: scale(0.97);
-            transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+            transform: translateX(100%);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease, visibility 0.6s;
         }
+
+        /* 2. BUTON: SARI RENKLİ TABLO STYLE */
+        #btn-tablo-reklam {
+            background: #ffd700; /* Parlak Sarı */
+            box-shadow: 0 0 8px #ffd700, 0 0 18px #ffd700;
+        }
+        #btn-tablo-reklam:hover {
+            background: #e6c200;
+            box-shadow: 0 0 12px #e6c200, 0 0 24px #e6c200;
+        }
+
+        /* Ekranda Aktif Durandaki Buton (Ortada) */
         .btn-neon-sticky.active {
             opacity: 1;
             visibility: visible;
-            transform: scale(1);
+            transform: translateX(0);
         }
+
+        /* Sola Kayarak Çıkan Buton */
+        .btn-neon-sticky.exit-left {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-100%);
+        }
+
         .btn-neon-sticky:hover { 
             background: #28b828; 
             box-shadow: 0 0 12px #28b828, 0 0 24px #28b828; 
@@ -553,15 +574,15 @@
             <a href="mailto:info@viktoria-az.store">📧 E-poçt</a>
         </nav>
         
-        <!-- YENİLENEN REKLAM ALANI -->
+        <!-- REKLAM ALANI -->
         <div class="btn-neon-wrap">
             <span id="sponsoredLabel" class="sponsored-label">🔹 Reklam</span>
             <div class="btn-neon-container">
-                <!-- 1. Buton: Şifalı Bitkiler -->
+                <!-- 1. Buton: Yeşil (Şifalı Bitkiler) -->
                 <a href="https://herbal-az.store" class="btn-neon-sticky active" id="btn-herbal" rel="sponsored noopener" target="_blank">
                     ⏩ ŞƏFALI BİTKİLƏR SATIŞI SAYTINA KEÇİN ⏪
                 </a>
-                <!-- 2. Buton: Tablo Style (Google Reklam) -->
+                <!-- 2. Buton: Sarı (Tablo Style - Google Reklam) -->
                 <a href="https://tablo-style.vercel.app/" class="btn-neon-sticky" id="btn-tablo-reklam" rel="sponsored noopener" target="_blank">
                     ⏩ Google Reklam: TABLO STYLE QALEREYASINA KEÇİN ⏪
                 </a>
@@ -723,7 +744,7 @@
                 <div class="use-case-item">👖 Cins boyamaq</div>
                 <div class="use-case-item">🧥 Gödəkçə rəngini yeniləmək</div>
                 <div class="use-case-item">👮 Forma və geyimlər</div>
-                <div class="use-case-item">🏢 Otel og kimyəvi təmizləmələr</div>
+                <div class="use-case-item">🏢 Otel və kimyəvi təmizləmələr</div>
                 <div class="use-case-item">🏁 Xalça, kilim, parça və toxumalar</div>
                 <div class="use-case-item">🧴 Xlor ləkəsini boyamaq</div>
                 <div class="use-case-item">🎽 Solmuş geyim</div>
@@ -822,91 +843,10 @@
                 <li><a href="https://viktoria-az.store/uniforma-boyasi.html">Uniforma boyaları və parça üçün boya növləri</a></li>
                 <li><a href="https://viktoria-az.store/qara-paltar-boyasi">Qara paltar boyasının istifadəsi çox sadədir</a></li>
                 <li><a href="https://viktoria-az.store/reklam.html">Qara paltar boyasının reklamı</a></li>
-                <li><a href="https://viktoria-az.store/perde-ortu-xalca">Viktoria Paltar Boyası ile pərdə boyamaq olar?</a></li>
+                <li><a href="https://viktoria-az.store/perde-ortu-xalca">Viktoria Paltar Boyası ilə pərdə boyamaq olar?</a></li>
             </ul>
         </div>
         <p style="text-align:center; margin-bottom: 14px;">
             📧 <a href="mailto:info@viktoria-az.store" style="color:#4b0082; font-weight:600; text-decoration:underline;">info&#64;viktoria&#45;az&#46;store</a>
         </p>
-        <p style="text-align:center;font-weight:bold;">Endirimlər və yeni rənglər üçün e-mail burax 👇</p>
-        <iframe width="540" height="305" src="https://756cf6d5.sibforms.com/serve/MUIFACzOYbJOKv86u1fThZfhxRowjTbyQPguT1jF2fYhh7XAqUPP8OH3dQqFaL91WU3E2G6MkoA47dAeTTO5V7IgqfEicboNYxv43ognTak1PeF_wZcdfWP2hUmwtqp7m25GEu2HUS4_Y-_ULhtoGBeX2OSlSzRvH8KWTyOdEK7NCkNo7hgvKGqIzB6pcm_5WPFbJ6bYNGxB6NUMWA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
-        <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">&copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
-    </footer>
-
-    <audio id="bgMusic" loop preload="auto">
-        <source src="/music/musiqi.mpeg" type="audio/mpeg">
-    </audio>
-    <button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
-        style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
-        🔇
-    </button>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
-    <script>
-        function openGmail(e) {
-            e.preventDefault();
-            var to             = "info@viktoria-az.store";
-            var subjectEncoded = encodeURIComponent("Viktoria boya haqqında məlumat almaq istəyirəm");
-            var isIOS          = /iPhone|iPad|iPod/i.test(navigator.userAgent);
-            if (isIOS) {
-                window.location.href = "googlegmail://co?to=" + to + "&subject=" + subjectEncoded;
-                setTimeout(function () {
-                    window.open("https://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subjectEncoded, "_blank");
-                }, 1500);
-            } else {
-                window.location.href = "mailto:" + to + "?subject=" + subjectEncoded;
-            }
-        }
-
-        (function () {
-            var music = document.getElementById('bgMusic');
-            var btn   = document.getElementById('muteBtn');
-            music.volume = 0.25;
-            function playMusic() {
-                music.play().then(function () {
-                    btn.textContent = '🔊';
-                }).catch(function (e) {
-                    console.warn('Audio blocked:', e);
-                });
-            }
-            window.addEventListener('scroll', function () {
-                if (music.paused) playMusic();
-            }, { once: true, passive: true });
-            window.toggleMute = function () {
-                if (music.paused) {
-                    music.play();
-                    btn.textContent = '🔊';
-                } else {
-                    music.pause();
-                    btn.textContent = '🔇';
-                }
-            };
-            
-            // ALTERNATİF REKLAM BUTONLARI GEÇİŞİ (YENİ EKLENDİ)
-            var btnHerbal = document.getElementById("btn-herbal");
-            var btnTablo = document.getElementById("btn-tablo-reklam");
-            var sponsoredLabel = document.getElementById("sponsoredLabel");
-
-            if (btnHerbal && btnTablo) {
-                setInterval(function () {
-                    if (btnHerbal.classList.contains("active")) {
-                        btnHerbal.classList.remove("active");
-                        btnTablo.classList.add("active");
-                        if (sponsoredLabel) {
-                            sponsoredLabel.textContent = "🔹 Google Reklam";
-                        }
-                    } else {
-                        btnTablo.classList.remove("active");
-                        btnHerbal.classList.add("active");
-                        if (sponsoredLabel) {
-                            sponsoredLabel.textContent = "🔹 Reklam";
-                        }
-                    }
-                }, 2000); // 2 saniyede bir dikey geçiş yapar
-            }
-            
-        })();
-    </script>
-
-</body>
-</html>
+        <p
