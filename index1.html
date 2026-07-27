@@ -849,4 +849,106 @@
         <p style="text-align:center; margin-bottom: 14px;">
             📧 <a href="mailto:info@viktoria-az.store" style="color:#4b0082; font-weight:600; text-decoration:underline;">info&#64;viktoria&#45;az&#46;store</a>
         </p>
-        <p
+        <p style="text-align:center;font-weight:bold;">Endirimlər və yeni rənglər üçün e-mail burax 👇</p>
+        <iframe width="540" height="305" src="https://756cf6d5.sibforms.com/serve/MUIFACzOYbJOKv86u1fThZfhxRowjTbyQPguT1jF2fYhh7XAqUPP8OH3dQqFaL91WU3E2G6MkoA47dAeTTO5V7IgqfEicboNYxv43ognTak1PeF_wZcdfWP2hUmwtqp7m25GEu2HUS4_Y-_ULhtoGBeX2OSlSzRvH8KWTyOdEK7NCkNo7hgvKGqIzB6pcm_5WPFbJ6bYNGxB6NUMWA==" frameborder="0" scrolling="auto" allowfullscreen style="display: block;margin-left: auto;margin-right: auto;max-width: 100%;"></iframe>
+        <p style="text-align:center; font-size:13px; color:#555; padding-bottom:16px;">&copy; 2026 Viktoria Paltar Boyaları. Bütün hüquqlar qorunur.</p>
+    </footer>
+
+    <audio id="bgMusic" loop preload="auto">
+        <source src="/music/musiqi.mpeg" type="audio/mpeg">
+    </audio>
+    <button id="muteBtn" onclick="toggleMute()" title="Musiqini aç/bağla" aria-label="Musiqini aç/bağla"
+        style="position:fixed;bottom:96px;right:28px;z-index:9999;background:#fff;border:1.5px solid #e2ddd6;border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;transition:transform 0.2s,box-shadow 0.2s;box-shadow:0 2px 12px rgba(0,0,0,0.10);display:flex;align-items:center;justify-content:center;line-height:1;">
+        🔇
+    </button>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script>
+        function openGmail(e) {
+            e.preventDefault();
+            var to             = "info@viktoria-az.store";
+            var subjectEncoded = encodeURIComponent("Viktoria boya haqqında məlumat almaq istəyirəm");
+            var isIOS          = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if (isIOS) {
+                window.location.href = "googlegmail://co?to=" + to + "&subject=" + subjectEncoded;
+                setTimeout(function () {
+                    window.open("https://mail.google.com/mail/?view=cm&to=" + to + "&su=" + subjectEncoded, "_blank");
+                }, 1500);
+            } else {
+                window.location.href = "mailto:" + to + "?subject=" + subjectEncoded;
+            }
+        }
+
+        (function () {
+            var music = document.getElementById('bgMusic');
+            var btn   = document.getElementById('muteBtn');
+            music.volume = 0.25;
+            function playMusic() {
+                music.play().then(function () {
+                    btn.textContent = '🔊';
+                }).catch(function (e) {
+                    console.warn('Audio blocked:', e);
+                });
+            }
+            window.addEventListener('scroll', function () {
+                if (music.paused) playMusic();
+            }, { once: true, passive: true });
+            window.toggleMute = function () {
+                if (music.paused) {
+                    music.play();
+                    btn.textContent = '🔊';
+                } else {
+                    music.pause();
+                    btn.textContent = '🔇';
+                }
+            };
+            
+            // ALTERNATİF REKLAM BUTONLARI GEÇİŞİ (KAYMA ANİMASYONLU & 3 SANİYE)
+            var btnHerbal = document.getElementById("btn-herbal");
+            var btnTablo = document.getElementById("btn-tablo-reklam");
+            var sponsoredLabel = document.getElementById("sponsoredLabel");
+
+            if (btnHerbal && btnTablo) {
+                setInterval(function () {
+                    if (btnHerbal.classList.contains("active")) {
+                        // 1. Buton sola kaysın, 2. Buton sağdan gelsin
+                        btnHerbal.classList.remove("active");
+                        btnHerbal.classList.add("exit-left");
+                        
+                        btnTablo.classList.remove("exit-left");
+                        btnTablo.classList.add("active");
+                        
+                        if (sponsoredLabel) {
+                            sponsoredLabel.textContent = "🔹 Google Reklam";
+                        }
+
+                        // Sola kayan butonu gizlice sağ tarafa sıfırla
+                        setTimeout(function() {
+                            btnHerbal.classList.remove("exit-left");
+                        }, 700);
+
+                    } else {
+                        // 2. Buton sola kaysın, 1. Buton sağdan gelsin
+                        btnTablo.classList.remove("active");
+                        btnTablo.classList.add("exit-left");
+                        
+                        btnHerbal.classList.remove("exit-left");
+                        btnHerbal.classList.add("active");
+                        
+                        if (sponsoredLabel) {
+                            sponsoredLabel.textContent = "🔹 Reklam";
+                        }
+
+                        // Sola kayan butonu gizlice sağ tarafa sıfırla
+                        setTimeout(function() {
+                            btnTablo.classList.remove("exit-left");
+                        }, 700);
+                    }
+                }, 3000); // 3 saniyede bir geçiş yapar
+            }
+            
+        })();
+    </script>
+
+</body>
+</html>
