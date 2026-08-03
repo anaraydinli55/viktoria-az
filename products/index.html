@@ -6,7 +6,6 @@
   <title>Viktoria Paltar Boyaları — Kataloq</title>
   <meta name="description" content="Viktoria paltar boyası kataloqu — 60 rəng seçimi, cəmi 5 AZN. Bakı və bütün Azərbaycana çatdırılma." />
 
-  
   <style>
     :root {
       --purple: #4b0082;
@@ -65,9 +64,20 @@
     /* Content */
     h1 {
       text-align: center;
-      padding: 30px 16px 10px;
+      padding: 30px 16px 5px;
+      margin-bottom: 0;
       font-size: clamp(20px, 5vw, 28px);
       color: #e8d0ff;
+    }
+
+    /* Yeni Açıqlama Mətni Stili */
+    .subtitle {
+      text-align: center;
+      color: rgba(232, 208, 255, 0.75);
+      font-size: clamp(13px, 3.5vw, 15px);
+      margin: 5px 0 25px;
+      padding: 0 16px;
+      font-weight: 500;
     }
 
     .container {
@@ -91,18 +101,22 @@
       border-radius: 14px;
       text-decoration: none;
       font-weight: 700;
-      transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      /* Daha yumşaq keçid üçün transition parametri yeniləndi */
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.2s, box-shadow 0.25s, border-color 0.25s;
       font-size: 13px;
       text-align: center;
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.12);
       cursor: pointer;
       line-height: 1.2;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
+    /* Təkmilləşdirilmiş Hover Effekti */
     .btn:hover {
-      transform: translateY(-4px) scale(1.02);
-      filter: brightness(1.2);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transform: translateY(-5px) scale(1.05);
+      filter: brightness(1.2) contrast(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.45);
+      border-color: rgba(255,255,255,0.35);
     }
 
     /* WhatsApp Float */
@@ -164,6 +178,8 @@
 </header>
 
 <h1>Viktoria — Rəng Kataloqu</h1>
+<!-- Yeni Açıqlama Mətni -->
+<div class="subtitle">Boyaların üstünə klikləyib paketləri görmək olar</div>
 
 <div class="container">
   <div class="grid" id="grid"></div>
