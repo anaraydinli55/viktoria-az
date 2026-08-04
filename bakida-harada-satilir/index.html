@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="az">
 
@@ -416,10 +415,16 @@
       height: 30px;
     }
 
+    @media (max-width: 640px) {
+      .slider-btn { width: 36px; height: 36px; font-size: 16px; }
+      .interactive-map {
+        height: 280px;
+      }
+    }
+
     @media (max-width: 520px) {
       h1 { font-size: 24px; }
       .card { padding: 18px; }
-      .slider-btn { width: 36px; height: 36px; font-size: 16px; }
     }
   </style>
 </head>
@@ -451,17 +456,17 @@
       </ul>
 
       <h2>İnteraktiv Xəritə</h2>
-      <p>Aşağıda canlı Google Xəritəsi yerləşir. Üzərinə klikləyərək birbaşa <strong>Google Maps</strong> tətbiqində ünvanı aça bilərsiniz:</p>
+      <p>Aşağıda canlı Google Xəritəsi yerləşir. Üzərinə klikləyərək birbaşa <strong>Google Maps</strong> tətbiqində ünvanı rəsmi qırmızı mövqe pini (marker) ilə aça bilərsiniz:</p>
 
-      <!-- Tıklanabilir İnteraktif Google Harita Yapısı (Doğru Adrese Yönlendirir) -->
+      <!-- Doğru Ünvana ve Kırmızı Pıne (Marker) Yönlendiren Canlı Google Harita Yapısı -->
       <div class="map-wrapper">
         <iframe 
-          src="https://maps.google.com/maps?q=Icheri%20Sheher,%2051/4%20Asef%20Zeynalli,%20Baku%201001&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+          src="https://maps.google.com/maps?q=Mindal%20Sheki%20Sweets,%20As%C9%99f%20Zeynall%C4%B1%2051/4,%20Baku%201001&t=&z=17&ie=UTF8&iwloc=&output=embed" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <!-- Üzerindeki Tıklama Maskesi -->
-        <a class="map-click-overlay" href="https://www.google.com/maps/search/?api=1&query=Icheri+Sheher,+51/4+Asef+Zeynalli,+Baku+1001" target="_blank" rel="noopener noreferrer">
+        <a class="map-click-overlay" href="https://www.google.com/maps/search/?api=1&query=Mindal+Sheki+Sweets,+Asəf+Zeynallı+51/4,+Baku+1001" target="_blank" rel="noopener noreferrer">
           <div class="map-tooltip">
             📍 Google Maps-da açmaq üçün klikləyin
           </div>
@@ -502,7 +507,7 @@
       </div>
 
       <div style="text-align: center; margin-top: 35px;">
-        <a class="btn-google" href="https://www.google.com/maps/search/?api=1&query=Icheri+Sheher,+51/4+Asef+Zeynalli,+Baku+1001" target="_blank" rel="noopener noreferrer">
+        <a class="btn-google" href="https://www.google.com/maps/search/?api=1&query=Mindal+Sheki+Sweets,+As%C3%A6f+Zeynall%C4%B1+51/4,+Baku+1001" target="_blank" rel="noopener noreferrer">
           🗺️ Google Maps ilə Yol Tarifi Al
         </a>
       </div>
