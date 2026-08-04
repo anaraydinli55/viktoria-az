@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="az">
 
@@ -20,7 +21,7 @@
   <meta property="og:description" content="Viktoria paltar boyasını Bakıda əldə edə biləcəyiniz rəsmi satış ünvanımız — İçərişəhər, Mindal Şəki Şirniyyatları mağazası." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://viktoria-az.store/bakida-harada-satilir/" />
-  <meta property="og:image" content="https://viktoria-az.store/images/mindal-magaza.jpeg" />
+  <meta property="og:image" content="https://viktoria-az.store/images/mindal-magaza.jpg" />
   <meta property="og:site_name" content="Viktoria AZ" />
 
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -231,45 +232,131 @@
       opacity: 1;
     }
 
-    /* Görsel Grid Yapısı */
-    .images-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin-top: 16px;
-    }
-
-    .visual-card {
+    /* Slayder Kartı və Tərtibatı */
+    .slider-card {
+      position: relative;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 18px;
+      padding: 16px;
+      margin-top: 16px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    }
+
+    .slider-container {
+      position: relative;
+      width: 100%;
+      border-radius: 14px;
+      border: 1px solid var(--border);
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s, border-color 0.25s;
-      text-decoration: none;
+      background: #0d0713;
+    }
+
+    .slider-track {
+      display: flex;
+      transition: transform 0.35s ease-in-out;
+      width: 100%;
+    }
+
+    .slide {
+      min-width: 100%;
+      cursor: zoom-in; /* Zoom ikonunu göstərir */
       display: block;
+      position: relative;
     }
 
-    .visual-card:hover {
-      transform: translateY(-5px) scale(1.02);
-      box-shadow: 0 12px 24px rgba(75,0,130,0.15);
-      border-color: rgba(75,0,130,0.3);
-    }
-
-    .visual-card img {
+    .slide img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .visual-card-title {
-      padding: 12px;
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--text);
-      text-align: center;
-      border-top: 1px solid var(--border);
-      background: #faf9f6;
+    .slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(75, 0, 130, 0.85);
+      color: #fff;
+      border: none;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 20px;
+      z-index: 15;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .slider-btn:hover {
+      background: var(--purple-dark);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .slider-btn.prev { left: 15px; }
+    .slider-btn.next { right: 15px; }
+
+    .slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .slider-dot.active {
+      background: var(--purple);
+    }
+
+    /* Tam Ekran Lightbox (Modal) Stili */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.95);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      cursor: zoom-out;
+    }
+
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: color 0.2s;
+      pointer-events: auto;
+    }
+
+    .lightbox-close:hover {
+      color: #e8d0ff;
     }
 
     .btn-google {
@@ -300,7 +387,7 @@
       background: #4b0082;
     }
 
-    /* Konsolide Edilmiş Yüzen Buton Stilleri */
+    /* WhatsApp & Music Buttons */
     .float-wa, .float-music {
       position: fixed;
       right: 18px;
@@ -329,19 +416,10 @@
       height: 30px;
     }
 
-    @media (max-width: 640px) {
-      .images-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-      }
-      .interactive-map {
-        height: 280px;
-      }
-    }
-
     @media (max-width: 520px) {
       h1 { font-size: 24px; }
       .card { padding: 18px; }
+      .slider-btn { width: 36px; height: 36px; font-size: 16px; }
     }
   </style>
 </head>
@@ -366,52 +444,65 @@
 
       <h2>Mağaza məlumatları</h2>
       <ul class="info-list">
-        <li>📍 <strong>Ünvan:</strong> İçərişəhər, Asəf Zeynallı küçəsi (Qız Qalası yaxınlığında, Castello Inn Baku oteli ilə yanaşı)</li>
+        <li>📍 <strong>Ünvan:</strong> İçərişəhər, Asəf Zeynallı 51/4, Bakı 1001 (Qız Qalası yaxınlığında, Castello Inn Baku oteli ilə yanaşı)</li>
         <li>🏬 <strong>Mağazanın adı:</strong> Mindal Şəki Şirniyyatları (Mindal Sweets)</li>
         <li>⏰ <strong>İş saatları:</strong> Hər gün 10:00 - 22:00</li>
         <li>📞 <strong>Əlaqə telefonu:</strong> +994 55 482 8424</li>
       </ul>
 
       <h2>İnteraktiv Xəritə</h2>
-      <p>Aşağıda canlı Google Xəritəsi yerləşir. Üzərinə klikləyərək birbaşa <strong>Google Maps</strong> üzərində ünvanı aça bilərsiniz:</p>
+      <p>Aşağıda canlı Google Xəritəsi yerləşir. Üzərinə klikləyərək birbaşa <strong>Google Maps</strong> tətbiqində ünvanı aça bilərsiniz:</p>
 
-      <!-- Tıklanabilir İnteraktif Google Harita Yapısı -->
+      <!-- Tıklanabilir İnteraktif Google Harita Yapısı (Doğru Adrese Yönlendirir) -->
       <div class="map-wrapper">
         <iframe 
-          src="https://maps.google.com/maps?q=Mindal%20Sheki%20Sweets%20Baku&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+          src="https://maps.google.com/maps?q=Icheri%20Sheher,%2051/4%20Asef%20Zeynalli,%20Baku%201001&t=&z=17&ie=UTF8&iwloc=&output=embed" 
           loading="lazy" 
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <!-- Üzerindeki Tıklama Maskesi -->
-        <a class="map-click-overlay" href="https://www.google.com/maps/search/?api=1&query=Mindal+Sheki+Sweets+Icherisheher+Baku" target="_blank" rel="noopener noreferrer">
+        <a class="map-click-overlay" href="https://www.google.com/maps/search/?api=1&query=Icheri+Sheher,+51/4+Asef+Zeynalli,+Baku+1001" target="_blank" rel="noopener noreferrer">
           <div class="map-tooltip">
             📍 Google Maps-da açmaq üçün klikləyin
           </div>
         </a>
       </div>
 
-      <h2>Ünvan Bələdçisi (Şəkillərlə)</h2>
-      <p>Əraziyə yaxınlaşdıqda asanlıqla ünvanı tapmağınız üçün köməkçi vizual şəkillər (Kliklədikdə Google Maps açılır):</p>
+      <h2>Ünvan Bələdçisi (Slayder)</h2>
+      <p>Əraziyə yaxınlaşdıqda asanlıqla ünvanı tapmağınız üçün köməkçi bələdçi şəkillər. **Şəkli ekran boyu tam (böyük) ölçüdə açmaq üçün üzərinə klikləyin:**</p>
 
-      <!-- Peyk Haritası ve Mağaza Girişi Yan-Yana Kart Yapısı -->
-      <div class="images-grid">
+      <!-- İleri Geri Butonlu Kart Slayderi -->
+      <div class="slider-card">
         
-        <!-- Şekil 1: Peyk Haritası -->
-        <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=Mindal+Sheki+Sweets+Icherisheher+Baku" target="_blank" rel="noopener noreferrer">
-          <img src="/images/mindal-magaza-peyk.jpeg" alt="İçərişəhər Peyk Xəritəsi - Mindal" loading="lazy">
-          <div class="visual-card-title">🗺️ Peyk Bələdçisi (Şəkil 1)</div>
-        </a>
+        <div class="slider-container">
+          <div class="slider-track" id="sliderTrack">
+            <!-- Şekil 1: Peyk Bələdçisi -->
+            <div class="slide">
+              <img src="/images/mindal-peyk.jpg" alt="İçərişəhər Peyk Xəritəsi - Mindal" loading="lazy">
+              <div class="visual-card-title">🗺️ Peyk Bələdçisi (Şəkil 1)</div>
+            </div>
+            <!-- Şekil 2: Mağaza Fotoğrafı -->
+            <div class="slide">
+              <img src="/images/mindal-magaza.jpg" alt="Mindal Şirniyyat Mağazası Ön Görünüşü" loading="lazy">
+              <div class="visual-card-title">🏬 Mağaza Girişi (Şəkil 2)</div>
+            </div>
+          </div>
 
-        <!-- Şekil 2: Mağaza Fotoğrafı -->
-        <a class="visual-card" href="https://www.google.com/maps/search/?api=1&query=Mindal+Sheki+Sweets+Icherisheher+Baku" target="_blank" rel="noopener noreferrer">
-          <img src="/images/mindal-magaza.jpeg" alt="Mindal Şirniyyat Mağazası Ön Görünüşü" loading="lazy">
-          <div class="visual-card-title">🏬 Mağaza Girişi (Şəkil 2)</div>
-        </a>
+          <!-- İleri-Geri Okları -->
+          <button class="slider-btn prev" id="prevBtn" aria-label="Geri">&#10094;</button>
+          <button class="slider-btn next" id="nextBtn" aria-label="İrəli">&#10095;</button>
+        </div>
+
+        <!-- Slayder Nöqtələri (Dots) -->
+        <div class="slider-dots">
+          <div class="slider-dot active"></div>
+          <div class="slider-dot"></div>
+        </div>
 
       </div>
 
       <div style="text-align: center; margin-top: 35px;">
-        <a class="btn-google" href="https://www.google.com/maps/search/?api=1&query=Mindal+Sheki+Sweets+Icherisheher+Baku" target="_blank" rel="noopener noreferrer">
+        <a class="btn-google" href="https://www.google.com/maps/search/?api=1&query=Icheri+Sheher,+51/4+Asef+Zeynalli,+Baku+1001" target="_blank" rel="noopener noreferrer">
           🗺️ Google Maps ilə Yol Tarifi Al
         </a>
       </div>
@@ -419,6 +510,12 @@
     </article>
 
   </main>
+
+  <!-- Tam Ekran Lightbox Modal -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-content" id="lightboxImg" alt="Böyüdülmüş Görünüş">
+  </div>
 
   <footer>
     &copy; 2026 Viktoria AZ · Bütün hüquqlar qorunur
@@ -437,6 +534,60 @@
   <audio id="bgMusic" src="/music/musiqi1.mpeg" preload="auto" loop></audio>
 
   <script>
+    // 1. Slayder (Carousel) Məntiqi
+    let currentSlide = 0;
+    const slides = document.querySelectorAll(".slide");
+    const dots = document.querySelectorAll(".slider-dot");
+    const track = document.getElementById("sliderTrack");
+
+    function showSlide(index) {
+      if (index >= slides.length) {
+        currentSlide = 0;
+      } else if (index < 0) {
+        currentSlide = slides.length - 1;
+      } else {
+        currentSlide = index;
+      }
+
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      
+      dots.forEach((dot, idx) => {
+        if (idx === currentSlide) {
+          dot.classList.add("active");
+        } else {
+          dot.classList.remove("active");
+        }
+      });
+    }
+
+    document.getElementById("nextBtn").addEventListener("click", () => showSlide(currentSlide + 1));
+    document.getElementById("prevBtn").addEventListener("click", () => showSlide(currentSlide - 1));
+    
+    dots.forEach((dot, idx) => {
+      dot.addEventListener("click", () => showSlide(idx));
+    });
+
+    // 2. Tam Ekran Lightbox (Görsəllərin Böyüdülməsi) Məntiqi
+    const lightbox = document.getElementById("lightboxModal");
+    const lightboxImg = document.getElementById("lightboxImg");
+    const lightboxClose = document.getElementById("lightboxClose");
+
+    slides.forEach(slide => {
+      const img = slide.querySelector("img");
+      img.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = img.src;
+      });
+    });
+
+    // Şəklin kənarına kliklədikdə böyüdülmüş ekranı bağlayır
+    lightbox.addEventListener("click", (e) => {
+      if (e.target !== lightboxImg) {
+        lightbox.style.display = "none";
+      }
+    });
+
+    // 3. Musiqi Məntiqi
     const music = document.getElementById("bgMusic");
     const musicBtn = document.getElementById("musicBtn");
 
