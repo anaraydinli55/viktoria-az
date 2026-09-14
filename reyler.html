@@ -17,54 +17,53 @@
       "name": "Viktoria"
     },
     "aggregateRating": {
-      "@type": "AggregateRating",
       "ratingValue": "4.8",
       "reviewCount": "5",
       "bestRating": "5",
       "worstRating": "1"
     },
     "review": [
-          {
+      {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Alyona"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
         "reviewBody": "Hamınızın günü xeyirli olsun! Bu boyanı niyə aldığımı danışmaqla başlamaq istəyirəm. Bir gün ağlıma özümə bənövşəyi rəngdə cırıq şalvar hazırlamaq ideyası gəldi. Uzun müddət həm şalvar, həm də boya axtardım. Ağ şalvar alsam yaxşıdır, yoxsa çəhrayı və ya yasəməni çalara yaxın rəngdə şalvar alsam – qərar verə bilmirdim. Çünki bir saytda oxumuşdum ki, ağ şalvarı qara rəngə boyasan, nəticə qara yox, tünd boz olur.\n\nƏvvəlcə universal Atey Plus boyasını almaq istəyirdim. Qiyməti çox münasib idi, amma rəngləri xoşuma gəlmədi. Sonra dərzidə \"Viktoria\" boyasını gördüm. Rəng palitrası əla idi, amma qiyməti bir az baha idi (boya üçün) – 5 manat. 54 nömrəli rəngi aldım. İstehsalçı Türkiyədir. Çox yaxşı boyadır və rəng seçimi çox genişdir.",
-        "datePublished": "2025-11-06"
+        "datePublished": "2026-01-29"
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Aytən Kərimova"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
         "reviewBody": "Əla boyadır, çox razı qaldım. Keyfiyyəti həqiqətən belə gözləmirdim. Mütləq tövsiyə edirəm, yoxlayıb nəticəni görün!",
-        "datePublished": "2025-12-19"
+        "datePublished": "2026-03-17"
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Müşfiq Talıbov"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
         "reviewBody": "Qiymət-keyfiyyət baxımından mükəmməldir. Çatdırılma çox sürətli oldu, cinsimin rəngi ilk aldığım kimi olub. Yenə alacam.",
-        "datePublished": "2026-01-16"
+        "datePublished": "2026-04-08"
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Zəhra Abbaszadə"},
         "reviewRating": {"@type": "Rating", "ratingValue": "4", "bestRating": "5"},
         "reviewBody": "Gözəl nəticə əldə etdim Viktoria ilə, köynəyin rəngi tam istədiyim kimi oldu. Qiymət Trendyol'dan da ucuzdur, həm də çatdırılma sürətli oldu, ümumiyyətlə məmnunam.",
-        "datePublished": "2026-02-12"
+        "datePublished": "2026-05-22"
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "Səttar Fərhadlı"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
         "reviewBody": "Paltaryuyanda paltarlarımın rəngi qarışmışdı. Viktoria ilə onları əvvəlki rənglərinə qaytara bildim. Nəticə super.. minnətdaram.",
-        "datePublished": "2026-02-24"
+        "datePublished": "2026-06-11"
       },
       {
         "@type": "Review",
         "author": {"@type": "Person", "name": "İsmət Məmmədov"},
         "reviewRating": {"@type": "Rating", "ratingValue": "5", "bestRating": "5"},
         "reviewBody": "Məhsulun keyfiyyəti əladır. Rəngi çox canlı alındı, təşəkkürlər.",
-        "datePublished": "2026-02-27"
+        "datePublished": "2026-09-03"
       }
     ]
   }
@@ -74,398 +73,102 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* ── Orijinal neytral rənglər ── */
       --cream:        #faf7f2;
-      --warm:         #f9f4ff;          /* #f0e8d8 → açıq bənövşəyi */
+      --warm:         #f9f4ff;
       --gold:         #c9a84c;
       --gold-light:   #e8c97a;
-      /* ── Tünd fonlar → FAQ moru ── */
-      --dark:         #4b0082;          /* #1a1410 → bənövşəyi */
-      --dark-deeper:  #360060;          /* hover üçün */
-      --mid:          #7b1fa2;          /* #5c4a32 → orta bənövşəyi */
+      --dark:         #4b0082;
+      --dark-deeper:  #360060;
+      --mid:          #7b1fa2;
       --text:         #3d2e1e;
-      --border:       #d0a3ff;          /* #e0d5c5 → bənövşəyi kənar */
+      --border:       #d0a3ff;
       --verified:     #2d7a4f;
       --verified-bg:  #eaf5ee;
     }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-      min-height: 100vh;
-    }
-
-    /* ── HEADER ── */
-    .header {
-      background: var(--dark);
-      padding: 60px 20px 50px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .header::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.15) 0%, transparent 60%),
-                  radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.1) 0%, transparent 60%);
-    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); min-height: 100vh; }
+    .header { background: var(--dark); padding: 60px 20px 50px; text-align: center; position: relative; overflow: hidden; }
+    .header::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, rgba(201,168,76,0.1) 0%, transparent 60%); }
     .header-inner { position: relative; z-index: 1; }
-    .header-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 16px;
-    }
-    .header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 6vw, 72px);
-      font-weight: 900;
-      color: #fff;
-      line-height: 1.05;
-      margin-bottom: 20px;
-    }
+    .header-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: clamp(36px, 6vw, 72px); font-weight: 900; color: #fff; line-height: 1.05; margin-bottom: 20px; }
     .header h1 span { color: var(--gold); }
-
-    .avg-score {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(201,168,76,0.3);
-      border-radius: 60px;
-      padding: 12px 28px;
-      margin-top: 10px;
-    }
-    .avg-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 36px;
-      font-weight: 700;
-      color: var(--gold);
-      line-height: 1;
-    }
+    .avg-score { display: inline-flex; align-items: center; gap: 14px; background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.3); border-radius: 60px; padding: 12px 28px; margin-top: 10px; }
+    .avg-number { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: var(--gold); line-height: 1; }
     .avg-right { text-align: left; }
     .avg-stars { color: var(--gold); font-size: 18px; letter-spacing: 1px; }
     .avg-count { font-size: 12px; color: rgba(255,255,255,0.5); margin-top: 2px; }
-
-    /* ── MAIN ── */
     .main { max-width: 860px; margin: 0 auto; padding: 60px 20px 80px; }
-
-    /* ── REVIEW CARD ── */
     .reviews-list { display: flex; flex-direction: column; gap: 24px; margin-bottom: 60px; }
-
-    .review-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px 30px;
-      position: relative;
-      transition: box-shadow 0.3s, transform 0.3s;
-      animation: fadeUp 0.5s ease both;
-    }
-    .review-card:hover {
-      box-shadow: 0 12px 40px rgba(75,0,130,0.12);
-      transform: translateY(-2px);
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-
-    .review-top {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      margin-bottom: 14px;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+    .review-card { background: #fff; border: 1px solid var(--border); border-radius: 16px; padding: 28px 30px; position: relative; transition: box-shadow 0.3s, transform 0.3s; animation: fadeUp 0.5s ease both; }
+    .review-card:hover { box-shadow: 0 12px 40px rgba(75,0,130,0.12); transform: translateY(-2px); }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    .review-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 10px; }
     .review-author-block { display: flex; align-items: center; gap: 12px; }
-    .avatar {
-      width: 46px; height: 46px;
-      border-radius: 50%;
-      background: var(--warm);
-      border: 2px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--dark);          /* #mid → var(--dark) */
-      overflow: hidden;
-      flex-shrink: 0;
-    }
+    .avatar { width: 46px; height: 46px; border-radius: 50%; background: var(--warm); border: 2px solid var(--border); display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--dark); overflow: hidden; flex-shrink: 0; }
     .avatar img { width: 100%; height: 100%; object-fit: cover; }
-    .author-name {
-      font-weight: 500;
-      font-size: 15px;
-      color: var(--dark);
-    }
+    .author-name { font-weight: 500; font-size: 15px; color: var(--dark); }
     .review-date { font-size: 12px; color: #a08060; margin-top: 2px; }
-
     .review-right { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
     .star-display { color: var(--gold); font-size: 17px; letter-spacing: 1px; }
     .star-display .empty { color: #ddd; }
-
-    .verified-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      background: var(--verified-bg);
-      color: var(--verified);
-      font-size: 11px;
-      font-weight: 500;
-      padding: 4px 10px;
-      border-radius: 20px;
-      letter-spacing: 0.3px;
-    }
+    .verified-badge { display: inline-flex; align-items: center; gap: 5px; background: var(--verified-bg); color: var(--verified); font-size: 11px; font-weight: 500; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.3px; }
     .verified-badge::before { content: '✓'; font-weight: 700; }
-
-    .review-text {
-      font-size: 15px;
-      line-height: 1.7;
-      color: var(--text);
-      margin-bottom: 14px;
-      white-space: pre-line;
-    }
-
-    .review-photo {
-      margin-top: 12px;
-      border-radius: 10px;
-      overflow: hidden;
-      display: inline-block;
-      max-width: 220px;
-      border: 1px solid var(--border);
-    }
+    .review-text { font-size: 15px; line-height: 1.7; color: var(--text); margin-bottom: 14px; white-space: pre-line; }
+    .review-photo { margin-top: 12px; border-radius: 10px; overflow: hidden; display: inline-block; max-width: 220px; border: 1px solid var(--border); }
     .review-photo img { width: 100%; display: block; }
-
-    /* ── FORM ── */
-    .form-section {
-      background: var(--dark);
-      border-radius: 20px;
-      padding: 44px 40px;
-      position: relative;
-      overflow: hidden;
-    }
-    .form-section::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 200px; height: 200px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%);
-    }
-    .form-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 6px;
-    }
+    .form-section { background: var(--dark); border-radius: 20px; padding: 44px 40px; position: relative; overflow: hidden; }
+    .form-section::before { content: ''; position: absolute; top: -60px; right: -60px; width: 200px; height: 200px; border-radius: 50%; background: radial-gradient(circle, rgba(201,168,76,0.15) 0%, transparent 70%); }
+    .form-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #fff; margin-bottom: 6px; }
     .form-subtitle { font-size: 14px; color: rgba(255,255,255,0.45); margin-bottom: 32px; }
-
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } .form-section { padding: 30px 20px; } }
-
     .form-group { display: flex; flex-direction: column; gap: 8px; }
     .form-group.full { grid-column: 1 / -1; }
-
-    label {
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: rgba(255,255,255,0.5);
-    }
-    input[type="text"], textarea {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 10px;
-      padding: 13px 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      color: #fff;
-      outline: none;
-      transition: border-color 0.2s, background 0.2s;
-      resize: none;
-    }
+    label { font-size: 12px; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+    input[type="text"], textarea { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 13px 16px; font-family: 'DM Sans', sans-serif; font-size: 14px; color: #fff; outline: none; transition: border-color 0.2s, background 0.2s; resize: none; }
     input[type="text"]::placeholder, textarea::placeholder { color: rgba(255,255,255,0.25); }
-    input[type="text"]:focus, textarea:focus {
-      border-color: var(--gold);
-      background: rgba(255,255,255,0.09);
-    }
-
+    input[type="text"]:focus, textarea:focus { border-color: var(--gold); background: rgba(255,255,255,0.09); }
     .star-picker { display: flex; flex-direction: row-reverse; justify-content: flex-end; gap: 4px; }
     .star-picker input { display: none; }
-    .star-picker label {
-      font-size: 32px;
-      color: rgba(255,255,255,0.2);
-      cursor: pointer;
-      letter-spacing: 0;
-      text-transform: none;
-      transition: color 0.15s, transform 0.15s;
-      padding: 0 2px;
-    }
-    .star-picker label:hover,
-    .star-picker label:hover ~ label,
-    .star-picker input:checked ~ label {
-      color: var(--gold);
-    }
+    .star-picker label { font-size: 32px; color: rgba(255,255,255,0.2); cursor: pointer; letter-spacing: 0; text-transform: none; transition: color 0.15s, transform 0.15s; padding: 0 2px; }
+    .star-picker label:hover, .star-picker label:hover ~ label, .star-picker input:checked ~ label { color: var(--gold); }
     .star-picker label:hover { transform: scale(1.2); }
-
-    .file-upload-wrapper {
-      position: relative;
-      border: 1.5px dashed rgba(201,168,76,0.4);
-      border-radius: 10px;
-      padding: 20px;
-      text-align: center;
-      cursor: pointer;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .file-upload-wrapper:hover {
-      border-color: var(--gold);
-      background: rgba(201,168,76,0.05);
-    }
-    .file-upload-wrapper input[type="file"] {
-      position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%;
-    }
+    .file-upload-wrapper { position: relative; border: 1.5px dashed rgba(201,168,76,0.4); border-radius: 10px; padding: 20px; text-align: center; cursor: pointer; transition: border-color 0.2s, background 0.2s; }
+    .file-upload-wrapper:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); }
+    .file-upload-wrapper input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; width: 100%; height: 100%; }
     .upload-icon { font-size: 28px; margin-bottom: 6px; }
     .upload-text { font-size: 13px; color: rgba(255,255,255,0.4); }
     .upload-text span { color: var(--gold); }
     #file-preview { margin-top: 12px; display: none; }
     #file-preview img { max-width: 120px; border-radius: 8px; border: 1px solid var(--gold); }
-
-    .submit-btn {
-      margin-top: 8px;
-      width: 100%;
-      padding: 16px;
-      background: var(--gold);
-      color: var(--dark);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
+    .submit-btn { margin-top: 8px; width: 100%; padding: 16px; background: var(--gold); color: var(--dark); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; border: none; border-radius: 10px; cursor: pointer; transition: background 0.2s, transform 0.15s; }
     .submit-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
     .submit-btn:active { transform: translateY(0); }
-
-    .form-note {
-      margin-top: 16px;
-      font-size: 12px;
-      color: rgba(255,255,255,0.3);
-      text-align: center;
-      line-height: 1.6;
-    }
+    .form-note { margin-top: 16px; font-size: 12px; color: rgba(255,255,255,0.3); text-align: center; line-height: 1.6; }
     .form-note a { color: rgba(255,255,255,0.5); }
-
-    .success-msg {
-      display: none;
-      background: var(--verified-bg);
-      color: var(--verified);
-      border-radius: 10px;
-      padding: 16px 20px;
-      font-size: 14px;
-      font-weight: 500;
-      text-align: center;
-      margin-top: 16px;
-    }
-
-    .divider {
-      display: flex; align-items: center; gap: 16px;
-      margin-bottom: 40px;
-    }
+    .success-msg { display: none; background: var(--verified-bg); color: var(--verified); border-radius: 10px; padding: 16px 20px; font-size: 14px; font-weight: 500; text-align: center; margin-top: 16px; }
+    .divider { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
     .divider-line { flex: 1; height: 1px; background: var(--border); }
-    .divider-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 700;
-      color: var(--dark);          /* #mid → var(--dark) */
-      white-space: nowrap;
-    }
-
-    /* ── WHATSAPP FLOAT ── */
-    .wa-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      text-decoration: none;
-      padding: 14px;
-      border-radius: 50%;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.45);
-      z-index: 999;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.15s, box-shadow 0.15s;
-      animation: waPulse 2.5s ease-in-out infinite;
-    }
-    .wa-btn:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
-      animation: none;
-    }
+    .divider-text { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--dark); white-space: nowrap; }
+    .wa-btn { position: fixed; bottom: 20px; right: 20px; background: #25D366; text-decoration: none; padding: 14px; border-radius: 50%; box-shadow: 0 6px 24px rgba(37,211,102,0.45); z-index: 999; display: flex; align-items: center; justify-content: center; transition: transform 0.15s, box-shadow 0.15s; animation: waPulse 2.5s ease-in-out infinite; }
+    .wa-btn:hover { transform: scale(1.1); box-shadow: 0 10px 32px rgba(37,211,102,0.55); animation: none; }
     .wa-btn svg { width: 32px; height: 32px; fill: #fff; display: block; }
-    @keyframes waPulse {
-      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); }
-      50%       { box-shadow: 0 4px 32px rgba(37,211,102,0.75); }
-    }
-
-    /* ── PAGE NAV ── */
-    .page-nav {
-      max-width: 860px;
-      margin: 48px auto 0;
-      padding: 0 20px 60px;
-    }
-    .nav-buttons {
-      display: flex;
-      gap: 10px;
-    }
-    .nav-btn {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 14px 8px;
-      background: var(--dark);          /* #1a1410 → var(--dark) */
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      font-weight: 700;
-      font-size: 15px;
-      box-shadow: 0 4px 16px rgba(75,0,130,0.20);
-      transition: background 0.2s, transform 0.15s;
-      min-width: 0;
-    }
-    .nav-btn:hover {
-      background: var(--dark-deeper);   /* #mid → var(--dark-deeper) */
-      transform: translateY(-2px);
-    }
-
-    @media (max-width: 480px) {
-      .nav-btn { font-size: 13px; padding: 12px 6px; }
-    }
+    @keyframes waPulse { 0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.45); } 50% { box-shadow: 0 4px 32px rgba(37,211,102,0.75); } }
+    .page-nav { max-width: 860px; margin: 48px auto 0; padding: 0 20px 60px; }
+    .nav-buttons { display: flex; gap: 10px; }
+    .nav-btn { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 14px 8px; background: var(--dark); color: #fff; text-decoration: none; border-radius: 12px; font-weight: 700; font-size: 15px; box-shadow: 0 4px 16px rgba(75,0,130,0.20); transition: background 0.2s, transform 0.15s; min-width: 0; }
+    .nav-btn:hover { background: var(--dark-deeper); transform: translateY(-2px); }
+    @media (max-width: 480px) { .nav-btn { font-size: 13px; padding: 12px 6px; } }
   </style>
 </head>
 <body>
 
-  <!-- WHATSAPP FLOAT -->
   <a class="wa-btn" href="https://wa.me/994554828424?text=Salam%20Viktoria%20paltar%20boyas%C4%B1%20sifar%C4%B1%C5%9F%20etm%C9%99k%20ist%C9%99yir%C9%99m" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
     <svg viewBox="0 0 48 48" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
       <path fill="#fff" d="M24 4C13 4 4 13 4 24c0 3.6 1 7 2.7 9.9L4 44l10.4-2.7C17.1 43 20.5 44 24 44c11 0 20-9 20-20S35 4 24 4zm0 36c-3.1 0-6.1-.8-8.7-2.4l-.6-.4-6.2 1.6 1.7-6-.4-.6C8.8 30.1 8 27.1 8 24 8 15.2 15.2 8 24 8s16 7.2 16 16-7.2 16-16 16zm8.8-11.8c-.5-.2-2.8-1.4-3.2-1.5-.4-.2-.7-.2-1 .2-.3.5-1.2 1.5-1.5 1.9-.3.3-.5.4-1 .1-.5-.2-2-.7-3.8-2.3-1.4-1.2-2.3-2.8-2.6-3.2-.3-.5 0-.7.2-1 .2-.2.5-.6.7-.9.2-.3.3-.5.4-.8.1-.3 0-.6-.1-.9-.1-.2-1-2.4-1.4-3.3-.4-.9-.7-.7-1-.7h-.9c-.3 0-.8.1-1.2.6-.4.5-1.6 1.6-1.6 3.8s1.7 4.4 1.9 4.7c.2.3 3.3 5.1 8 7.1 1.1.5 2 .8 2.7 1 1.1.3 2.2.3 3 .2.9-.1 2.8-1.1 3.2-2.3.4-1.1.4-2.1.3-2.3-.2-.2-.5-.3-1-.5z"/>
     </svg>
   </a>
 
-  <!-- HEADER -->
   <header class="header">
     <div class="header-inner">
       <div class="header-label">Müştəri Təcrübələri</div>
@@ -496,7 +199,7 @@
             <div class="avatar">A</div>
             <div>
               <div class="author-name">Alyona</div>
-              <div class="review-date">6 Noyabr 2025</div>
+              <div class="review-date">29 Yanvar 2026</div>
             </div>
           </div>
           <div class="review-right">
@@ -515,7 +218,7 @@
             <div class="avatar">A</div>
             <div>
               <div class="author-name">Aytən Kərimova</div>
-              <div class="review-date">19 Dekabr 2025</div>
+              <div class="review-date">17 Mart 2026</div>
             </div>
           </div>
           <div class="review-right">
@@ -532,7 +235,7 @@
             <div class="avatar">M</div>
             <div>
               <div class="author-name">Müşfiq Talıbov</div>
-              <div class="review-date">16 Yanvar 2026</div>
+              <div class="review-date">8 Aprel 2026</div>
             </div>
           </div>
           <div class="review-right">
@@ -549,7 +252,7 @@
             <div class="avatar">Z</div>
             <div>
               <div class="author-name">Zəhra Abbaszadə</div>
-              <div class="review-date">12 Fevral 2026</div>
+              <div class="review-date">22 May 2026</div>
             </div>
           </div>
           <div class="review-right">
@@ -566,7 +269,7 @@
             <div class="avatar">S</div>
             <div>
               <div class="author-name">Səttar Fərhadlı</div>
-              <div class="review-date">24 Fevral 2026</div>
+              <div class="review-date">11 İyun 2026</div>
             </div>
           </div>
           <div class="review-right">
@@ -583,7 +286,7 @@
             <div class="avatar">İ</div>
             <div>
               <div class="author-name">İsmət Məmmədov</div>
-              <div class="review-date">27 Fevral 2026</div>
+              <div class="review-date">3 Sentyabr 2026</div>
             </div>
           </div>
           <div class="review-right">
@@ -596,7 +299,6 @@
 
     </div>
 
-    <!-- RƏY FORMU -->
     <div class="divider">
       <div class="divider-line"></div>
       <div class="divider-text">Rəy Yaz</div>
@@ -663,7 +365,6 @@
 
   </main>
 
-  <!-- PAGE NAV -->
   <nav class="page-nav">
     <div class="nav-buttons">
       <a href="https://www.viktoria-az.store/catalog" class="nav-btn">&#9664; Geri</a>
@@ -673,7 +374,6 @@
   </nav>
 
   <script>
-    // Fotoğraf önizleme
     document.getElementById('photo').addEventListener('change', function(e) {
       const file = e.target.files[0];
       if (!file) return;
@@ -685,7 +385,6 @@
       reader.readAsDataURL(file);
     });
 
-    // Form gönderimi (Formspree AJAX)
     document.getElementById('review-form').addEventListener('submit', async function(e) {
       e.preventDefault();
       const form = e.target;
@@ -716,7 +415,6 @@
       }
     });
 
-    // Ortalama puan hesapla
     function calcAvg() {
       const stars = document.querySelectorAll('.review-card .star-display');
       let total = 0, count = 0;
