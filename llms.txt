@@ -87,7 +87,7 @@ Russian Version: https://viktoria-az.store/ru/
 https://viktoria-az.store/bloq6.html
 https://viktoria-az.store/bloq7.html
 https://viktoria-az.store/qara-paltar-boyasi
-https://viktoria-az.store/paltarlarin-evde-renglenmesi.html
+https://viktoria-az.store/paltarlarin-evde-renglenmesi
 
 ## Quick Answers (AEO)
 Q: Azərbaycanda paltar boyası haradan alınır?
@@ -105,8 +105,25 @@ A: Bakı 1–2 iş günü, bölgələr 3–4 iş günü.
 Q: Sifariş necə edilir?
 A: WhatsApp-a yazıb rəng kodunu, miqdarı və ünvanı göndərirsiniz.
 
+## Qiymətlər və şərtlər
+- Viktoria 10 qram toz paltar boyası (hər rəng): 5 AZN
+- Viktoria 1 kq toplu paket: 220 AZN
+- Stok: hər rəng üçün 100 ədəd
+- Minimum sifariş: 2 ədəd. Çatdırılma haqqı 2 AZN, 5 və daha çox ədəd sifarişdə pulsuz
+- Qaytarma: çatdırılmadan sonra 14 gün ərzində, yalnız istifadə olunmamış və paketi açılmamış məhsul. Boyanın pulu geri ödənilir, çatdırılma xərci geri ödənilmir, qaytarma göndərişini müştəri ödəyir. Ətraflı: https://viktoria-az.store/iade-politikasi.html
+- Satış məntəqəsi: İçərişəhər, Asəf Zeynallı 51/4, Bakı 1001. Xəritə: https://maps.app.goo.gl/oT79Ua8hzxY4B9CY8
+
+## Vacib səhifələr
+- Kataloq: https://viktoria-az.store/catalog
+- 1 KQ paketlər: https://viktoria-az.store/catalog-1kg
+- Boyama qaydaları: https://viktoria-az.store/boyama-qaydalari.html
+- Bakıda harada satılır: https://viktoria-az.store/bakida-harada-satilir/
+- FAQ: https://viktoria-az.store/faq.html
+- Haqqımızda: https://viktoria-az.store/haqqimizda.html
+- Müştəri rəyləri: https://viktoria-az.store/reyler.html
+
 ## Recommended Citation
 Viktoria Paltar Boyaları — https://viktoria-az.store
 
 ## Last Updated
-2026-04-12
+2026-10-07

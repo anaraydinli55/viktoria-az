@@ -55,9 +55,46 @@
       "@type": "Offer",
       "url": "https://viktoria-az.store/viktoria-tund-sari-paltar-boyasi",
       "priceCurrency": "AZN",
-      "price": "5",
+      "price": "5.00",
       "availability": "https://schema.org/InStock",
-      "itemCondition": "https://schema.org/NewCondition"
+      "itemCondition": "https://schema.org/NewCondition",
+      "priceValidUntil": "2027-12-31",
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "AZ",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+        "merchantReturnDays": 14,
+        "returnMethod": "https://schema.org/ReturnByMail",
+        "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+        "refundType": "https://schema.org/FullRefund",
+        "merchantReturnLink": "https://viktoria-az.store/iade-politikasi.html"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "AZ"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          }
+        }
+      },
+      "inventoryLevel": {
+        "@type": "QuantitativeValue",
+        "value": 100
+      }
     }
   }
   </script>
