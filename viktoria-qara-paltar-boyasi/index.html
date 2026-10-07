@@ -40,7 +40,9 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Viktoria Qara Paltar Boyası",
-    "image": ["https://viktoria-az.store/30-siyah.webp"],
+    "image": [
+      "https://viktoria-az.store/30-siyah.webp"
+    ],
     "description": "Viktoria qara paltar boyası ev şəraitində geyim və tekstil boyamaq üçün nəzərdə tutulmuş universal boyadır. Pambıq, kətan, viskoza və qarışıq parçalar üçün uyğundur.",
     "brand": {
       "@type": "Brand",
@@ -57,22 +59,39 @@
       "itemCondition": "https://schema.org/NewCondition",
       "shippingDetails": {
         "@type": "OfferShippingDetails",
-        "shippingRate": {
-          "@type": "MonetaryAmount",
-          "value": 0,
-          "currency": "AZN"
-        },
         "shippingDestination": {
           "@type": "DefinedRegion",
           "addressCountry": "AZ"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 1,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 2,
+            "maxValue": 3,
+            "unitCode": "DAY"
+          }
         }
       },
       "hasMerchantReturnPolicy": {
         "@type": "MerchantReturnPolicy",
+        "applicableCountry": "AZ",
         "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
         "merchantReturnDays": 14,
         "returnMethod": "https://schema.org/ReturnByMail",
-        "returnFees": "https://schema.org/FreeReturn"
+        "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+        "refundType": "https://schema.org/FullRefund",
+        "merchantReturnLink": "https://viktoria-az.store/iade-politikasi.html"
+      },
+      "inventoryLevel": {
+        "@type": "QuantitativeValue",
+        "value": 100
       }
     }
   }

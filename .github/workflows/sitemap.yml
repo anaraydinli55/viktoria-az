@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Update product schema (60 rəng)
+        run: python .github/scripts/update_product_schema.py
+
       - name: Run sitemap generator
         run: python update_sitemap.py
 
@@ -29,7 +32,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          git add sitemap.xml
+          git add sitemap.xml 'viktoria-*-paltar-boyasi/index.html' pitturafelice.html sprey1.html
 
           git diff --cached --quiet || git commit -m "auto: update sitemap"
 
