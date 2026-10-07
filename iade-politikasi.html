@@ -3,56 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Qaytarılma Siyasəti | Viktoria Boya</title>
+
     <meta name="description" content="Viktoria Boya məhsullarının qaytarılması: 14 gün ərzində, açılmamış paket, boyanın pulu geri ödənilir.">
+
     <link rel="canonical" href="https://viktoria-az.store/iade-politikasi.html">
+
     <meta property="og:type" content="website">
     <meta property="og:title" content="Qaytarılma Siyasəti | Viktoria Boya">
     <meta property="og:url" content="https://viktoria-az.store/iade-politikasi.html">
     <meta property="og:locale" content="az_AZ">
     <meta property="og:image" content="https://viktoria-az.store/images/og-image.jpg">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f6f6;
+            color: #222;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        .top-bar {
+            margin-bottom: 25px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            color: #555;
+            font-size: 14px;
+            font-weight: 600;
+            transition: color .2s ease;
+        }
+
+        .back-link:hover {
+            color: #111;
+        }
+
+        .hero {
+            background: #111;
+            color: #fff;
+            border-radius: 18px;
+            padding: 45px 40px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            margin: 0 0 12px;
+            font-size: 38px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            margin: 0;
+            max-width: 720px;
+            color: #d5d5d5;
+            font-size: 16px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-bottom: 22px;
+        }
+
+        .info-card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 14px;
+            padding: 24px;
+        }
+
+        .info-card strong {
+            display: block;
+            font-size: 25px;
+            color: #111;
+            margin-bottom: 5px;
+        }
+
+        .info-card span {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .card.full {
+            grid-column: 1 / -1;
+        }
+
+        .card h2 {
+            margin: 0 0 15px;
+            font-size: 22px;
+            line-height: 1.3;
+            color: #111;
+        }
+
+        .card p {
+            margin: 0 0 12px;
+            color: #555;
+        }
+
+        .card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .card li {
+            position: relative;
+            padding: 8px 0 8px 27px;
+            color: #555;
+        }
+
+        .card li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 19px;
+            height: 19px;
+            border-radius: 50%;
+            background: #111;
+            color: #fff;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .not-returnable li::before {
+            content: "×";
+        }
+
+        .process {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .step {
+            background: #f7f7f7;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .step-number {
+            width: 34px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #111;
+            color: #fff;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .step h3 {
+            margin: 0 0 7px;
+            font-size: 16px;
+            color: #111;
+        }
+
+        .step p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .contact {
+            margin-top: 22px;
+            background: #fff;
+            border: 1px solid #e5e5e5;
+            border-radius: 14px;
+            padding: 28px;
+        }
+
+        .contact h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+        }
+
+        .contact p {
+            margin: 6px 0;
+            color: #555;
+        }
+
+        .notice {
+            margin-top: 22px;
+            padding: 18px 20px;
+            border-radius: 12px;
+            background: #fff8dc;
+            border: 1px solid #eadb91;
+            color: #665700;
+            font-size: 14px;
+        }
+
+        @media (max-width: 750px) {
+            .page {
+                padding: 20px 14px 40px;
+            }
+
+            .hero {
+                padding: 32px 24px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .card.full {
+                grid-column: auto;
+            }
+
+            .process {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                border-radius: 14px;
+                padding: 28px 20px;
+            }
+
+            .hero h1 {
+                font-size: 27px;
+            }
+
+            .card,
+            .contact {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<p><a href="/">&larr; Ana səhifə</a></p>
+<div class="page">
 
-<h1>Qaytarılma Siyasəti</h1>
+    <div class="top-bar">
+        <a href="/" class="back-link">&larr; Ana səhifə</a>
+    </div>
 
-<p>Bu qaytarılma siyasəti Viktoria Boya tərəfindən satılan məhsullara şamil edilir.</p>
+    <section class="hero">
+        <h1>Qaytarılma Siyasəti</h1>
+        <p>
+            Bu qaytarılma siyasəti Viktoria Boya tərəfindən satılan
+            məhsullara şamil edilir.
+        </p>
+    </section>
 
-<h2>Qaytarılma Müddəti</h2>
-<p>Aldığınız məhsulu çatdırılma tarixindən etibarən 14 gün ərzində geri qaytara bilərsiniz.</p>
+    <section class="info-grid">
 
-<h2>Qaytarılma Şərtləri</h2>
-<ul>
-    <li>Məhsul istifadə olunmamış olmalıdır.</li>
-    <li>Boya paketi açılmamış və orijinal qablaşdırmasında olmalıdır.</li>
-    <li>Məhsul zədələnməmiş olmalıdır.</li>
-    <li>Müraciət zamanı sifariş məlumatları təqdim edilməlidir.</li>
-</ul>
+        <div class="info-card">
+            <strong>14 gün</strong>
+            <span>Qaytarılma müddəti</span>
+        </div>
 
-<h2>Qaytarılması Mümkün Olmayan Məhsullar</h2>
-<ul>
-    <li>Paketi açılmış və ya istifadə edilmiş boya məhsulları</li>
-    <li>Müştərinin xüsusi tələbinə uyğun hazırlanmış rənglər</li>
-</ul>
+        <div class="info-card">
+            <strong>Açılmamış</strong>
+            <span>Məhsul orijinal qablaşdırmada olmalıdır</span>
+        </div>
 
-<h2>Pulun Geri Qaytarılması</h2>
-<ul>
-    <li>Boyanın pulu geri ödənilir.</li>
-    <li>Çatdırılma xərci geri ödənilmir.</li>
-    <li>Qaytarma göndərişinin xərcini məhsulu qaytaran müştəri ödəyir.</li>
-</ul>
-<p>Qaytarılan məhsul tərəfimizə çatdıqdan sonra ödəniş istifadə edilmiş ödəniş üsulu ilə 7 iş günü ərzində geri qaytarılır.</p>
+        <div class="info-card">
+            <strong>7 iş günü</strong>
+            <span>Uyğun geri ödəniş müddəti</span>
+        </div>
 
-<h2>Qaytarılma Prosesi</h2>
-<p>Qaytarılma ilə bağlı müraciət etmək üçün bizimlə əlaqə saxlayın:</p>
-<p>
-E-poçt: info@viktoria-az.store<br>
-Telefon / WhatsApp: +994 55 482 84 24
-</p>
+    </section>
 
-<p>Viktoria Boya zəruri hesab etdiyi hallarda qaytarılma şərtlərində dəyişiklik etmək hüququnu özündə saxlayır.</p>
+    <div class="content">
+
+        <section class="card">
+            <h2>Qaytarılma Müddəti</h2>
+
+            <p>
+                Aldığınız məhsulu çatdırılma tarixindən etibarən
+                14 gün ərzində geri qaytara bilərsiniz.
+            </p>
+        </section>
+
+        <section class="card">
+            <h2>Qaytarılma Şərtləri</h2>
+
+            <ul>
+                <li>Məhsul istifadə olunmamış olmalıdır.</li>
+                <li>Boya paketi açılmamış və orijinal qablaşdırmasında olmalıdır.</li>
+                <li>Məhsul zədələnməmiş olmalıdır.</li>
+                <li>Müraciət zamanı sifariş məlumatları təqdim edilməlidir.</li>
+            </ul>
+        </section>
+
+        <section class="card not-returnable">
+            <h2>Qaytarılması Mümkün Olmayan Məhsullar</h2>
+
+            <ul>
+                <li>Paketi açılmış və ya istifadə edilmiş boya məhsulları</li>
+                <li>Müştərinin xüsusi tələbinə uyğun hazırlanmış rənglər</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Pulun Geri Qaytarılması</h2>
+
+            <ul>
+                <li>Boyanın pulu geri ödənilir.</li>
+                <li>Çatdırılma xərci geri ödənilmir.</li>
+                <li>Qaytarma göndərişinin xərcini məhsulu qaytaran müştəri ödəyir.</li>
+            </ul>
+
+            <p style="margin-top: 14px;">
+                Qaytarılan məhsul tərəfimizə çatdıqdan sonra ödəniş
+                istifadə edilmiş ödəniş üsulu ilə 7 iş günü ərzində
+                geri qaytarılır.
+            </p>
+        </section>
+
+        <section class="card full">
+            <h2>Qaytarılma Prosesi</h2>
+
+            <p>
+                Qaytarılma ilə bağlı müraciət etmək üçün bizimlə əlaqə saxlayın.
+            </p>
+
+            <div class="process">
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Müraciət edin</h3>
+                    <p>
+                        Qaytarılma barədə bizimlə əlaqə saxlayın.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Məlumatları təqdim edin</h3>
+                    <p>
+                        Sifariş məlumatlarını təqdim edin.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Məhsulu qaytarın</h3>
+                    <p>
+                        Qaytarılma təsdiqləndikdən sonra məhsulu geri göndərin.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </div>
+
+    <section class="contact">
+        <h2>Əlaqə</h2>
+
+        <p>
+            E-poçt: info@viktoria-az.store
+        </p>
+
+        <p>
+            Telefon / WhatsApp: +994 55 482 84 24
+        </p>
+    </section>
+
+    <div class="notice">
+        Viktoria Boya zəruri hesab etdiyi hallarda qaytarılma
+        şərtlərində dəyişiklik etmək hüququnu özündə saxlayır.
+    </div>
+
+</div>
 
 </body>
 </html>
