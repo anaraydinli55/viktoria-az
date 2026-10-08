@@ -24,6 +24,9 @@ jobs:
       - name: Update product schema (60 rəng)
         run: python .github/scripts/update_product_schema.py
 
+      - name: Prune sitemap (404 URL-lər)
+        run: python .github/scripts/prune_sitemap.py
+
       - name: Run sitemap generator
         run: python update_sitemap.py
 
