@@ -113,7 +113,7 @@
     .whatsapp-float svg { width:32px; height:32px; fill:#fff; display:block; }
     @keyframes waPulse { 0%,100%{box-shadow:0 4px 20px rgba(37,211,102,0.45);} 50%{box-shadow:0 4px 32px rgba(37,211,102,0.75);} }
   </style>
-  <style id="all-colors-css">.all-colors{max-width:1000px;margin:32px auto;padding:0 16px}.all-colors ul{columns:2 240px;list-style:none;padding:0;margin:0}.all-colors li{margin:6px 0}.all-colors a{color:inherit}</style>
+  <style id="all-colors-css">.all-colors{display:block;max-width:1000px;margin:24px auto;padding:0 16px;font-size:15px;line-height:1.5;text-align:left}.all-colors details{display:block}.all-colors summary{cursor:pointer;font-weight:600;padding:8px 0}.all-colors ul{display:block;columns:2 240px;list-style:none;padding:0;margin:8px 0 0}.all-colors li{display:block;margin:5px 0;font:inherit;color:inherit}.all-colors a{display:inline;font:inherit;color:inherit;padding:0;background:none}</style>
 </head>
 <body>
 
@@ -141,8 +141,10 @@
 
 <div class="container">
   <div class="grid" id="grid"></div>
-  <nav class="all-colors" id="all-colors" aria-label="Все цвета"><h2>Все цвета</h2>
-    <ul>
+  <section class="all-colors" id="all-colors">
+    <details>
+      <summary>Все цвета (60)</summary>
+      <ul>
       <li><a href="/ru/viktoria-chernaya-kraska-dlya-odejdy">Viktoria — краска для одежды: Чёрный</a></li>
       <li><a href="/ru/viktoria-temno-sinyaya-kraska-dlya-odejdy">Viktoria — краска для одежды: Тёмно-синий</a></li>
       <li><a href="/ru/viktoria-krasnaya-kraska-dlya-odejdy">Viktoria — краска для одежды: Красный</a></li>
@@ -203,7 +205,9 @@
       <li><a href="/ru/viktoria-temno-zelyonaya-kraska-dlya-odezhdy">Viktoria — краска для одежды: Темно-Зелёный</a></li>
       <li><a href="/ru/viktoria-temno-salatoviy-kraska-dlya-odezhdy">Viktoria — краска для одежды: Темно-салатовый</a></li>
       <li><a href="/ru/viktoria-zakrepitel-cveta-kraski-dlya-odezhdy">Viktoria — краска для одежды: Фиксатор</a></li>
-    </ul></nav>
+    </ul>
+    </details>
+  </section>
 </div>
 
 <script>
