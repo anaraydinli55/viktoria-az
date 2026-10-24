@@ -1,21 +1,40 @@
-# robots.txt - viktoria-az.store
+
+# Viktoria AZ — Search engines and AI crawlers
 
 User-agent: *
 Allow: /
 
-# Axtaris sistemləri və AI crawler-lər üçün açıq icazə
+# Google
 User-agent: Googlebot
 Allow: /
 
-User-agent: Bingbot
+User-agent: Googlebot-Image
 Allow: /
 
-User-agent: YandexBot
+User-agent: GoogleOther
 Allow: /
 
 User-agent: Google-Extended
 Allow: /
 
+User-agent: Gemini-Deep-Research
+Allow: /
+
+User-agent: Google-CloudVertexBot
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+# Microsoft / Bing
+User-agent: Bingbot
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# OpenAI / ChatGPT
 User-agent: GPTBot
 Allow: /
 
@@ -25,6 +44,7 @@ Allow: /
 User-agent: ChatGPT-User
 Allow: /
 
+# Anthropic / Claude
 User-agent: ClaudeBot
 Allow: /
 
@@ -37,30 +57,53 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# Perplexity
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Perplexity-User
 Allow: /
 
+# xAI / Grok
 User-agent: GrokBot
 Allow: /
 
 User-agent: xAI-Bot
 Allow: /
 
+# Apple
+User-agent: Applebot
+Allow: /
+
 User-agent: Applebot-Extended
 Allow: /
 
+# Meta / Facebook
 User-agent: Meta-ExternalAgent
 Allow: /
 
-User-agent: Gemini-Deep-Research
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Other AI crawlers
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 
 User-agent: CCBot
 Allow: /
 
-# Qeyd: Gemini üçün nəzarət tokeni Google-Extended-dir. xAI/Grok rəsmi User-Agent dərc etməyib.
+User-agent: DuckAssistBot
+Allow: /
 
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# Sitemap
 Sitemap: https://viktoria-az.store/sitemap.xml
+
