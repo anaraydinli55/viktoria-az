@@ -100,7 +100,7 @@ S: Paltar boyası neçə manatdır?
 C: 10 qramlıq paket 5 AZN, 1 kq paket 220 AZN-dir.
 
 S: Çatdırılma haqqı nə qədərdir?
-C: Azərpoçt ilə çatdırılma 2 AZN-dir. 5 5 və daha çox sifarişdə pulsuzdur. Minimum sifariş 2 ədəddir.
+C: Azərpoçt ilə çatdırılma 2 AZN-dir. 5 və daha çox sifarişdə pulsuzdur. Minimum sifariş 2 ədəddir.
 
 S: Çatdırılma neçə gün çəkir?
 C: Bakı təxminən 1–2 iş günü, bölgələr 3–4 iş günü.
